@@ -20,6 +20,7 @@
                         <p style="text-align:center;font-size:14px;color:#616161;margin-top: 20px;padding-top: 6px;border-top: 2px solid #979593;display: inline-block;" class="x-hidden-focus">
                             {{ page.date | date_to_long_string: "ordinal" }}
                         </p>
+                        {% include post/meta.html %}
                     </div>
                     {{ content }}
                     <hr />
