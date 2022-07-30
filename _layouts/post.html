@@ -1,14 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }}</title>
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}">{% endif %}
-    <link rel="stylesheet" href="/assets/css/styles-post.css">
-    {% include google-analytics.html %}
-</head>
+{% include head.html %}
 <body>
     {% include header.html %}
     <div class="container">
