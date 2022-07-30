@@ -1,0 +1,83 @@
+:root {
+    --main-shadow: 2px 2px 8px #0000001a;
+    --primary-color: #da0830;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.navbar-nav.navbar-nav--text .nav-item {
+    padding-right: 1rem;
+    /*font-weight: bold;*/
+    font-size: 18px;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover :not(.navbar a)  {
+    text-decoration: underline;
+}
+
+.carousel .carousel-inner img {
+    object-fit: cover;
+    object-position: center;
+    height: 45vh;
+    overflow: hidden;
+}
+
+.postcontent {
+    margin: 30px 0;
+    box-shadow: var(--main-shadow);
+    padding-top: 60px;
+    padding-left: 16%;
+    padding-right: 16%;
+    padding-bottom: 60px;
+    background-color: #fff;
+    border-radius: 4px 4px 0 0;
+
+    h1 {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.search-main {
+    background: #fff;
+    box-shadow: var(--main-shadow);
+    border-radius: 4px;
+    padding: 0.5em 1.25em;
+    margin-bottom: 1.5em;
+}
+
+.box-style {
+    padding: 20px;
+    margin-bottom: 25px;
+    background: #fff;
+    box-shadow: var(--main-shadow);
+    border-radius: 4px;
+}
+
+.post-card {
+    background-color: #fff;
+    box-shadow: var(--main-shadow);
+    border-radius: 4px;
+    padding: 20px 40px;
+    word-break: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    .postcontent {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
