@@ -1,33 +1,29 @@
-plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
+# Site Settings
+title: Stride Game Engine
+author: Stride Team
+description: Stride Game Engine
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://stride3d.net" # the base hostname & protocol for your site
 
-title: Code or not to code
-email: vaclavelias@gmail.com
-description: Blog about coding in .NET and C#.
-baseurl: ""
-#url: "https://mycutejekyllblog.com"
-twitter_username: VasoElias
-github_username:  VaclavElias
-google_analytics: G-E0VDFZERRK
+# Twitter
+twitter_user: stridedotnet
+twitter_tweet_button: true
+
+# Disqus Comments
+disqus_short_name: stride3d
+disqus_show_comment_count: true
+
+# Google Analytics
+googlega: 'UA-35991323-1'
+
+# Jekyll settings
+permalink: /blog/:title/
+# try to fix excerpt separator
+excerpt_separator: <!--more-->
+# excerpt_link: Read More...
 paginate: 10
-paginate_path: "/blog/page:num"
+paginate_path: "/blog/page:num/"
 
-#markdown: kramdown
-#highlighter: rouge
-
-#kramdown:
-#    input: GFM 
-#    syntax_highlighter: rouge
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
 exclude:
     - .vs
 #   - .sass-cache/
@@ -40,3 +36,7 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate

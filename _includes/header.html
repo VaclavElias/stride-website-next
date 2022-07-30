@@ -9,7 +9,10 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample07">
             <ul class="navbar-nav navbar-nav--text me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                {% assign menu_root = site.data.menus %}
+                {% assign menu_current = page.menu %}
+                {% include menu.html %}
+                <!--<li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="https://www.stride3d.net/features/">Features</a>
                 </li>
                 <li class="nav-item">
@@ -29,10 +32,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.stride3d.net/download/">
-                        <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
-                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
-                        </svg>-->
                         Download
                     </a>
                 </li>
@@ -42,7 +41,7 @@
                             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
                         </svg> Sponsor
                     </a>
-                </li>
+                </li>-->
             </ul>
             <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
                 <li class="nav-item col-6 col-lg-auto">
