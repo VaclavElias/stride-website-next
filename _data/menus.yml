@@ -15,6 +15,7 @@ blog:
 learn:
     url: https://doc.stride3d.net/latest
     text: Learn
+    dropdown: learn-display
 community:
     url: /community
     text: Community
@@ -25,3 +26,9 @@ sponsor:
     url: /sponsor
     text: Sponsor
     icon: bi-heart-fill
+learn-display:
+    - manual
+    - api
+    - release-notes
+    - tutorials
+
