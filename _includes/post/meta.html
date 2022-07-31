@@ -1,12 +1,18 @@
 <div class="stride-blog-post-meta">
-	<p>
-		<span class="fa fa-calendar"></span> {% include post/date.html %}{{ time }}
-		&nbsp; <span class="fa fa-pencil"></span> By {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}
-	</p>
-	{% include post_tags.html %}
-	{% if site.disqus_short_name and site.disqus_show_comment_count == true %}
-		<div class="pull-right">
-			<span class="fa fa-comments"></span> {% include post/comments_link.html %}
-		</div>
-	{% endif %}
+    <p>
+        <i class="fa-solid fa-calendar-days"></i> {% include post/date.html %}{{ time }}
+        &nbsp; <i class="fa-solid fa-pencil"></i> By {% if post.author %}
+        {% if post.author-github %}
+        <img class="rounded-circle" src="https://avatars.githubusercontent.com/{{ post.author-github }}?size=20" />
+        {% endif %}
+        {{ post.author }}
+        {% else %}{{ site.author }}
+        {% endif %}
+    </p>
+    {% include post_tags.html %}
+    {% if site.disqus_short_name and site.disqus_show_comment_count == true %}
+    <div class="pull-right">
+        <span class="fa fa-comments"></span> {% include post/comments_link.html %}
+    </div>
+    {% endif %}
 </div>
