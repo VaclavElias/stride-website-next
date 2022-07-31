@@ -8,13 +8,18 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExample07">
-            <ul class="navbar-nav navbar-nav--text me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav navbar-nav--text me-auto mb-2 mb-lg-0 ms-sm-2">
                 {% assign menu_current = page.url | remove: '/' %}
+                {% assign menu_blog = menu_current | slice: 0,4 %}
+                {% comment %}
+                <li class="nav-item">
+                    <a class="nav-link{% if menu_current=='features' %} active text-primary{% endif %}" aria-current="page" href="/features/">{{ menu_blog }}</a>
+                </li>{% endcomment %}
                 <li class="nav-item">
                     <a class="nav-link{% if menu_current=='features' %} active text-primary{% endif %}" aria-current="page" href="/features/">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link{% if menu_current=='blog' %} active text-primary{% endif %}" href="/blog/">Blog</a>
+                    <a class="nav-link{% if menu_current=='blog' or menu_blog=='blog' %} active text-primary{% endif %}" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>

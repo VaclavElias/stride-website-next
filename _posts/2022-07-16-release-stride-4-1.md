@@ -99,9 +99,9 @@ With Stride 4.1, you will be able to select the C# intermediate tutorials projec
 
 Each tutorial has a video tutorial accompanying it, which can be found on Stride's [Youtube channel](https://www.youtube.com/c/Stride3D). Below you can find the full playlist. 
  
- 
+ <div class="ratio ratio-16x9 mb-4">
  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+ </div>
 
 ## Known Issues
 
