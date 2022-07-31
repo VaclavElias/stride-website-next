@@ -7,9 +7,15 @@ body {
     background-color: #f4f4f4;
 }
 
-.navbar-nav.navbar-nav--text .nav-item {
-    padding-right: 1rem;
-    font-size: 18px;
+.navbar-nav {
+    &.navbar-nav--text .nav-item {
+        padding-right: 1rem;
+        font-size: 18px;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 20px;
+    }
 }
 
 h1, h2 {
@@ -20,7 +26,7 @@ a {
     text-decoration: none;
 }
 
-a:hover :not(.navbar a)  {
+a:hover :not(.navbar a) {
     text-decoration: underline;
 }
 
