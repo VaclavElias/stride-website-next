@@ -1,6 +1,6 @@
 :root {
     --main-shadow: 2px 2px 8px #0000001a;
-    --primary-color: #da0830;
+    --primary-color: var(--bs-primary);
 }
 
 body {
@@ -56,10 +56,13 @@ a:hover :not(.navbar a) {
     }
 }
 
+.box-shadow {
+    box-shadow: var(--main-shadow);
+}
+
 .search-main {
     background: #fff;
-    box-shadow: var(--main-shadow);
-    border-radius: 4px;
+    @extend .box-shadow;
     padding: 0.5em 1.25em;
     margin-bottom: 1.5em;
 }
@@ -69,7 +72,6 @@ a:hover :not(.navbar a) {
     margin-bottom: 25px;
     background: #fff;
     box-shadow: var(--main-shadow);
-    border-radius: 4px;
 }
 
 .post-card {

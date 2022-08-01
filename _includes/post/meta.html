@@ -1,18 +1,19 @@
-<div class="stride-blog-post-meta">
-    <p>
+<p class="d-flex justify-content-between">
+    <span>
         <i class="fa-solid fa-calendar-days"></i> {% include post/date.html %}{{ time }}
-        &nbsp; <i class="fa-solid fa-pencil"></i> By {% if post.author %}
-        {% if post.author-github %}
-        <img class="rounded-circle" src="https://avatars.githubusercontent.com/{{ post.author-github }}?size=20" />
+    </span>
+    <span>
+        {% if site.disqus_short_name and site.disqus_show_comment_count == true %}
+        <i class="fa fa-comments"></i> {% include post/comments_link.html %}
         {% endif %}
-        {{ post.author }}
-        {% else %}{{ site.author }}
-        {% endif %}
-    </p>
-    {% include post_tags.html %}
-    {% if site.disqus_short_name and site.disqus_show_comment_count == true %}
-    <div class="pull-right">
-        <span class="fa fa-comments"></span> {% include post/comments_link.html %}
-    </div>
+    </span>
+</p>
+<p>
+    {% if post.author %}
+    {% if post.author-github %}
+    <img class="rounded-circle me-2" src="https://avatars.githubusercontent.com/{{ post.author-github }}?size=30" />
     {% endif %}
-</div>
+    {{ post.author }}
+    {% else %}{{ site.author }}
+    {% endif %}
+</p>

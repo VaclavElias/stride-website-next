@@ -4,7 +4,8 @@ title: 'Stride 4.1 is now live!'
 author: 'Aggror Jorn'
 author-github: Aggror
 popular: true
-tags: 4.1 New-Features
+image: https://i.imgur.com/7GVEiSR.jpg
+tags: 4.1 Physics Tutorials
 ---
 
 Stride 4.1 is here and ready for the future!

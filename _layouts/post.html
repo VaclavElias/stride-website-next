@@ -28,7 +28,7 @@
                     <hr />
                     <p>
                         {% for tag in page.tags %}
-                        <span class="badge rounded-pill text-bg-success">{{ tag | replace: "-"," " }}</span>
+                        <span class="badge text-bg-success text-success" style="--bs-bg-opacity: .20;">{{ tag | replace: "-"," " }}</span>
                         {% endfor %}
                     </p>
                     <p>

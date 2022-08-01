@@ -3,6 +3,7 @@ layout: post
 title: 'Stride 4.0 is now live!'
 author: 'Virgile Bello'
 popular: true
+image: /images/blog/2021-02-01-release-stride-4-0/voxelgi.jpg
 ---
 
 Stride 4.0 has been around for a while, but it's now time to remove the `-beta` tag!

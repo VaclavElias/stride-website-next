@@ -6,8 +6,12 @@
  */
 
 /*$font-size-base: 1.1rem;*/
+$stride-red: #FC365B;
+$stride-red-web: #da0830;
+$stride-green: #08DA30;
+$stride-blue: #20C5F5;
 
-$primary: #da0830;
+$primary: $stride-red-web;
 $enable-rounded: false;
 
 // scss-docs-start import-stack

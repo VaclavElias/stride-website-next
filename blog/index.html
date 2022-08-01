@@ -2,126 +2,158 @@
 layout: default
 title: Blog
 ---
-<div class="container">
-    <h1 class="my-3">Blog</h1>
-    <div class="row">
-        <div class="col-lg-9 col-md-8 col-sm-12">
-            {% for post in paginator.posts %}
-            <article class="search-main">
-                <div class="row justify-content-center pt-3 pb-1">
-                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
-                        <img class="mt-2 px-4 pb-4 lazyloaded img-fluid" loading="lazy" src="https://www.stride3d.net/images/blog/default_thumb.png" data-src="https://www.stride3d.net/images/blog/default_thumb.png" alt="">
+<div class="bg-dark">
+    <div class="container">
+        <h1 class="py-2">Blog</h1>
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-12">
+                {% for post in paginator.posts %}
+                <article class="search-main">
+                    <div class="row justify-content-center pt-3 pb-1">
+                        <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                            {% if post.image_thumb %}
+                            <a href="{{ post.url }}">
+                                <img loading="lazy" class="mt-2 px-4 pb-4 lazyloaded img-fluid" src="{{ post.image_thumb }}" alt="{{ post.title }}" data-src="{{ post.image_thumb }}">
+                            </a>
+                            {% elsif post.image %}
+                            <a href="{{ post.url }}">
+                                <img loading="lazy" class="mt-2 px-4 pb-4 lazyloaded img-fluid" src="{{ post.image }}" alt="{{ post.title }}" data-src="{{ post.image }}">
+                            </a>
+                            {% else %}
+                            <a href="{{ post.url }}">
+                                <img loading="lazy" class="mt-2 px-4 pb-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
+                            </a>
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-8 col-md-12 post-card-header">
+                            <h4 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                            {% include post/meta.html %}
+                            <p>
+                                {{ post.excerpt | strip_html | truncatewords: 19 }}
+                            </p>
+                            <p>
+                                {% for tag in post.tags %}
+                                <span class="badge text-bg-success text-success" style="--bs-bg-opacity: .20;">{{ tag | replace: "-"," "}}</span>
+                                {% endfor %}
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-lg-8 col-md-12 post-card-header">
-                        <h4 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-                        {% include post/meta.html %}
-                        <p>
-                            {{ post.excerpt | strip_html | truncatewords: 19 }}
-                        </p>
-                        <p>
-                            {% for tag in post.tags %}
-                            <span class="badge rounded-pill text-bg-success">{{ tag | replace: "-"," "}}</span>
-                            {% endfor %}
-                        </p>
-                    </div>
-                </div>
-            </article>
-            {% endfor %}
-            <nav class="justify-content-center d-flex">
-                {% assign paginator_divider =  paginator.total_pages | minus:paginator.page %}
-                <ul class="pagination stride-custom-pagination">
-                    {% if paginator.page > 1 %}
-                    <li class="page-item">
-                        <a href="{{ paginator.previous_page_path }}" class="stride-paginate-arrow-prev page-link">&laquo; Previous</a>
-                    </li>
-                    {% else %}
-                    <li class="page-item disabled">
-                        <span class="stride-paginate-arrow-prev page-link">&laquo; Previous</span>
-                    </li>
-                    {% endif %}
-                    {% if paginator.page > 1 %}
-                    <li class="page-item">
-                        <a class="page-link" href="/blog">1</a>
-                    </li>
-                    {% endif %}
-                    {% if paginator.page > 4 %}
-                    <li class="page-item">
-                        <span class="page-link">...</span>
-                    </li>
-                    {% endif %}
-                    {% if paginator.page > 3 %}
-                    <li class="page-item">
-                        <a class="page-link" href="/blog/page{{ paginator.page | minus:2 }}/">{{ paginator.page | minus:2 }}</a>
-                    </li>
-                    {% endif %}
-                    {% if paginator.page > 2 %}
-                    <li class="page-item">
-                        <a class="page-link" href="{{ paginator.previous_page_path }}">{{ paginator.previous_page }}</a>
-                    </li>
-                    {% endif %}
-                    <li class="page-item disabled">
-                        <span class="page-link">{{ paginator.page }}</span>
-                    </li>
-                    {% if paginator_divider > 0 %}
-                    <li class="page-item">
-                        <a class="page-link" href="{{ paginator.next_page_path }}">{{ paginator.next_page }}</a>
-                    </li>
-                    {% endif %}
-                    {% if paginator_divider > 1 %}
-                    <li class="page-item">
-                        <a class="page-link" href="/blog/page{{ paginator.page | plus:2 }}/">{{ paginator.page | plus:2 }}</a>
-                    </li>
-                    {% endif %}
-                    {% if paginator_divider > 3 %}
-                    <li class="page-item">
-                        <span class="page-link">...</span>
-                    </li>
-                    {% endif %}
-                    {% if paginator_divider > 2 %}
-                    <li class="page-item">
-                        <a class="page-link" href="/blog/page{{ paginator.total_pages }}/">{{ paginator.total_pages }}</a>
-                    </li>
-                    {% endif %}
-                    {% if paginator.page != paginator.total_pages %}
-                    <li class="page-item">
-                        <a href="{{ paginator.next_page_path }}" class="stride-paginate-arrow-next page-link">Next &raquo;</a>
-                    </li>
-                    {% else %}
-                    <li class="page-item disabled">
-                        <span class="stride-paginate-arrow-next page-link">Next &raquo;</span>
-                    </li>
-                    {% endif %}
-                </ul>
-            </nav>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-12">
-            <div class="box-style">
-                <div class="devblogs-widget">
-                    <h5 class="blog-info x-hidden-focus">Recent Posts</h5>
-                    <div class="all-blogs-list sidebar-links">
-                        <!--<ul class="">
-                            <li>
-                                <a title="Visual Studio Blog" href="https://devblogs.microsoft.com/visualstudio">
-                                    Visual Studio Blog
-                                </a>
-                            </li>
-                            <li>
-                                <a title=".NET Blog" href="https://devblogs.microsoft.com/dotnet">
-                                    .NET Blog
-                                </a>
-                            </li>
-                        </ul>-->
-                    </div>
-                    <hr />
-                    <h5 class="blog-info x-hidden-focus">Resources</h5>
-                    <div class="all-blogs-list sidebar-links">
-                        <ul>
-                            <li><a title="Microsoft Docs" href="https://docs.microsoft.com/en-us/" target="_blank" rel="noopener" class="x-hidden-focus">Microsoft Docs</a></li>
-                            <!--<li><a title="C# Game Engine" href="https://www.stride3d.net" target="_blank" rel="noopener" class="x-hidden-focus">Stride 3D Game Engine</a></li>-->
-                        </ul>
-                    </div>
-                </div>
+                </article>
+                {% endfor %}
+                <nav class="justify-content-center d-flex">
+                    {% assign paginator_divider =  paginator.total_pages | minus:paginator.page %}
+                    <ul class="pagination stride-custom-pagination">
+                        {% if paginator.page > 1 %}
+                        <li class="page-item">
+                            <a href="{{ paginator.previous_page_path }}" class="stride-paginate-arrow-prev page-link">&laquo; Previous</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <span class="stride-paginate-arrow-prev page-link">&laquo; Previous</span>
+                        </li>
+                        {% endif %}
+                        {% if paginator.page > 1 %}
+                        <li class="page-item">
+                            <a class="page-link" href="/blog">1</a>
+                        </li>
+                        {% endif %}
+                        {% if paginator.page > 4 %}
+                        <li class="page-item">
+                            <span class="page-link">...</span>
+                        </li>
+                        {% endif %}
+                        {% if paginator.page > 3 %}
+                        <li class="page-item">
+                            <a class="page-link" href="/blog/page{{ paginator.page | minus:2 }}/">{{ paginator.page | minus:2 }}</a>
+                        </li>
+                        {% endif %}
+                        {% if paginator.page > 2 %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ paginator.previous_page_path }}">{{ paginator.previous_page }}</a>
+                        </li>
+                        {% endif %}
+                        <li class="page-item disabled">
+                            <span class="page-link">{{ paginator.page }}</span>
+                        </li>
+                        {% if paginator_divider > 0 %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ paginator.next_page_path }}">{{ paginator.next_page }}</a>
+                        </li>
+                        {% endif %}
+                        {% if paginator_divider > 1 %}
+                        <li class="page-item">
+                            <a class="page-link" href="/blog/page{{ paginator.page | plus:2 }}/">{{ paginator.page | plus:2 }}</a>
+                        </li>
+                        {% endif %}
+                        {% if paginator_divider > 3 %}
+                        <li class="page-item">
+                            <span class="page-link">...</span>
+                        </li>
+                        {% endif %}
+                        {% if paginator_divider > 2 %}
+                        <li class="page-item">
+                            <a class="page-link" href="/blog/page{{ paginator.total_pages }}/">{{ paginator.total_pages }}</a>
+                        </li>
+                        {% endif %}
+                        {% if paginator.page != paginator.total_pages %}
+                        <li class="page-item">
+                            <a href="{{ paginator.next_page_path }}" class="stride-paginate-arrow-next page-link">Next &raquo;</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <span class="stride-paginate-arrow-next page-link">Next &raquo;</span>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
             </div>
+            <aside class="col-lg-3 col-md-4 col-sm-12">
+                <div class="box-style">
+                    <div class="devblogs-widget">
+                        <h5 class="blog-info x-hidden-focus">Popular Posts</h5>
+                        <div class="all-blogs-list sidebar-links">
+                            <ul class="">
+                                {% for post in site.posts %}
+                                {% if post.popular == true %}
+                                <li>
+                                    <a href="{{ post.url }}">
+                                        {{ post.title }}
+                                    </a>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <hr />
+                        <h5 class="blog-info x-hidden-focus">Resources</h5>
+                        <div class="all-blogs-list sidebar-links">
+                            <ul>
+                                <li>
+                                    <a title="Microsoft Docs" href="https://devblogs.microsoft.com/dotnet/category/csharp/" target="_blank" rel="noopener">C# Blog</a>
+                                </li>
+                                <li>
+                                    <a title="Microsoft Docs" href="https://docs.microsoft.com/en-us/" target="_blank" rel="noopener" class="x-hidden-focus">Microsoft Docs</a>
+                                </li>
+                                <li>
+                                    <a title="Visual Studio Blog" href="https://devblogs.microsoft.com/visualstudio" target="_blank" rel="noopener">
+                                        Visual Studio Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Visual Studio Download" href="https://visualstudio.microsoft.com/downloads/" target="_blank" rel="noopener">
+                                        Download Visual Studio Community
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Visual Studio Code Download" href="https://code.visualstudio.com/" target="_blank" rel="noopener">
+                                        Download Visual Studio Code
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
     </div>
 </div>
