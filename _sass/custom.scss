@@ -61,3 +61,7 @@ $enable-rounded: false;
 // Utilities
 @import "bootstrap/utilities/api";
 // scss-docs-end import-stack
+
+.card {
+    box-shadow: var(--main-shadow);
+}

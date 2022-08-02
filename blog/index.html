@@ -4,29 +4,29 @@ title: Blog
 ---
 <div class="bg-dark">
     <div class="container">
-        <h1 class="py-2">Blog</h1>
+        <h1 class="pt-2 pb-1" title="Stride Blog">Blog</h1>
         <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-12">
                 {% for post in paginator.posts %}
-                <article class="search-main">
-                    <div class="row justify-content-center pt-3 pb-1">
-                        <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                <article class="card mb-4 py-4 px-5">
+                    <div class="row justify-content-center">
+                        <div class="text-center col-lg-4 col-md-12 d-none d-lg-block pe-2">
                             {% if post.image_thumb %}
                             <a href="{{ post.url }}">
-                                <img loading="lazy" class="mt-2 px-4 pb-4 lazyloaded img-fluid" src="{{ post.image_thumb }}" alt="{{ post.title }}" data-src="{{ post.image_thumb }}">
+                                <img loading="lazy" class="mt-2 pe-4 lazyloaded img-fluid" src="{{ post.image_thumb }}" alt="{{ post.title }}" data-src="{{ post.image_thumb }}">
                             </a>
                             {% elsif post.image %}
                             <a href="{{ post.url }}">
-                                <img loading="lazy" class="mt-2 px-4 pb-4 lazyloaded img-fluid" src="{{ post.image }}" alt="{{ post.title }}" data-src="{{ post.image }}">
+                                <img loading="lazy" class="mt-2 pe-4 lazyloaded img-fluid" src="{{ post.image }}" alt="{{ post.title }}" data-src="{{ post.image }}">
                             </a>
                             {% else %}
                             <a href="{{ post.url }}">
-                                <img loading="lazy" class="mt-2 px-4 pb-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
+                                <img loading="lazy" class="mt-2 pe-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
                             </a>
                             {% endif %}
                         </div>
                         <div class="col-lg-8 col-md-12 post-card-header">
-                            <h4 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                            <h3 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
                             {% include post/meta.html %}
                             <p>
                                 {{ post.excerpt | strip_html | truncatewords: 19 }}
@@ -108,50 +108,44 @@ title: Blog
                 </nav>
             </div>
             <aside class="col-lg-3 col-md-4 col-sm-12">
-                <div class="box-style">
-                    <div class="devblogs-widget">
-                        <h5 class="blog-info x-hidden-focus">Popular Posts</h5>
-                        <div class="all-blogs-list sidebar-links">
-                            <ul class="">
-                                {% for post in site.posts %}
-                                {% if post.popular == true %}
-                                <li>
-                                    <a href="{{ post.url }}">
-                                        {{ post.title }}
-                                    </a>
-                                </li>
-                                {% endif %}
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <hr />
-                        <h5 class="blog-info x-hidden-focus">Resources</h5>
-                        <div class="all-blogs-list sidebar-links">
-                            <ul>
-                                <li>
-                                    <a title="Microsoft Docs" href="https://devblogs.microsoft.com/dotnet/category/csharp/" target="_blank" rel="noopener">C# Blog</a>
-                                </li>
-                                <li>
-                                    <a title="Microsoft Docs" href="https://docs.microsoft.com/en-us/" target="_blank" rel="noopener" class="x-hidden-focus">Microsoft Docs</a>
-                                </li>
-                                <li>
-                                    <a title="Visual Studio Blog" href="https://devblogs.microsoft.com/visualstudio" target="_blank" rel="noopener">
-                                        Visual Studio Blog
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="Visual Studio Download" href="https://visualstudio.microsoft.com/downloads/" target="_blank" rel="noopener">
-                                        Download Visual Studio Community
-                                    </a>
-                                </li>
-                                <li>
-                                    <a title="Visual Studio Code Download" href="https://code.visualstudio.com/" target="_blank" rel="noopener">
-                                        Download Visual Studio Code
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="card p-3 mb-4">
+                    <h5>Popular Posts</h5>
+                    <ul>
+                        {% for post in site.posts %}
+                        {% if post.popular == true %}
+                        <li>
+                            <a href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <hr />
+                    <h5>Resources</h5>
+                    <ul>
+                        <li>
+                            <a title="Microsoft Docs" href="https://devblogs.microsoft.com/dotnet/category/csharp/" target="_blank" rel="noopener">C# Blog</a>
+                        </li>
+                        <li>
+                            <a title="Microsoft Docs" href="https://docs.microsoft.com/en-us/" target="_blank" rel="noopener" class="x-hidden-focus">Microsoft Docs</a>
+                        </li>
+                        <li>
+                            <a title="Visual Studio Blog" href="https://devblogs.microsoft.com/visualstudio" target="_blank" rel="noopener">
+                                Visual Studio Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Visual Studio Download" href="https://visualstudio.microsoft.com/downloads/" target="_blank" rel="noopener">
+                                Download Visual Studio Community
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Visual Studio Code Download" href="https://code.visualstudio.com/" target="_blank" rel="noopener">
+                                Download Visual Studio Code
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </aside>
         </div>
