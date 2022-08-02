@@ -39,7 +39,7 @@ a:hover :not(.navbar a) {
 
 .postcontent {
     margin: 30px 0;
-    /*box-shadow: var(--main-shadow);*/
+    box-shadow: var(--main-shadow);
     padding-top: 60px;
     padding-left: 16%;
     padding-right: 16%;
@@ -73,12 +73,12 @@ a:hover :not(.navbar a) {
     box-shadow: var(--main-shadow);
 }*/
 
-.post-card {
+/*.post-card {
     background-color: #fff;
-    /*box-shadow: var(--main-shadow);*/
+    box-shadow: var(--main-shadow);
     padding: 20px 40px;
     word-break: break-word;
-}
+}*/
 
 @media screen and (max-width: 768px) {
     .postcontent {

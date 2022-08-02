@@ -3,7 +3,6 @@ layout: post
 title: 'Community meeting October 2021'
 author: 'Jorn Theunissen'
 author-github: Aggror
-popular: true
 tags: Meeting
 ---
 
