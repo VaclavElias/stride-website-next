@@ -4,24 +4,24 @@ title: Blog
 ---
 <div class="bg-dark">
     <div class="container">
-        <h1 class="pt-2 pb-1" title="Stride Blog">Blog</h1>
+        <h1 class="pt-2 pb-1" title="Stride Blog">Stride Blog</h1>
         <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-12">
                 {% for post in paginator.posts %}
-                <article class="card mb-4 py-4 px-5">
+                <article class="card mb-4 p-4">
                     <div class="row justify-content-center">
                         <div class="text-center col-lg-4 col-md-12 d-none d-lg-block pe-2">
                             {% if post.image_thumb %}
                             <a href="{{ post.url }}">
-                                <img loading="lazy" class="mt-2 pe-4 lazyloaded img-fluid" src="{{ post.image_thumb }}" alt="{{ post.title }}" data-src="{{ post.image_thumb }}">
+                                <img loading="lazy" class="mt-2 p-4 lazyloaded img-fluid" src="{{ post.image_thumb }}" alt="{{ post.title }}" data-src="{{ post.image_thumb }}">
                             </a>
                             {% elsif post.image %}
                             <a href="{{ post.url }}">
-                                <img loading="lazy" class="mt-2 pe-4 lazyloaded img-fluid" src="{{ post.image }}" alt="{{ post.title }}" data-src="{{ post.image }}">
+                                <img loading="lazy" class="mt-2 p-4 lazyloaded img-fluid" src="{{ post.image }}" alt="{{ post.title }}" data-src="{{ post.image }}">
                             </a>
                             {% else %}
                             <a href="{{ post.url }}">
-                                <img loading="lazy" class="mt-2 pe-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
+                                <img loading="lazy" class="mt-2 p-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
                             </a>
                             {% endif %}
                         </div>
