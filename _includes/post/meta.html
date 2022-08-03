@@ -1,12 +1,12 @@
 <p class="d-flex justify-content-between">
     <span>
         <i class="fa-solid fa-calendar-days me-1"></i> {% include post/date.html %}{{ time }}
-    </span>
+    </span>{% comment %}
     <span>
         {% if site.disqus_short_name and site.disqus_show_comment_count == true %}
         <i class="fa fa-comments"></i> {% include post/comments_link.html %}
         {% endif %}
-    </span>
+    </span>{% endcomment %}
 </p>
 <p>
     {% if post.author %}
