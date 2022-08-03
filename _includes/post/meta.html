@@ -1,6 +1,6 @@
 <p class="d-flex justify-content-between">
     <span>
-        <i class="fa-solid fa-calendar-days"></i> {% include post/date.html %}{{ time }}
+        <i class="fa-solid fa-calendar-days me-1"></i> {% include post/date.html %}{{ time }}
     </span>
     <span>
         {% if site.disqus_short_name and site.disqus_show_comment_count == true %}
@@ -11,7 +11,7 @@
 <p>
     {% if post.author %}
     {% if post.author-github %}
-    <img class="rounded-circle me-2" src="https://avatars.githubusercontent.com/{{ post.author-github }}?size=30" />
+    <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/{{ post.author-github }}?size=30" />
     {% endif %}
     {{ post.author }}
     {% else %}{{ site.author }}

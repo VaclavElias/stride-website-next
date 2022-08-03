@@ -2,6 +2,7 @@
 layout: post
 title: 'Open collective'
 author: 'Aggror Jorn'
+author-github: Aggror
 popular: true
 ---
 

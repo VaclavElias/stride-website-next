@@ -2,7 +2,9 @@
 layout: post
 title: 'Community meeting February 2022'
 author: 'Aggror Jorn'
+author-github: Aggror
 popular: true
+tags: Meeting
 ---
 # Summary community meeting 2022
 

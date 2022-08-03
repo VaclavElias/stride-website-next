@@ -13,7 +13,7 @@ body {
         font-size: 18px;
     }
 
-    .fa-brands, .fa-solid {
+    &.navbar-icons {
         font-size: 20px;
     }
 }
@@ -45,7 +45,6 @@ a:hover :not(.navbar a) {
     padding-right: 16%;
     padding-bottom: 60px;
     background-color: #fff;
-    border-radius: 4px 4px 0 0;
 
     h1 {
         text-align: center;
@@ -56,31 +55,30 @@ a:hover :not(.navbar a) {
     }
 }
 
-.box-shadow {
+/*.box-shadow {
     box-shadow: var(--main-shadow);
-}
+}*/
 
-.search-main {
+/*.search-main {
     background: #fff;
     @extend .box-shadow;
     padding: 0.5em 1.25em;
     margin-bottom: 1.5em;
-}
+}*/
 
-.box-style {
+/*.box-style {
     padding: 20px;
     margin-bottom: 25px;
     background: #fff;
     box-shadow: var(--main-shadow);
-}
+}*/
 
-.post-card {
+/*.post-card {
     background-color: #fff;
     box-shadow: var(--main-shadow);
-    border-radius: 4px;
     padding: 20px 40px;
     word-break: break-word;
-}
+}*/
 
 @media screen and (max-width: 768px) {
     .postcontent {

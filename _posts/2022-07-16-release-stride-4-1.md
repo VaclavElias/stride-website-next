@@ -50,7 +50,7 @@ Here's a non-exhaustive list of new improvements:
 ### Dithered shadows for semi-transparent materials
 Produces semi-transparent shadows by poking more and more holes in the shadow map based on the transparency of the object, shadow map filtering will blur those holes with their neighbor which will result in those partially opaque pixels.
 
-![Dithered shadow settings](https://i.imgur.com/xFzuNbl.png)
+![Dithered shadow settings](https://i.imgur.com/xFzuNbl.png){: .img-fluid}
 ![Dithered shadow effect comparison](https://i.imgur.com/kHvSy8a.png){: .img-fluid}
 
 
@@ -77,7 +77,7 @@ The old gizmos weren't very nice to look at, so this feature makes them look bet
 
 This feature also updates the text on the CameraOrientationGizmo to be XYZ instead of right/left. Still prefer the old text instead of the XYZ coordinate? Don't worry, there's a setting under the viewport settings that swaps it back to the old text.
 
-![Rotation](https://i.imgur.com/W4zIf7J.png =400x160){: .img-fluid}
+![Rotation](https://i.imgur.com/W4zIf7J.png=400x160){: .img-fluid}
 
 
 ### Intermediate tutorials

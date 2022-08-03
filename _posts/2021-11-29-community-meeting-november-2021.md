@@ -2,7 +2,8 @@
 layout: post
 title: 'Community meeting November 2021'
 author: 'Jorn Theunissen'
-popular: true
+author-github: Aggror
+tags: Meeting
 ---
 Hello fellow Striders,
 
