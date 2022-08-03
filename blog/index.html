@@ -108,12 +108,14 @@ title: Blog
                 </nav>
             </div>
             <aside class="col-lg-3 col-md-4 col-sm-12">
-                <div class="card p-3 mb-4">
-                    <h5>Popular Posts</h5>
-                    <ul>
+                <div class="card mb-4">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item active">
+                            <h5 class="mb-0 fw-normal">Popular Posts</h5>
+                        </li>
                         {% for post in site.posts %}
                         {% if post.popular == true %}
-                        <li>
+                        <li class="list-group-item  list-group-item-action">
                             <a href="{{ post.url }}">
                                 {{ post.title }}
                             </a>
@@ -121,9 +123,10 @@ title: Blog
                         {% endif %}
                         {% endfor %}
                     </ul>
-                    <hr />
+                </div>
+                <div class="card mb-4 p-3">
                     <h5>Latest Posts</h5>
-                    <ul>
+                    <ul style="padding-left: 17px;">
                         {% for post in site.posts limit:5 %}
                         <li>
                             <a href="{{ post.url }}">
@@ -134,9 +137,12 @@ title: Blog
                     </ul>
                     <hr />
                     <h5>Resources</h5>
-                    <ul>
+                    <ul style="padding-left: 17px;">
                         <li>
-                            <a title="Microsoft Docs" href="https://devblogs.microsoft.com/dotnet/category/csharp/" target="_blank" rel="noopener">C# Blog</a>
+                            <a title="Blender" href="https://www.blender.org/" target="_blank" rel="noopener">Blender - Free and Open 3D Creation Software</a>
+                        </li>
+                        <li>
+                            <a title="Microsoft C# Docs" href="https://devblogs.microsoft.com/dotnet/category/csharp/" target="_blank" rel="noopener">C# Blog</a>
                         </li>
                         <li>
                             <a title="Microsoft Docs" href="https://docs.microsoft.com/en-us/" target="_blank" rel="noopener" class="x-hidden-focus">Microsoft Docs</a>
@@ -159,12 +165,12 @@ title: Blog
                     </ul>
                     <hr />
                     <h5>Other</h5>
-                    <ul>
+                    <ul style="padding-left: 17px;">
                         <li>
-                            <a title="Microsoft Docs" href="https://devblogs.microsoft.com/dotnet/category/csharp/" target="_blank" rel="noopener">Archive</a>
+                            <a title="Stride Post Archive" href="/blog/archive" target="_blank" rel="noopener">Archive</a>
                         </li>
                         <li>
-                            <a title="Microsoft Docs" href="https://docs.microsoft.com/en-us/" target="_blank" rel="noopener" class="x-hidden-focus">Tags</a>
+                            <a title="Stride Tags" href="/blog/tags" target="_blank" rel="noopener" class="x-hidden-focus">Tags</a>
                         </li>
                     </ul>
                 </div>

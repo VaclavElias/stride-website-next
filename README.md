@@ -5,9 +5,9 @@ Just playing with different design ideas and possibilities.
 The motivation for the update is:
 
 - to simplify design
-- use Bootstrap 5.2
+- [x] use Bootstrap 5.2
   - this was also used previously with lots of inconsistency
-- use Fontawesome 6
+- [x] use Fontawesome 6
   - this was also used previously
 - remove old unnecessary code, AddThis, Discus, JQuery, JavaScript libraries
 - get better website responsivness
@@ -23,24 +23,28 @@ The motivation for the update is:
   - [ ] Content and images update?
   - [ ] Maybe add a whole section dedicated to scripting, mentioning ```async```, maybe add code snippets?
 - [x] Blog Page
+   - [x] GitHub avatar added to list and posts
    - [x] Improve Side bar
    - [x] Popular Posts
    - [x] Latest Posts
    - [x] Resources
-   - [ ] Friends - Shall we link to our frinds GoDot, 
-   - [ ] Archive
-   - [ ] Tags
+   - [ ] Friends - Shall we link to our friends GoDot, others, just to be open and making friends in other C# open source game communities? 
+   - [ ] Archive - New Page, list by year
+   - [ ] Tags - New Page, list by tag
 - [ ] Learn
   - [ ] Research new update for stride-docs
 - [x] Community Page
   - [ ] Content update? Keep similar length.
   - [ ] Do we need Q&A external link? If yes, shall we collect some typical Questions and Answer them there? Maybe another platform to watch but maybe helpful for SEO? Make sense to support it and link it if this is watched by community?
   - [ ] Do we need Contact Page to officially contact us?
+- [ ] Footer
+   - [ ] Shall we mention that we use Bootstrap and Fontawesome
 
 ## Phase 2
 - [ ] Features Page - Improve like this, link to individual pages https://www.blender.org/features/
+- [] Blog Comments from GitHub - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/
 - [ ] Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
-- [ ] Footer 
+- [ ] Footer example https://www.blender.org/
   - [ ] New Section Download
      - [ ] Direct link to Release Notes
      - [ ] Direct link to Requirements
