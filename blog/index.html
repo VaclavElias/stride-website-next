@@ -31,11 +31,7 @@ title: Blog
                             <p>
                                 {{ post.excerpt | strip_html | truncatewords: 19 }}
                             </p>
-                            <p>
-                                {% for tag in post.tags %}
-                                <span class="badge text-bg-success text-success" style="--bs-bg-opacity: .20;">{{ tag | replace: "-"," "}}</span>
-                                {% endfor %}
-                            </p>
+                            {% include post/tags.html tags=post.tags %}
                         </div>
                     </div>
                 </article>
