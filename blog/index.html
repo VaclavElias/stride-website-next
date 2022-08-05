@@ -2,9 +2,16 @@
 layout: default
 title: Blog
 ---
+<div style="background-image: url(/images/backgrounds/download.jpg); background-position: 50% 50%; background-size: cover">
+    <div class="cover text-center py-5">
+        <h1 class="text-light py-5">Stride Blog</h1>
+        <div>
+            <h4 class="text-light">Free. Cross-platform. Open source. A game engine for building all your apps.</h4>
+        </div>
+    </div>
+</div>
 <div class="bg-dark">
     <div class="container">
-        <h1 class="pt-2 pb-1" title="Stride Blog">Stride Blog</h1>
         <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-12">
                 {% for post in paginator.posts %}
@@ -13,15 +20,15 @@ title: Blog
                         <div class="text-center col-lg-4 col-md-12 d-none d-lg-block pe-2">
                             {% if post.image_thumb %}
                             <a href="{{ post.url }}">
-                                <img loading="lazy" class="mt-2 p-4 lazyloaded img-fluid" src="{{ post.image_thumb }}" alt="{{ post.title }}" data-src="{{ post.image_thumb }}">
+                                <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="{{ post.image_thumb }}" alt="{{ post.title }}" data-src="{{ post.image_thumb }}">
                             </a>
                             {% elsif post.image %}
                             <a href="{{ post.url }}">
-                                <img loading="lazy" class="mt-2 p-4 lazyloaded img-fluid" src="{{ post.image }}" alt="{{ post.title }}" data-src="{{ post.image }}">
+                                <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="{{ post.image }}" alt="{{ post.title }}" data-src="{{ post.image }}">
                             </a>
                             {% else %}
                             <a href="{{ post.url }}">
-                                <img loading="lazy" class="mt-2 p-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
+                                <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
                             </a>
                             {% endif %}
                         </div>
@@ -107,7 +114,7 @@ title: Blog
                 <div class="card mb-4">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item active">
-                            <h5 class="mb-0 fw-normal">Popular Posts</h5>
+                            <h4 class="mb-0 fw-normal">Popular Posts</h4>
                         </li>
                         {% for post in site.posts %}
                         {% if post.popular == true %}
@@ -121,7 +128,7 @@ title: Blog
                     </ul>
                 </div>
                 <div class="card mb-4 p-3">
-                    <h5>Latest Posts</h5>
+                    <h4>Latest Posts</h4>
                     <ul style="padding-left: 17px;">
                         {% for post in site.posts limit:5 %}
                         <li>
@@ -132,7 +139,7 @@ title: Blog
                         {% endfor %}
                     </ul>
                     <hr />
-                    <h5>Resources</h5>
+                    <h4>Resources</h4>
                     <ul style="padding-left: 17px;">
                         <li>
                             <a title="Blender" href="https://www.blender.org/" target="_blank" rel="noopener">Blender - Free and Open 3D Creation Software</a>
@@ -160,7 +167,7 @@ title: Blog
                         </li>
                     </ul>
                     <hr />
-                    <h5>Other</h5>
+                    <h4>Other</h4>
                     <ul style="padding-left: 17px;">
                         <li>
                             <a title="Stride Post Archive" href="/blog/archive" target="_blank" rel="noopener">Archive</a>
