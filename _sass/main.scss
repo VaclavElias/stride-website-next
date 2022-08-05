@@ -37,8 +37,8 @@ a:hover :not(.navbar a):not(.navbar-icons a small) {
     overflow: hidden;
 }
 
-.accordion-item:hover {
-    background-color: #bababa25;
+.accordion-item:hover label {
+    cursor: pointer;
 }
 
 .postcontent {
