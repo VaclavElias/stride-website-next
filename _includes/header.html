@@ -45,33 +45,40 @@
                 </li>
             </ul>
             <ul class="navbar-nav flex-row flex-wrap ms-md-auto navbar-icons">
-                <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/stride3d/stride" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-magnifying-glass text-decoration-none"></i>
-                    </a>
+                <li class="nav-item col-12 col-lg-auto dropdown">
+                    <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-magnifying-glass text-decoration-none"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end p-3" style="width: 280px;">
+                        <form action="/search.html" method="get">
+                            <input name="search_paths[]" type="hidden" value="/en">
+                            <div class="mb-3">
+                                <input class="form-control" name="query" type="text" value="">
+                            </div>
+                            <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
+                        </form>
+                    </div>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/stride3d/stride" target="_blank" rel="noopener">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="{{ site.github-url }}" target="_blank" rel="noopener">
                         <i class="fa-brands fa-github text-decoration-none"></i>
-                        <small class="d-lg-none ms-2">GitHub</small>
+                        <small class="d-lg-none">GitHub</small>
                     </a>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="{{ site.twitter-url }}" target="_blank" rel="noopener">
                         <i class="fa-brands fa-twitter text-decoration-none"></i>
-                        <small class="d-lg-none ms-2">Twitter</small>
+                        <small class="d-lg-none">Twitter</small>
                     </a>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="{{ site.discord-url }}" target="_blank" rel="noopener">
                         <i class="fa-brands fa-discord text-decoration-none"></i>
-                        <small class="d-lg-none ms-2">Discord</small>
+                        <small class="d-lg-none">Discord</small>
                     </a>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-1 px-0 px-lg-2" href="https://opencollective.com/stride3d" target="_blank" rel="noopener">
+                    <a class="nav-link py-1 px-0 px-lg-2" href="{{ site.open-collective-url }}" target="_blank" rel="noopener">
                         {% include svg-icons.html type='open-collective' size=20 %}
-                        <small class="d-lg-none ms-2">Open Collective</small>
+                        <small class="d-lg-none">Open Collective</small>
                     </a>
                 </li>
                 <!--<li class="nav-item py-1 col-12 col-lg-auto">

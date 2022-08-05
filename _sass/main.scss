@@ -26,7 +26,7 @@ a {
     text-decoration: none;
 }
 
-a:hover :not(.navbar a) {
+a:hover :not(.navbar a):not(.navbar-icons a small) {
     text-decoration: underline;
 }
 
@@ -35,6 +35,10 @@ a:hover :not(.navbar a) {
     object-position: center;
     height: 45vh;
     overflow: hidden;
+}
+
+.accordion-item:hover {
+    background-color: #bababa25;
 }
 
 .postcontent {

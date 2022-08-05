@@ -9,6 +9,16 @@ url: "https://stride3d.net" # the base hostname & protocol for your site
 twitter_user: stridedotnet
 twitter_tweet_button: true
 
+# Links
+discord-url: https://discord.gg/f6aerfE
+facebook-url: https://www.facebook.com/stride3d
+github-url: https://github.com/stride3d/stride
+github-discussions-url: https://github.com/stride3d/stride/discussions
+open-collective-url: https://opencollective.com/stride3d
+twitter-url: https://twitter.com/stridedotnet
+youtube-url: https://www.youtube.com/c/Stride3D
+stackexchange-url: https://gamedev.stackexchange.com/questions/tagged/stride
+
 # Disqus Comments
 disqus_short_name: stride3d
 disqus_show_comment_count: true
