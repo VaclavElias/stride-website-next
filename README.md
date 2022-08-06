@@ -16,7 +16,8 @@ The motivation for the update is:
 ## Phase 1
 
 - [x] Top Navigation
-  - [ ] Search button
+  - [x] Search button
+  - [ ] Search page
 - [x] Home Page
   - [ ] Content and images update?
 - [x] Features Page
@@ -28,6 +29,8 @@ The motivation for the update is:
    - [x] Popular Posts
    - [x] Latest Posts
    - [x] Resources
+   - [ ] Rss Link
+   - [ ] 404 Page
    - [ ] Friends - Shall we link to our friends GoDot, others, just to be open and making friends in other C# open source game communities? 
    - [ ] Archive - New Page, list by year
    - [ ] Tags - New Page, list by tag
@@ -38,6 +41,7 @@ The motivation for the update is:
   - [ ] Content update? Keep similar length.
   - [ ] Do we need Q&A external link? If yes, shall we collect some typical Questions and Answer them there? Maybe another platform to watch but maybe helpful for SEO? Make sense to support it and link it if this is watched by community?
   - [ ] Do we need Contact Page to officially contact us?
+- [x] Sponsor Page
 - [ ] FAQ Page
 - [ ] Footer Section
    - [ ] Update all links
