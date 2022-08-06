@@ -41,72 +41,38 @@ menu: download
             <div class="col-lg-7 col-md-6 rt-left">
                 <h2 class="h1 mb-3">Frequently asked questions</h2>
                 <div class="accordion">
-                    <div class="row">
-                        <div class="col-auto pe-0 collapsed" data-bs-toggle="collapse" data-bs-target="#largeAnswer1collapse">
-                            <i class="fa-solid fa-square-plus text-primary mt-2 pt-1"></i>
-                            <i class="fa-solid fa-square-minus text-primary mt-2 pt-1"></i>
-                        </div>
-                        <div class="col accordion-item">
-                            <label class="fw-bold py-2 w-100" data-bs-toggle="collapse" data-bs-target="#largeAnswer1collapse">What platforms can I make applications for using Stride?</label>
-                            <div id="largeAnswer1collapse" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <p>Stride currently supports <b>Windows</b>, <b>Android</b>, <b>iOS</b>, <b>Xbox One</b> and <b>Universal Windows Platforms (UWP)</b>. Stride also supports most popular VR devices and has experimental support for Linux.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <label class="fw-bold py-2 w-100" data-bs-toggle="collapse" data-bs-target="#question-platforms" aria-controls="question-platforms">
-                            <i class="fa-solid fa-square-plus text-primary me-2"></i> What platforms can I make applications for using Stride?
-                        </label>
-                        <div id="question-platforms" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <p>Stride currently supports <b>Windows</b>, <b>Android</b>, <b>iOS</b>, <b>Xbox One</b> and <b>Universal Windows Platforms (UWP)</b>. Stride also supports most popular VR devices and has experimental support for Linux.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <label class="fw-bold py-2 w-100" data-bs-toggle="collapse" data-bs-target="#question-features" aria-controls="question-features">
-                            <i class="fa-solid fa-square-plus text-primary me-2"></i> Where can I learn about the Stride features?
-                        </label>
-                        <div id="question-features" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <p>See the <a href="/features/" target="_self">Stride features page</a>, the <a href="http://doc.stride3d.net/latest/manual/" target="_self">Stride documentation</a>, the <a href="/blog/" target="_self">Stride blog</a>, and the <a href="http://doc.stride3d.net/latest/releasenotes/" target="_self">Stride release notes</a>. If you can't find what you're looking for, ask on the <a href="{{ site.github-discussions-url }}" target="_self">Stride Github discussions</a>.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <label class="fw-bold py-2 w-100" data-bs-toggle="collapse" data-bs-target="#question-modify" aria-controls="question-modify">
-                            <i class="fa-solid fa-square-plus text-primary me-2"></i> Do I have to open the code of my game if I modify Stride/Xenko?
-                        </label>
-                        <div id="question-modify" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <p>No. Xenko 3.x and Stride 4+ are covered by MIT license.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <label class="fw-bold py-2 w-100" data-bs-toggle="collapse" data-bs-target="#question-what-application" aria-controls="question-what-application">
-                            <i class="fa-solid fa-square-plus text-primary me-2"></i> What kinds of application can I make with Stride?
-                        </label>
-                        <div id="question-what-application" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <p>Stride is open-source, highly modular, and super-versatile. You can use it to create mobile, PC and VR games, or as a high-end rendering engine for applications such as training simulations or architecture and engineering software.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <label class="fw-bold py-2 w-100" data-bs-toggle="collapse" data-bs-target="#question-content-ownership" aria-controls="question-content-ownership">
-                            <i class="fa-solid fa-square-plus text-primary me-2"></i> Do I own the content I make with Stride?
-                        </label>
-                        <div id="question-content-ownership" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <p>Yes. You own all the content you make with Stride.</p>
-                            </div>
-                        </div>
-                    </div>
+                    {% include post/accordion-item-faq.html
+                    id="what-platforms"
+                    title="What platforms can I make applications for using Stride?"
+                    body="<p>Stride currently supports <b>Windows</b>, <b>Android</b>, <b>iOS</b>, <b>Xbox One</b> and <b>Universal Windows Platforms (UWP)</b>. Stride also supports most popular VR devices and has experimental support for Linux.</p>"
+                    %}
+
+                    {% capture body %}
+                    <p>See the <a href="/features/" target="_self">Stride features page</a>, the <a href="{{ site.docs-manual-url }}" target="_self">Stride documentation</a>, the <a href="/blog/" target="_self">Stride blog</a>, and the <a href="{{ site.docs-release-notes-url }}" target="_self">Stride release notes</a>. If you can't find what you're looking for, ask on the <a href="{{ site.github-discussions-url }}" target="_self">Stride Github discussions</a>.</p>
+                    {% endcapture %}
+                    {% include post/accordion-item-faq.html
+                    id="question-features"
+                    title="Where can I learn about the Stride features?"
+                    body=body
+                    %}
+
+                    {% include post/accordion-item-faq.html
+                    id="question-modify"
+                    title="Do I have to open the code of my game if I modify Stride/Xenko?"
+                    body="<p>No. Xenko 3.x and Stride 4+ are covered by MIT license.</p>"
+                    %}
+
+                    {% include post/accordion-item-faq.html
+                    id="question-what-application"
+                    title="What kinds of application can I make with Stride?"
+                    body="<p>Stride is open-source, highly modular, and super-versatile. You can use it to create mobile, PC and VR games, or as a high-end rendering engine for applications such as training simulations or architecture and engineering software.</p>"
+                    %}
+
+                    {% include post/accordion-item-faq.html
+                    id="question-content-ownership"
+                    title="Do I own the content I make with Stride?"
+                    body="<p>Yes. You own all the content you make with Stride.</p>"
+                    %}
                 </div>
                 <p class="lead mt-3">
                     For more answers, see our dedicated <a href="/faq/">FAQ page</a>.
