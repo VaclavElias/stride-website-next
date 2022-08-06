@@ -37,6 +37,26 @@ a:hover :not(.navbar a):not(.navbar-icons a small) {
     overflow: hidden;
 }
 
+.accordion div {
+    .fa-square-minus {
+        display: inline-block;
+    }
+
+    .fa-square-plus {
+        display: none;
+    }
+}
+
+.accordion div.collapsed {
+    .fa-square-minus {
+        display: none;
+    }
+
+    .fa-square-plus {
+        display: inline-block;
+    }
+}
+
 .accordion-item:hover label {
     cursor: pointer;
 }
