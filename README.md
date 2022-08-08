@@ -53,12 +53,15 @@ The motivation for the update is:
 ## Phase 2 - In the future
 
 - [ ] Features Page - Improve like this, link to individual pages https://www.blender.org/features/
+    - [ ] Link Features content to dedicated pages/docs
 - [ ] Blog Comments from GitHub Issues - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/, the problem is spam..
 - [ ] Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
 - [ ] Footer example https://www.blender.org/
   - [ ] New Section Download
      - [ ] Direct link to Release Notes
      - [ ] Direct link to Requirements
+- [ ] Include Avatar, wtith different asssets like donet bot, use also for 2D Games
+
 
 ## Demo
 
