@@ -18,9 +18,11 @@ open-collective-url: https://opencollective.com/stride3d
 twitter-url: https://twitter.com/stridedotnet
 youtube-url: https://www.youtube.com/c/Stride3D
 stackexchange-url: https://gamedev.stackexchange.com/questions/tagged/stride
-docs-manual-url: http://doc.stride3d.net/latest/manual/
+docs-api-url: https://doc.stride3d.net/latest/en/api/
+docs-manual-url: https://doc.stride3d.net/latest/en/manual/
+docs-tutorial-url: https://doc.stride3d.net/latest/en/tutorials/
 docs-requirements-url: https://doc.stride3d.net/latest/en/manual/requirements/
-docs-release-notes-url: http://doc.stride3d.net/latest/releasenotes/
+docs-release-notes-url: https://doc.stride3d.net/latest/en/releasenotes/
 
 # Disqus Comments
 disqus_short_name: stride3d
