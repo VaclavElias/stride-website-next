@@ -1,43 +1,38 @@
-<div class="bg-dark show" id="footer-1">
+<div class="{{ include.bg }} show" id="footer-{{ include.id }}">
     <div class="container">
         <footer class="pt-5 px-2">
             <div class="row">
-                <p>
-                    <a data-bs-toggle="collapse" href="#footer-1" class="disabled btn-link btn" >Toggle Footer Demo 1</a>
-                    <a data-bs-toggle="collapse" href="#footer-2" class="btn-link btn">Toggle Footer Demo 2</a>
-                    <a data-bs-toggle="collapse" href="#footer-3" class="btn-link btn">Toggle Footer Demo 3</a>
-                </p>
                 <div class="col-6 col-lg-2 mb-3">
                     <h5>Links</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 text-muted">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 text-muted">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 text-muted">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 text-muted">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 {{ include.btn-class }}">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 {{ include.btn-class }}">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 {{ include.btn-class }}">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 {{ include.btn-class }}">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 {{ include.btn-class }}">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 {{ include.btn-class }}">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2 mb-3">
                     <h5>Documentation</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="{{ site.docs-manual-url }}" class="nav-link p-0 text-muted">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="{{ site.docs-api-url }}" class="nav-link p-0 text-muted">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="{{ site.docs-release-notes-url }}" class="nav-link p-0 text-muted">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="{{ site.docs-tutorial-url }}" class="nav-link p-0 text-muted">Tutorials</a></li>
+                        <li class="nav-item mb-2"><a href="{{ site.docs-manual-url }}" class="nav-link p-0 {{ include.btn-class }}">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="{{ site.docs-api-url }}" class="nav-link p-0 {{ include.btn-class }}">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="{{ site.docs-release-notes-url }}" class="nav-link p-0 {{ include.btn-class }}">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="{{ site.docs-tutorial-url }}" class="nav-link p-0 {{ include.btn-class }}">Tutorials</a></li>
                     </ul>
                 </div>
 
                 <div class="col-6 col-lg-2 mb-3">
                     <h5>Community</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="{{ site.open-collective-url }}" class="nav-link p-0 text-muted">Open Colective</a></li>
-                        <li class="nav-item mb-2"><a href="{{ site.discord-url }}" class="nav-link p-0 text-muted">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="{{ site.github-url }}" class="nav-link p-0 text-muted">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="{{ site.twitter-url }}" class="nav-link p-0 text-muted">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 text-muted">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="{{ site.github-discussions-url }}" class="nav-link p-0 text-muted">Discussions</a></li>
+                        <li class="nav-item mb-2"><a href="{{ site.open-collective-url }}" class="nav-link p-0 {{ include.btn-class }}">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="{{ site.discord-url }}" class="nav-link p-0 {{ include.btn-class }}">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="{{ site.github-url }}" class="nav-link p-0 {{ include.btn-class }}">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="{{ site.twitter-url }}" class="nav-link p-0 {{ include.btn-class }}">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 {{ include.btn-class }}">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 {{ include.btn-class }}">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="{{ site.github-discussions-url }}" class="nav-link p-0 {{ include.btn-class }}">Discussions</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-6 mb-3 text-start text-lg-end">
@@ -51,7 +46,7 @@
                         <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
                     </a>
                     <a class="link-dark me-2 text-decoration-none" href="{{ site.open-collective-url }}">
-                        {% include svg-icons.html type='open-collective' size=20 %}
+                        {% include svg-icons.html type='open-collective' size=23 %}
                     </a>
                     <a class="link-dark me-2 text-decoration-none" href="{{ site.facebook-url }}">
                         <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
@@ -62,7 +57,7 @@
                 </div>
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a href="">.NET Foundation</a></p>
+                <p>Supported by the <a href="{{ site.dotnet-foundation }}">.NET Foundation</a></p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>

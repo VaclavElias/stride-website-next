@@ -23,6 +23,7 @@ docs-manual-url: https://doc.stride3d.net/latest/en/manual/
 docs-tutorial-url: https://doc.stride3d.net/latest/en/tutorials/
 docs-requirements-url: https://doc.stride3d.net/latest/en/manual/requirements/
 docs-release-notes-url: https://doc.stride3d.net/latest/en/releasenotes/
+dotnet-foundation: https://dotnetfoundation.org/
 
 # Disqus Comments
 disqus_short_name: stride3d

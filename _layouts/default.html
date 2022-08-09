@@ -7,8 +7,9 @@
     <!-- End Google Tag Manager (noscript) -->
     {% include header.html %}
     {{ content }}
-    {% include footer.html %}
-    {% include footer2.html %}
+    {% include dev-bar.html %}
+    {% include footer.html id=1 bg="bg-light" btn-class="link-primary" %}
+    {% include footer.html id=2 bg="bg-dark" btn-class="text-muted" %}
     {% include footer3.html %}
     <script src="{{ site.baseurl}}/scripts/site.js"></script>
 </body>
