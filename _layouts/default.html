@@ -8,9 +8,12 @@
     {% include header.html %}
     {{ content }}
     {% include dev-bar.html %}
-    {% include footer.html id=1 bg="bg-light" btn-class="link-primary" %}
-    {% include footer.html id=2 bg="bg-dark" btn-class="text-muted" %}
-    {% include footer3.html %}
+    {% include footer.html id=1 bg="bg-light collapse" btn-class="link-primary" social-class="link-dark" %}
+    {% include footer.html id=2 bg="bg-dark collapse" btn-class="text-muted" social-class="link-dark" %}
+    {% include footer.html id=3 bg="bg-footer collapse text-light" btn-class="link-light" social-class="link-light" %}
+    {% include footer.html id=4 bg="bg-footer collapse text-light" btn-class="link-danger" social-class="link-danger" %}
+    {% include footer.html id=5 bg="bg-footer collapse text-light" btn-class="link-warning" social-class="link-warning" %}
+    {% include footer.html id=6 bg="bg-footer show text-light" btn-class="link-success" social-class="link-success" %}
     <script src="{{ site.baseurl}}/scripts/site.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<div class="{{ include.bg }} show" id="footer-{{ include.id }}">
+<div class="{{ include.bg }}" id="footer-{{ include.id }}">
     <div class="container">
         <footer class="pt-5 px-2">
             <div class="row">
@@ -36,28 +36,28 @@
                     </ul>
                 </div>
                 <div class="col-6 col-md-6 mb-3 text-start text-lg-end">
-                    <a class="link-dark me-2 text-decoration-none mb-3 d-inline-block" href="{{ site.github-url }}">
+                    <a class="{{ include.social-class }} me-2 text-decoration-none mb-3 d-inline-block" href="{{ site.github-url }}">
                         <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
                     </a>
-                    <a class="link-dark me-2 text-decoration-none" href="{{ site.discord-url }}">
+                    <a class="{{ include.social-class }} me-2 text-decoration-none" href="{{ site.discord-url }}">
                         <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
                     </a>
-                    <a class="link-dark me-2 text-decoration-none" href="{{ site.twitter-url }}">
+                    <a class="{{ include.social-class }} me-2 text-decoration-none" href="{{ site.twitter-url }}">
                         <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
                     </a>
-                    <a class="link-dark me-2 text-decoration-none" href="{{ site.open-collective-url }}">
+                    <a class="{{ include.social-class }} me-2 text-decoration-none" href="{{ site.open-collective-url }}">
                         {% include svg-icons.html type='open-collective' size=23 %}
                     </a>
-                    <a class="link-dark me-2 text-decoration-none" href="{{ site.facebook-url }}">
+                    <a class="{{ include.social-class }} me-2 text-decoration-none" href="{{ site.facebook-url }}">
                         <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
                     </a>
-                    <a class="link-dark me-2 text-decoration-none" href="{{ site.youtube-url }}">
+                    <a class="{{ include.social-class }} me-2 text-decoration-none" href="{{ site.youtube-url }}">
                         <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
                     </a>
                 </div>
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a href="{{ site.dotnet-foundation }}">.NET Foundation</a></p>
+                <p>Supported by the <a class="{{ include.social-class }}" href="{{ site.dotnet-foundation }}">.NET Foundation</a></p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
