@@ -10,22 +10,23 @@ permalink: /search
                 <h1>Search results for <span id="search-result-term" class="rt-accent-color1"></span></h1>
                 <ul id="search-results"></ul>
                 <script>
-                  window.store = {
+                    window.store = {
                     {% for post in site.posts %}
                       "{{ post.url | slugify }}": {
-                        "title": "{{ post.title | xml_escape }}",
+                        "title": "{{ post.title | strip_html | xml_escape }}",
                         "author": "{{ post.author | xml_escape }}",
                         "category": "{{ post.category | xml_escape }}",
-                        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+                        "content": {{ post.content | strip_html | strip_newlines | normalize_whitespace | jsonify }},
                         "url": "{{ post.url | xml_escape }}"
                       },
                     {% endfor %}
+                    {% assign pages = site.html_pages | where_exp: "page", "page.exclude-search != true" %}
                     {% for page in site.pages %}
                       "{{ page.url | slugify }}": {
-                        "title": "{{ page.title | xml_escape }}",
+                        "title": "{{ page.title | strip_html | xml_escape }}",
                         "author": "{{ page.author | xml_escape }}",
                         "category": "{{ page.category | xml_escape }}",
-                        "content": {{ page.content | strip_html | strip_newlines | jsonify }},
+                        "content": {{ page.content | strip_html | strip_newlines | normalize_whitespace | jsonify }},
                         "url": "{{ page.url | xml_escape }}"
                       },
                     {% endfor %}
