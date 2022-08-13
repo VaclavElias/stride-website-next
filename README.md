@@ -52,6 +52,8 @@ The motivation for the update is:
 
 ## Phase 2 - In the future
 
+- [ ] Consider modern static site generator [11ty](https://www.11ty.dev/docs/)
+   - No Ruby issues as it is JavaScript generator
 - [ ] Features Page - Improve like this, link to individual pages https://www.blender.org/features/
     - [ ] Link Features content to dedicated pages/docs
 - [ ] Blog Comments from GitHub Issues - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/, the problem is spam..
