@@ -22,6 +22,7 @@
         <div class="col-12 post-card-header">
             <h3 class="entry-title"><a href="${post.url}">${post.title}</a></h3>
             ${getDate(post.date)}
+            <p>${post.author}</p>
             <p>
                 ${getExcerpt(post)}...
             </p>
