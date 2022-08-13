@@ -71,13 +71,7 @@
                 <li class="nav-item col-12 col-lg-auto dropdown">
                     <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-magnifying-glass text-decoration-none"></i></a>
                     <div class="dropdown-menu dropdown-menu-end p-3" style="width: 280px;">
-                        <form action="/search.html" method="get">
-                            <input name="search_paths[]" type="hidden" value="/en">
-                            <div class="mb-3">
-                                <input class="form-control" name="query" type="text" value="">
-                            </div>
-                            <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
-                        </form>
+                        {% include search-form.html %}
                     </div>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
