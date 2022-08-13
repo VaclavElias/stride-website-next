@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 'Stride 4.1 is now live!'
+excerpt: 'Stride 4.1 is now available with many improvements and new features, .NET6 support, Dithered shadows for semi-transparent materials, Physics constraints, Fog image effect, C# Intermediate tutorials project and more
+'
 author: 'Aggror Jorn'
 author-github: Aggror
 popular: true

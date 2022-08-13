@@ -7,14 +7,15 @@ permalink: /search
 <div class="bg-dark pt-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-9 col-md-8 col-sm-12">
-                <ul id="search-results"></ul>
+            <div class="col-lg-9 col-md-8 col-sm-12" id="search-results">
                 <script>
                     window.store = {
                     {% for post in site.posts %}
                       "{{ post.url | slugify }}": {
                         "title": "{{ post.title | strip_html | xml_escape }}",
+                        "excerpt": {{ post.excerpt | strip_html | truncatewords: 30 | jsonify }},
                         "author": "{{ post.author | xml_escape }}",
+                        "date": "{{ post.date | date_to_string }}",
                         "category": "{{ post.category | xml_escape }}",
                         "tags": "{{ post.tags | join: ', ' | xml_escape }}",
                         "content": {{ post.content | strip_html | strip_newlines | normalize_whitespace | jsonify }},
@@ -25,7 +26,9 @@ permalink: /search
                     {% for page in site.html_pages %}
                       "{{ page.url | slugify }}": {
                         "title": "{{ page.title | strip_html | xml_escape }}",
+                        "excerpt": {{ page.excerpt | strip_html | truncatewords: 30 | jsonify }},
                         "author": "{{ page.author | xml_escape }}",
+                        "date": "{{ page.date | date_to_string }}",
                         "category": "{{ page.category | xml_escape }}",
                         "tags": "{{ page.tags | join: ', ' | xml_escape }}",
                         "content": {{ page.content | strip_html | strip_newlines | normalize_whitespace | jsonify }},
