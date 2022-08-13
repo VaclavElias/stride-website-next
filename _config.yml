@@ -3,7 +3,7 @@ title: Stride Game Engine
 author: Stride Team
 description: Stride Game Engine
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://stride3d.net" # the base hostname & protocol for your site
+url: "https://www.stride3d.net" # the base hostname & protocol for your site
 
 # Twitter
 twitter_user: stridedotnet
