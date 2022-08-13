@@ -3,11 +3,11 @@ layout: default
 title: Search
 permalink: /search
 ---
-<div class="bg-light bg-bottom-border">
+{% include banner.html title="Search" sub-title='Search results for <span class="fw-bold text-primary" id="search-result-term"></span>' image-url="/images/backgrounds/features_banner.jpg" %}
+<div class="bg-dark pt-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 gantry-width-block rt-left">
-                <h1>Search results for <span id="search-result-term" class="rt-accent-color1"></span></h1>
+            <div class="col-lg-9 col-md-8 col-sm-12">
                 <ul id="search-results"></ul>
                 <script>
                     window.store = {
@@ -34,8 +34,11 @@ permalink: /search
                     {% endfor %}
                   };
                 </script>
-                <script src="/scripts/search.js"></script>
             </div>
+            <aside class="col-lg-3 col-md-4 col-sm-12">
+                {% include blog-aside.html %}
+            </aside>
         </div>
     </div>
 </div>
+<script src="/scripts/search.js"></script>

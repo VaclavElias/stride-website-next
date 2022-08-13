@@ -1,0 +1,69 @@
+<div class="card mb-4">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item active">
+            <h4 class="mb-0 fw-normal">Popular Posts</h4>
+        </li>
+        {% for post in site.posts %}
+        {% if post.popular == true %}
+        <li class="list-group-item  list-group-item-action">
+            <a href="{{ post.url }}">
+                {{ post.title }}
+            </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+<div class="card mb-4 p-3">
+    <h4>Latest Posts</h4>
+    <ul style="padding-left: 17px;">
+        {% for post in site.posts limit:5 %}
+        <li>
+            <a href="{{ post.url }}">
+                {{ post.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <hr />
+    <h4>Resources</h4>
+    <ul style="padding-left: 17px;">
+        <li>
+            <a title="Blender" href="https://www.blender.org/" target="_blank" rel="noopener">Blender - Free and Open 3D Creation Software</a>
+        </li>
+        <li>
+            <a title="Microsoft C# Docs" href="https://devblogs.microsoft.com/dotnet/category/csharp/" target="_blank" rel="noopener">C# Blog</a>
+        </li>
+        <li>
+            <a title="Microsoft Docs" href="https://docs.microsoft.com/en-us/" target="_blank" rel="noopener" class="x-hidden-focus">Microsoft Docs</a>
+        </li>
+        <li>
+            <a title="Visual Studio Blog" href="https://devblogs.microsoft.com/visualstudio" target="_blank" rel="noopener">
+                Visual Studio Blog
+            </a>
+        </li>
+        <li>
+            <a title="Visual Studio Download" href="https://visualstudio.microsoft.com/downloads/" target="_blank" rel="noopener">
+                Download Visual Studio Community
+            </a>
+        </li>
+        <li>
+            <a title="Visual Studio Code Download" href="https://code.visualstudio.com/" target="_blank" rel="noopener">
+                Download Visual Studio Code
+            </a>
+        </li>
+    </ul>
+    <hr />
+    <h4>Other</h4>
+    <ul style="padding-left: 17px;">
+        <li>
+            <a title="Stride Post Archive" href="/blog/archive" target="_blank" rel="noopener">Archive</a>
+        </li>
+        <li>
+            <a title="Stride Tags" href="/blog/tags" target="_blank" rel="noopener" class="x-hidden-focus">Tags</a>
+        </li>
+        <li>
+            <a href="/feed.xml"><i class="fa-solid fa-rss text-decoration-none"></i> Stride RSS Feed</a>
+        </li>
+    </ul>
+</div>
