@@ -7,14 +7,9 @@
     function displaySearchResults(results, store) {
         var searchResults = document.getElementById('search-results');
 
-        if (results.length) { // Are there any results?
+        if (results.length) {
             var appendString = '';
-            //for (var i = 0; i < results.length; i++) {  // Iterate over the results
-            //    var item = store[results[i].ref];
-            //    appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-            //    appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
-            //}
-            for (var i = 0; i < results.length; i++) {  // Iterate over the results
+            for (var i = 0; i < results.length; i++) {
                 var post = store[results[i].ref];
                 appendString += `
 <article class="card mb-4 p-4">
@@ -33,7 +28,7 @@
             }
             searchResults.innerHTML = appendString;
         } else {
-            searchResults.innerHTML = '<li>Your query returned 0 results. Retry with a different search term, or try one of the links on the side.</li>';
+            searchResults.innerHTML = '<div class="card p-4"><h2>No results found</h2>Your query returned 0 results. Retry with a different search term, or try one of the links on the side.</div>';
         }
     }
 
