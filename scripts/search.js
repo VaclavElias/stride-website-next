@@ -71,6 +71,13 @@
     if (searchTerm) {
         document.getElementById('search-result-term').textContent = searchTerm;
 
+        fetch('./search.json')
+            .then(response => response.json())
+            .then(data => search(data))
+            .catch(error => console.log(error));
+    }
+
+    function search(data) {
         // Initalize lunr with the fields it will be searching on. I've given title
         // a boost of 10 to indicate matches on this field are more important.
         var idx = lunr(function () {
@@ -82,21 +89,21 @@
             this.field('content');
             this.field('excerpt');
 
-            for (var key in window.store) { // Add the data to lunr
+            for (var key in data) { // Add the data to lunr
                 this.add({
                     'id': key,
-                    'title': window.store[key].title,
-                    'author': window.store[key].author,
-                    'category': window.store[key].category,
-                    'tags': window.store[key].tags,
-                    'content': window.store[key].content,
-                    'excerpt': window.store[key].excerpt
+                    'title': data[key].title,
+                    'author': data[key].author,
+                    'category': data[key].category,
+                    'tags': data[key].tags,
+                    'content': data[key].content,
+                    'excerpt': data[key].excerpt
                 });
             }
 
         });
 
         var results = idx.search(searchTerm); // Get lunr to perform a search
-        displaySearchResults(results, window.store); // We'll write this in the next section
+        displaySearchResults(results, data); // We'll write this in the next section
     }
 })();
