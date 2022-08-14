@@ -48,7 +48,7 @@ The motivation for the update is:
    - [ ] Shall we mention that we use Bootstrap and Fontawesome
 - [ ] Website code refactoring and code clean up - Once the new design update is settled
    - [ ] Community Content - Move to data like Features?   
-   - [ ] Primary Links (github, twitter, ..) - Move to data?
+   - [x] Primary Links (github, twitter, ..) - Move to _config.yml?
 
 ## Phase 2 - In the future
 
