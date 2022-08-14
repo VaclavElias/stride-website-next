@@ -98,83 +98,41 @@ permalink: /faq/
                     <div class="card-body">
                         <h2 class="h1 mb-3">Licensing</h2>
                         <div class="accordion">
-                            {% capture body %}
-                            <p>See the <a href="/features/" target="_self">Stride features page</a>, the <a href="{{ site.docs-manual-url }}" target="_self">Stride documentation</a>, the <a href="/blog/" target="_self">Stride blog</a>, and the <a href="{{ site.docs-release-notes-url }}" target="_self">Stride release notes</a>. If you can't find what you're looking for, ask on the <a href="{{ site.github-discussions-url }}" target="_self">Stride Github discussions</a>.</p>
-                            {% endcapture %}
                             {% include accordion-item-faq.html
-                            id="question-features"
-                            title="Where can I learn about the Stride features?"
-                            body=body
+                            id="question-do-i-own"
+                            title="Do I own the content I make with Stride?"
+                            body="<p>Yes. You own all the content you make with Stride.</p>"
                             %}
 
                             {% include accordion-item-faq.html
-                            id="question-modify"
-                            title="Do I have to open the code of my game if I modify Stride/Xenko?"
+                            id="question-royalty"
+                            title="Does Stride charge royalties?"
+                            body="<p>No. You can build and distribute applications made with Stride with zero royalty fees.</p>"
+                            %}
+
+                            {% include accordion-item-faq.html
+                            id="question-modify-source"
+                            title="Can I modify the Stride source code for my game?"
+                            body="<p>Yes. You can modify Stride as you need without restrictions.</p>"
+                            %}
+
+                            {% include accordion-item-faq.html
+                            id="question-open-game"
+                            title="Do I have to open the code of my game if I modify Xenko/Stride?"
                             body="<p>No. Xenko 3.x and Stride 4+ are covered by MIT license.</p>"
                             %}
 
                             {% include accordion-item-faq.html
-                            id="question-what-application"
-                            title="What kind of application can I make with Stride?"
-                            body="<p>Stride is open-source, highly modular, and super-versatile. You can use it to create mobile, PC and VR games, or as a high-end rendering engine for applications such as training simulations or architecture and engineering software.</p>"
+                            id="question-share-modified"
+                            title="Can I share a modified version of Stride in source code or binary form?"
+                            body="<p>Yes, as long as you comply with the terms of the MIT license.</p>"
                             %}
 
                             {% include accordion-item-faq.html
-                            id="question-content-ownership"
-                            title="Do I own the content I make with Stride?"
-                            body="<p>Yes. You own all the content you make with Stride.</p>"
+                            id="question-include-parts"
+                            title="Can I include parts of Stride in my own application or engine?"
+                            body="<p>Yes, as long as you comply with the terms of the MIT license.</p>"
                             %}
-                        </div>
-                        <div class="x_accordion">
-                            <input id="block_700" type="checkbox">
-                            <dl>
-                                <dt><label for="block_700">Do I own the content I make with Stride?</label></dt>
-                                <dd>
-                                    <p>Yes. You own all the content you make with Stride.</p>
-                                </dd>
-                            </dl>
-                        </div>
-
-                        <div class="x_accordion">
-                            <input id="block_701" type="checkbox">
-                            <dl>
-                                <dt><label for="block_701">Does Stride charge royalties?</label></dt>
-                                <dd>
-                                    <p>No. You can build and distribute applications made with Stride with zero royalty fees.</p>
-                                </dd>
-                            </dl>
-                        </div>
-
-                        <div class="x_accordion">
-                            <input id="block_709" type="checkbox">
-                            <dl>
-                                <dt><label for="block_709">Can I modify the Stride source code for my game?</label></dt>
-                                <dd><p>Yes. You can modify Stride as you need without restrictions.</p></dd>
-                            </dl>
-                        </div>
-
-                        <div class="x_accordion">
-                            <input id="block_720" type="checkbox">
-                            <dl>
-                                <dt><label for="block_720">Do I have to open the code of my game if I modify Xenko/Stride?</label></dt>
-                                <dd><p>No. Xenko 3.x and Stride 4+ are covered by MIT license.</p></dd>
-                            </dl>
-                        </div>
-
-                        <div class="x_accordion">
-                            <input id="block_710" type="checkbox">
-                            <dl>
-                                <dt><label for="block_710">Can I share a modified version of Stride in source code or binary form?</label></dt>
-                                <dd><p>Yes, as long as you comply with the terms of the MIT license.</p></dd>
-                            </dl>
-                        </div>
-
-                        <div class="x_accordion">
-                            <input id="block_711" type="checkbox">
-                            <dl>
-                                <dt><label for="block_711">Can I include parts of Stride in my own application or engine?</label></dt>
-                                <dd><p>Yes, as long as you comply with the terms of the MIT license.</p></dd>
-                            </dl>
                         </div>
                     </div>
                 </div>
