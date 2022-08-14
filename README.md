@@ -17,7 +17,7 @@ The motivation for the update is:
 
 - [x] Top Navigation
   - [x] Search button
-  - [ ] Search page
+  - [x] Search page
 - [x] Home Page
   - [ ] Content and images update?
 - [x] Features Page
@@ -29,8 +29,8 @@ The motivation for the update is:
    - [x] Popular Posts
    - [x] Latest Posts
    - [x] Resources
-   - [ ] Rss Link
-   - [ ] 404 Page
+   - [x] Rss Link
+   - [x] 404 Page
    - [ ] Friends - Shall we link to our friends GoDot, others, just to be open and making friends in other C# open source game communities? 
    - [ ] Archive - New Page, list by year
    - [ ] Tags - New Page, list by tag
@@ -42,9 +42,9 @@ The motivation for the update is:
   - [ ] Do we need Q&A external link? If yes, shall we collect some typical Questions and Answer them there? Maybe another platform to watch but maybe helpful for SEO? Make sense to support it and link it if this is watched by community?
   - [ ] Do we need Contact Page to officially contact us?
 - [x] Sponsor Page
-- [ ] FAQ Page
-- [ ] Footer Section
-   - [ ] Update all links
+- [x] FAQ Page
+- [x] Footer Section
+   - [x] Update all links
    - [ ] Shall we mention that we use Bootstrap and Fontawesome
 - [ ] Website code refactoring and code clean up - Once the new design update is settled
    - [ ] Community Content - Move to data like Features?   
