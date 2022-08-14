@@ -41,7 +41,7 @@ menu: download
             <div class="col-lg-7 col-md-6">
                 <h2 class="h1 mb-3">Frequently asked questions</h2>
                 <div class="accordion">
-                    {% include post/accordion-item-faq.html
+                    {% include accordion-item-faq.html
                     id="what-platforms"
                     title="What platforms can I make applications for using Stride?"
                     body="<p>Stride currently supports <b>Windows</b>, <b>Android</b>, <b>iOS</b>, <b>Xbox One</b> and <b>Universal Windows Platforms (UWP)</b>. Stride also supports most popular VR devices and has experimental support for Linux.</p>"
@@ -50,25 +50,25 @@ menu: download
                     {% capture body %}
                     <p>See the <a href="/features/" target="_self">Stride features page</a>, the <a href="{{ site.docs-manual-url }}" target="_self">Stride documentation</a>, the <a href="/blog/" target="_self">Stride blog</a>, and the <a href="{{ site.docs-release-notes-url }}" target="_self">Stride release notes</a>. If you can't find what you're looking for, ask on the <a href="{{ site.github-discussions-url }}" target="_self">Stride Github discussions</a>.</p>
                     {% endcapture %}
-                    {% include post/accordion-item-faq.html
+                    {% include accordion-item-faq.html
                     id="question-features"
                     title="Where can I learn about the Stride features?"
                     body=body
                     %}
 
-                    {% include post/accordion-item-faq.html
+                    {% include accordion-item-faq.html
                     id="question-modify"
                     title="Do I have to open the code of my game if I modify Stride/Xenko?"
                     body="<p>No. Xenko 3.x and Stride 4+ are covered by MIT license.</p>"
                     %}
 
-                    {% include post/accordion-item-faq.html
+                    {% include accordion-item-faq.html
                     id="question-what-application"
                     title="What kinds of application can I make with Stride?"
                     body="<p>Stride is open-source, highly modular, and super-versatile. You can use it to create mobile, PC and VR games, or as a high-end rendering engine for applications such as training simulations or architecture and engineering software.</p>"
                     %}
 
-                    {% include post/accordion-item-faq.html
+                    {% include accordion-item-faq.html
                     id="question-content-ownership"
                     title="Do I own the content I make with Stride?"
                     body="<p>Yes. You own all the content you make with Stride.</p>"
