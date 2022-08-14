@@ -46,6 +46,10 @@ a:hover :not(.navbar a):not(.navbar-icons a small) {
         .fa-square-plus {
             display: none;
         }
+
+        .accordion-collapse {
+            border-bottom: 1px solid #383838;
+        }
     }
 
     div.collapsed {
@@ -60,6 +64,10 @@ a:hover :not(.navbar a):not(.navbar-icons a small) {
 
     div.row:hover {
         background-color: #cbcbcb40;
+    }
+
+    div.accordion-item label[aria-expanded="true"] {
+        color: var(--primary-color);
     }
 }
 
