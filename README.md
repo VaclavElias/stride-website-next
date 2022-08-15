@@ -52,6 +52,7 @@ The motivation for the update is:
 
 ## Phase 2 - In the future
 
+- [ ] Authors links to author pages
 - [ ] Consider modern static site generator [11ty](https://www.11ty.dev/docs/)
    - No Ruby issues as it is JavaScript generator
 - [ ] Features Page - Improve like this, link to individual pages https://www.blender.org/features/
