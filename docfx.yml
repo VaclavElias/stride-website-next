@@ -1,0 +1,33 @@
+template: ../template
+template2: https://github.com/docascode/template
+globalMetadata:
+  titleSuffix: Stride Game Engine
+  layout: conceptual
+  menu_path: /menu.json
+  _discord-url: https://discord.gg/f6aerfE
+  _facebook-url: https://www.facebook.com/stride3d
+  _github-url: https://github.com/stride3d/stride
+  _github-discussions-url: https://github.com/stride3d/stride/discussions
+  _open-collective-url: https://opencollective.com/stride3d
+  _twitter-url: https://twitter.com/stridedotnet
+  _youtube-url: https://www.youtube.com/c/Stride3D
+  _stackexchange-url: https://gamedev.stackexchange.com/questions/tagged/stride
+  _docs-api-url: https://doc.stride3d.net/latest/en/api/
+  _docs-manual-url: https://doc.stride3d.net/latest/en/manual/
+  _docs-manual-jp-url: https://doc.stride3d.net/latest/jp/manual/
+  _docs-tutorial-url: /tutorials/
+  _docs-requirements-url: https://doc.stride3d.net/latest/en/manual/requirements/
+  _docs-release-notes-url: https://doc.stride3d.net/latest/en/releasenotes/
+  _dotnet-foundation-url: https://dotnetfoundation.org/
+files: [
+        "toc.yml",
+        "*.md",
+        "images/**/*.*",
+        "scripts/**/*.*",
+        #"blog/*.*",
+        "favicon.*"
+       ]
+/defaultLocale: 'en-us'
+outputType: Html #Json, PageJson
+outputs:
+  docs/index.json:
