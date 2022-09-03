@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Homee
 excerpt: Stride is an open-source MIT C# game engine designed for the future of gaming.
 ---
 {% include carousel_home.html %}
