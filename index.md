@@ -4,6 +4,8 @@ title: Homee
 excerpt: Stride is an open-source MIT C# game engine designed for the future of gaming.
 ---
 {% include carousel_home.html %}
+  {% assign name = 'Vaclav Elias' %}
+  {% include test.html myValue:name %}
 <div class="bg-dark">
     <div class="container-xxl py-5 px-4 px-sm-5">
         <div class="row g-5 py-sm-5">
