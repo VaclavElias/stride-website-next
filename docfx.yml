@@ -1,5 +1,32 @@
 template: ../template
 template2: https://github.com/docascode/template
+#files: [
+#        "toc.yml",
+#        "*.md",
+#        "features.html",
+#        "index.html",
+#        "en-us/**/*.*", "assets/**/*.*", "scripts/**/*.*", "favicon.*",
+#        "blog/*.*",
+#       ]
+#resource: [
+#        files: ["images/**/*.*", "scripts/**/*.*", "favicon.*"]
+#       ]
+content:
+  - src: "_posts"
+    dest: "blog"
+    files: ["*.md"]
+  - files: [
+        "toc.yml",
+        "*.md",
+        "features.html",
+        "index.html",
+        "en-us/**/*.*", "assets/**/*.*", "scripts/**/*.*", "favicon.*",
+        "blog/index.html",
+       ]
+#defaultLocale: 'en-us'
+outputType: Html #Json, PageJson
+outputs:
+  docs/index.json:
 globalMetadata:
   titleSuffix: Stride Game Engine
   layout: conceptual
@@ -114,21 +141,3 @@ globalMetadata:
         title: VR preview
         description: Save valuable time by visualizing and testing VR directly from the scene editor.
         type: video
-files: [
-        "toc.yml",
-        "*.md",
-        "features.html",
-        "index.html",
-        "en-us/**/*.*", "assets/**/*.*", "scripts/**/*.*", "favicon.*"
-        #"blog/*.*",
-       ]
-#resource: [
-#        files: ["images/**/*.*", "scripts/**/*.*", "favicon.*"]
-#       ]
-#content: [
-#        files: ["toc.yml", "*.md", "features.html"]
-#       ]
-#defaultLocale: 'en-us'
-outputType: Html #Json, PageJson
-outputs:
-  docs/index.json:
