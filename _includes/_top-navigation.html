@@ -8,26 +8,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarMain">
             <ul class="navbar-nav navbar-nav--text me-auto mb-2 mb-lg-0 ms-sm-2">
-                {% assign menu_current = page.url | remove: '/' %}
-                {% assign menu_blog = menu_current | slice: 0,4 %}
-                {% comment %}
-                <li class="nav-item">
-                    <a class="nav-link{% if menu_current=='features' %} active text-primary{% endif %}" aria-current="page" href="/features/">{{ menu_blog }}</a>
-                </li>{% endcomment %}
-                <!--<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Examples</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/index1/">Home 1 - One bg</a></li>
-                        <li><a class="dropdown-item" href="/index2/">Home 2 - Alternage bg</a></li>
-                        <li><a class="dropdown-item" href="/index3/">Home 3 - Alternage bg</a></li>
-                        <li><a class="dropdown-item" href="/index4/">Home 4 - One bg - dark</a></li>
-                        <li><a class="dropdown-item" href="/index4-1/">Home 4.1 - One bg - light</a></li>
-                        <li><a class="dropdown-item" href="/index5/">Home 5 - One bg - Text on the left</a></li>
-                        <li><a class="dropdown-item" href="/index6/">Home 6 - One bg - Smaller cards</a></li>
-                        <li><a class="dropdown-item" href="/features1/">Features 1 - One bg</a></li>
-                        <li><a class="dropdown-item" href="/features2/">Features 2 - One bg - More cards</a></li>
-                    </ul>
-                </li>-->
                 <li class="nav-item">
                     <a class="nav-link{% if menu_current=='features' %} active text-primary{% endif %}" aria-current="page" href="/features/">Features</a>
                 </li>
@@ -75,26 +55,26 @@
                     </div>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" href="{{ site.github-url }}" target="_blank" rel="noopener">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="{{ site.links.github-stride-url }}" target="_blank" rel="noopener">
                         <i class="fa-brands fa-github text-decoration-none"></i>
                         <small class="d-lg-none">GitHub</small>
                     </a>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" href="{{ site.twitter-url }}" target="_blank" rel="noopener">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="{{ site.links.twitter-url }}" target="_blank" rel="noopener">
                         <i class="fa-brands fa-twitter text-decoration-none"></i>
                         <small class="d-lg-none">Twitter</small>
                     </a>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link py-2 px-0 px-lg-2" href="{{ site.discord-url }}" target="_blank" rel="noopener">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="{{ site.links.discord-url }}" target="_blank" rel="noopener">
                         <i class="fa-brands fa-discord text-decoration-none"></i>
                         <small class="d-lg-none">Discord</small>
                     </a>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
-                    <a class="nav-link px-0 px-lg-2" href="{{ site.open-collective-url }}" target="_blank" rel="noopener">
-                        {% include svg-icons.html type='open-collective' size=20 %}
+                    <a class="nav-link px-0 px-lg-2" href="{{ site.links.open-collective-url }}" target="_blank" rel="noopener">
+                        {% include svg-icons.html type:'open-collective' size:20 %}
                         <small class="d-lg-none">Open Collective</small>
                     </a>
                 </li>
