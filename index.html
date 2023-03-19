@@ -20,7 +20,7 @@ eleventyComputed:
                         <a href="/download/" class="btn btn-lg btn-primary me-2 mb-3">
                             <i class="fa-solid fa-download"></i> Download {{ site.dowload-version }}
                         </a>
-                        <a href="{{ site.links.github-stride-url }}" class="btn btn-lg btn-outline-primary mb-3">
+                        <a href="{{ site.links.github-stride-url }}" class="btn btn-lg btn-outline-primary mb-3" target="_blank" rel="noopener">
                             <i class="fa-brands fa-github text-decoration-none"></i> Source Code (MIT)
                         </a>
                     </div>
@@ -35,10 +35,10 @@ eleventyComputed:
                 <div class="card-body p-4">
                     <h2 class="h1 mb-3">Bet of the future</h2>
                     <ul class="lead mb-4 fa-ul" style="--fa-li-margin: 1.8em;">
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Next-gen graphics API support</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Photorealistic rendering</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Fully multi-threaded</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>VR ready</li>
+                        {% include bullet-point.html text:'Next-gen graphics API support' %}
+                        {% include bullet-point.html text:'Photorealistic rendering' %}
+                        {% include bullet-point.html text:'Fully multi-threaded' %}
+                        {% include bullet-point.html text:'VR ready' %}
                     </ul>
                     <div class="mt-5">
                         <a href="/features" class="btn btn-lg btn-outline-primary me-md-2">Read more</a>
@@ -53,9 +53,9 @@ eleventyComputed:
                     <h2 class="h1 mb-3">Accelerated development</h2>
                     <ul class="lead mb-4 fa-ul" style="--fa-li-margin: 1.8em;">
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>{{ site.csharp-version }} scripting with {{ site.dotnet-version }}</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Built-in game templates</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Full asset creation toolchain</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Flexible and customizable rendering pipeline</li>
+                        {% include bullet-point.html text:'Built-in game templates' %}
+                        {% include bullet-point.html text:'Full asset creation toolchain' %}
+                        {% include bullet-point.html text:'Flexible and customizable rendering pipeline' %}
                     </ul>
                     <div class="mt-5">
                         <a href="/features" class="btn btn-lg btn-outline-primary me-md-2">Read more</a>
@@ -65,16 +65,14 @@ eleventyComputed:
         </div>
         <div class="col-lg-6">
             <div class="card h-100">
-                <div class="p-2a">
-                    <img src="/images/backgrounds/toppage_poster_cropped.jpg" alt="Game Image" width="816" height="441" class="img-fluid">
-                </div>
+                <img src="/images/backgrounds/toppage_poster_cropped.jpg" alt="Game Image" width="816" height="441" class="img-fluid">
                 <div class="card-body p-4">
                     <h2 class="h1 mb-3">Collaborate with us</h2>
                     <ul class="lead mb-4 fa-ul" style="--fa-li-margin: 1.8em;">
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Editor and runtime open source (MIT)</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Participate in the community</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Propose changes to the engine and docs</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Connect with Stride game engine community</li>
+                        {% include bullet-point.html text:'Editor and runtime open source (MIT)' %}
+                        {% include bullet-point.html text:'Participate in the community' %}
+                        {% include bullet-point.html text:'Propose changes to the engine and docs' %}
+                        {% include bullet-point.html text:'Connect with Stride game engine community' %}
                     </ul>
                     <div class="mt-5">
                         <a href="/features" class="btn btn-lg btn-outline-primary me-md-2">Read more</a>
@@ -88,9 +86,9 @@ eleventyComputed:
                 <div class="card-body p-4">
                     <h2 class="h1 mb-3">Develop once, deploy cross-platform</h2>
                     <ul class="lead mb-4 fa-ul" style="--fa-li-margin: 1.8em;">
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span> Windows Desktop & Windows Universal</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span> iOS and Android through Xamarin</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span> Xbox One via UWP</li>
+                        {% include bullet-point.html text:'Windows Desktop & Windows Universal' %}
+                        {% include bullet-point.html text:'iOS and Android through Xamarin' %}
+                        {% include bullet-point.html text:'Xbox One via UWP' %}
                     </ul>
                     <div class="mt-5">
                         <a href="/features" class="btn btn-lg btn-outline-primary me-md-2">Read more</a>
@@ -98,19 +96,14 @@ eleventyComputed:
                 </div>
             </div>
         </div>
-
         <div class="col-lg-6">
             <div class="card h-100">
-                <div class="p-2a">
-                    <img src="/images/backgrounds/stride-game-code-short-rotated.png" alt="Game Image" width="816" height="459" class="img-fluid">
-                </div>
+                <img src="/images/backgrounds/stride-game-code-short-rotated.png" alt="Game Image" width="816" height="459" class="img-fluid ps-2 pt-3">
                 <div class="card-body p-4">
                     <h2 class="h1 mb-3">Write your Stride scripts in {{ site.csharp-version }}</h2>
                     <ul class="lead mb-4 fa-ul" style="--fa-li-margin: 1.8em;">
-                        <li>
-                            <span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span> IntelliSense and code navigation for C#
-                        </li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span> Use Visual Studio, Visual Studio Code or Rider</li>
+                        {% include bullet-point.html text:'IntelliSense and code navigation for C#' %}
+                        {% include bullet-point.html text:'Visual Studio, Visual Studio Code or Rider' %}
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span> Game Development with {{ site.dotnet-version }}</li>
                     </ul>
                     <div class="mt-5">
@@ -121,12 +114,12 @@ eleventyComputed:
         </div>
         <div class="col-lg-6">
             <div class="card h-100">
-                <div class="p-2a">
+                <div class="p-4">
                     <img src="/images/logos/Silicon_Studio_logo.svg" alt="Silicon Studio" class="img-fluid">
                 </div>
                 <div class="card-body p-4">
                     <h2 class="h1 mb-3">History</h2>
-                    <p class="lead">Xenko was originally started by <b><a href="http://www.siliconstudio.co.jp/en/">Silicon Studio</a></b>, a technology and services company of 300+ employees founded in 2000, dedicated to driving entertainment forward. Silicon Studio develops world-class products to help developers maximize the potential of leading-edge digital media technology.</p>
+                    <p class="lead">Xenko was originally started by <b><a href="https://www.siliconstudio.co.jp/en/"  target="_blank" rel="noopener">Silicon Studio</a></b>, a technology and services company of 300+ employees founded in 2000, dedicated to driving entertainment forward. Silicon Studio develops world-class products to help developers maximize the potential of leading-edge digital media technology.</p>
                     <p class="lead">In 2018, Silicon Studio turned Xenko into an independent open-source community-driven project.</p>
                     <p class="lead">In 2020, Xenko was renamed to Stride.</p>
                     <p class="lead">In 2021 May, Stride joined .NET foundation.</p>

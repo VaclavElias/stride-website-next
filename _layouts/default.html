@@ -4,6 +4,11 @@
 <body class="bg-dark d-flex flex-column min-vh-100">
     {% include _top-navigation.html %}
     {{ content }}
+    {% include footer.html bg:"bg-footer show text-light" btn-class:"link-primary" social-class:"link-primary" %}
+    {% include footer.html bg:"bg-footer show text-light" btn-class:"link-danger" social-class:"link-danger" %}
+    {% include footer.html bg:"bg-footer show text-light" btn-class:"link-info" social-class:"link-info" %}
+    {% include footer.html bg:"bg-footer show text-light" btn-class:"link-warning" social-class:"link-warning" %}
+    {% include footer.html bg:"bg-footer show text-light" btn-class:"link-success" social-class:"link-success" %}
     <script src="{{ site.baseurl}}/scripts/bootstrap.bundle.min.js"></script>
     <script src="{{ site.baseurl}}/scripts/site.js"></script>
 </body>

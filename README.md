@@ -5,13 +5,13 @@ Just playing with different design ideas and possibilities.
 The motivation for the update is:
 
 - [x] to simplify design
-- [x] use Bootstrap 5.2
+- [x] use Bootstrap 5.3
   - this was also used previously with lots of inconsistency
 - [x] use Fontawesome 6
   - this was also used previously
-- [ ] remove old unnecessary code, AddThis, Discus, JQuery, JavaScript libraries
+- [x] remove old unnecessary code, AddThis, Discus, JQuery, JavaScript libraries
 - [x] get better website responsivness
-- [ ] keep the content as it is and where it is, maybe just improve if needed
+- [x] keep the content as it is and where it is, maybe just improve if needed
 
 ## Phase 1
 
@@ -70,3 +70,7 @@ The motivation for the update is:
 
 Demo is here https://stride-website.vaclavelias.com/
 
+## Release Checklist
+
+- [ ] Proof reading
+- [ ] Update Ore System Link
