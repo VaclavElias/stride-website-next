@@ -1,0 +1,5 @@
+<p>
+    {% for tag in include.tags %}
+    <span class="badge text-bg-primary text-primary" style="--bs-bg-opacity: .20;">{{ tag | replace: "-"," " }}</span>
+    {% endfor %}
+</p>

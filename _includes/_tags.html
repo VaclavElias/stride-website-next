@@ -1,0 +1,1 @@
+{% for tag in tags %}{% if tag != "blog" and tag != "search" %}<span class="badge rounded-pill text-bg-success me-1">{{ tag | replace: "-"," "}}</span>{% endif %}{% endfor %}
