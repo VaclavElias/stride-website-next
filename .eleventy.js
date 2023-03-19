@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({
         "node_modules/lunr/lunr.min.js": "scripts/lunr.min.js",
         "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "scripts/bootstrap.bundle.min.js",
+        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map": "scripts/bootstrap.bundle.min.js.map",
         "node_modules/@fortawesome/fontawesome-free/css/all.min.css": "css/all.min.css",
         "node_modules/@fortawesome/fontawesome-free/webfonts": "webfonts/",
     });
