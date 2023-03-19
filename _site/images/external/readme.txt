@@ -1,1 +1,0 @@
-Those images are accessed from outside of the website (git repo readme file, release notes, etc.) and should not be removed whithout checking that they are not used anymore from anywhere.
