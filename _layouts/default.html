@@ -2,8 +2,9 @@
 <html lang="en" class="h-100">
 {% include head.html %}
 <body class="bg-dark d-flex flex-column min-vh-100">
-    {% include header.html %}
+    {% include top-navigation.html %}
     {{ content }}
+    <script src="{{ site.baseurl}}/scripts/bootstrap.bundle.min.js"></script>
     <script src="{{ site.baseurl}}/scripts/site.js"></script>
 </body>
 </html>

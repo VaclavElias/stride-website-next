@@ -10,12 +10,15 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPlugin(syntaxHighlight);
 
-    eleventyConfig.addPassthroughCopy("assets/img");
+    eleventyConfig.addPassthroughCopy("images");
+    eleventyConfig.addPassthroughCopy("scripts");
     eleventyConfig.addPassthroughCopy("favicon.ico");
+    eleventyConfig.addPassthroughCopy("favicon.png");
+    eleventyConfig.addPassthroughCopy("CNAME");
+    eleventyConfig.addPassthroughCopy("web.config");
     eleventyConfig.addPassthroughCopy({
-        "node_modules/lunr/lunr.min.js": "assets/scripts/lunr.min.js",
-        "CNAME": "CNAME",
-        "web.config": "web.config"
+        "node_modules/lunr/lunr.min.js": "scripts/lunr.min.js",
+        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js": "scripts/bootstrap.bundle.min.js"
     });
 
     //eleventyConfig.exc
