@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Home
-description: Stride is an open-source MIT C# game engine designed for the future of gaming.
+eleventyComputed:
+  description: Stride, an MIT-licensed C# game engine, built for the future of gaming. Use {{ site.csharp-version }} and {{ site.dotnet-version }} to create your own games. #opensource
 ---
 {% include carousel_home.html %}
 <div class="container-xxl mt-5 mt-sm-0">
@@ -47,11 +48,11 @@ description: Stride is an open-source MIT C# game engine designed for the future
         </div>
         <div class="col-lg-6">
             <div class="card h-100">
-                <img src="/images/home/stride-studio-editor.jpg" alt="editor_game.jpg" width="816" height="459" class="img-fluid">
+                <img src="/images/home/stride-studio-editor.jpg" alt="editor_game.jpg" width="816" height="441" class="img-fluid">
                 <div class="card-body p-4">
                     <h2 class="h1 mb-3">Accelerated development</h2>
                     <ul class="lead mb-4 fa-ul" style="--fa-li-margin: 1.8em;">
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>C# 10 scripting with .NET 6</li>
+                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>{{ site.csharp-version }} scripting with {{ site.dotnet-version }}</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Built-in game templates</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Full asset creation toolchain</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Flexible and customizable rendering pipeline</li>
@@ -65,7 +66,7 @@ description: Stride is an open-source MIT C# game engine designed for the future
         <div class="col-lg-6">
             <div class="card h-100">
                 <div class="p-2a">
-                    <img src="/images/backgrounds/toppage_poster.jpg" alt="Game Image" width="816" height="459" class="img-fluid">
+                    <img src="/images/backgrounds/toppage_poster_cropped.jpg" alt="Game Image" width="816" height="441" class="img-fluid">
                 </div>
                 <div class="card-body p-4">
                     <h2 class="h1 mb-3">Collaborate with us</h2>
@@ -73,6 +74,7 @@ description: Stride is an open-source MIT C# game engine designed for the future
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Editor and runtime open source (MIT)</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Participate in the community</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Propose changes to the engine and docs</li>
+                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span>Connect with Stride game engine community</li>
                     </ul>
                     <div class="mt-5">
                         <a href="/features" class="btn btn-lg btn-outline-primary me-md-2">Read more</a>
@@ -103,13 +105,13 @@ description: Stride is an open-source MIT C# game engine designed for the future
                     <img src="/images/backgrounds/stride-game-code-short-rotated.png" alt="Game Image" width="816" height="459" class="img-fluid">
                 </div>
                 <div class="card-body p-4">
-                    <h2 class="h1 mb-3">Write your Stride scripts in C# 10</h2>
+                    <h2 class="h1 mb-3">Write your Stride scripts in {{ site.csharp-version }}</h2>
                     <ul class="lead mb-4 fa-ul" style="--fa-li-margin: 1.8em;">
                         <li>
                             <span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span> IntelliSense and code navigation for C#
                         </li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span> Use Visual Studio, Visual Studio Code or Rider</li>
-                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span> Game Development with .NET 6</li>
+                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-primary me-2"></i></span> Game Development with {{ site.dotnet-version }}</li>
                     </ul>
                     <div class="mt-5">
                         <a href="/features" class="btn btn-lg btn-outline-primary me-md-2">Read more</a>
