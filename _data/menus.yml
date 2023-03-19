@@ -2,9 +2,8 @@
 __display__:
     - features
     - blog
-    - learn
-    - community
-    - download
+    - documentation
+    - community    
     - sponsor
 features:
     url: /features
@@ -12,22 +11,12 @@ features:
 blog:
     url: /blog
     text: Blog
-learn:
+documentation:
     url: https://doc.stride3d.net/latest
-    text: Learn
-    dropdown: learn-display
+    text: Documentation
 community:
     url: /community
     text: Community
-download:
-    url: /download
-    text: Download
 sponsor:
     url: /sponsor
     text: Sponsor
-    icon: bi-heart-fill
-learn-display:
-    - manual
-    - api
-    - release-notes
-    - tutorials
