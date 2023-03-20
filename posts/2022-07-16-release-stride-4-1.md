@@ -50,13 +50,15 @@ Here's a non-exhaustive list of new improvements:
 ### Dithered shadows for semi-transparent materials
 Produces semi-transparent shadows by poking more and more holes in the shadow map based on the transparency of the object, shadow map filtering will blur those holes with their neighbor which will result in those partially opaque pixels.
 
-![Dithered shadow settings](https://i.imgur.com/xFzuNbl.png){: .img-fluid}
-![Dithered shadow effect comparison](https://i.imgur.com/kHvSy8a.png){: .img-fluid}
-
+<img alt="Dithered shadow settings" src="https://i.imgur.com/xFzuNbl.png" class="img-fluid">
+<img alt="Dithered shadow effect comparison" src="https://i.imgur.com/kHvSy8a.png" class="img-fluid">
+&nbsp;
 
 ### Physics constraints
 Stride's physics system Bullet comes with a set of constraints for you to use in your projects. These constraints are now all visible inside the editor, previewing the constraints using various editor gizmo.
-![preview(to be removed)](https://i.imgur.com/qiaBBpm.png){: .img-fluid}
+
+<img alt="preview(to be removed)]()" src="https://i.imgur.com/qiaBBpm.png" class="img-fluid">
+&nbsp;
 
 For more information on all the types of constraints, you can read up about them in the [Stride documentation](https://doc.stride3d.net/latest/en/manual/physics/constraints.html) or watch the video below. 
 
@@ -127,33 +129,4 @@ Many thanks to [all the contributors](https://github.com/stride3d/stride/graphs/
 ### Financial contributors
 Also, a huge thanks to the individuals and companies who contributed financially to our [Open Collective](https://opencollective.com/stride3d)! 
 
-* [ORE System](https://ore-system.com) with a diamond sponsorship
-* [xen2](https://opencollective.com/xen2) Core contributor that donated a large portion of the previous Patreon back through Open collective
-* [vvvv](https://visualprogramming.net) A visual live-programming environment for easy prototyping and development. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously. vvvv uses Stride
-* [Vašo](https://opencollective.com/vaclav)
-* [Mitchel Albertz](https://opencollective.com/mitchel-albertz)
-* [Bill](https://opencollective.com/bill2)
-* [Ideonella](https://opencollective.com/ideonella)
-* [Soul Rider](https://opencollective.com/soul-rider)
-* [najak3d](https://opencollective.com/guest-ce7ccb03)
-* [Eideren](https://opencollective.com/eideren)
-* [Jorn Aggror](https://opencollective.com/jorn-theunissen)
-* [Marian Dziubiak](https://marian.dziubiak.pl)
-* [Youness KAFIA](https://opencollective.com/guest-7253cc41)
-* [David Thunderclown](https://www.disruptionworks.co.uk)
-* [Christian Clavet](https://opencollective.com/christian-clavet)
-* [Marko Viitanen](https://opencollective.com/fador)
-* [Aaron Disibio](https://opencollective.com/guest-2f41a631)
-* [z16](https://opencollective.com/z16)
-* [Incognito](https://opencollective.com/guest-5635aca5)
-* [Walter Hulsebos](https://opencollective.com/guest-2170ad46)
-* [TheKeyblader](https://opencollective.com/thekeyblader)
-* [James Rinker](https://opencollective.com/james-rinker)
-* [ztl](https://opencollective.com/guest-6653841d)
-* [Bruno Garcia](https://brunogarcia.com)
-* [BanditRevolver](https://opencollective.com/banditrevolver)
-* [EmmX](https://opencollective.com/emmx)
-* [SeleDreams](https://opencollective.com/seledreams)
-* [Vignette](https://vignetteapp.org)
-* [Longplay Games](https://opencollective.com/guest-a5fa78c8)
-* [Redberd36](https://opencollective.com/guest-3fc8bf91)
+{% include contributors/contributors-2022.md %}
