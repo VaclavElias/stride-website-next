@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Stride 4.1 is now live!'
+title: 'Stride 4.1 is Now Live'
 author: 'Aggror Jorn'
 author-github: Aggror
 popular: true
