@@ -1,1 +1,2 @@
+{% comment %} The tag needs to be updated also in tags.html {% endcomment %}
 {% for tag in tags %}{% if tag != "blog" and tag != "search" %}<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">{{ tag | replace: "-"," "}}</span>{% endif %}{% endfor %}

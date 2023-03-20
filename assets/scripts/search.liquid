@@ -47,7 +47,7 @@ permalink: /scripts/search.js
 
     function getTags(post) {
         var tags = post.tags.split(', ');
-        return tags.filter(s => s !== 'blog' && s !== 'search').map(s => `<span class="badge rounded-pill text-bg-success me-1">${s.replace('-', ' ')}</span>`).join('');
+        return tags.filter(s => s !== 'blog' && s !== 'search').map(s => `<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">${s.replace('-', ' ')}</span>`).join('');
     }
 
     function getQueryVariable(variable) {
@@ -67,7 +67,8 @@ permalink: /scripts/search.js
 
     if (searchTerm) {
         document.getElementById('search-result-term').textContent = searchTerm;
-        document.getElementById('search-text').value = searchTerm;
+        document.getElementById('search-input').value = searchTerm;
+        document.getElementById('search-form-post').value = searchTerm;
 
         fetch('/search.json')
             .then(response => response.json())
