@@ -51,14 +51,12 @@ Here's a non-exhaustive list of new improvements:
 Produces semi-transparent shadows by poking more and more holes in the shadow map based on the transparency of the object, shadow map filtering will blur those holes with their neighbor which will result in those partially opaque pixels.
 
 <img alt="Dithered shadow settings" src="https://i.imgur.com/xFzuNbl.png" class="img-fluid">
-<img alt="Dithered shadow effect comparison" src="https://i.imgur.com/kHvSy8a.png" class="img-fluid">
-&nbsp;
+<img alt="Dithered shadow effect comparison" src="https://i.imgur.com/kHvSy8a.png" class="img-fluid mb-2">
 
 ### Physics constraints
 Stride's physics system Bullet comes with a set of constraints for you to use in your projects. These constraints are now all visible inside the editor, previewing the constraints using various editor gizmo.
 
 <img alt="preview(to be removed)]()" src="https://i.imgur.com/qiaBBpm.png" class="img-fluid">
-&nbsp;
 
 For more information on all the types of constraints, you can read up about them in the [Stride documentation](https://doc.stride3d.net/latest/en/manual/physics/constraints.html) or watch the video below. 
 
@@ -114,7 +112,6 @@ The transition to .NET6 unfortunately broke the help tooltips and the code compl
 The reason for the error is that [RoslynPad](https://github.com/roslynpad/roslynpad), the underlaying library, also needs an update or fix. We'll adress this in one of the upcoming minor version releases.
 
 ![](https://i.imgur.com/Gn2i6Js.png){: .img-fluid}
-
 
 ## A little help
 We, contributors, believe that Stride can help .NET game developers make the games they want with ease using their favorite languages. We want to make sure Stride offers the most comfortable environment for developing games, and this takes time and effort.
