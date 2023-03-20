@@ -3,7 +3,7 @@
         <li class="list-group-item active">
             <h4 class="mb-0 fw-normal">Popular Posts</h4>
         </li>
-        {% assign posts = collections.blog | reverse %}
+        {% assign posts = collections.blog reversed %}
         {% for post in posts %}
         {% if post.data.popular == true %}
         <li class="list-group-item  list-group-item-action">

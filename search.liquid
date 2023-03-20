@@ -3,7 +3,7 @@ permalink: /search.json
 eleventyExcludeFromCollections: true
 ---
 [
-{% for post in collections.search | reverse %}{% unless post.url contains ".css" %}{
+{% for post in collections.search reversed %}{% unless post.url contains ".css" %}{
     "title":"{{ post.data.title | strip_html | xml_escape }}",
     "excerpt": {{ post.data.page.excerpt | strip_html | truncatewords: 30 | jsonify }},
     "author": "{{ post.data.author | xml_escape }}",
