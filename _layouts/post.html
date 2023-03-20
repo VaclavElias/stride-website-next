@@ -27,17 +27,21 @@ layout: default
         {% assign nextPost = collections.blog | getNextCollectionItem: page %}
         <div class="col-md-6 mb-4">
             {% if previousPost %}
-            <div class="post-card">
-                <h5>Previous Post</h5>
-                <a class="prev stretched-link" href="{{previousPost.url}}">{{previousPost.data.title}}</a>
+            <div class="card px-3">
+                <div class="card-body p-4">
+                    <h5>Previous Post</h5>
+                    <a class="prev stretched-link" href="{{previousPost.url}}">{{previousPost.data.title}}</a>
+                </div>
             </div>
             {% endif %}
         </div>
         <div class="col-md-6 text-md-end">
             {% if nextPost %}
-            <div class="post-card">
-                <h5>Next Post</h5>
-                <a class="next stretched-link" href="{{nextPost.url}}">{{nextPost.data.title}}</a>
+            <div class="card px-3">
+                <div class="card-body p-4">
+                    <h5>Next Post</h5>
+                    <a class="next stretched-link" href="{{nextPost.url}}">{{nextPost.data.title}}</a>
+                </div>
             </div>
             {% endif %}
         </div>

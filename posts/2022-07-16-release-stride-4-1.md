@@ -5,17 +5,12 @@ author: 'Aggror Jorn'
 author-github: Aggror
 popular: true
 image: https://i.imgur.com/7GVEiSR.jpg
-tags:
-  - 4.1
-  - Physics
-  - Tutorials
+tags: ['4.1','Physics','Tutorials']
 ---
 Stride 4.1 is here and ready for the future!
 
-Stride 4.1 is now available with many improvements and new features, .NET 6 support, Dithered shadows for semi-transparent materials, Physics constraints, Fog image effect, C# Intermediate tutorials project and more
-<!-- excerpt -->
-
 Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.
+<!-- excerpt -->
 
 ## Stride On .NET Live
 We had the pleasure to be on a live stream with the .NET team! We gave an introduction, overview and some live demos:
