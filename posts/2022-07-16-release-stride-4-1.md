@@ -50,8 +50,8 @@ Here's a non-exhaustive list of new improvements:
 ### Dithered shadows for semi-transparent materials
 Produces semi-transparent shadows by poking more and more holes in the shadow map based on the transparency of the object, shadow map filtering will blur those holes with their neighbor which will result in those partially opaque pixels.
 
-<img alt="Dithered shadow settings" src="https://i.imgur.com/xFzuNbl.png" class="img-fluid">
-<img alt="Dithered shadow effect comparison" src="https://i.imgur.com/kHvSy8a.png" class="img-fluid mb-2">
+<img alt="Dithered shadow settings" src="https://i.imgur.com/xFzuNbl.png" class="img-fluid" loading="lazy" data-src="https://i.imgur.com/xFzuNbl.png">
+<img alt="Dithered shadow effect comparison" src="https://i.imgur.com/kHvSy8a.png" class="img-fluid mb-2" data-src="https://i.imgur.com/kHvSy8a.png">
 
 ### Physics constraints
 Stride's physics system Bullet comes with a set of constraints for you to use in your projects. These constraints are now all visible inside the editor, previewing the constraints using various editor gizmo.

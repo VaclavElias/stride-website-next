@@ -6,15 +6,15 @@ author-github: Aggror
 popular: true
 tags: ['Meeting']
 ---
-## Summary community meeting 2022
+## Summary Community Meeting 2022
 
 Hello there fellow Striders,
 
 On February 16th we held another community meeting. A whopping 2.5 hours with various subjects. Here is a quick summary.
 
-## Current funding
+## Current Funding
 
-With a budget of $4,220.48 USD at the moment of the community meeting happening, we wanted to decide on whether to allocate money for bugs and new features. So a big thanks to all those who are donating to this project. In particular:
+With a budget of **$4,220.48 USD** at the moment of the community meeting happening, we wanted to decide on whether to allocate money for bugs and new features. So a big thanks to all those who are donating to this project. In particular:
 
 * [VVVV](https://visualprogramming.net/)
 * [Vašo (vaclav)](https://opencollective.com/vaclav)
@@ -32,8 +32,6 @@ With a budget of $4,220.48 USD at the moment of the community meeting happening,
     * A smaller $50,- USD bounty for more research on this bug. If it can be pinpointed what exactly is causing this, we can also estimate better whether it is worth spending more money on it.
     * Depending on the outcome we might skip this bug and spend time researching/implementing a replacement UI.
     * AggrorJorn will provide the texts for the bounty and once approved by other contributors/developers in the team, this will be updated on the Open Collective project for [Bug bounties](https://opencollective.com/stride3d/projects/bug-bounties)
-
-
 
 ## Funding for features
 * Linux runtime support
