@@ -1,8 +1,19 @@
 # Stride Website - Next
 
-Just playing with different design ideas and possibilities.
+## Demo
 
-The motivation for the update is:
+Demo is here https://stride-website.vaclavelias.com/
+
+## Release Checklist
+
+- [ ] Proof reading
+- [ ] Update Ore System Link
+- [ ] Add .NET/C# section to Stride Features
+- [ ] Deployment Docs
+- [ ] Wiki instructions how to add update website
+- [ ] Staging web
+
+## The motivation for the update
 
 - [x] to simplify design
 - [x] use Bootstrap 5.3
@@ -32,8 +43,8 @@ The motivation for the update is:
    - [x] Rss Link
    - [x] 404 Page
    - [ ] Friends - Shall we link to our friends GoDot, others, just to be open and making friends in other C# open source game communities? 
-   - [ ] Archive - New Page, list by year
-   - [ ] Tags - New Page, list by tag
+   - [x] Archive - New Page, list by year
+   - [x] Tags - New Page, list by tag
    - [ ] Past Posts - Update and pretify conent
 - [ ] Learn
   - [ ] Research new update for stride-docs
@@ -48,12 +59,12 @@ The motivation for the update is:
    - [ ] Shall we mention that we use Bootstrap and Fontawesome
 - [ ] Website code refactoring and code clean up - Once the new design update is settled
    - [ ] Community Content - Move to data like Features?   
-   - [x] Primary Links (github, twitter, ..) - Move to _config.yml?
+   - [x] Primary Links (github, twitter, ..) - Move to site.json?
 
 ## Phase 2 - In the future
 
 - [ ] Authors links to author pages
-- [ ] Consider modern static site generator [11ty](https://www.11ty.dev/docs/)
+- [x] Consider modern static site generator [11ty](https://www.11ty.dev/docs/)
    - No Ruby issues as it is JavaScript generator
 - [ ] Features Page - Improve like this, link to individual pages https://www.blender.org/features/
     - [ ] Link Features content to dedicated pages/docs
@@ -65,16 +76,6 @@ The motivation for the update is:
      - [ ] Direct link to Requirements
 - [ ] Include Avatar, wtith different asssets like donet bot, use also for 2D Games
 
-
-## Demo
-
-Demo is here https://stride-website.vaclavelias.com/
-
-## Content Options
-- Maybe we can include this https://github.com/Doprez/Awesome-Stride
+## Additional Content
+- Maybe we can include this somewhere https://github.com/Doprez/Awesome-Stride
 - Web, Docs, GitHub Wiki
-
-## Release Checklist
-
-- [ ] Proof reading
-- [ ] Update Ore System Link
