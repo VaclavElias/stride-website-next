@@ -70,6 +70,10 @@ The motivation for the update is:
 
 Demo is here https://stride-website.vaclavelias.com/
 
+## Content Options
+- Maybe we can include this https://github.com/Doprez/Awesome-Stride
+- Web, Docs, GitHub Wiki
+
 ## Release Checklist
 
 - [ ] Proof reading
