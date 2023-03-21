@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="_data\features.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="_data\features.json" />
+  </ItemGroup>
+
 </Project>
