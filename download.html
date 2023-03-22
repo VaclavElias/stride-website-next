@@ -1,0 +1,66 @@
+---
+layout: default
+title: Download
+permalink: /download/
+menu: download
+---
+{% include banner.html title:"Download Stride" sub-title:"The Freedom to Create Your Own Game" image-url:"/images/backgrounds/download.jpg" %}
+<div class="bg-dark">
+    <div class="container-xxl py-5 px-4 px-sm-5">
+        <div class="row">
+            <div class="col-lg-7 col-md-6">
+                <h2 class="h1 mb-3">Stride is licensed under<br /> the permissive <span class="rt-accent-color1">MIT</span> license</h2>
+                <p class="lead">Free to Use. Free to Change. Free to Share. Free to Sell Your Work.</p>
+                <ul class="lead">
+                    <li>You are free to use Stride, for any purpose</li>
+                    <li>You are free to distribute Stride</li>
+                    <li>You can study how Stride works and change it</li>
+                    <li>You can distribute changed versions of Stride</li>
+                </ul>
+                <div class="mt-5">
+                    <a href="/files/StrideSetup.exe" target="_self" class="btn btn-lg btn-primary me-2 mb-3">
+                        <i class="fa-solid fa-download"></i> Installer Download
+                    </a>
+                    <a href="{{ site.links.github-stride-url }}" class="btn btn-lg btn-outline-primary mb-3">
+                        <i class="fa-brands fa-github text-decoration-none"></i> Source Code
+                    </a>
+                </div>
+                <p class="mt-3 lead">Read here for information on <a href="{{ site.links.docs-requirements-url }}" target="_self">system requirements</a>. The <a href="{{ site.links.docs-release-notes-url }}" target="_self">release notes</a> cover the most recent changes in current release.</p>
+            </div>
+            <div class="col-lg-5 col-md-6 rt-center feature-block">
+                <a href="/images/features/gamestudio/overview.jpg" title="The GameStudio Editor" class="feature-image-container image-popup">
+                    <div class="rt-image"><div class="zoom-in"></div><img alt="" class="img-fluid" src="/images/features/gamestudio/overview.jpg" /></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-light">
+    <div class="container-xxl py-5 px-4 px-sm-5">
+        <div class="row">
+            <div class="col-lg-7 col-md-6">
+                <h2 class="h1 mb-3">Frequently asked questions</h2>
+
+                <p class="lead mt-3">
+                    <div class="accordion">
+                        {% include accordion-item-faq.html id:"what-platforms"
+                        title:"What platforms can I make applications for using Stride?"
+                        body:"<p>Stride currently supports <b>Windows</b>, <b>Android</b>, <b>iOS</b>, <b>Xbox One</b> and <b>Universal Windows Platforms (UWP)</b>. Stride also supports most popular VR devices and has experimental support for Linux.</p>"
+                        %}
+
+                        {% include accordion-item-faq.html id:"question-modify"
+                        title:"Do I have to open the code of my game if I modify Stride/Xenko?"
+                        body:"<p>No. Xenko 3.x and Stride 4+ are covered by MIT license.</p>"
+                        %}
+                    </div>
+                    For more answers, see our dedicated <a href="/faq/">FAQ page</a>.
+                </p>
+            </div>
+            <div class="col-lg-5 col-md-6 rt-center feature-block">
+                <a href="/images/features/graphics/overview.jpg" title="Material Editor" class="feature-image-container image-popup">
+                    <div class="rt-image"><div class="zoom-in"></div><img src="/images/features/graphics/overview.jpg" alt="Material Editor" class="img-fluid"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
