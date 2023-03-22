@@ -12,6 +12,7 @@ Demo is here https://stride-website.vaclavelias.com/
 - [ ] Deployment Docs
 - [ ] Wiki instructions how to add update website
 - [ ] Staging web
+- [ ] Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 
 ## The motivation for the update
 
