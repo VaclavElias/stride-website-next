@@ -80,3 +80,4 @@ Demo is here https://stride-website.vaclavelias.com/
 ## Additional Content
 - Maybe we can include this somewhere https://github.com/Doprez/Awesome-Stride
 - Web, Docs, GitHub Wiki
+- https://khalidabuhakmeh.com/combining-11ty-static-site-generator-with-aspnet-core
