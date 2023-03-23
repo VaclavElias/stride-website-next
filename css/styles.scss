@@ -137,6 +137,29 @@ a:hover :not(.navbar a):not(.navbar-icons a small) {
     background-image: url(/images/top/svg/bg_light.svg);
 }
 
+
+[data-bs-theme=dark] .bg-dark {
+    background-image: url(/images/top/svg/bg_dark-dark-mode.svg);
+}
+
+[data-bs-theme=dark] .bg-light {
+    background-image: url(/images/top/svg/bg_dark-dark-mode.svg);
+}
+
+
+[data-bs-theme=dark] .postcontent {
+    background: #323130;
+    box-shadow: none;
+    color: #fff;
+}
+
+/* Dark theme */
+/*@media (prefers-color-scheme: dark) {
+    .bg-dark {
+        background-image: url(/images/top/svg/bg_dark-dark-mode.svg);
+    }
+}*/
+
 .bg-footer {
     background-image: url(/images/backgrounds/foot_bg.jpg);
     background-size: cover;
