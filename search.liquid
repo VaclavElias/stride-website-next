@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
     "title":"{{ post.data.title | strip_html | xml_escape }}",
     "excerpt": {{ post.data.page.excerpt | strip_html | truncatewords: 30 | jsonify }},
     "author": "{{ post.data.author | xml_escape }}",
-    "date": "{% include _day.html date: post.data.date %}",
+    "date": "{% include post/day.html date: post.data.date %}",
     "category": "{{ post.data.category | xml_escape }}",
     "tags": "{{ post.data.tags | join: ', ' | xml_escape }}",
     "url":"{{ site.url }}{{ post.url | url }}",

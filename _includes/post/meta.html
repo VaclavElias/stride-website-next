@@ -1,19 +1,14 @@
 <p class="d-flex justify-content-between">
     <span>
-        <i class="fa-solid fa-calendar-days me-1"></i> {% include post/date.html %}{{ time }}
-    </span>{% comment %}
-    <span>
-        {% if site.disqus_short_name and site.disqus_show_comment_count == true %}
-        <i class="fa fa-comments"></i> {% include post/comments_link.html %}
-        {% endif %}
-    </span>{% endcomment %}
+        <i class="fa-solid fa-calendar-days me-1"></i> {% include post/day.html date:post.date %}
+    </span>
 </p>
 <p>
-    {% if post.author %}
-    {% if post.author-github %}
-    <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/{{ post.author-github }}?size=40" />
+    {% if post.data.author %}
+    {% if post.data.author-github %}
+    <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/{{ post.data.author-github }}?size=40" />
     {% endif %}
-    {{ post.author }}
-    {% else %}{{ site.author }}
+    {{ post.data.author }}
+    {% else %}{{ site.data.author }}
     {% endif %}
 </p>
