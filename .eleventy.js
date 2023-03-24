@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addPassthroughCopy("scripts");
+    eleventyConfig.addPassthroughCopy("files");
     eleventyConfig.addPassthroughCopy("favicon.ico");
     eleventyConfig.addPassthroughCopy("favicon.png");
     eleventyConfig.addPassthroughCopy("CNAME");

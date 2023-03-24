@@ -18,6 +18,7 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [x] keep the content as it is and where it is, maybe just improve if needed
 
 ## RC1+ Checklist
+- [ ] Web - Update blog post urls so they match the old urls
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Past Posts - Update and pretify conent
 - [ ] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
