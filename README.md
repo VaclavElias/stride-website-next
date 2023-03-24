@@ -17,13 +17,15 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [x] get better website responsivness
 - [x] keep the content as it is and where it is, maybe just improve if needed
 
-## RC Checklist
+## RC1+ Checklist
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Past Posts - Update and pretify conent
 - [ ] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [ ] Wiki - Review and updaste
 - [ ] Web - Staging web - Check image caching and gzip (web.config)
+- [ ] Web - Ensure excerpt and page description is set for all pages
+
 
 ## Release Checklist
 - [ ] Web - Proof reading
