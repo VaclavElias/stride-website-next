@@ -95,6 +95,19 @@ a:hover :not(.navbar a):not(.navbar-icons a small) {
     a {
         text-decoration: underline;
     }
+
+    .direct-link {
+        text-decoration: none;
+        font-size: 1.5rem;
+        transform: rotate(45deg);
+        display: none;
+    }
+
+    h2, h3, h4, h5, h6 {
+        &:hover .direct-link {
+            display: inline-block;
+        }
+    }
 }
 
 /*.box-shadow {
