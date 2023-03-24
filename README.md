@@ -45,7 +45,8 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [ ] Web - Blog Comments from GitHub Issues - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/, the problem is spam..
 - [ ] Include Avatar, wtith different asssets like donet bot, use also for 2D Games
 - [ ] Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
-- [ ] Footer example https://www.blender.org/
+- [ ] Web - Keep only used FontAwesome references in all.css, to reduce the file sie
+- [ ] - [ ] Footer example https://www.blender.org/
   - [ ] New Section Download
      - [ ] Direct link to Release Notes
      - [ ] Direct link to Requirements
