@@ -20,7 +20,8 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 ## RC Checklist
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Past Posts - Update and pretify conent
-- [ ] Web - Do we need Contact Page to officially contact us?
+- [ ] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
+- [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [ ] Wiki - Review and updaste
 - [ ] Web - Staging web - Check image caching and gzip (web.config)
 
@@ -50,6 +51,7 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [ ] Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
 - [ ] Web - Keep only used FontAwesome references in all.css, to reduce the file sie
 - [ ] Web - Change all images to webp
+- [ ] Web - Minify if possible js and html
 - [ ] Footer example https://www.blender.org/
   - [ ] New Section Download
      - [ ] Direct link to Release Notes
