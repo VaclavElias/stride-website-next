@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" class="h-100">
 {% include _head.html %}
+<script src="{{ site.baseurl}}/scripts/site.js"></script>
 <body class="bg-dark d-flex flex-column min-vh-100">
     {% include _top-navigation.html %}
     {{ content }}
@@ -10,6 +11,5 @@
     {% include footer.html bg:"bg-footer show text-light" btn-class:"link-warning" social-class:"link-warning" %}
     {% include footer.html bg:"bg-footer show text-light" btn-class:"link-success" social-class:"link-success" %}
     <script src="{{ site.baseurl}}/scripts/bootstrap.bundle.min.js"></script>
-    <script src="{{ site.baseurl}}/scripts/site.js"></script>
 </body>
 </html>
