@@ -11,7 +11,7 @@
     {% if  page.image %}
     <meta property="og:image" content="{{ page.image }}" />
     {% else %}
-    <meta property="og:image" content="/images/og/ogp.jpg">
-    {% endif %}
-    <script src="{{ site.baseurl}}/scripts/theme-selector.js"></script>
+    <meta property="og:image" content="/images/og/ogp.jpg">{% endif %}
+    {% if site.dark-mode %}
+    <script src="{{ site.baseurl}}/scripts/theme-selector.js"></script>{% endif %}
 </head>

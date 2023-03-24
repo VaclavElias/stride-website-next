@@ -3,6 +3,7 @@
   "description": "C# Stride Game Engine is a powerful and versatile game development engine that is based on the C# programming language",
   "language": "en",
   "author": "Stride Team",
+  "dark-mode": true,
   "dowload-version": "4.2",
   "csharp-version": "C# 12",
   "dotnet-version": ".NET 8",

@@ -3,6 +3,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const path = require("node:path");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItToc = require("markdown-it-table-of-contents");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const EleventyFetch = require("@11ty/eleventy-fetch");
 
@@ -118,7 +119,8 @@ module.exports = function (eleventyConfig) {
             symbol: "🔗",
             class: "direct-link"
         })
-    });
+    }).use(markdownItToc);
+
     eleventyConfig.setLibrary("md", markdownLibrary);
 
     eleventyConfig.addPlugin(pluginRss);

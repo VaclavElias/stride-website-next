@@ -11,6 +11,8 @@ Hello there fellow Striders,
 
 On February 16th we held another community meeting. A whopping 2.5 hours with various subjects. Here is a quick summary.
 
+[[TOC]]
+
 ## Current Funding
 
 With a budget of **$4,220.48 USD** at the moment of the community meeting happening, we wanted to decide on whether to allocate money for bugs and new features. So a big thanks to all those who are donating to this project. In particular:

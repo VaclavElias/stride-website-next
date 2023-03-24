@@ -22,6 +22,7 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [ ] Web - Past Posts - Update and pretify conent
 - [ ] Web - Do we need Contact Page to officially contact us?
 - [ ] Wiki - Review and updaste
+- [ ] Web - Staging web - Check image caching and gzip (web.config)
 
 ## Release Checklist
 - [ ] Web - Proof reading
@@ -29,14 +30,16 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [ ] Web - Featurs - Add .NET/C# section
   - [ ] Mention/add section dedicated to scripting, mentioning ```async```, maybe add code snippets?
 - [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updaste)
-- [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json, _data
-- [ ] Web - Staging web
+- [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
 - [ ] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 - [ ] Web/Wiki - Shall we mention that we use Bootstrap and Fontawesome to support Open Source community?
 
+## Suggested posts
+- [ ] Posts about all Stride tutorials, internal and external tutorials
+
 ## Post Release Update / Future Updates and Improvements
 - [ ] Web - Encourage community to contribute with articles
-- [ ] Wiki - New post instructions
+- [ ] Wiki - New post instructions (e.g. using webp images)
 - [ ] Wiki - Update post instructions
 - [ ] Web - Features - Created dedicated page for some features
 - [ ] Web - Futher update existing images and content across pages
@@ -46,7 +49,8 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [ ] Include Avatar, wtith different asssets like donet bot, use also for 2D Games
 - [ ] Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
 - [ ] Web - Keep only used FontAwesome references in all.css, to reduce the file sie
-- [ ] - [ ] Footer example https://www.blender.org/
+- [ ] Web - Change all images to webp
+- [ ] Footer example https://www.blender.org/
   - [ ] New Section Download
      - [ ] Direct link to Release Notes
      - [ ] Direct link to Requirements
