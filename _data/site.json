@@ -6,10 +6,11 @@
   "dowload-version": "4.2",
   "csharp-version": "C# 12",
   "dotnet-version": ".NET 8",
-  "url": "http://stride3d.net",
+  "url": "https://stride3d.net",
   "twitter-username": "stridedotnet",
   "google_analytics": "G-E0VDFZERRK",
   "paginate": 10,
+  "engine": "Eleventy 2.0",
   "links": {
     "discord-url": "https://discord.gg/f6aerfE",
     "docs-api-url": "https://doc.stride3d.net/latest/en/api/",
@@ -30,5 +31,19 @@
     "stackexchange-url": "https://gamedev.stackexchange.com/questions/tagged/stride",
     "twitter-url": "https://twitter.com/stridedotnet",
     "youtube-url": "https://www.youtube.com/c/Stride3D"
+  },
+  "authors": {
+    "aggror": {
+      "name": "Aggror Jorn",
+      "github": "Aggror",
+      "linkedin": "",
+      "twitter": ""
+    },
+    "vaclav": {
+      "name": "Vaclav Elias",
+      "github": "VaclavElias",
+      "linkedin": "",
+      "twitter": ""
+    }
   }
 }

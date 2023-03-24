@@ -12,13 +12,18 @@
   <link href="{{ site.url }}"/>
   <updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ site.url }}</id>
+  <generator>{{ site.engine }}</generator>
   <author>
-    <name>{{ site.author }}</name>
+    <name>Stride Community</name>
   </author>
   {%- for post in collections.blog | reverse %}
   {%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
+  {%- set author = site.authors[post.data.author] %}
   <entry>
     <title>{{ post.data.title }}</title>
+    {%- if author -%}<author>
+      <name>{{ author.name }}</name>
+    </author>{%- endif -%}
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>

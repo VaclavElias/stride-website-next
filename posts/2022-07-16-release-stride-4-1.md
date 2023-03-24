@@ -1,8 +1,7 @@
 ---
 layout: post
 title: 'Stride 4.1 is Now Live'
-author: 'Aggror Jorn'
-author-github: Aggror
+author: aggror
 popular: true
 image: https://i.imgur.com/7GVEiSR.jpg
 tags: ['4.1','Physics','Tutorials']

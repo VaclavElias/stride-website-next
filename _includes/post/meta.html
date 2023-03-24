@@ -3,12 +3,14 @@
         <i class="fa-solid fa-calendar-days me-1"></i> {% include post/day.html date:post.date %}
     </span>
 </p>
+{% assign author = site.authors[post.data.author] %}
+{% if author %}
 <p>
-    {% if post.data.author %}
-    {% if post.data.author-github %}
-    <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/{{ post.data.author-github }}?size=40" />
+    {% if author.github %}
+    <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/{{ author.github }}?size=40" />
     {% endif %}
-    {{ post.data.author }}
-    {% else %}{{ site.data.author }}
-    {% endif %}
+    {{ author.name }}
 </p>
+{% else %}
+<p>Unknown author</p>
+{% endif %}
