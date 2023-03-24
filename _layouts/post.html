@@ -6,9 +6,20 @@ layout: default
         <div class="col-12">
             <article>
                 <h1>{{ title }}</h1>
-                <div class="entry-meta entry-meta-layoutt text-center">
-                    <p class="x-hidden-focus mt-4 pt-1 small text-muted date d-inline-block">
-                        {% include post/day.html date: date %}
+                <div class="text-center mb-3 pt-2">
+                    {% assign author = site.authors[author] %}
+                    {% if author %}
+                    <p>
+                        {% if author.github %}
+                        <div class="mt-4 mb-2">
+                            <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/{{ author.github }}?size=58" />
+                        </div>
+                        {% endif %}
+                        {{ author.name }}
+                    </p>
+                    {% endif %}
+                    <p style="color:#616161;border-top: 2px solid #979593;" class="x-hidden-focus mt-2 pt-1 small text-muted date d-inline-block">
+                        <i class="fa-solid fa-calendar-days"></i> {% include post/day.html date: page.date %}
                     </p>
                 </div>
                 {{ content }}
