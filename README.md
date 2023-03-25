@@ -61,6 +61,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [ ] Web - Keep only used FontAwesome references in all.css, to reduce the file sie
 - [ ] Metrics - Update to ASP.NET Core / Blazor https://github.com/stride3d/stride/tree/master/sources/metrics/Stride.Metrics
 - [ ] Web - Change all images to webp
+- [ ] Web - Creted devs dedicated page (https://developer.blender.org/)
 - [ ] Web - Minify if possible js and html
 - [ ] Footer example https://www.blender.org/
   - [ ] New Section Download
