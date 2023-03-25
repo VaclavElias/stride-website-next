@@ -22,6 +22,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] Web - Update blog post urls so they match the old urls
 - [ ] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
   - CSS Collaborator wanted
+- [ ] Web - FAQ - Remove Premium Support sentence
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Past Posts - Update and pretify content
 - [ ] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
