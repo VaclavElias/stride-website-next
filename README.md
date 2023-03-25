@@ -32,7 +32,7 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 ## Release Checklist
 - [ ] Web - Proof reading
 - [ ] Web - Update Ore System Link
-- [ ] Web - Featurs - Add .NET/C# section
+- [ ] Web - Features - Add .NET/C# section
   - [ ] Mention/add section dedicated to scripting, mentioning ```async```, maybe add code snippets?
 - [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updaste)
 - [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
