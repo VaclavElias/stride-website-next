@@ -2,7 +2,9 @@
 
 ## Demo
 
-Demo is here https://stride-website.vaclavelias.com/. Please feel free collaborate, create Issues and Pull requests.
+Demo is here https://stride-website.vaclavelias.com/
+
+Please feel free to collaborate, create issues, and submit pull requests.
 
 ## The motivation for the update
 
