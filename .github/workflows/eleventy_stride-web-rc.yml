@@ -4,9 +4,9 @@
 name: Build and Eleventy app to Azure Web App - stride-web-rc
 
 on:
-  push:
-    branches:
-      - eleventy
+#  push:
+#    branches:
+#      - eleventy
   workflow_dispatch:
 
 jobs:
