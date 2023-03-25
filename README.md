@@ -68,6 +68,9 @@ Please feel free to collaborate, create issues, and submit pull requests.
      - [ ] Direct link to Release Notes
      - [ ] Direct link to Requirements
 
+## Known Issues
+- Web - Sponsor - Widgets don't support dark theme. This can be fixed in the future, to fetch data from https://opencollective.com/stride3d/members/all.json and render before deployment or make dynamic. This might be overall better solution to have a full control over the content and design.
+
 ## Phase 1 - Done
 
 - [x] Top Navigation
