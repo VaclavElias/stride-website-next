@@ -87,8 +87,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] Learn
   - [x] Research new update for stride-docs
 - [x] Community Page
-  - [ ] Content update? Keep similar length.
-  - [ ] Do we need Q&A external link? If yes, shall we collect some typical Questions and Answer them there? Maybe another platform to watch but maybe helpful for SEO? Make sense to support it and link it if this is watched by community?
+  - [x] Content update? Keep similar length.
 - [x] Sponsor Page
 - [x] FAQ Page
 - [x] Footer Section
