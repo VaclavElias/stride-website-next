@@ -26,6 +26,7 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [ ] Wiki - Review and updaste
 - [ ] Web - Staging web - Check image caching and gzip (web.config)
 - [ ] Web - Ensure excerpt and page description is set for all pages
+- [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
 
 
 ## Release Checklist
