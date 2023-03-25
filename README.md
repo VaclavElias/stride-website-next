@@ -25,7 +25,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] Web - FAQ - Remove Premium Support sentence
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Past Posts - Update and pretify content
-- [ ] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
+- [x] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [ ] Wiki - Review and update
 - [x] Web - Staging web - Check image caching and gzip (web.config)
