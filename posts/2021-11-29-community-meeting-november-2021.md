@@ -5,21 +5,23 @@ author: jorn
 popular: true
 tags: ['Meeting']
 ---
-Hello fellow Striders,
-
-November 29th we had another commmunity meeting. This blogpost summarizes the topics we talked about
+After a month on Open Collective, the Stride collective reached $1,984.31 USD and discussed funding for various projects. Plans for requesting an Epic grant are in progress. Ongoing development includes physics constraints, splines, and the upcoming release of version 4.1.
+<!-- excerpt -->
 
 ## Summary
+
+November 29th we had another commmunity meeting. This blog post summarizes the topics we talked about.
 
 [[TOC]]
 
 ## Sponsors
+
 Started of with a thank you to all those who donated on the new sponsor platform: [Open collective](https://opencollective.com/stride3d). In particular a big thanks to:
 
 * {% include sponsor-user.md key:'xen2' %}, who decided that he wanted to contribute some of the Patreon money back in to the community.
+* {% include sponsor-org.md key:'ore' emoji:'💎' %}
 * {% include sponsor-org.md key:'vvvv' emoji:'🥇' %}
 * {% include sponsor-user.md key:'vaclav' emoji:'🥇' %}
-* {% include sponsor-org.md key:'ore' emoji:'💎' %}
 
 <img alt="Ore Logo" src="/images/sponsors/ore_system-next_gen_nfts_dark.png" class="img-fluid mb-2" loading="lazy" data-src="/images/sponsors/ore_system-next_gen_nfts_dark.png">
 
