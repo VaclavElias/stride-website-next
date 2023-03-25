@@ -20,11 +20,11 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 ## RC1+ Checklist
 - [ ] Web - Update blog post urls so they match the old urls
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
-- [ ] Web - Past Posts - Update and pretify conent
+- [ ] Web - Past Posts - Update and pretify content
 - [ ] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
-- [ ] Wiki - Review and updaste
-- [ ] Web - Staging web - Check image caching and gzip (web.config)
+- [ ] Wiki - Review and update
+- [x] Web - Staging web - Check image caching and gzip (web.config)
 - [ ] Web - Ensure excerpt and page description is set for all pages
 - [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
 
