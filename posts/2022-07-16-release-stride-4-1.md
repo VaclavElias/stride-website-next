@@ -83,17 +83,18 @@ One of the first Open Collective sub-projects is the [intermediate C# tutorials 
 <img alt="Intermediate tutorials intro screen" src="https://i.imgur.com/7GVEiSR.jpg" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/7GVEiSR.jpg">
 
 With Stride 4.1, you will be able to select the C# intermediate tutorials project as a new template project. The template project contains (at the moment of writing) 11 topics that every developer will want to have a look at.
-1.    UI basics
-1.    Collision triggers
-1.    Raycasting
-1.    Projecting and Unprojecting
-1.    Async(hronous) scripts
-1.    Scene loading
-1.    Animation basics
-1.    Audio
-1.    First person camera
-1.    Third person camera
-1.    Navigation
+
+1. UI basics
+1. Collision triggers
+1. Raycasting
+1. Projecting and Unprojecting
+1. Async(hronous) scripts
+1. Scene loading
+1. Animation basics
+1. Audio
+1. First person camera
+1. Third person camera
+1. Navigation
 
 Each tutorial has a video tutorial accompanying it, which can be found on Stride's [Youtube channel](https://www.youtube.com/c/Stride3D). Below you can find the full playlist. 
  
