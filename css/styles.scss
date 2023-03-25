@@ -108,31 +108,6 @@ a:hover :not(.navbar a):not(.navbar-icons a small) {
     }
 }
 
-/*.box-shadow {
-    box-shadow: var(--main-shadow);
-}*/
-
-/*.search-main {
-    background: #fff;
-    @extend .box-shadow;
-    padding: 0.5em 1.25em;
-    margin-bottom: 1.5em;
-}*/
-
-/*.box-style {
-    padding: 20px;
-    margin-bottom: 25px;
-    background: #fff;
-    box-shadow: var(--main-shadow);
-}*/
-
-/*.post-card {
-    background-color: #fff;
-    box-shadow: var(--main-shadow);
-    padding: 20px 40px;
-    word-break: break-word;
-}*/
-
 @media screen and (max-width: 768px) {
     .postcontent {
         padding-left: 10px;
@@ -148,6 +123,10 @@ a:hover :not(.navbar a):not(.navbar-icons a small) {
     background-image: url(/images/top/svg/bg_light.svg);
 }
 
+.image-code-script-wrapper {
+    margin: 38px 0px 20px 50px;
+}
+
 [data-bs-theme=dark] {
     .bg-dark {
         background-image: url(/images/top/svg/bg_dark-dark-mode.svg);
@@ -155,6 +134,10 @@ a:hover :not(.navbar a):not(.navbar-icons a small) {
 
     .bg-light {
         background-image: url(/images/top/svg/bg_dark-dark-mode.svg);
+    }
+
+    .image-code-script-wrapper {
+        margin: 50px 10px 20px 80px;
     }
 
     .postcontent {
