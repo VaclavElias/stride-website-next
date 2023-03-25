@@ -51,7 +51,7 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [ ] Web - Friends - Shall we link to our friends GoDot, others, just to be open and making friends in other C# open source game communities? 
 - [ ] Web - Authors links to author pages
 - [ ] Web - Blog Comments from GitHub Issues - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/, the problem is spam..
-- [ ] Include Avatar, wtith different asssets like donet bot, use also for 2D Games
+- [ ] Include Avatar, wtith different asssets like dotnet bot, use also for 2D Games
 - [ ] Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
 - [ ] Web - Keep only used FontAwesome references in all.css, to reduce the file sie
 - [ ] Web - Change all images to webp
