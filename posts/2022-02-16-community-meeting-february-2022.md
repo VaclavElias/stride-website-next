@@ -5,11 +5,12 @@ author: aggror
 popular: true
 tags: ['Meeting']
 ---
-## Summary Community Meeting 2022
+The Striders discussed allocating their $4,220.48 USD budget for bug bounties and new features. Funding proposals include fullscreen Vulkan support, UI slowness bug research, Linux runtime support, decal support, morphing target animation support, and embedding Stride into UI frameworks. Release 4.1 is in progress, and an Epic grant proposal is being prepared.
+<!-- excerpt -->
 
-Hello there fellow Striders,
+## Summary
 
-On February 16th we held another community meeting. A whopping 2.5 hours with various subjects. Here is a quick summary.
+On February 16th, we held a whopping 2.5-hour community meeting covering various subjects.
 
 [[TOC]]
 
@@ -17,10 +18,11 @@ On February 16th we held another community meeting. A whopping 2.5 hours with va
 
 With a budget of **$4,220.48 USD** at the moment of the community meeting happening, we wanted to decide on whether to allocate money for bugs and new features. So a big thanks to all those who are donating to this project. In particular:
 
-* [VVVV](https://visualprogramming.net/)
-* [Vašo (vaclav)](https://opencollective.com/vaclav)
-* [ORE system](https://www.ore-system.com/) with a diamond sponsorship
-    <img src="/images/sponsors/ore_system-next_gen_nfts_dark.png"/>
+* {% include sponsor-org.md key:'ore' emoji:'💎' %}
+* {% include sponsor-org.md key:'vvvv' emoji:'🥇' %}
+* {% include sponsor-user.md key:'vaclav' emoji:'🥇' %}
+
+<img alt="Ore Logo" src="/images/sponsors/ore_system-next_gen_nfts_dark.png" class="img-fluid mb-2" loading="lazy" data-src="/images/sponsors/ore_system-next_gen_nfts_dark.png">
 
 
 ## Funding for bug bounties
@@ -45,13 +47,13 @@ With a budget of **$4,220.48 USD** at the moment of the community meeting happen
     * [Github discussion](https://github.com/stride3d/stride/issues/24) requires more deliverables
     * New Open collective project [Decals]( https://opencollective.com/stride3d/projects/decals) added and will be updated once deliverables are clear:]
 * Morphing target animation support
-    * [Github discussion] (https://github.com/stride3d/stride/issues/339)requires more deliverables
+    * [Github discussion](https://github.com/stride3d/stride/issues/339) requires more deliverables
     * New Open collective project [Morhping Target](https://opencollective.com/stride3d/projects/morph-targets) added and will be updated once deliverables are clear:
 * Embed stride into UI frameworks
     * There already is a [work in progress PR](https://github.com/stride3d/stride/pull/1315) that allows developers to specify a custom render context.
     * New Open collective Project for [Embedding Stride into UI frameworks](https://opencollective.com/stride3d/projects/embed-stride-ui-frameworks)
 * [Silk.NET](https://github.com/dotnet/Silk.NET)
-    * New Open collective project [Silk.NET](https://opencollective.com/stride3d/projects/silknet)
+    * New Open collective project [Silk.NET](https://opencollective.com/stride3d/projects/stride3d-silknet)
 
 
 ## Release 4.1
@@ -86,5 +88,5 @@ With a budget of **$4,220.48 USD** at the moment of the community meeting happen
         * Difference and 2 examples
 
 
-# Epic grant
+## Epic grant
 * Yka and AggrorJorn have a look at Epic grant and make final proposal in the 3rd week of February
