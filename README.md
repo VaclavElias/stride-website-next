@@ -21,8 +21,8 @@ Please feel free to collaborate, create issues, and submit pull requests.
 ## RC1+ Checklist
 - [x] Web - Update blog post urls so they match the old urls
 - [ ] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
+  - CSS Collaborator wanted
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
-  - Collaborator wanted
 - [ ] Web - Past Posts - Update and pretify content
 - [ ] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
