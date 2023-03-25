@@ -154,18 +154,18 @@
     </author><link href="https://stride3d.net/blog/community-meeting-february-2022/"/>
     <updated>2022-02-16T00:00:00Z</updated>
     <id>https://stride3d.net/blog/community-meeting-february-2022/</id>
-    <content xml:lang="en" type="html">&lt;h2 id=&quot;summary-community-meeting-2022&quot; tabindex=&quot;-1&quot;&gt;Summary Community Meeting 2022 &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#summary-community-meeting-2022&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Hello there fellow Striders,&lt;/p&gt;
-&lt;p&gt;On February 16th we held another community meeting. A whopping 2.5 hours with various subjects. Here is a quick summary.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#summary-community-meeting-2022&quot;&gt;Summary Community Meeting 2022 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#current-funding&quot;&gt;Current Funding &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#funding-for-bug-bounties&quot;&gt;Funding for bug bounties &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#funding-for-features&quot;&gt;Funding for features &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#release-4.1&quot;&gt;Release 4.1 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#additional-task-for-xen2&quot;&gt;Additional task for Xen2 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#work-in-progress&quot;&gt;Work in progress &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#epic-grant&quot;&gt;Epic grant &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
+    <content xml:lang="en" type="html">&lt;p&gt;The Striders discussed allocating their $4,220.48 USD budget for bug bounties and new features. Funding proposals include fullscreen Vulkan support, UI slowness bug research, Linux runtime support, decal support, morphing target animation support, and embedding Stride into UI frameworks. Release 4.1 is in progress, and an Epic grant proposal is being prepared.&lt;/p&gt;
+&lt;h2 id=&quot;summary&quot; tabindex=&quot;-1&quot;&gt;Summary &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#summary&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;On February 16th, we held a whopping 2.5-hour community meeting covering various subjects.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#summary&quot;&gt;Summary &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#current-funding&quot;&gt;Current Funding &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#funding-for-bug-bounties&quot;&gt;Funding for bug bounties &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#funding-for-features&quot;&gt;Funding for features &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#release-4.1&quot;&gt;Release 4.1 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#additional-task-for-xen2&quot;&gt;Additional task for Xen2 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#work-in-progress&quot;&gt;Work in progress &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#epic-grant&quot;&gt;Epic grant &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
 &lt;h2 id=&quot;current-funding&quot; tabindex=&quot;-1&quot;&gt;Current Funding &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#current-funding&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;With a budget of &lt;strong&gt;$4,220.48 USD&lt;/strong&gt; at the moment of the community meeting happening, we wanted to decide on whether to allocate money for bugs and new features. So a big thanks to all those who are donating to this project. In particular:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://visualprogramming.net/&quot;&gt;VVVV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://opencollective.com/vaclav&quot;&gt;Vašo (vaclav)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.ore-system.com/&quot;&gt;ORE system&lt;/a&gt; with a diamond sponsorship&lt;br /&gt;
-&lt;img src=&quot;https://stride3d.net/images/sponsors/ore_system-next_gen_nfts_dark.png&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ore-system.com/&quot;&gt;ORE system&lt;/a&gt;💎&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://visualprogramming.net/&quot;&gt;VVVV&lt;/a&gt;🥇&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/vaclav&quot;&gt;Vašo (Vaclav)&lt;/a&gt;🥇&lt;/li&gt;
 &lt;/ul&gt;
+&lt;img alt=&quot;Ore Logo&quot; src=&quot;https://stride3d.net/images/sponsors/ore_system-next_gen_nfts_dark.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/sponsors/ore_system-next_gen_nfts_dark.png&quot; /&gt;
 &lt;h2 id=&quot;funding-for-bug-bounties&quot; tabindex=&quot;-1&quot;&gt;Funding for bug bounties &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#funding-for-bug-bounties&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Fullscreen Vulkan support
@@ -206,7 +206,7 @@
 &lt;/li&gt;
 &lt;li&gt;Morphing target animation support
 &lt;ul&gt;
-&lt;li&gt;[Github discussion] (&lt;a href=&quot;https://github.com/stride3d/stride/issues/339&quot;&gt;https://github.com/stride3d/stride/issues/339&lt;/a&gt;)requires more deliverables&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/issues/339&quot;&gt;Github discussion&lt;/a&gt; requires more deliverables&lt;/li&gt;
 &lt;li&gt;New Open collective project &lt;a href=&quot;https://opencollective.com/stride3d/projects/morph-targets&quot;&gt;Morhping Target&lt;/a&gt; added and will be updated once deliverables are clear:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -218,7 +218,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/Silk.NET&quot;&gt;Silk.NET&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;New Open collective project &lt;a href=&quot;https://opencollective.com/stride3d/projects/silknet&quot;&gt;Silk.NET&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;New Open collective project &lt;a href=&quot;https://opencollective.com/stride3d/projects/stride3d-silknet&quot;&gt;Silk.NET&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -275,9 +275,106 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;epic-grant&quot; tabindex=&quot;-1&quot;&gt;Epic grant &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#epic-grant&quot;&gt;🔗&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id=&quot;epic-grant&quot; tabindex=&quot;-1&quot;&gt;Epic grant &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#epic-grant&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Yka and AggrorJorn have a look at Epic grant and make final proposal in the 3rd week of February&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Community Meeting November 2021</title><author>
+      <name>Jorn Theunissen</name>
+    </author><link href="https://stride3d.net/blog/community-meeting-november-2021/"/>
+    <updated>2021-11-29T00:00:00Z</updated>
+    <id>https://stride3d.net/blog/community-meeting-november-2021/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;After a month on Open Collective, the Stride collective reached $1,984.31 USD and discussed funding for various projects. Plans for requesting an Epic grant are in progress. Ongoing development includes physics constraints, splines, and the upcoming release of version 4.1.&lt;/p&gt;
+&lt;h2 id=&quot;summary&quot; tabindex=&quot;-1&quot;&gt;Summary &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#summary&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;November 29th we had another commmunity meeting. This blog post summarizes the topics we talked about.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#summary&quot;&gt;Summary &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#sponsors&quot;&gt;Sponsors &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#a-month-of-open-collective&quot;&gt;A Month of Open Collective &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#preparing-request-epic-grant&quot;&gt;Preparing Request Epic Grant &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#other-action-items&quot;&gt;Other Action Items &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#ongoing-development&quot;&gt;Ongoing Development &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h2 id=&quot;sponsors&quot; tabindex=&quot;-1&quot;&gt;Sponsors &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#sponsors&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Started of with a thank you to all those who donated on the new sponsor platform: &lt;a href=&quot;https://opencollective.com/stride3d&quot;&gt;Open collective&lt;/a&gt;. In particular a big thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/xen2&quot;&gt;Xen2&lt;/a&gt;, who decided that he wanted to contribute some of the Patreon money back in to the community.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ore-system.com/&quot;&gt;ORE system&lt;/a&gt;💎&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://visualprogramming.net/&quot;&gt;VVVV&lt;/a&gt;🥇&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/vaclav&quot;&gt;Vašo (Vaclav)&lt;/a&gt;🥇&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img alt=&quot;Ore Logo&quot; src=&quot;https://stride3d.net/images/sponsors/ore_system-next_gen_nfts_dark.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/sponsors/ore_system-next_gen_nfts_dark.png&quot; /&gt;
+&lt;h2 id=&quot;a-month-of-open-collective&quot; tabindex=&quot;-1&quot;&gt;A Month of Open Collective &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#a-month-of-open-collective&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;After a month using the new sponsor platform, the Stride collective has reached a balance of &lt;strong&gt;$1,984.31&lt;/strong&gt; USD. We started discussing how and where the money should be distributed to. We want to do this with the help of Open collective &#39;Projects&#39;. These projects are listed on Stride&#39;s Open collective page, and have their own tiers, targets and description. Users can sponsor projects directly instead of the main Stride collective if they want to.&lt;/p&gt;
+&lt;p&gt;We have come up with several projects that need to be written out in more detail before we will add them to the Open collective page. All tickets below have a Github disscusion for more details.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OC project: Bug bounties project
+&lt;ul&gt;
+&lt;li&gt;Before starting on an issue, make it known on Github and Discord that your are willing to tackle the issue. It would be a shame if multiple people try to solve the same issue.&lt;/li&gt;
+&lt;li&gt;Any PR to the Stride repo must be reviewed by a contributor and discussed if needed.&lt;/li&gt;
+&lt;li&gt;Once a PR is reviewed and merged to the Stride repo, the submitter 60% of the bounty.&lt;/li&gt;
+&lt;li&gt;The submitter receives the remaining 40% when stride release happens.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/discussions/1204&quot;&gt;Github Discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OC project: .NET 6 platforms support
+&lt;ul&gt;
+&lt;li&gt;In order for proper support for macOs, we need hardware to test this on. Xen2 will look in to the hardware requirements for this.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/discussions/1206&quot;&gt;Github Discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OC project: Shader system
+&lt;ul&gt;
+&lt;li&gt;Xen2 will gather info and budget requirements&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/discussions/1201&quot;&gt;Github Discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OC project: Linux/macOS support&#39;
+&lt;ul&gt;
+&lt;li&gt;A rather large topic that require a lot of work is the the support for Linux and/or macOs. When worked out in more detail, it can be used in the plan for requesting an Epic grant. Subtopics to resolve:
+&lt;ul&gt;
+&lt;li&gt;Runtime/3d&lt;/li&gt;
+&lt;li&gt;Build tools (able to msbuild a Stride project and have the asset compiler work on it) requirement:  FBX/Assimp&lt;/li&gt;
+&lt;li&gt;Editor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/discussions/1202&quot;&gt;Github Discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;preparing-request-epic-grant&quot; tabindex=&quot;-1&quot;&gt;Preparing Request Epic Grant &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#preparing-request-epic-grant&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For a while now we have been wanting to pursue the option of requesting an Epig grant. In order to do so however, we need to come up with a proper plan. The endgoal is to have a proper document explaining what we want to do, and how we plan to spend any given budget.&lt;/p&gt;
+&lt;p&gt;AggrorJorn starts a github ticket where we gather info on the request to Epic. He will contact others for proof read and further info. &lt;a href=&quot;https://github.com/stride3d/stride/discussions/1207&quot;&gt;Github Discussion&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Some of the topics mentioned:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shader system&lt;/li&gt;
+&lt;li&gt;Editor rewrite&lt;/li&gt;
+&lt;li&gt;Megascan Integration&lt;/li&gt;
+&lt;li&gt;ECS rewrite/Run Update() and Render() in parallel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;other-action-items&quot; tabindex=&quot;-1&quot;&gt;Other Action Items &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#other-action-items&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We close forum in December as there is almost no activity there. We want to utilize Discord and Github discussion for this. The forum will be read only but we will no longer refer to it from the website and Github.&lt;/li&gt;
+&lt;li&gt;Use a Github project for remaining tasks: &lt;a href=&quot;https://github.com/orgs/stride3d/projects/3/views/1&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github ticket on a simple free community marketplace
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/issues/1197&quot;&gt;Github Discussion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A lot of people have made usefull components/utilities/art and other usefull assets for in Stride projects. Right now we don&#39;t have a quick and easy to import such assets in to an existing (editor) project.&lt;/li&gt;
+&lt;li&gt;What we can do it is utilise the existing Nuget (tagging) system so that users can quickly add a component to their ongoing project in the editor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Documentation on the stride source/new comers tutorial
+&lt;ul&gt;
+&lt;li&gt;YKA, Manio143 and Tebjan collect some info for a tutorial: &lt;a href=&quot;https://github.com/stride3d/stride/discussions/1211&quot;&gt;Github Discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ongoing-development&quot; tabindex=&quot;-1&quot;&gt;Ongoing Development &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#ongoing-development&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Manio143: finishing touches/documentation for Physics constraints&lt;/li&gt;
+&lt;li&gt;AggrorJorn: Splines
+&lt;ul&gt;
+&lt;li&gt;Trying to finish the base splines which could be integrated in to the Stride source. Other Spline based components should be added later, so that we can have a milestone finished.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Some tricky stuff with custom translation gizmo&#39;s for controlling tangents in the editor are currently holding me back. If this isn&#39;t resolved quickly I will make a PR without this (nice to have) feature&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Release of 4.1 only held back by final .NET 6 related fixes. After that Xen2 will prepare release. AggrorJorn will aid in blogpost release notes&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>

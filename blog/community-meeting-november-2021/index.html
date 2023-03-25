@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stride Game Engine - Community</title>
-    <meta name="description" content="Join the vibrant Stride game engine community on Discord, Sponsor, GitHub, Twitter, and YouTube. Connect, learn, and collaborate with fellow game developers today.">
+    <title>Stride Game Engine - Community Meeting November 2021</title>
+    <meta name="description" content="After a month on Open Collective, the Stride collective reached $1,984.31 USD and discussed funding for various projects. Plans for requesting an Epic grant ...">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="canonical" href="https://stride3d.net/community/">
+    <link rel="canonical" href="https://stride3d.net/blog/community-meeting-november-2021/">
     <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
     <link rel="stylesheet" href="/css/styles.css?site-version=2.0">
     
@@ -31,7 +31,7 @@
                     <a class="nav-link" aria-current="page" href="/features/">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/blog/">Blog</a>
+                    <a class="nav-link active text-primary" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
@@ -44,7 +44,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-primary" href="/community/">Community</a>
+                    <a class="nav-link" href="/community/">Community</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/download/">
@@ -130,119 +130,149 @@
         </div>
     </div>
 </nav>
-    
-<div style="background-image: url(/images/backgrounds/spaceescape.jpg); background-position: 50% 50%; background-size: cover">
-    <div class="cover text-center py-5">
-        <h1 class="text-light pt-4">Stride Community</h1>
-        <p class="text-light lead pb-3">Help and Share</p>
+    <div class="container">
+    <div class="row postcontent">
+        <div class="col-12">
+            <article>
+                <h1>Community Meeting November 2021</h1>
+                <div class="text-center mb-3 pt-2">
+                    
+                    
+                    <p>
+                        
+                        <div class="mt-4 mb-2">
+                            <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/Aggror?size=58" />
+                        </div>
+                        
+                        Jorn Theunissen
+                    </p>
+                    
+                    <p style="color:#616161;border-top: 2px solid #979593;" class="x-hidden-focus mt-2 pt-1 small text-muted date d-inline-block">
+                        <i class="fa-solid fa-calendar-days"></i> <time datetime="2021-29-11T00:00:00+0000" itemprop="datePublished"> November 29, 2021</time>
+                    </p>
+                </div>
+                <p>After a month on Open Collective, the Stride collective reached $1,984.31 USD and discussed funding for various projects. Plans for requesting an Epic grant are in progress. Ongoing development includes physics constraints, splines, and the upcoming release of version 4.1.</p>
+<h2 id="summary" tabindex="-1">Summary <a class="direct-link" href="#summary">🔗</a></h2>
+<p>November 29th we had another commmunity meeting. This blog post summarizes the topics we talked about.</p>
+<p><div class="table-of-contents"><ul><li><a href="#summary">Summary </a></li><li><a href="#sponsors">Sponsors </a></li><li><a href="#a-month-of-open-collective">A Month of Open Collective </a></li><li><a href="#preparing-request-epic-grant">Preparing Request Epic Grant </a></li><li><a href="#other-action-items">Other Action Items </a></li><li><a href="#ongoing-development">Ongoing Development </a></li></ul></div></p>
+<h2 id="sponsors" tabindex="-1">Sponsors <a class="direct-link" href="#sponsors">🔗</a></h2>
+<p>Started of with a thank you to all those who donated on the new sponsor platform: <a href="https://opencollective.com/stride3d">Open collective</a>. In particular a big thanks to:</p>
+<ul>
+<li><a href="https://opencollective.com/xen2">Xen2</a>, who decided that he wanted to contribute some of the Patreon money back in to the community.</li>
+<li><a href="https://www.ore-system.com/">ORE system</a>💎</li>
+<li><a href="https://visualprogramming.net/">VVVV</a>🥇</li>
+<li><a href="https://opencollective.com/vaclav">Vašo (Vaclav)</a>🥇</li>
+</ul>
+<img alt="Ore Logo" src="/images/sponsors/ore_system-next_gen_nfts_dark.png" class="img-fluid mb-2" loading="lazy" data-src="/images/sponsors/ore_system-next_gen_nfts_dark.png">
+<h2 id="a-month-of-open-collective" tabindex="-1">A Month of Open Collective <a class="direct-link" href="#a-month-of-open-collective">🔗</a></h2>
+<p>After a month using the new sponsor platform, the Stride collective has reached a balance of <strong>$1,984.31</strong> USD. We started discussing how and where the money should be distributed to. We want to do this with the help of Open collective 'Projects'. These projects are listed on Stride's Open collective page, and have their own tiers, targets and description. Users can sponsor projects directly instead of the main Stride collective if they want to.</p>
+<p>We have come up with several projects that need to be written out in more detail before we will add them to the Open collective page. All tickets below have a Github disscusion for more details.</p>
+<ul>
+<li>OC project: Bug bounties project
+<ul>
+<li>Before starting on an issue, make it known on Github and Discord that your are willing to tackle the issue. It would be a shame if multiple people try to solve the same issue.</li>
+<li>Any PR to the Stride repo must be reviewed by a contributor and discussed if needed.</li>
+<li>Once a PR is reviewed and merged to the Stride repo, the submitter 60% of the bounty.</li>
+<li>The submitter receives the remaining 40% when stride release happens.</li>
+<li><a href="https://github.com/stride3d/stride/discussions/1204">Github Discussion</a></li>
+</ul>
+</li>
+<li>OC project: .NET 6 platforms support
+<ul>
+<li>In order for proper support for macOs, we need hardware to test this on. Xen2 will look in to the hardware requirements for this.</li>
+<li><a href="https://github.com/stride3d/stride/discussions/1206">Github Discussion</a></li>
+</ul>
+</li>
+<li>OC project: Shader system
+<ul>
+<li>Xen2 will gather info and budget requirements</li>
+<li><a href="https://github.com/stride3d/stride/discussions/1201">Github Discussion</a></li>
+</ul>
+</li>
+<li>OC project: Linux/macOS support'
+<ul>
+<li>A rather large topic that require a lot of work is the the support for Linux and/or macOs. When worked out in more detail, it can be used in the plan for requesting an Epic grant. Subtopics to resolve:
+<ul>
+<li>Runtime/3d</li>
+<li>Build tools (able to msbuild a Stride project and have the asset compiler work on it) requirement:  FBX/Assimp</li>
+<li>Editor</li>
+</ul>
+</li>
+<li><a href="https://github.com/stride3d/stride/discussions/1202">Github Discussion</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="preparing-request-epic-grant" tabindex="-1">Preparing Request Epic Grant <a class="direct-link" href="#preparing-request-epic-grant">🔗</a></h2>
+<p>For a while now we have been wanting to pursue the option of requesting an Epig grant. In order to do so however, we need to come up with a proper plan. The endgoal is to have a proper document explaining what we want to do, and how we plan to spend any given budget.</p>
+<p>AggrorJorn starts a github ticket where we gather info on the request to Epic. He will contact others for proof read and further info. <a href="https://github.com/stride3d/stride/discussions/1207">Github Discussion</a></p>
+<p>Some of the topics mentioned:</p>
+<ul>
+<li>Shader system</li>
+<li>Editor rewrite</li>
+<li>Megascan Integration</li>
+<li>ECS rewrite/Run Update() and Render() in parallel</li>
+</ul>
+<h2 id="other-action-items" tabindex="-1">Other Action Items <a class="direct-link" href="#other-action-items">🔗</a></h2>
+<ul>
+<li>We close forum in December as there is almost no activity there. We want to utilize Discord and Github discussion for this. The forum will be read only but we will no longer refer to it from the website and Github.</li>
+<li>Use a Github project for remaining tasks: <a href="https://github.com/orgs/stride3d/projects/3/views/1">Overview</a></li>
+<li>Github ticket on a simple free community marketplace
+<ul>
+<li><a href="https://github.com/stride3d/stride/issues/1197">Github Discussion</a></li>
+<li>A lot of people have made usefull components/utilities/art and other usefull assets for in Stride projects. Right now we don't have a quick and easy to import such assets in to an existing (editor) project.</li>
+<li>What we can do it is utilise the existing Nuget (tagging) system so that users can quickly add a component to their ongoing project in the editor.</li>
+</ul>
+</li>
+<li>Documentation on the stride source/new comers tutorial
+<ul>
+<li>YKA, Manio143 and Tebjan collect some info for a tutorial: <a href="https://github.com/stride3d/stride/discussions/1211">Github Discussion</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="ongoing-development" tabindex="-1">Ongoing Development <a class="direct-link" href="#ongoing-development">🔗</a></h2>
+<ul>
+<li>Manio143: finishing touches/documentation for Physics constraints</li>
+<li>AggrorJorn: Splines
+<ul>
+<li>Trying to finish the base splines which could be integrated in to the Stride source. Other Spline based components should be added later, so that we can have a milestone finished.</li>
+<li><em>Some tricky stuff with custom translation gizmo's for controlling tangents in the editor are currently holding me back. If this isn't resolved quickly I will make a PR without this (nice to have) feature</em></li>
+</ul>
+</li>
+<li>Release of 4.1 only held back by final .NET 6 related fixes. After that Xen2 will prepare release. AggrorJorn will aid in blogpost release notes</li>
+</ul>
+
+                <hr />
+                <p>
+<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Meeting</span></p>
+                <p>
+                    Any comments? You can start 🗨 at <i class="fa-brands fa-github text-decoration-none"></i> <a href="https://github.com/stride3d/stride/discussions" target="_blank" rel="noreferrer">GitHub Discussions</a> or <i class="fa-brands fa-discord text-decoration-none"></i> <a class="" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener">Discord</a>.
+                </p>
+                <p>
+                    <a href="https://github.com/VaclavElias/stride-website-next/blob/eleventy/./posts/2021-11-29-community-meeting-november-2021.md" target="_blank" rel="noreferrer">Edit</a> this page on
+                    <i class="fa-brands fa-github text-decoration-none"></i>.
+                </p>
+            </article>
+        </div>
+    </div>
+    <div class="row mb-5">
+        
+        
+        <div class="col-md-6 mb-4">
+            
+        </div>
+        <div class="col-md-6 text-md-end">
+            
+            <div class="card px-3">
+                <div class="card-body p-4">
+                    <h5>Next Post</h5>
+                    <a class="next stretched-link" href="/blog/community-meeting-february-2022/">Community Meeting February 2022</a>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </div>
-<div class="container-xxl py-5 px-4 px-sm-5">
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="card-title"><i class="fa-brands fa-discord text-decoration-none"></i> Discord</h4>
-                    <p>
-                        Join our Discord community to engage with Stride users and developers, share your experiences, and seek advice on various topics.
-                    </p>
-                    <p>
-                        <a href="https://discord.gg/f6aerfE" class="stretched-link" target="_blank" rel="noopener">Join Discord</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="card-title"><i class="fa-solid fa-heart text-decoration-none"></i> Sponsor</h4>
-                    <p>
-                        Support the Stride project by donating to help cover server costs, fund development efforts, and reward the dedicated team working behind the scenes.
-                    </p>
-                    <p>
-                        <a href="/sponsor/" class="stretched-link">Become a Sponsor</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="card-title"><i class="fa-brands fa-github text-decoration-none"></i> GitHub</h4>
-                    <p>Collaborate on the Stride project with fellow developers, contribute your unique skills, and share your ideas to enhance the platform's capabilities.</p>
-                    <p>
-                        <a href="https://github.com/stride3d/stride" target="_blank" rel="noopner" class="stretched-link">Collaborate</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="title"><i class="fa-solid fa-comments"></i> GitHub Discussions</h4>
-                    <p>Actively participate in GitHub discussions to connect with other users, learn valuable insights from developers, and proudly showcase your work to the community.</p>
-                    <p>
-                        <a href="https://github.com/stride3d/stride/discussions" target="_blank" rel="noopner" class="stretched-link">Join a Discussion</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="title"><i class="fa-brands fa-twitter text-decoration-none"></i> Twitter</h4>
-                    <p>Follow us on Twitter at @stridedotnet to stay updated with the latest announcements, exciting news, and essential updates from the Stride team.</p>
-                    <p>
-                        <a href="https://twitter.com/stridedotnet" target="_blank" rel="noopner" class="stretched-link">Follow us</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="title"><i class="fa-brands fa-youtube text-decoration-none"></i> YouTube</h4>
-                    <p>Subscribe to our YouTube channel for access to a wide range of video content, including tutorials, demos, and insights into Stride's features.</p>
-                    <p>
-                        <a href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopner" class="stretched-link">Follow us</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="title"><i class="fa-brands fa-facebook text-decoration-none"></i> Facebook</h4>
-                    <p>Keep up to date with recent developments and engage with our growing community by following Stride on Facebook.</p>
-                    <p>
-                        <a href="https://www.facebook.com/stride3d" target="_blank" rel="noopner" class="stretched-link">Follow us</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="title"><i class="fa-solid fa-circle-question"></i> Q&A Game Dev</h4>
-                    <p>Explore the Stack Exchange platform for Stride-related help, ask questions, share your expertise, and discover top-voted answers from the community.</p>
-                    <p>
-                        <a href="https://gamedev.stackexchange.com/questions/tagged/stride" target="_blank" rel="noopner" class="stretched-link">Ask a Question</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="title"><i class="fa-solid fa-envelope"></i> Contact</h4>
-                    <p>
-                        Have a particular request or need advanced support? Want to offer us feedback? Feel free to contact us directly through any channels listed on this page.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
     <div class="bg-dark mt-auto">
     <div class="container">
         <footer class="pt-5 px-2">
