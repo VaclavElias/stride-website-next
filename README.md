@@ -18,7 +18,7 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [x] keep the content as it is and where it is, maybe just improve if needed
 
 ## RC1+ Checklist
-- [ ] Web - Update blog post urls so they match the old urls
+- [x] Web - Update blog post urls so they match the old urls
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Past Posts - Update and pretify content
 - [ ] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
@@ -54,6 +54,7 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 - [ ] Include Avatar, wtith different asssets like dotnet bot, use also for 2D Games
 - [ ] Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
 - [ ] Web - Keep only used FontAwesome references in all.css, to reduce the file sie
+- [ ] Metrics - Update to ASP.NET Core / Blazor https://github.com/stride3d/stride/tree/master/sources/metrics/Stride.Metrics
 - [ ] Web - Change all images to webp
 - [ ] Web - Minify if possible js and html
 - [ ] Footer example https://www.blender.org/

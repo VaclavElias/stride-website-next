@@ -13,9 +13,7 @@
                 <a href="#{{ feature.id }}_popup" title="{{ feature.title }}" class="video-popup">
                     <div class="ratio ratio-16x9">
                         <div class="zoom-in"></div><div class="video-play-button"></div>
-                        <video muted autoplay loop onplay="feature_video_onplay(event)" onpause="feature_video_onpause(event)"
-                               poster="/images/features/{{ name }}/{{ feature.id }}_640.jpg">
-                            <source src="/images/features/{{ name }}/{{ feature.id }}_640.mp4">
+                        <video muted autoplay loop poster="/images/features/{{ name }}/{{ feature.id }}_640.jpg"><source src="/images/features/{{ name }}/{{ feature.id }}_640.mp4">
                         </video>
                     </div>
                 </a>
