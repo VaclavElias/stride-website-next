@@ -2,8 +2,7 @@
 
 ## Demo
 
-Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago (Jekyll version). Upcoming update made in 11ty will be released in 03-04/2023
-
+Demo is here https://stride-website.vaclavelias.com/. Please feel free collaborate, create Issues and Pull requests.
 
 ## The motivation for the update
 
@@ -19,7 +18,9 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 
 ## RC1+ Checklist
 - [x] Web - Update blog post urls so they match the old urls
+- [ ] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
+  - Collaborator wanted
 - [ ] Web - Past Posts - Update and pretify content
 - [ ] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
