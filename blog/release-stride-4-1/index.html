@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stride Game Engine - Stride 4.1 is Now Live</title>
+    <meta name="description" content="Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page a...">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="canonical" href="https://stride3d.net/blog/release-stride-4-1/">
+    <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
+    <link rel="stylesheet" href="/css/styles.css?site-version=2.0">
+    
+    <meta property="og:image" content="/images/og/ogp.jpg">
+    
+    <script src="/scripts/theme-selector.js?site-version=2.0"></script>
+</head>
+<body class="bg-dark d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-xxl">
+        <a class="navbar-brand" href="/">
+            <img height="37" width="124" src="/images/svg/logo.svg" alt="Stride logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+            
+            
+            <ul class="navbar-nav navbar-nav--text me-auto mb-2 mb-lg-0 ms-sm-2">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/features/">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-primary" href="/blog/">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/manual/" target="_blank" rel="noopener"><i class="fa-solid fa-book fa-fw text-decoration-none"></i> Manual (EN)</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/jp/manual/" target="_blank" rel="noopener"><i class="fa-solid fa-book fa-fw text-decoration-none"></i> Manual (JP)</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/api/" target="_blank" rel="noopener"><i class="fa-solid fa-gears fa-fw text-decoration-none"></i> API</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/releasenotes/" target="_blank" rel="noopener"><i class="fa-brands fa-readme fa-fw text-decoration-none"></i> Release Notes</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/tutorials/" target="_blank" rel="noopener"><i class="fa-solid fa-glasses fa-fw text-decoration-none"></i> Tutorials</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/community/">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/download/">
+                        Download
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sponsor/">
+                        <i class="fa-solid fa-heart text-decoration-none"></i> Sponsor
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto navbar-icons">
+                <li class="nav-item col-12 col-lg-auto dropdown">
+                    <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false" onclick="document.getElementById('search-input').focus()" aria-label="Search button"><i class="fa-solid fa-magnifying-glass text-decoration-none"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end p-3" style="width: 280px;">
+                        
+<form action="/search/" method="get">
+    <div class="mb-3">
+        <input class="form-control" id="search-input" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
+    </div>
+    <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
+</form>
+                    </div>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-github text-decoration-none"></i>
+                        <small class="d-lg-none">GitHub</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-twitter text-decoration-none"></i>
+                        <small class="d-lg-none">Twitter</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-discord text-decoration-none"></i>
+                        <small class="d-lg-none">Discord</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link px-0 px-lg-2" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top: -4px;"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                        <small class="d-lg-none">Open Collective</small>
+                    </a>
+                </li>
+                <li class="nav-item dropdown d-flex align-items-center ms-2">
+                    <a title="Change theme" class="nav-link dropdown-toggle d-flex align-items-center mt-1" href="#" id="themeDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#" id="lightTheme">
+                                <svg data-theme="light" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
+                                    <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                                </svg>
+                                <span class="ms-2 text-decoration-none">Light</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" id="darkTheme">
+                                <svg data-theme="dark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+                                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+                                </svg>
+                                <span class="ms-2 text-decoration-none">Dark</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" id="autoTheme">
+                                <svg data-theme="auto" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+                                </svg>
+                                <span class="ms-2 text-decoration-none">Auto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+    <div class="row postcontent">
+        <div class="col-12">
+            <article>
+                <h1>Stride 4.1 is Now Live</h1>
+                <div class="text-center mb-3 pt-2">
+                    
+                    
+                    <p>
+                        
+                        <div class="mt-4 mb-2">
+                            <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/Aggror?size=58" />
+                        </div>
+                        
+                        Aggror Jorn
+                    </p>
+                    
+                    <p style="color:#616161;border-top: 2px solid #979593;" class="x-hidden-focus mt-2 pt-1 small text-muted date d-inline-block">
+                        <i class="fa-solid fa-calendar-days"></i> <time datetime="2022-16-07T00:00:00+0000" itemprop="datePublished"> July 16, 2022</time>
+                    </p>
+                </div>
+                <p>Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.</p>
+<p><div class="table-of-contents"><ul><li><a href="#stride-on-.net-live">Stride On .NET Live </a></li><li><a href="#improvements-summary">Improvements Summary </a></li><li><a href="#improvement-details">Improvement Details </a></li><li><a href="#known-issues">Known Issues </a></li><li><a href="#a-little-help">A Little Help </a></li></ul></div></p>
+<h2 id="stride-on-.net-live" tabindex="-1">Stride On .NET Live <a class="direct-link" href="#stride-on-.net-live">🔗</a></h2>
+<p>We had the pleasure to be on a live stream with the .NET team! We gave an introduction, overview and some live demos:</p>
+<div class="ratio ratio-16x9 mb-4">
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/J6g5y8m26zs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<h2 id="improvements-summary" tabindex="-1">Improvements Summary <a class="direct-link" href="#improvements-summary">🔗</a></h2>
+<p>Here's a non-exhaustive list of new improvements:</p>
+<ul>
+<li>.NET 6 support and <a href="https://github.com/stride3d/stride/pull/1221">VS 2022 plugin</a>
+<ul>
+<li>Stride 4.1 leverages the power of .NET 6</li>
+<li>Support for C# 10</li>
+</ul>
+</li>
+<li><a href="https://github.com/stride3d/stride/pull/1256">Dithered shadows for semi-transparent materials</a></li>
+<li><a href="https://github.com/stride3d/stride/pull/1114">Physics constraints</a>
+<ul>
+<li>Bullet constraints wrapped around in easy to use functionality</li>
+<li>Editor gizmos for physics constraints</li>
+</ul>
+</li>
+<li><a href="https://github.com/stride3d/stride/pull/1100">Physics performance optimization</a></li>
+<li><a href="https://github.com/stride3d/stride/pull/1037">ACES tonemaping</a></li>
+<li><a href="https://github.com/stride3d/stride/pull/1039">Fog image effect</a></li>
+<li><a href="https://github.com/stride3d/stride/pull/1038">Outline image effect</a></li>
+<li><a href="https://github.com/stride3d/stride/pull/1083">Improved editor gizmos</a></li>
+<li><a href="https://github.com/stride3d/stride/pull/1401">C# Intermediate tutorials project</a>
+<ul>
+<li>This Open Collective sub-project was <a href="https://opencollective.com/stride3d/projects/stride-intermediate-tutorials">successfully funded</a> by the community.  All related video recordings are available on Stride's <a href="https://www.youtube.com/c/Stride3D">Youtube channel</a> and the <a href="https://doc.stride3d.net/latest/en/tutorials/index.html">tutorials page</a> in the documentation will also be update to reflect the new project.</li>
+</ul>
+</li>
+<li>Many more minor fixes and quality of life improvements
+<ul>
+<li><a href="https://github.com/stride3d/stride/pull/1217">Fixed sample game</a></li>
+<li><a href="https://github.com/stride3d/stride/pull/1285">Simpler Procedural Model creation</a></li>
+<li>New math signatures (<a href="https://github.com/stride3d/stride/pull/1122">1122</a>, <a href="https://github.com/stride3d/stride/pull/1121">1121</a>, <a href="https://github.com/stride3d/stride/pull/1090">1090</a>)</li>
+<li>Dispatcher/threadpool improvements</li>
+<li>Ambient Occlusion quality improvement</li>
+<li>And many other fixes</li>
+</ul>
+</li>
+</ul>
+<h2 id="improvement-details" tabindex="-1">Improvement Details <a class="direct-link" href="#improvement-details">🔗</a></h2>
+<h3 id="dithered-shadows-for-semi-transparent-materials" tabindex="-1">Dithered shadows for semi-transparent materials <a class="direct-link" href="#dithered-shadows-for-semi-transparent-materials">🔗</a></h3>
+<p>Produces semi-transparent shadows by poking more and more holes in the shadow map based on the transparency of the object, shadow map filtering will blur those holes with their neighbor which will result in those partially opaque pixels.</p>
+<img alt="Dithered shadow settings" src="https://i.imgur.com/xFzuNbl.png" class="img-fluid" loading="lazy" data-src="https://i.imgur.com/xFzuNbl.png">
+<img alt="Dithered shadow effect comparison" src="https://i.imgur.com/kHvSy8a.png" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/kHvSy8a.png">
+<h3 id="physics-constraints" tabindex="-1">Physics constraints <a class="direct-link" href="#physics-constraints">🔗</a></h3>
+<p>Stride's physics system Bullet comes with a set of constraints for you to use in your projects. These constraints are now all visible inside the editor, previewing the constraints using various editor gizmo.</p>
+<img alt="preview(to be removed)]()" src="https://i.imgur.com/qiaBBpm.png" class="img-fluid mb-3">
+<p>For more information on all the types of constraints, you can read up about them in the <a href="https://doc.stride3d.net/latest/en/manual/physics/constraints.html">Stride documentation</a> or watch the video below.</p>
+<div class="ratio ratio-16x9 mb-4">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uMZMYpMD3Wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<h3 id="physics-optimizations" tabindex="-1">Physics optimizations <a class="direct-link" href="#physics-optimizations">🔗</a></h3>
+<p>Retrieving collision and contact information was previously done by re-testing all components for collisions, which, as one might expect, led to awful performance for physics heavy scenes (could take up to and above 90% of the frame).</p>
+<p>Contacts are now lazily evaluated to reduce overhead when nothing ends up reading them. Users can now read and iterate over all collisions through Simulation.CurrentCollisions.</p>
+<h3 id="improved-editor-gizmos" tabindex="-1">Improved editor gizmos <a class="direct-link" href="#improved-editor-gizmos">🔗</a></h3>
+<p>The old gizmos weren't very nice to look at, so this feature makes them look better and more user-friendly. It also changes how the rotation gizmo works and adds scale planes to the scale gizmo.</p>
+<img alt="New gizmos" src="https://i.imgur.com/8siM2Lc.png" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/8siM2Lc.png">
+<p>This feature also updates the text on the CameraOrientationGizmo to be XYZ instead of right/left. Still prefer the old text instead of the XYZ coordinate? Don't worry, there's a setting under the viewport settings that swaps it back to the old text.</p>
+<img alt="Rotation" src="https://i.imgur.com/W4zIf7J.png=400x160" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/W4zIf7J.png=400x160">
+<h3 id="intermediate-tutorials" tabindex="-1">Intermediate tutorials <a class="direct-link" href="#intermediate-tutorials">🔗</a></h3>
+<p>One of the first Open Collective sub-projects is the <a href="https://opencollective.com/stride3d/projects/stride-intermediate-tutorials">intermediate C# tutorials project</a>. After discussion in community meetings and with various contributors donating directly to this project, the amount for this project to be included in Stride quickly became a realization.</p>
+<img alt="Intermediate tutorials intro screen" src="https://i.imgur.com/7GVEiSR.jpg" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/7GVEiSR.jpg">
+<p>With Stride 4.1, you will be able to select the C# intermediate tutorials project as a new template project. The template project contains (at the moment of writing) 11 topics that every developer will want to have a look at.</p>
+<ol>
+<li>UI basics</li>
+<li>Collision triggers</li>
+<li>Raycasting</li>
+<li>Projecting and Unprojecting</li>
+<li>Async(hronous) scripts</li>
+<li>Scene loading</li>
+<li>Animation basics</li>
+<li>Audio</li>
+<li>First person camera</li>
+<li>Third person camera</li>
+<li>Navigation</li>
+</ol>
+<p>Each tutorial has a video tutorial accompanying it, which can be found on Stride's <a href="https://www.youtube.com/c/Stride3D">Youtube channel</a>. Below you can find the full playlist.</p>
+ <div class="ratio ratio-16x9 mb-4">
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
+<h2 id="known-issues" tabindex="-1">Known Issues <a class="direct-link" href="#known-issues">🔗</a></h2>
+<h3 id="integrated-c%23-editor" tabindex="-1">Integrated C# Editor <a class="direct-link" href="#integrated-c%23-editor">🔗</a></h3>
+<p>The transition to .NET6 unfortunately broke the help tooltips and the code completion of the integrated C# code editor. But we decided to accept it for now, as everyone is using a proper C# editor anyways, such as Visual Studio, Rider or Visual Studio Code.</p>
+<p>The reason for the error is that <a href="https://github.com/roslynpad/roslynpad">RoslynPad</a>, the underlaying library, also needs an update or fix. We'll adress this in one of the upcoming minor version releases.</p>
+<img alt="Integrated Editor Issue" src="https://i.imgur.com/Gn2i6Js.png" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/Gn2i6Js.png">
+<h2 id="a-little-help" tabindex="-1">A Little Help <a class="direct-link" href="#a-little-help">🔗</a></h2>
+<p>We, contributors, believe that Stride can help .NET game developers make the games they want with ease using their favorite languages. We want to make sure Stride offers the most comfortable environment for developing games, and this takes time and effort.</p>
+<p>Since the free and open-source release of Stride, the community has been growing slowly, so we have decided to open a fund to reward developers for any contribution they make to Stride. We set up an <a href="https://opencollective.com/stride3d">Open Collective page</a> to manage our funds and allocate money for features that the community would like to see implemented.</p>
+<p>We have various bounties for <a href="https://opencollective.com/stride3d/projects">bug fixes and features</a> (Vulkan support, decals, morph targets, and many others). If you have or know someone with the skills to tackle those bounties, please reach out to us through the <a href="https://github.com/stride3d/stride/labels/bounty">respective Github tickets</a>. You can also contact us through our discord server or on Github to propose new bounties.</p>
+<h3 id="contributors" tabindex="-1">Contributors <a class="direct-link" href="#contributors">🔗</a></h3>
+<p>Many thanks to <a href="https://github.com/stride3d/stride/graphs/contributors?from=2021-02-01&amp;to=2022-06-10&amp;type=c">all the contributors</a> who have donated their time and skill by adding features, fixing bugs, managing the build pipelines, adding documentation, and reviewing PRs.</p>
+<h3 id="financial-contributors" tabindex="-1">Financial contributors <a class="direct-link" href="#financial-contributors">🔗</a></h3>
+<p>Also, a huge thanks to the individuals and companies who contributed financially to our <a href="https://opencollective.com/stride3d">Open Collective</a>!</p>
+<ul>
+<li><a href="https://ore-system.com">ORE System</a> with a diamond sponsorship</li>
+<li><a href="https://opencollective.com/xen2">xen2</a> Core contributor that donated a large portion of the previous Patreon back through Open collective</li>
+<li><a href="https://visualprogramming.net">vvvv</a> A visual live-programming environment for easy prototyping and development. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously. vvvv uses Stride</li>
+<li><a href="https://opencollective.com/vaclav">Vašo</a></li>
+<li><a href="https://opencollective.com/mitchel-albertz">Mitchel Albertz</a></li>
+<li><a href="https://opencollective.com/bill2">Bill</a></li>
+<li><a href="https://opencollective.com/ideonella">Ideonella</a></li>
+<li><a href="https://opencollective.com/soul-rider">Soul Rider</a></li>
+<li><a href="https://opencollective.com/guest-ce7ccb03">najak3d</a></li>
+<li><a href="https://opencollective.com/eideren">Eideren</a></li>
+<li><a href="https://opencollective.com/jorn-theunissen">Jorn Aggror</a></li>
+<li><a href="https://marian.dziubiak.pl">Marian Dziubiak</a></li>
+<li><a href="https://opencollective.com/guest-7253cc41">Youness KAFIA</a></li>
+<li><a href="https://www.disruptionworks.co.uk">David Thunderclown</a></li>
+<li><a href="https://opencollective.com/christian-clavet">Christian Clavet</a></li>
+<li><a href="https://opencollective.com/fador">Marko Viitanen</a></li>
+<li><a href="https://opencollective.com/guest-2f41a631">Aaron Disibio</a></li>
+<li><a href="https://opencollective.com/z16">z16</a></li>
+<li><a href="https://opencollective.com/guest-5635aca5">Incognito</a></li>
+<li><a href="https://opencollective.com/guest-2170ad46">Walter Hulsebos</a></li>
+<li><a href="https://opencollective.com/thekeyblader">TheKeyblader</a></li>
+<li><a href="https://opencollective.com/james-rinker">James Rinker</a></li>
+<li><a href="https://opencollective.com/guest-6653841d">ztl</a></li>
+<li><a href="https://brunogarcia.com">Bruno Garcia</a></li>
+<li><a href="https://opencollective.com/banditrevolver">BanditRevolver</a></li>
+<li><a href="https://opencollective.com/emmx">EmmX</a></li>
+<li><a href="https://opencollective.com/seledreams">SeleDreams</a></li>
+<li><a href="https://vignetteapp.org">Vignette</a></li>
+<li><a href="https://opencollective.com/guest-a5fa78c8">Longplay Games</a></li>
+<li><a href="https://opencollective.com/guest-3fc8bf91">Redberd36</a></li>
+</ul>
+
+                <hr />
+                <p>
+<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">4.1</span><span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Physics</span><span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Tutorials</span></p>
+                <p>
+                    Any comments? You can start 🗨 at <i class="fa-brands fa-github text-decoration-none"></i> <a href="https://github.com/stride3d/stride/discussions" target="_blank" rel="noreferrer">GitHub Discussions</a> or <i class="fa-brands fa-discord text-decoration-none"></i> <a class="" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener">Discord</a>.
+                </p>
+                <p>
+                    <a href="https://github.com/VaclavElias/stride-website-next/blob/eleventy/./posts/2022-07-16-release-stride-4-1.md" target="_blank" rel="noreferrer">Edit</a> this page on
+                    <i class="fa-brands fa-github text-decoration-none"></i>.
+                </p>
+            </article>
+        </div>
+    </div>
+    <div class="row mb-5">
+        
+        
+        <div class="col-md-6 mb-4">
+            
+            <div class="card px-3">
+                <div class="card-body p-4">
+                    <h5>Previous Post</h5>
+                    <a class="prev stretched-link" href="/blog/community-meeting-february-2022/">Community Meeting February 2022</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-6 text-md-end">
+            
+        </div>
+    </div>
+</div>
+
+    <div class="bg-dark mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-primary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-primary">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-primary">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-primary">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-primary">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-primary" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-primary">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-primary">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 mb-3 text-start text-lg-end">
+                    <a class="link-primary me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top: -4px;"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-primary" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-primary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-primary">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-primary">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-primary">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-primary">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-primary" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-primary">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-primary">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 mb-3 text-start text-lg-end">
+                    <a class="link-primary me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top: -4px;"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-primary" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-danger">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-danger">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-danger">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-danger">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-danger">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-danger">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-danger" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-danger">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-danger">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 mb-3 text-start text-lg-end">
+                    <a class="link-danger me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top: -4px;"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-info">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-info">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-info">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-info">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-info">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-info">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-info" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-info" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-info" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-info" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-info">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-info">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-info" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 mb-3 text-start text-lg-end">
+                    <a class="link-info me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top: -4px;"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-info" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-warning">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-warning">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-warning">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-warning">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-warning">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-warning">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-warning" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-warning">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-warning">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 mb-3 text-start text-lg-end">
+                    <a class="link-warning me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top: -4px;"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-warning" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-success">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-success">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-success">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-success">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-success">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-success" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-success" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-success" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-success">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-success">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 mb-3 text-start text-lg-end">
+                    <a class="link-success me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top: -4px;"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-success" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0"></script>
+</body>
+</html>

@@ -1,36 +1,284 @@
----
-layout: null
----
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:20 %}
-      <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% if post.image_thumb %}
-        {% assign enclosureImage = post.image_thumb | split: "." %}
-        <enclosure url="{{ site.url }}{{ post.image_thumb }}" type="image/{{ enclosureImage | last }}" length="0" />
-        {% else %}
-        <enclosure url="{{ site.url }}/images/blog/default_thumb.png" type="image/png" length="0" />
-        {% endif %}
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
-      </item>
-    {% endfor %}
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://stride3d.net">
+  <title>Stride Game Engine</title>
+  <subtitle>C# Stride Game Engine is a powerful and versatile game development engine that is based on the C# programming language</subtitle>
+  <link href="https://stride3d.net/feed.xml" rel="self"/>
+  <link href="https://stride3d.net"/>
+  <updated>2022-07-16T00:00:00Z</updated>
+  <id>https://stride3d.net</id>
+  <generator>Eleventy 2.0</generator>
+  <author>
+    <name>Stride Community</name>
+  </author>
+  <entry>
+    <title>Stride 4.1 is Now Live</title><author>
+      <name>Aggror Jorn</name>
+    </author><link href="https://stride3d.net/blog/release-stride-4-1/"/>
+    <updated>2022-07-16T00:00:00Z</updated>
+    <id>https://stride3d.net/blog/release-stride-4-1/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-1/#stride-on-.net-live&quot;&gt;Stride On .NET Live &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-1/#improvements-summary&quot;&gt;Improvements Summary &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-1/#improvement-details&quot;&gt;Improvement Details &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-1/#known-issues&quot;&gt;Known Issues &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-1/#a-little-help&quot;&gt;A Little Help &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h2 id=&quot;stride-on-.net-live&quot; tabindex=&quot;-1&quot;&gt;Stride On .NET Live &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#stride-on-.net-live&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We had the pleasure to be on a live stream with the .NET team! We gave an introduction, overview and some live demos:&lt;/p&gt;
+&lt;div class=&quot;ratio ratio-16x9 mb-4&quot;&gt;
+ &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/J6g5y8m26zs&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;improvements-summary&quot; tabindex=&quot;-1&quot;&gt;Improvements Summary &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#improvements-summary&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Here&#39;s a non-exhaustive list of new improvements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;.NET 6 support and &lt;a href=&quot;https://github.com/stride3d/stride/pull/1221&quot;&gt;VS 2022 plugin&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Stride 4.1 leverages the power of .NET 6&lt;/li&gt;
+&lt;li&gt;Support for C# 10&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/pull/1256&quot;&gt;Dithered shadows for semi-transparent materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/pull/1114&quot;&gt;Physics constraints&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Bullet constraints wrapped around in easy to use functionality&lt;/li&gt;
+&lt;li&gt;Editor gizmos for physics constraints&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/pull/1100&quot;&gt;Physics performance optimization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/pull/1037&quot;&gt;ACES tonemaping&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/pull/1039&quot;&gt;Fog image effect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/pull/1038&quot;&gt;Outline image effect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/pull/1083&quot;&gt;Improved editor gizmos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/pull/1401&quot;&gt;C# Intermediate tutorials project&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;This Open Collective sub-project was &lt;a href=&quot;https://opencollective.com/stride3d/projects/stride-intermediate-tutorials&quot;&gt;successfully funded&lt;/a&gt; by the community.  All related video recordings are available on Stride&#39;s &lt;a href=&quot;https://www.youtube.com/c/Stride3D&quot;&gt;Youtube channel&lt;/a&gt; and the &lt;a href=&quot;https://doc.stride3d.net/latest/en/tutorials/index.html&quot;&gt;tutorials page&lt;/a&gt; in the documentation will also be update to reflect the new project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Many more minor fixes and quality of life improvements
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/pull/1217&quot;&gt;Fixed sample game&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/pull/1285&quot;&gt;Simpler Procedural Model creation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;New math signatures (&lt;a href=&quot;https://github.com/stride3d/stride/pull/1122&quot;&gt;1122&lt;/a&gt;, &lt;a href=&quot;https://github.com/stride3d/stride/pull/1121&quot;&gt;1121&lt;/a&gt;, &lt;a href=&quot;https://github.com/stride3d/stride/pull/1090&quot;&gt;1090&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dispatcher/threadpool improvements&lt;/li&gt;
+&lt;li&gt;Ambient Occlusion quality improvement&lt;/li&gt;
+&lt;li&gt;And many other fixes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;improvement-details&quot; tabindex=&quot;-1&quot;&gt;Improvement Details &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#improvement-details&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;dithered-shadows-for-semi-transparent-materials&quot; tabindex=&quot;-1&quot;&gt;Dithered shadows for semi-transparent materials &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#dithered-shadows-for-semi-transparent-materials&quot;&gt;🔗&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Produces semi-transparent shadows by poking more and more holes in the shadow map based on the transparency of the object, shadow map filtering will blur those holes with their neighbor which will result in those partially opaque pixels.&lt;/p&gt;
+&lt;img alt=&quot;Dithered shadow settings&quot; src=&quot;https://i.imgur.com/xFzuNbl.png&quot; class=&quot;img-fluid&quot; loading=&quot;lazy&quot; data-src=&quot;https://i.imgur.com/xFzuNbl.png&quot; /&gt;
+&lt;img alt=&quot;Dithered shadow effect comparison&quot; src=&quot;https://i.imgur.com/kHvSy8a.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;https://i.imgur.com/kHvSy8a.png&quot; /&gt;
+&lt;h3 id=&quot;physics-constraints&quot; tabindex=&quot;-1&quot;&gt;Physics constraints &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#physics-constraints&quot;&gt;🔗&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Stride&#39;s physics system Bullet comes with a set of constraints for you to use in your projects. These constraints are now all visible inside the editor, previewing the constraints using various editor gizmo.&lt;/p&gt;
+&lt;img alt=&quot;preview(to be removed)]()&quot; src=&quot;https://i.imgur.com/qiaBBpm.png&quot; class=&quot;img-fluid mb-3&quot; /&gt;
+&lt;p&gt;For more information on all the types of constraints, you can read up about them in the &lt;a href=&quot;https://doc.stride3d.net/latest/en/manual/physics/constraints.html&quot;&gt;Stride documentation&lt;/a&gt; or watch the video below.&lt;/p&gt;
+&lt;div class=&quot;ratio ratio-16x9 mb-4&quot;&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/uMZMYpMD3Wg&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id=&quot;physics-optimizations&quot; tabindex=&quot;-1&quot;&gt;Physics optimizations &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#physics-optimizations&quot;&gt;🔗&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Retrieving collision and contact information was previously done by re-testing all components for collisions, which, as one might expect, led to awful performance for physics heavy scenes (could take up to and above 90% of the frame).&lt;/p&gt;
+&lt;p&gt;Contacts are now lazily evaluated to reduce overhead when nothing ends up reading them. Users can now read and iterate over all collisions through Simulation.CurrentCollisions.&lt;/p&gt;
+&lt;h3 id=&quot;improved-editor-gizmos&quot; tabindex=&quot;-1&quot;&gt;Improved editor gizmos &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#improved-editor-gizmos&quot;&gt;🔗&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The old gizmos weren&#39;t very nice to look at, so this feature makes them look better and more user-friendly. It also changes how the rotation gizmo works and adds scale planes to the scale gizmo.&lt;/p&gt;
+&lt;img alt=&quot;New gizmos&quot; src=&quot;https://i.imgur.com/8siM2Lc.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;https://i.imgur.com/8siM2Lc.png&quot; /&gt;
+&lt;p&gt;This feature also updates the text on the CameraOrientationGizmo to be XYZ instead of right/left. Still prefer the old text instead of the XYZ coordinate? Don&#39;t worry, there&#39;s a setting under the viewport settings that swaps it back to the old text.&lt;/p&gt;
+&lt;img alt=&quot;Rotation&quot; src=&quot;https://i.imgur.com/W4zIf7J.png=400x160&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;https://i.imgur.com/W4zIf7J.png=400x160&quot; /&gt;
+&lt;h3 id=&quot;intermediate-tutorials&quot; tabindex=&quot;-1&quot;&gt;Intermediate tutorials &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#intermediate-tutorials&quot;&gt;🔗&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;One of the first Open Collective sub-projects is the &lt;a href=&quot;https://opencollective.com/stride3d/projects/stride-intermediate-tutorials&quot;&gt;intermediate C# tutorials project&lt;/a&gt;. After discussion in community meetings and with various contributors donating directly to this project, the amount for this project to be included in Stride quickly became a realization.&lt;/p&gt;
+&lt;img alt=&quot;Intermediate tutorials intro screen&quot; src=&quot;https://i.imgur.com/7GVEiSR.jpg&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;https://i.imgur.com/7GVEiSR.jpg&quot; /&gt;
+&lt;p&gt;With Stride 4.1, you will be able to select the C# intermediate tutorials project as a new template project. The template project contains (at the moment of writing) 11 topics that every developer will want to have a look at.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;UI basics&lt;/li&gt;
+&lt;li&gt;Collision triggers&lt;/li&gt;
+&lt;li&gt;Raycasting&lt;/li&gt;
+&lt;li&gt;Projecting and Unprojecting&lt;/li&gt;
+&lt;li&gt;Async(hronous) scripts&lt;/li&gt;
+&lt;li&gt;Scene loading&lt;/li&gt;
+&lt;li&gt;Animation basics&lt;/li&gt;
+&lt;li&gt;Audio&lt;/li&gt;
+&lt;li&gt;First person camera&lt;/li&gt;
+&lt;li&gt;Third person camera&lt;/li&gt;
+&lt;li&gt;Navigation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each tutorial has a video tutorial accompanying it, which can be found on Stride&#39;s &lt;a href=&quot;https://www.youtube.com/c/Stride3D&quot;&gt;Youtube channel&lt;/a&gt;. Below you can find the full playlist.&lt;/p&gt;
+ &lt;div class=&quot;ratio ratio-16x9 mb-4&quot;&gt;
+ &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/videoseries?list=PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+&lt;h2 id=&quot;known-issues&quot; tabindex=&quot;-1&quot;&gt;Known Issues &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#known-issues&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;integrated-c%23-editor&quot; tabindex=&quot;-1&quot;&gt;Integrated C# Editor &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#integrated-c%23-editor&quot;&gt;🔗&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The transition to .NET6 unfortunately broke the help tooltips and the code completion of the integrated C# code editor. But we decided to accept it for now, as everyone is using a proper C# editor anyways, such as Visual Studio, Rider or Visual Studio Code.&lt;/p&gt;
+&lt;p&gt;The reason for the error is that &lt;a href=&quot;https://github.com/roslynpad/roslynpad&quot;&gt;RoslynPad&lt;/a&gt;, the underlaying library, also needs an update or fix. We&#39;ll adress this in one of the upcoming minor version releases.&lt;/p&gt;
+&lt;img alt=&quot;Integrated Editor Issue&quot; src=&quot;https://i.imgur.com/Gn2i6Js.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;https://i.imgur.com/Gn2i6Js.png&quot; /&gt;
+&lt;h2 id=&quot;a-little-help&quot; tabindex=&quot;-1&quot;&gt;A Little Help &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#a-little-help&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We, contributors, believe that Stride can help .NET game developers make the games they want with ease using their favorite languages. We want to make sure Stride offers the most comfortable environment for developing games, and this takes time and effort.&lt;/p&gt;
+&lt;p&gt;Since the free and open-source release of Stride, the community has been growing slowly, so we have decided to open a fund to reward developers for any contribution they make to Stride. We set up an &lt;a href=&quot;https://opencollective.com/stride3d&quot;&gt;Open Collective page&lt;/a&gt; to manage our funds and allocate money for features that the community would like to see implemented.&lt;/p&gt;
+&lt;p&gt;We have various bounties for &lt;a href=&quot;https://opencollective.com/stride3d/projects&quot;&gt;bug fixes and features&lt;/a&gt; (Vulkan support, decals, morph targets, and many others). If you have or know someone with the skills to tackle those bounties, please reach out to us through the &lt;a href=&quot;https://github.com/stride3d/stride/labels/bounty&quot;&gt;respective Github tickets&lt;/a&gt;. You can also contact us through our discord server or on Github to propose new bounties.&lt;/p&gt;
+&lt;h3 id=&quot;contributors&quot; tabindex=&quot;-1&quot;&gt;Contributors &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#contributors&quot;&gt;🔗&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Many thanks to &lt;a href=&quot;https://github.com/stride3d/stride/graphs/contributors?from=2021-02-01&amp;amp;to=2022-06-10&amp;amp;type=c&quot;&gt;all the contributors&lt;/a&gt; who have donated their time and skill by adding features, fixing bugs, managing the build pipelines, adding documentation, and reviewing PRs.&lt;/p&gt;
+&lt;h3 id=&quot;financial-contributors&quot; tabindex=&quot;-1&quot;&gt;Financial contributors &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-1/#financial-contributors&quot;&gt;🔗&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Also, a huge thanks to the individuals and companies who contributed financially to our &lt;a href=&quot;https://opencollective.com/stride3d&quot;&gt;Open Collective&lt;/a&gt;!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ore-system.com/&quot;&gt;ORE System&lt;/a&gt; with a diamond sponsorship&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/xen2&quot;&gt;xen2&lt;/a&gt; Core contributor that donated a large portion of the previous Patreon back through Open collective&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://visualprogramming.net/&quot;&gt;vvvv&lt;/a&gt; A visual live-programming environment for easy prototyping and development. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously. vvvv uses Stride&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/vaclav&quot;&gt;Vašo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/mitchel-albertz&quot;&gt;Mitchel Albertz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/bill2&quot;&gt;Bill&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/ideonella&quot;&gt;Ideonella&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/soul-rider&quot;&gt;Soul Rider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/guest-ce7ccb03&quot;&gt;najak3d&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/eideren&quot;&gt;Eideren&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/jorn-theunissen&quot;&gt;Jorn Aggror&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://marian.dziubiak.pl/&quot;&gt;Marian Dziubiak&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/guest-7253cc41&quot;&gt;Youness KAFIA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.disruptionworks.co.uk/&quot;&gt;David Thunderclown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/christian-clavet&quot;&gt;Christian Clavet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/fador&quot;&gt;Marko Viitanen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/guest-2f41a631&quot;&gt;Aaron Disibio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/z16&quot;&gt;z16&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/guest-5635aca5&quot;&gt;Incognito&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/guest-2170ad46&quot;&gt;Walter Hulsebos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/thekeyblader&quot;&gt;TheKeyblader&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/james-rinker&quot;&gt;James Rinker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/guest-6653841d&quot;&gt;ztl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://brunogarcia.com/&quot;&gt;Bruno Garcia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/banditrevolver&quot;&gt;BanditRevolver&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/emmx&quot;&gt;EmmX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/seledreams&quot;&gt;SeleDreams&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vignetteapp.org/&quot;&gt;Vignette&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/guest-a5fa78c8&quot;&gt;Longplay Games&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/guest-3fc8bf91&quot;&gt;Redberd36&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Community Meeting February 2022</title><author>
+      <name>Aggror Jorn</name>
+    </author><link href="https://stride3d.net/blog/community-meeting-february-2022/"/>
+    <updated>2022-02-16T00:00:00Z</updated>
+    <id>https://stride3d.net/blog/community-meeting-february-2022/</id>
+    <content xml:lang="en" type="html">&lt;h2 id=&quot;summary-community-meeting-2022&quot; tabindex=&quot;-1&quot;&gt;Summary Community Meeting 2022 &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#summary-community-meeting-2022&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Hello there fellow Striders,&lt;/p&gt;
+&lt;p&gt;On February 16th we held another community meeting. A whopping 2.5 hours with various subjects. Here is a quick summary.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#summary-community-meeting-2022&quot;&gt;Summary Community Meeting 2022 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#current-funding&quot;&gt;Current Funding &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#funding-for-bug-bounties&quot;&gt;Funding for bug bounties &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#funding-for-features&quot;&gt;Funding for features &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#release-4.1&quot;&gt;Release 4.1 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#additional-task-for-xen2&quot;&gt;Additional task for Xen2 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#work-in-progress&quot;&gt;Work in progress &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#epic-grant&quot;&gt;Epic grant &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h2 id=&quot;current-funding&quot; tabindex=&quot;-1&quot;&gt;Current Funding &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#current-funding&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;With a budget of &lt;strong&gt;$4,220.48 USD&lt;/strong&gt; at the moment of the community meeting happening, we wanted to decide on whether to allocate money for bugs and new features. So a big thanks to all those who are donating to this project. In particular:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://visualprogramming.net/&quot;&gt;VVVV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/vaclav&quot;&gt;Vašo (vaclav)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ore-system.com/&quot;&gt;ORE system&lt;/a&gt; with a diamond sponsorship&lt;br /&gt;
+&lt;img src=&quot;https://stride3d.net/images/sponsors/ore_system-next_gen_nfts_dark.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;funding-for-bug-bounties&quot; tabindex=&quot;-1&quot;&gt;Funding for bug bounties &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#funding-for-bug-bounties&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fullscreen Vulkan support
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/issues/455&quot;&gt;Github ticket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bounty: $200,- USD&lt;/li&gt;
+&lt;li&gt;AggrorJorn will provide the texts for the bounty and once approved by other contributors/developers in the team, this will be updated on the Open Collective project for &lt;a href=&quot;https://opencollective.com/stride3d/projects/bug-bounties&quot;&gt;Bug bounties&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;UI slowness bug
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/issues/455&quot;&gt;Github ticket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A smaller $50,- USD bounty for more research on this bug. If it can be pinpointed what exactly is causing this, we can also estimate better whether it is worth spending more money on it.&lt;/li&gt;
+&lt;li&gt;Depending on the outcome we might skip this bug and spend time researching/implementing a replacement UI.&lt;/li&gt;
+&lt;li&gt;AggrorJorn will provide the texts for the bounty and once approved by other contributors/developers in the team, this will be updated on the Open Collective project for &lt;a href=&quot;https://opencollective.com/stride3d/projects/bug-bounties&quot;&gt;Bug bounties&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;funding-for-features&quot; tabindex=&quot;-1&quot;&gt;Funding for features &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#funding-for-features&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux runtime support
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/discussions/1202&quot;&gt;Github ticket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Requires mores fleshed out details and deliverables&lt;/li&gt;
+&lt;li&gt;Once that is done, we can decide on funding
+&lt;ul&gt;
+&lt;li&gt;Either fixed amount or use xx,xx amount per hour with a certain limit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;New Open collective project &lt;a href=&quot;https://opencollective.com/stride3d/projects/linux-runtime-support&quot;&gt;Linux runtime&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Decal support
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stride3d/stride/issues/24&quot;&gt;Github discussion&lt;/a&gt; requires more deliverables&lt;/li&gt;
+&lt;li&gt;New Open collective project &lt;a href=&quot;https://opencollective.com/stride3d/projects/decals&quot;&gt;Decals&lt;/a&gt; added and will be updated once deliverables are clear:]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Morphing target animation support
+&lt;ul&gt;
+&lt;li&gt;[Github discussion] (&lt;a href=&quot;https://github.com/stride3d/stride/issues/339&quot;&gt;https://github.com/stride3d/stride/issues/339&lt;/a&gt;)requires more deliverables&lt;/li&gt;
+&lt;li&gt;New Open collective project &lt;a href=&quot;https://opencollective.com/stride3d/projects/morph-targets&quot;&gt;Morhping Target&lt;/a&gt; added and will be updated once deliverables are clear:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Embed stride into UI frameworks
+&lt;ul&gt;
+&lt;li&gt;There already is a &lt;a href=&quot;https://github.com/stride3d/stride/pull/1315&quot;&gt;work in progress PR&lt;/a&gt; that allows developers to specify a custom render context.&lt;/li&gt;
+&lt;li&gt;New Open collective Project for &lt;a href=&quot;https://opencollective.com/stride3d/projects/embed-stride-ui-frameworks&quot;&gt;Embedding Stride into UI frameworks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/Silk.NET&quot;&gt;Silk.NET&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;New Open collective project &lt;a href=&quot;https://opencollective.com/stride3d/projects/silknet&quot;&gt;Silk.NET&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;release-4.1&quot; tabindex=&quot;-1&quot;&gt;Release 4.1 &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#release-4.1&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hackmd.io/McqTXGtyQuSu1-QJz34xKw&quot;&gt;Release notes wip&lt;/a&gt; are prepared by Eideren/Vaso/Yka.&lt;/li&gt;
+&lt;li&gt;Final checks by Xen2: VS plugin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;additional-task-for-xen2&quot; tabindex=&quot;-1&quot;&gt;Additional task for Xen2 &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#additional-task-for-xen2&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Documentation needs to auto-release when Release branch is updated&lt;/li&gt;
+&lt;li&gt;Ask previous implementer of SPIR-V shader system if he is interested in new work for Stride&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;work-in-progress&quot; tabindex=&quot;-1&quot;&gt;Work in progress &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#work-in-progress&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Code only project: will enter beta phase
+&lt;ul&gt;
+&lt;li&gt;When merged into Stride 4.2 beta, we will add an Open collective page for additional examples.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;C# Pong game example: finishing touches (sound)&lt;/li&gt;
+&lt;li&gt;The following C# intermediate tutorials are written but not yet recorded:
+&lt;ul&gt;
+&lt;li&gt;UI basics
+&lt;ul&gt;
+&lt;li&gt;Both via the editor as well as entirely through code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Scene loading
+&lt;ul&gt;
+&lt;li&gt;Loading/Unloading&lt;/li&gt;
+&lt;li&gt;Reloading scenes&lt;/li&gt;
+&lt;li&gt;Child scenes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Collision triggers&lt;/li&gt;
+&lt;li&gt;Raycasting&lt;/li&gt;
+&lt;li&gt;Animation basics&lt;/li&gt;
+&lt;li&gt;Audio
+&lt;ul&gt;
+&lt;li&gt;Small tutorial really&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Navigation meshes and pathfinding
+&lt;ul&gt;
+&lt;li&gt;Both editor as well as code only approaches&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sync vs Async
+&lt;ul&gt;
+&lt;li&gt;Difference and 2 examples&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;epic-grant&quot; tabindex=&quot;-1&quot;&gt;Epic grant &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#epic-grant&quot;&gt;🔗&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Yka and AggrorJorn have a look at Epic grant and make final proposal in the 3rd week of February&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+</feed>
