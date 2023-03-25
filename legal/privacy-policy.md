@@ -6,6 +6,7 @@ banner:
   title: Privacy Policy
   sub-title: 
   image-url: /images/backgrounds/legal.jpg
+  h1: false
 ---
 Stride (“We” or “Us”) has created this privacy policy (“Privacy Policy”) to explain and summarize how we collect, retain, use and protect Your personally identifiable information (“User Information”) when You use Stride’s software (the “Software”) and any associated services (the “Services”).
 
