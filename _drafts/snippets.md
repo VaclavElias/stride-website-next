@@ -5,3 +5,6 @@
 - site.links.github-stride-url
 - site.links.docs-manual-url
 - site.links.docs-tutorial-url
+
+# Img
+<img alt="Image Title" src="" class="img-fluid mb-2" loading="lazy" data-src="">
