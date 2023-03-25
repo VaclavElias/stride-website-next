@@ -44,6 +44,7 @@ Demo is here https://stride-website.vaclavelias.com/. Last updated 7 months ago 
 
 ## Post Release Update / Future Updates and Improvements
 - [ ] Web - Encourage community to contribute with articles
+- [ ] Web - Add/LIst GitHub contributors automatically to a dedicated page (link from the footer)
 - [ ] Wiki - New post instructions (e.g. using webp images)
 - [ ] Wiki - Update post instructions
 - [ ] Web - Features - Created dedicated page for some features
