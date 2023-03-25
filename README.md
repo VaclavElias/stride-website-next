@@ -38,7 +38,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [ ] Web - Update Ore System Link
 - [ ] Web - Features - Add .NET/C# section
   - [ ] Mention/add section dedicated to scripting, mentioning ```async```, maybe add code snippets?
-- [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updaste)
+- [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
 - [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
 - [ ] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 - [ ] Web/Wiki - Shall we mention that we use Bootstrap and Fontawesome to support Open Source community?
