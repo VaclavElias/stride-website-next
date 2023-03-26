@@ -6,6 +6,7 @@
   "language": "en",
   "author": "Stride Team",
   "dark-mode": true,
+  "docs-search": true,
   "dowload-version": "4.1",
   "csharp-version": "C# 10",
   "dotnet-version": ".NET 6",
@@ -15,11 +16,13 @@
   "paginate": 10,
   "links": {
     "discord-url": "https://discord.gg/f6aerfE",
+    "docs-url": "https://doc.stride3d.net/latest/en/",
     "docs-api-url": "https://doc.stride3d.net/latest/en/api/",
     "docs-manual-url": "https://doc.stride3d.net/latest/en/manual/",
     "docs-manual-jp-url": "https://doc.stride3d.net/latest/jp/manual/",
     "docs-release-notes-url": "https://doc.stride3d.net/latest/en/releasenotes/",
     "docs-requirements-url": "https://doc.stride3d.net/latest/en/manual/requirements/",
+    "docs-search-url": "https://doc.stride3d.net/latest/en/index.json",
     "docs-tutorial-url": "https://doc.stride3d.net/latest/en/tutorials/",
     "dotnet-foundation-url": "https://dotnetfoundation.org/",
     "facebook-url": "https://www.facebook.com/stride3d",
@@ -35,6 +38,12 @@
     "youtube-url": "https://www.youtube.com/c/Stride3D"
   },
   "authors": {
+    "virgile": {
+      "name": "Virgile Bello",
+      "github": "xen2",
+      "linkedin": "",
+      "twitter": ""
+    },
     "aggror": {
       "name": "Aggror Jorn",
       "github": "Aggror",

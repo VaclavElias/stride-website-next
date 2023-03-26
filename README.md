@@ -19,18 +19,21 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] keep the content as it is and where it is, maybe just improve if needed
 
 ## RC2+ Checklist
-- [x] Web - Update blog post urls so they match the old urls
+- [ ] Web - Past Posts - Update and pretify content - Done 5/64
 - [ ] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
   - CSS Collaborator wanted
-- [x] Web - FAQ - Remove Premium Support sentence
+- [x] Web - Search - Include docs in search
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
-- [ ] Web - Past Posts - Update and pretify content
-- [x] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [ ] Wiki - Review and update
-- [x] Web - Staging web - Check image caching and gzip (web.config)
 - [ ] Web - Ensure excerpt and page description is set for all pages
 - [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
+
+## RC1 Checklist
+- [x] Web - Update blog post urls so they match the old urls
+- [x] Web - FAQ - Remove Premium Support sentence
+- [x] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
+- [x] Web - Staging web - Check image caching and gzip (web.config)
 
 
 ## Release Checklist
@@ -48,6 +51,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## Post Release Update / Future Updates and Improvements
 - [ ] Web - Encourage community to contribute with articles
+- [ ] Web - Search - Exclude API Search on the Web, or checkbox to include/exclude API
 - [ ] Web - Add/List GitHub contributors automatically to a dedicated page (link from the footer)
 - [ ] Wiki - New post instructions (e.g. using webp images)
 - [ ] Wiki - Update post instructions
@@ -70,6 +74,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## Known Issues
 - Web - Sponsor - Widgets don't support dark theme. This can be fixed in the future, to fetch data from https://opencollective.com/stride3d/members/all.json and render before deployment or make dynamic. This might be overall better solution to have a full control over the content and design.
+- Web - Search - No pager, max result restricted to 100 till the pages is implemented
 
 ## Phase 1 - Done
 
@@ -110,3 +115,45 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - Maybe we can include this somewhere https://github.com/Doprez/Awesome-Stride
 - Web, Docs, GitHub Wiki
 - https://khalidabuhakmeh.com/combining-11ty-static-site-generator-with-aspnet-core
+
+## Wiki
+
+This Contet will be moved to GitHub Wiki
+
+## Installation
+
+## Content
+
+### Updates
+
+### New Posts
+
+### New Pages
+
+### Global Data
+
+### Shortcodes and Includes
+
+`{% img 'title' 'url' %}`
+
+`{% img-click 'title' 'url' %}`
+
+`{% youtube 'url' %}`
+
+## Eleventy
+
+### Packages
+### Layouts
+### Includes
+
+## Configuration
+
+## Folder Structure
+
+## Deployment
+
+## Styling
+
+## Advance
+
+### Adding new Shortcodes and Includes
