@@ -8,7 +8,11 @@
 
 # Img
 <img alt="ImageTitle" src="" class="img-fluid mb-2" loading="lazy" data-src="">
+
 {% img 'title' 'url' %}
+{% img-click 'title' 'url' %}
+
+{% youtube 'url' %}
 
 # Iframe
 - Note: no frameborder
