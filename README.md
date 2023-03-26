@@ -51,6 +51,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## Post Release Update / Future Updates and Improvements
 - [ ] Web - Encourage community to contribute with articles
+- [ ] Web - Search - Exclude API Search on the Web, or checkbox to include/exclude API
 - [ ] Web - Add/List GitHub contributors automatically to a dedicated page (link from the footer)
 - [ ] Wiki - New post instructions (e.g. using webp images)
 - [ ] Wiki - Update post instructions
