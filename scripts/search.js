@@ -8,12 +8,18 @@
 
 (function () {
     function displaySearchResults(results, store) {
-        var searchResults = document.getElementById('search-results');
+        const searchResults = document.getElementById('search-results');
 
         if (results.length) {
+            const maxResults = 100; // Once paging implemented, then remove this restriction
             var appendString = '';
+
             for (var i = 0; i < results.length; i++) {
-                var post = store[results[i].ref];
+
+                const post = store[results[i].ref];
+
+                if (post.source === 'web') {
+
                 appendString += `
 <article class="card mb-4 p-4">
     <div class="row justify-content-center">
@@ -31,6 +37,24 @@
     </div>
 </article>
 `
+                } else if (post.source === 'docs') {
+
+                appendString += `
+<article class="card mb-4 p-4">
+    <div class="row justify-content-center">
+        <div class="col-12 post-card-header">
+            <h4 class="entry-title"><a href="https://doc.stride3d.net/latest/en/${post.key}" target="_blank" rel="noopener">${post.title}</a></h4>
+            <p>
+                ${getDocsExcerpt(post)}...
+            </p>
+        </div>
+    </div>
+</article>
+`
+                }
+
+                if (i > maxResults) break;
+
             }
             searchResults.innerHTML = appendString;
         } else {
@@ -46,6 +70,10 @@
 
     function getExcerpt(post) {
         return post.excerpt.length === 0 ? post.content.substring(0, 200) : post.excerpt;
+    }
+
+    function getDocsExcerpt(post) {
+        return htmlEncode(post.content.substring(0, 200));
     }
 
     function getTags(post) {
@@ -66,6 +94,15 @@
         }
     }
 
+    function htmlEncode(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+
     var searchTerm = getQueryVariable('query');
 
     if (searchTerm) {
@@ -73,10 +110,59 @@
         document.getElementById('search-input').value = searchTerm;
         document.getElementById('search-form-post').value = searchTerm;
 
-        fetch('/search.json')
-            .then(response => response.json())
-            .then(data => search(data))
-            .catch(error => console.log(error));
+        const success = res => res.ok ? res.json() : Promise.resolve({});
+
+        const web = fetch(`/search.json`).then(success);
+
+        var docs = Promise.resolve();
+
+        if(true) {
+            docs = fetch(`https://doc.stride3d.net/latest/en/index.json`).then(success);
+        }
+
+        Promise.all([web, docs])
+        .then(([webData, docsData]) => {
+            search(mergeSearchData(webData, docsData))
+        })
+        .catch(error => console.error(error));
+
+        /*fetch('/search.json')
+        .then(response => response.json())
+        .then(data => search(data))
+        .catch(error => console.log(error));*/
+    }
+
+    function mergeSearchData(webData, docsData) {
+
+        const data = [];
+
+        for (var key in webData) {
+            data.push({
+                'key': key,
+                'title': webData[key].title,
+                'author': webData[key].author,
+                'category': webData[key].category,
+                'tags': webData[key].tags,
+                'content': webData[key].content,
+                'excerpt': webData[key].excerpt,
+                'url': webData[key].url,
+                'date': webData[key].date,
+                'source': 'web',
+            });
+        }
+
+        if (!docsData) return data;
+
+        for (var key in docsData) {
+            data.push({
+                'key': key,
+                'title': docsData[key].title,
+                'content': docsData[key].keywords,
+                'source': 'docs',
+            });
+        }
+
+        return data;
     }
 
     function search(data) {
@@ -84,14 +170,15 @@
         // a boost of 10 to indicate matches on this field are more important.
         var idx = lunr(function () {
             this.field('id');
-            this.field('title', { boost: 10 });
+            this.field('title', { boost: 50 });
             this.field('author');
             this.field('category');
             this.field('tags');
             this.field('content');
             this.field('excerpt');
 
-            for (var key in data) { // Add the data to lunr
+            // Add the data to lunr
+            for (var key in data) {
                 this.add({
                     'id': key,
                     'title': data[key].title,
@@ -106,6 +193,6 @@
         });
 
         var results = idx.search(searchTerm); // Get lunr to perform a search
-        displaySearchResults(results, data); // We'll write this in the next section
+        displaySearchResults(results, data);
     }
 })();

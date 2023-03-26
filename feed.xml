@@ -163,7 +163,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.ore-system.com/&quot;&gt;ORE system&lt;/a&gt;💎&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://visualprogramming.net/&quot;&gt;VVVV&lt;/a&gt;🥇&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://opencollective.com/vaclav&quot;&gt;Vašo (Vaclav)&lt;/a&gt;🥇&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/vaclav&quot;&gt;Vašo ( Vaclav )&lt;/a&gt;🥇&lt;/li&gt;
 &lt;/ul&gt;
 &lt;img alt=&quot;Ore Logo&quot; src=&quot;https://stride3d.net/images/sponsors/ore_system-next_gen_nfts_dark.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/sponsors/ore_system-next_gen_nfts_dark.png&quot; /&gt;
 &lt;h2 id=&quot;funding-for-bug-bounties&quot; tabindex=&quot;-1&quot;&gt;Funding for bug bounties &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-february-2022/#funding-for-bug-bounties&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
@@ -297,7 +297,7 @@
 &lt;li&gt;&lt;a href=&quot;https://opencollective.com/xen2&quot;&gt;Xen2&lt;/a&gt;, who decided that he wanted to contribute some of the Patreon money back in to the community.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.ore-system.com/&quot;&gt;ORE system&lt;/a&gt;💎&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://visualprogramming.net/&quot;&gt;VVVV&lt;/a&gt;🥇&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://opencollective.com/vaclav&quot;&gt;Vašo (Vaclav)&lt;/a&gt;🥇&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencollective.com/vaclav&quot;&gt;Vašo ( Vaclav )&lt;/a&gt;🥇&lt;/li&gt;
 &lt;/ul&gt;
 &lt;img alt=&quot;Ore Logo&quot; src=&quot;https://stride3d.net/images/sponsors/ore_system-next_gen_nfts_dark.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/sponsors/ore_system-next_gen_nfts_dark.png&quot; /&gt;
 &lt;h2 id=&quot;a-month-of-open-collective&quot; tabindex=&quot;-1&quot;&gt;A Month of Open Collective &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-november-2021/#a-month-of-open-collective&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
@@ -376,6 +376,211 @@
 &lt;/li&gt;
 &lt;li&gt;Release of 4.1 only held back by final .NET 6 related fixes. After that Xen2 will prepare release. AggrorJorn will aid in blogpost release notes&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Open Collective</title><author>
+      <name>Aggror Jorn</name>
+    </author><link href="https://stride3d.net/blog/open-collective/"/>
+    <updated>2021-10-31T00:00:00Z</updated>
+    <id>https://stride3d.net/blog/open-collective/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Stride has been using Patreon and Github sponsors for a while now. However, in the recent community meeting of october 1st it became apparent that these donation platforms don&#39;t really suit all of our needs. Both Github sponsors and Patreon don&#39;t really show where the money is going.&lt;/p&gt;
+&lt;p&gt;To solve this we have been looking at a different platform that allows us to communicate more openly on our expenses and where money will be spent. After some investigation and various registration and other formalities, we can now say goodbye to Patreon, as Stride will from now use the &lt;a href=&quot;https://opencollective.com/stride3d&quot;&gt;Open Collective&lt;/a&gt; platform.&lt;/p&gt;
+&lt;h2 id=&quot;summary&quot; tabindex=&quot;-1&quot;&gt;Summary &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/open-collective/#summary&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/open-collective/#summary&quot;&gt;Summary &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/open-collective/#open-(source)-collective&quot;&gt;Open (Source) Collective &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/open-collective/#payments-and-expenses&quot;&gt;Payments and Expenses &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/open-collective/#projects&quot;&gt;Projects &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/open-collective/#what&#39;s-next%3F&quot;&gt;What&#39;s Next? &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
+&lt;div class=&quot;ratio ratio-16x9 mb-4&quot;&gt;
+ &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ufKkAsaJNTM&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;open-(source)-collective&quot; tabindex=&quot;-1&quot;&gt;Open (Source) Collective &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/open-collective/#open-(source)-collective&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;img alt=&quot;Open Collective Logo&quot; src=&quot;https://stride3d.net/images/blog/2021-10-31-open-collective/opencollective.svg&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-10-31-open-collective/opencollective.svg&quot; /&gt;
+&lt;p&gt;Open collective is similar to other sponsor platforms, but sticks out in the way it openly displays payments and expenses. Everything about it is open for everyone to see. Through various Tiers, people can sponsor the Stride game engine. Each tier will have its own reward(s). Some tiers for instance will have the reward that users are shown on the stride website as a thank you. This is being worked on.&lt;/p&gt;
+&lt;img alt=&quot;Tiers and rewards&quot; src=&quot;https://stride3d.net/images/blog/2021-10-31-open-collective/tiers.jpg&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-10-31-open-collective/tiers.jpg&quot; /&gt;
+&lt;p&gt;We also needed a good way to deal with payments towards contributors and any tax related activities that come with it. Open collective allows the Stride collective to join a so-called &#39;Fiscal host&#39; which takes care of all of that for us, for a percentage of the money contributed. After some communication and verification on the Stride github repository we are now also officially connected with the &lt;a href=&quot;https://www.oscollective.org/&quot;&gt;Open Source Collective&lt;/a&gt;. The Open Source Collective has various open source projects under its wing: WebPack, VueJs, OBS, Babel, Bootstrap and many more.&lt;/p&gt;
+&lt;img alt=&quot;Open Source Collective Logo&quot; src=&quot;https://stride3d.net/images/blog/2021-10-31-open-collective/oscollective.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-10-31-open-collective/oscollective.png&quot; /&gt;
+&lt;h2 id=&quot;payments-and-expenses&quot; tabindex=&quot;-1&quot;&gt;Payments and Expenses &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/open-collective/#payments-and-expenses&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Every payment made to a contributor will always show up on the Stride&#39;s open collective. A Stride contributor can submit an invoice: for instance the cost of Google accounts or domain names. These invoices can be approved by the Stride contributors team. These are the same people that are active members of the &lt;a href=&quot;https://github.com/orgs/stride3d/people&quot;&gt;Stride Contributors team&lt;/a&gt; on Github. Submitted invoices can be approved at any given time but allocating money for specific projects is done at the end of each month (or beginning).&lt;/p&gt;
+&lt;img alt=&quot;Expenses&quot; src=&quot;https://stride3d.net/images/blog/2021-10-31-open-collective/invoice.JPG&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-10-31-open-collective/invoice.JPG&quot; /&gt;
+&lt;h2 id=&quot;projects&quot; tabindex=&quot;-1&quot;&gt;Projects &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/open-collective/#projects&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The Stride contributors have the final call where all the collected money will be allocated too. This will be done with the help of Projects. This Open Collective feature acts as a sort of &#39;Ledger&#39; where money can be stored until the time comes to pay the contributor(s) of a project. A project can have its own tiers and goals. Those projects could be all sorts of things: new engine features, research on new technology, high priority bugs or documentation. These kinds of projects will be discussed at community meetings to get the input of the Stride community. Here is an &lt;a href=&quot;https://opencollective.com/stride3d/projects/stride-intermediate-tutorials&quot;&gt;example project&lt;/a&gt;.&lt;/p&gt;
+&lt;img alt=&quot;Projects&quot; src=&quot;https://stride3d.net/images/blog/2021-10-31-open-collective/projects.JPG&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-10-31-open-collective/projects.JPG&quot; /&gt;
+&lt;p&gt;People can also choose to donate to a specific project rather than the Stride collective in general if they want to. So if you only want to see your money being used for a specific cause, you are completely free to do so. You are more than welcome to do both of course. In the image below you can see an example of how money that has been donated to the Stride collective, has been partially allocated to a specific project.&lt;/p&gt;
+&lt;img alt=&quot;Allocating budget&quot; src=&quot;https://stride3d.net/images/blog/2021-10-31-open-collective/allocate_budget.JPG&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-10-31-open-collective/allocate_budget.JPG&quot; /&gt;
+&lt;h2 id=&quot;what&#39;s-next%3F&quot; tabindex=&quot;-1&quot;&gt;What&#39;s Next? &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/open-collective/#what&#39;s-next%3F&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We first want to see how this first month of the new platform goes. At the end of November/beginning December we will hold a new community meeting and we will discuss how things went and how we plan on distributing the donations.&lt;/p&gt;
+&lt;p&gt;There are also some remaining tasks regarding the Open Collective that will be taken care of in the weeks to come:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Setup webhook to Discord&lt;/li&gt;
+&lt;li&gt;Setup webhook to Twitter&lt;/li&gt;
+&lt;li&gt;Fully automate the website to show sponsors&lt;/li&gt;
+&lt;li&gt;Fully automate the Github &lt;a href=&quot;http://backers.md/&quot;&gt;backers.md&lt;/a&gt; file with sponsors&lt;/li&gt;
+&lt;li&gt;Write up blog on the entire process on how we spend money&lt;/li&gt;
+&lt;li&gt;Add open collective to sponsors.yaml on github&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Community Meeting October 2021</title><author>
+      <name>Jorn Theunissen</name>
+    </author><link href="https://stride3d.net/blog/community-meeting-october-2021/"/>
+    <updated>2021-10-01T00:00:00Z</updated>
+    <id>https://stride3d.net/blog/community-meeting-october-2021/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;It has been quite a while since we had a community meeting with the Stride community. On the 1st of October 2021 we had a good 2 hour chat about various topics on the Stride game engine.&lt;/p&gt;
+&lt;h2 id=&quot;summary&quot; tabindex=&quot;-1&quot;&gt;Summary &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#summary&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#summary&quot;&gt;Summary &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#access-rights&quot;&gt;Access Rights &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#roadmap&quot;&gt;Roadmap &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#funding&quot;&gt;Funding &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#stride-4.1&quot;&gt;Stride 4.1 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#remaining-topics&quot;&gt;Remaining Topics &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h2 id=&quot;access-rights&quot; tabindex=&quot;-1&quot;&gt;Access Rights &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#access-rights&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;First topic was about clearing up access rights of the Stride source contributors and how this can be displayed better to the rest of the world.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Github features a teams option, which is now free for open source projects. Xen2 made sure that those contributing to the engine are now part of the team on Github: &lt;a href=&quot;https://github.com/orgs/stride3d/teams/stride-contributors&quot;&gt;https://github.com/orgs/stride3d/teams/stride-contributors&lt;/a&gt;. These contributors can review and approve pull requests in to the various stride projects (engine, website, documentation).
+&lt;ul&gt;
+&lt;li&gt;When changes are merged into the website project and specifically the &#39;release&#39; branch, an automated process will trigger the website deployment.&lt;/li&gt;
+&lt;li&gt;Documentation is updated as well, although this is a manual process that needs to be triggered. Xen2 and Aggror will do some knowledge sharing in private, so that this process does not lie solely with xen2.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Social media access
+&lt;ul&gt;
+&lt;li&gt;Youtube: xen2 and Aggror&lt;/li&gt;
+&lt;li&gt;Facebook: xen2 and M0TH&lt;/li&gt;
+&lt;li&gt;Twitter: xen2 and Aggror&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;roadmap&quot; tabindex=&quot;-1&quot;&gt;Roadmap &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#roadmap&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The roadmap on Github hasn&#39;t received an update in quite a while. The reason for this is that there simply is no capacity to pick up these kind of features like terrain editor, visual programming etc.&lt;br /&gt;
+What we see in the community is that various contributors work on useful features for their own games, and as a result these kind of features and bug fixes and up being merged in to the Stride repository.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As a result it has now been decided that we no longer will use the roadmap on Github. At the moment of writing this blog, the roadmap has already been removed. If, in the future, we have more funding and capacity, we can re-introduce it again.&lt;/li&gt;
+&lt;li&gt;Aggror will try to put out a blogpost once a month keeping the community up to date on features that community members are working on. This also requires some initiative from the community. So if you have something that you are working on, feel free to send a message to Aggror on Discord. That we can feature your screenshots, videos, PR&#39;s in a blogpost on the stride website.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;funding&quot; tabindex=&quot;-1&quot;&gt;Funding &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#funding&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;There were 2 ways to contribute to Stride financially: Patreon and Xen2 sponsorship on his Github account.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Both these donation services didn’t really give a clear overview where the money was being spent on.&lt;/li&gt;
+&lt;li&gt;Sponsoring Xen2 on Github would specifically and only go to Xen2. On top of that there is no easy way to use this as a marketing tool.&lt;/li&gt;
+&lt;li&gt;Only Xen2 had access to Patreon, making it another responsibility for him to:
+&lt;ul&gt;
+&lt;li&gt;Post something interesting on Patreon (for which he has no time)&lt;/li&gt;
+&lt;li&gt;Do tax related activities and payments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Because of the above, Stride&#39;s Patreon page will soon close (or already might be at the time of posting blog)&lt;/li&gt;
+&lt;li&gt;Aggror will look into setting up a more open way of viewing where money from donations is being spent on. The idea here is to have a look at &lt;a href=&quot;https://opencollective.com/how-it-works&quot;&gt;Open Collective&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Aggror will present his findings to xen2. Once a decision has been made, the community will be informed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;.NET foundation
+&lt;ul&gt;
+&lt;li&gt;Stride has joined the .NET foundation. The .NET foundation offers to host various services on their Azure subscriptions. That means that a majority of the costs when it comes to hosting is taken care of for us.&lt;/li&gt;
+&lt;li&gt;As a result of this, Xen will move various services from Digital ocean to Azure. This will reduce costs. Money that is gained from donations can be spent on bug bounties, features and documentation. Once we have a new donation mechanism in place, we will have another community meeting on how to distribute money.&lt;/li&gt;
+&lt;li&gt;Aggror will also be included in the communication with .Net foundation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Xen2 gave a nice summary on the operating costs for various (web related)services
+&lt;ul&gt;
+&lt;li&gt;Azure: used to be $50~$100 per month but now paid by .NET Foundation&lt;/li&gt;
+&lt;li&gt;StackPath (CDN): $10 per month, can be moved to Azure&lt;/li&gt;
+&lt;li&gt;Google Cloud Service: $5 per month&lt;/li&gt;
+&lt;li&gt;DigitalOcean: $30 per month (teamcity and forums server), can be moved to Azure&lt;/li&gt;
+&lt;li&gt;GitHub: $40 per month
+&lt;ul&gt;
+&lt;li&gt;Some demo&#39;s use LFS. If .NET foundation were to cover those costs too, we could add additional demo&#39;s.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SSL: used to be expensive but now free (auto renew let&#39;s encrypt or Azure)&lt;/li&gt;
+&lt;li&gt;Domains: cheap, $10 per year&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Applying for a grant with Epic, Microsoft etc.
+&lt;ul&gt;
+&lt;li&gt;Although this is something that we want to pursue, we first want to have a new donation service in place. The next community meeting will cover this topic again.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;stride-4.1&quot; tabindex=&quot;-1&quot;&gt;Stride 4.1 &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#stride-4.1&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Stride 4.1 is on its way, but when exactly and what can we expect this year?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Stride 4.1 BETA will include the upgrade to .NET 6&lt;/li&gt;
+&lt;li&gt;Stride 4.1 targeted around november/december 2021&lt;/li&gt;
+&lt;li&gt;Although full Linux support is not possible right now, we will look at having the Linux runtime working again with Stride 4.1&lt;/li&gt;
+&lt;li&gt;Aggror will start collect info for the release notes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;remaining-topics&quot; tabindex=&quot;-1&quot;&gt;Remaining Topics &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/community-meeting-october-2021/#remaining-topics&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For the remaining topics, we ran out of time, so these will be picked up at another community meeting.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stride 4.0 is Now Live</title><author>
+      <name>Virgile Bello</name>
+    </author><link href="https://stride3d.net/blog/release-stride-4-0/"/>
+    <updated>2021-02-01T00:00:00Z</updated>
+    <id>https://stride3d.net/blog/release-stride-4-0/</id>
+    <content xml:lang="en" type="html">&lt;p&gt;Stride 4.0 is now out of beta, and the Xenko game engine has been renamed to Stride. This release brings Voxel Cone Tracing GI, .NET 5 support, flexible GPU instancing, Vulkan improvements, and new documentation and tutorials. The Stride team is also welcoming new developers to contribute to the engine&#39;s development.&lt;/p&gt;
+&lt;p&gt;Stride 4.0 has been around for a while, but it&#39;s now time to remove the &lt;code&gt;-beta&lt;/code&gt; tag!&lt;/p&gt;
+&lt;p&gt;Many thanks to the community and all the contributors who made this release possible!&lt;/p&gt;
+&lt;h2 id=&quot;summary&quot; tabindex=&quot;-1&quot;&gt;Summary &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-0/#summary&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;table-of-contents&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-0/#summary&quot;&gt;Summary &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-0/#xenko-is-now-stride!&quot;&gt;Xenko is now Stride! &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-0/#voxel-cone-tracing-gi&quot;&gt;Voxel Cone Tracing GI &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-0/#.net-5&quot;&gt;.NET 5 &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-0/#flexible-gpu-instancing&quot;&gt;Flexible GPU Instancing &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-0/#graphics-api%3A-different-selection-mechanism-%2B-vulkan-improvements&quot;&gt;Graphics API: Different Selection Mechanism + Vulkan Improvements &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-0/#documentation-%26-tutorials&quot;&gt;Documentation &amp;amp; Tutorials &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://stride3d.net/blog/release-stride-4-0/#new-developers-are-welcome!&quot;&gt;New Developers are Welcome! &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h2 id=&quot;xenko-is-now-stride!&quot; tabindex=&quot;-1&quot;&gt;Xenko is now Stride! &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-0/#xenko-is-now-stride!&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The Xenko game engine has been renamed to Stride. From now on, all source code, blogs, and tutorials will use the name ‘Stride’ instead of ‘Xenko’.&lt;/p&gt;
+&lt;p&gt;Here is the new logo:&lt;/p&gt;
+&lt;img alt=&quot;Stride Logo&quot; src=&quot;https://stride3d.net/images/blog/2021-02-01-release-stride-4-0/stride-logo.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-02-01-release-stride-4-0/stride-logo.png&quot; /&gt;
+&lt;p&gt;More details available on the &lt;a href=&quot;https://stride3d.net/blog/xenko-has-been-renamed-to-stride/&quot;&gt;dedicated blog post&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;voxel-cone-tracing-gi&quot; tabindex=&quot;-1&quot;&gt;Voxel Cone Tracing GI &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-0/#voxel-cone-tracing-gi&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Thanks to a substantial contribution from Sean Boettger and sponsored by David Jeske, Stride now supports Voxel Cone Tracing GI!&lt;/p&gt;
+&lt;p&gt;Here it is in action:&lt;/p&gt;
+&lt;div class=&quot;ratio ratio-16x9 mb-2&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/AZytf15FRks&quot; title=&quot;YouTube video&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;As you can see, there are many customizations and settings available in the editor:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://stride3d.net/images/blog/2021-02-01-release-stride-4-0/voxelgi.jpg&quot; title=&quot;Voxel Cone Tracing GI&quot; class=&quot;mb-2&quot;&gt;&lt;img alt=&quot;Voxel Cone Tracing GI&quot; src=&quot;https://stride3d.net/images/blog/2021-02-01-release-stride-4-0/voxelgi.jpg&quot; class=&quot;img-fluid&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-02-01-release-stride-4-0/voxelgi.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There&#39;s a documentation page explaining &lt;a href=&quot;https://doc.stride3d.net/4.0/en/manual/graphics/lights-and-shadows/voxel-cone-tracing-gi.html&quot;&gt;how to set up the project with Voxel Cone Tracing GI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here&#39;s the original &lt;a href=&quot;https://forums.stride3d.net/t/voxel-gi-implementation/1947&quot;&gt;forum post&lt;/a&gt; and &lt;a href=&quot;https://github.com/stride3d/stride/pull/583&quot;&gt;pull request&lt;/a&gt;. Thanks again for this great contribution!&lt;/p&gt;
+&lt;h2 id=&quot;.net-5&quot; tabindex=&quot;-1&quot;&gt;.NET 5 &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-0/#.net-5&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Stride editor and toolchain is now running with .NET 5! Runtime has been working with .NET Core for a few versions already.&lt;/p&gt;
+&lt;p&gt;This allows us to have scripts and custom assets in a project targetting &lt;code&gt;.NET Standard 2.1&lt;/code&gt; or &lt;code&gt;.NET 5&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you have scripts or custom assets in a .NET Framework project rather than a .NET Standard project, you can still choose between &lt;code&gt;.NET 5&lt;/code&gt; and &lt;code&gt;.NET Framework&lt;/code&gt; within the launcher:&lt;/p&gt;
+&lt;img alt=&quot;Framework selection in launcher&quot; src=&quot;https://stride3d.net/images/blog/2021-02-01-release-stride-4-0/launcher-net5.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-02-01-release-stride-4-0/launcher-net5.png&quot; /&gt;
+&lt;p&gt;The framework will also be displayed in the Game Studio toolbar for easier identification while both coexist.&lt;/p&gt;
+&lt;p&gt;.NET Framework version can be considered deprecated and will likely be removed in a future release (likely 4.1) to allow us to take full advantage of &lt;a href=&quot;https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8&quot;&gt;C# 8.0&lt;/a&gt; and soon-to-come &lt;a href=&quot;https://devblogs.microsoft.com/dotnet/welcome-to-c-9-0/&quot;&gt;C# 9.0&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We also expect dropping .NET Framework and supporting only .NET 5 will greatly simplify our installation process since we won&#39;t depend on specific workloads or packages of Visual Studio being installed anymore. This was a recurring issue with our users.&lt;/p&gt;
+&lt;h2 id=&quot;flexible-gpu-instancing&quot; tabindex=&quot;-1&quot;&gt;Flexible GPU Instancing &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-0/#flexible-gpu-instancing&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Aka geometry instancing. Thanks to another big community contribution sponsored by &lt;a href=&quot;https://visualprogramming.net/&quot;&gt;vvvv&lt;/a&gt;, Stride now supports GPU instancing per model.&lt;/p&gt;
+&lt;img alt=&quot;Instancing Header&quot; src=&quot;https://stride3d.net/images/blog/2021-02-01-release-stride-4-0/instancing-header.jpg&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-02-01-release-stride-4-0/instancing-header.jpg&quot; /&gt;
+&lt;p&gt;The nice thing about it is, that it plays together with the entity-component system: Simply add an Instancing component to an entity with a model. Then you can choose between 3 ways of how you generate the instances:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;EntityTransform&lt;/em&gt;, uses the transformation of other entities with an Instance component. This allows you to add components like physics, audio, etc. to each instance.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;UserArray&lt;/em&gt;, for providing an array of matrices via script&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;UserBuffer&lt;/em&gt;, for providing a structured buffer (GPU resource) of matrices via script&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img alt=&quot;Instancing Types&quot; src=&quot;https://stride3d.net/images/blog/2021-02-01-release-stride-4-0/instancing-types.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-02-01-release-stride-4-0/instancing-types.png&quot; /&gt;
+&lt;p&gt;&lt;em&gt;UserArray&lt;/em&gt; and &lt;em&gt;UserBuffer&lt;/em&gt; even allow you to specify how the matrix is multiplied with the parent transformation.&lt;/p&gt;
+&lt;p&gt;It even works with skinning:&lt;/p&gt;
+&lt;img alt=&quot;Instancing Skinning&quot; src=&quot;https://stride3d.net/images/blog/2021-02-01-release-stride-4-0/instancing-skinning.jpg&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-02-01-release-stride-4-0/instancing-skinning.jpg&quot; /&gt;
+&lt;p&gt;Picking individual instances in Game Studio works as well and selects the entity with the respective Instance component.&lt;/p&gt;
+&lt;p&gt;There are also two new entity templates for easy setup:&lt;/p&gt;
+&lt;img alt=&quot;Instancing Templates&quot; src=&quot;https://stride3d.net/images/blog/2021-02-01-release-stride-4-0/instancing-templates.png&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-02-01-release-stride-4-0/instancing-templates.png&quot; /&gt;
+&lt;p&gt;An example project that shows the new features can be found here: &lt;a href=&quot;https://github.com/tebjan/StrideTransformationInstancing&quot;&gt;StrideTransformationInstancing&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;graphics-api%3A-different-selection-mechanism-%2B-vulkan-improvements&quot; tabindex=&quot;-1&quot;&gt;Graphics API: Different Selection Mechanism + Vulkan Improvements &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-0/#graphics-api%3A-different-selection-mechanism-%2B-vulkan-improvements&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;There&#39;s been a big overhaul on Stride build system to make Graphics API selection work in a more future-proof way.&lt;/p&gt;
+&lt;p&gt;It was previously relying on the custom &lt;code&gt;RuntimeIdentifier&lt;/code&gt; being set in the solution. This didn&#39;t work very well because it was completely orthogonal to the existing &lt;code&gt;RuntimeIdentifier&lt;/code&gt;, and sometimes not having good fallbacks.&lt;/p&gt;
+&lt;p&gt;From now on, the user project will use &lt;code&gt;StrideGraphicsApi&lt;/code&gt; in the &lt;code&gt;.csproj&lt;/code&gt; project file to specify the graphics API. We hope to expose this in the editor later.&lt;/p&gt;
+&lt;p&gt;We also took the opportunity to improve the state of Vulkan renderer (thanks to a switch to &lt;a href=&quot;https://github.com/amerkoleci/Vortice.Vulkan&quot;&gt;Vortice.Vulkan bindings&lt;/a&gt; from &lt;a href=&quot;https://github.com/amerkoleci&quot;&gt;Amer Koleci&lt;/a&gt;) and automatize graphics unit tests, currently running for D3D11 and Vulkan.&lt;/p&gt;
+&lt;p&gt;It&#39;s still a work in progress so expect more in future releases.&lt;/p&gt;
+&lt;h2 id=&quot;documentation-%26-tutorials&quot; tabindex=&quot;-1&quot;&gt;Documentation &amp;amp; Tutorials &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-0/#documentation-%26-tutorials&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The first 10 C# beginner tutorials are recorded and uploaded to the official Stride Youtube channel. You check out &lt;a href=&quot;https://www.youtube.com/playlist?list=PLRZx2y7uC8mNySUMfOQf-TLNVnnHkLfPi&quot;&gt;the playlist here&lt;/a&gt;.&lt;/p&gt;
+&lt;img alt=&quot;Youtube Playlist&quot; src=&quot;https://stride3d.net/images/blog/2021-02-01-release-stride-4-0/doc-playlist.jpg&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-02-01-release-stride-4-0/doc-playlist.jpg&quot; /&gt;
+&lt;p&gt;These videos are the video equivalent of the existing &lt;a href=&quot;https://doc.stride3d.net/latest/en/tutorials/csharpbeginner/index.html&quot;&gt;online documentation&lt;/a&gt; for the C# beginner template tutorials and the &#39;new project&#39; template when creating a new project from the Stride launcher.&lt;/p&gt;
+&lt;p&gt;The C# beginner series should be fully recorded by the end of July 2020.&lt;br /&gt;
+After those videos are done, Jorn will put his focus on the C# Intermediate project template. Here a is work in progress screenshot on the raycasting tutorial:&lt;/p&gt;
+&lt;img alt=&quot;Raycast tutorial&quot; src=&quot;https://stride3d.net/images/blog/2021-02-01-release-stride-4-0/doc-raycast-tutorial.jpg&quot; class=&quot;img-fluid mb-2&quot; loading=&quot;lazy&quot; data-src=&quot;/images/blog/2021-02-01-release-stride-4-0/doc-raycast-tutorial.jpg&quot; /&gt;
+&lt;h2 id=&quot;new-developers-are-welcome!&quot; tabindex=&quot;-1&quot;&gt;New Developers are Welcome! &lt;a class=&quot;direct-link&quot; href=&quot;https://stride3d.net/blog/release-stride-4-0/#new-developers-are-welcome!&quot;&gt;🔗&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The Stride GitHub repository has more closed pull requests than open issues. This is a good sign! But in order to move faster and adapt to new technologies, we would be very happy to see more new talents in our friendly and professional developer community.&lt;/p&gt;
+&lt;p&gt;There are several good reasons to join us:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Writing engine code in C# is fun and quite productive&lt;/li&gt;
+&lt;li&gt;Stride users will work with what you create&lt;/li&gt;
+&lt;li&gt;We are happy to help, should you get stuck&lt;/li&gt;
+&lt;li&gt;You can learn a lot, the Stride code base is very professional and has high-quality standards&lt;/li&gt;
+&lt;li&gt;An open-source contribution is a great addition to your portfolio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;No matter whether you (or someone you know) can contribute documentation updates, UI improvements, bug fixes, or new rendering technologies, we welcome everyone!&lt;/p&gt;
 </content>
   </entry>
 </feed>

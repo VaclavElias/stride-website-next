@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stride Game Engine - Search</title>
-    <meta name="description" content="">
+    <title>Stride Game Engine - Community Meeting October 2021</title>
+    <meta name="description" content="It has been quite a while since we had a community meeting with the Stride community. On the 1st of October 2021 we had a good 2 hour chat about various topi...">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="canonical" href="https://stride3d.net/search/">
+    <link rel="canonical" href="https://stride3d.net/blog/community-meeting-october-2021/">
     <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
     <link rel="stylesheet" href="/css/styles.css?site-version=2.0">
     
@@ -31,7 +31,7 @@
                     <a class="nav-link" aria-current="page" href="/features/">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/blog/">Blog</a>
+                    <a class="nav-link active text-primary" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
@@ -131,152 +131,145 @@
     </div>
 </nav>
     <div class="container">
-    <h1 class="my-3">Search result for <span id="search-result-term"></span></h1>
-    <div class="row">
-        <div class="col-lg-9 col-md-8 col-sm-12" id="search-results">
-            <div class="fa-3x">
-                <i class="fa-solid fa-spinner text-primary fa-spin-pulse"></i>
-            </div>
+    <div class="row postcontent">
+        <div class="col-12">
+            <article itemscope itemtype="http://schema.org/BlogPosting">
+                <h1 itemprop="name">Community Meeting October 2021</h1>
+                <div class="text-center mb-3 pt-2">
+                    <div>
+                        
+                        <div class="mt-4 mb-2">
+                            <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/Aggror?size=58">
+                        </div>
+                        Jorn Theunissen
+                    </div>
+                    
+                    <p style="color:#616161;border-top: 2px solid #979593;" class="x-hidden-focus mt-2 pt-1 small text-muted date d-inline-block">
+                        <i class="fa-solid fa-calendar-days"></i> <time datetime="2021-10-01T00:00:00+0000" itemprop="datePublished"> October 01, 2021</time>
+                    </p>
+                </div><div itemprop="articleBody">
+                <p>It has been quite a while since we had a community meeting with the Stride community. On the 1st of October 2021 we had a good 2 hour chat about various topics on the Stride game engine.</p>
+<h2 id="summary" tabindex="-1">Summary <a class="direct-link" href="#summary">🔗</a></h2>
+<p><div class="table-of-contents"><ul><li><a href="#summary">Summary </a></li><li><a href="#access-rights">Access Rights </a></li><li><a href="#roadmap">Roadmap </a></li><li><a href="#funding">Funding </a></li><li><a href="#stride-4.1">Stride 4.1 </a></li><li><a href="#remaining-topics">Remaining Topics </a></li></ul></div></p>
+<h2 id="access-rights" tabindex="-1">Access Rights <a class="direct-link" href="#access-rights">🔗</a></h2>
+<p>First topic was about clearing up access rights of the Stride source contributors and how this can be displayed better to the rest of the world.</p>
+<ul>
+<li>Github features a teams option, which is now free for open source projects. Xen2 made sure that those contributing to the engine are now part of the team on Github: <a href="https://github.com/orgs/stride3d/teams/stride-contributors">https://github.com/orgs/stride3d/teams/stride-contributors</a>. These contributors can review and approve pull requests in to the various stride projects (engine, website, documentation).
+<ul>
+<li>When changes are merged into the website project and specifically the 'release' branch, an automated process will trigger the website deployment.</li>
+<li>Documentation is updated as well, although this is a manual process that needs to be triggered. Xen2 and Aggror will do some knowledge sharing in private, so that this process does not lie solely with xen2.</li>
+</ul>
+</li>
+<li>Social media access
+<ul>
+<li>Youtube: xen2 and Aggror</li>
+<li>Facebook: xen2 and M0TH</li>
+<li>Twitter: xen2 and Aggror</li>
+</ul>
+</li>
+</ul>
+<h2 id="roadmap" tabindex="-1">Roadmap <a class="direct-link" href="#roadmap">🔗</a></h2>
+<p>The roadmap on Github hasn't received an update in quite a while. The reason for this is that there simply is no capacity to pick up these kind of features like terrain editor, visual programming etc.<br>
+What we see in the community is that various contributors work on useful features for their own games, and as a result these kind of features and bug fixes and up being merged in to the Stride repository.</p>
+<ul>
+<li>As a result it has now been decided that we no longer will use the roadmap on Github. At the moment of writing this blog, the roadmap has already been removed. If, in the future, we have more funding and capacity, we can re-introduce it again.</li>
+<li>Aggror will try to put out a blogpost once a month keeping the community up to date on features that community members are working on. This also requires some initiative from the community. So if you have something that you are working on, feel free to send a message to Aggror on Discord. That we can feature your screenshots, videos, PR's in a blogpost on the stride website.</li>
+</ul>
+<h2 id="funding" tabindex="-1">Funding <a class="direct-link" href="#funding">🔗</a></h2>
+<p>There were 2 ways to contribute to Stride financially: Patreon and Xen2 sponsorship on his Github account.</p>
+<ul>
+<li>Both these donation services didn’t really give a clear overview where the money was being spent on.</li>
+<li>Sponsoring Xen2 on Github would specifically and only go to Xen2. On top of that there is no easy way to use this as a marketing tool.</li>
+<li>Only Xen2 had access to Patreon, making it another responsibility for him to:
+<ul>
+<li>Post something interesting on Patreon (for which he has no time)</li>
+<li>Do tax related activities and payments.</li>
+</ul>
+</li>
+<li>Because of the above, Stride's Patreon page will soon close (or already might be at the time of posting blog)</li>
+<li>Aggror will look into setting up a more open way of viewing where money from donations is being spent on. The idea here is to have a look at <a href="https://opencollective.com/how-it-works">Open Collective</a>
+<ul>
+<li>Aggror will present his findings to xen2. Once a decision has been made, the community will be informed.</li>
+</ul>
+</li>
+<li>.NET foundation
+<ul>
+<li>Stride has joined the .NET foundation. The .NET foundation offers to host various services on their Azure subscriptions. That means that a majority of the costs when it comes to hosting is taken care of for us.</li>
+<li>As a result of this, Xen will move various services from Digital ocean to Azure. This will reduce costs. Money that is gained from donations can be spent on bug bounties, features and documentation. Once we have a new donation mechanism in place, we will have another community meeting on how to distribute money.</li>
+<li>Aggror will also be included in the communication with .Net foundation.</li>
+</ul>
+</li>
+<li>Xen2 gave a nice summary on the operating costs for various (web related)services
+<ul>
+<li>Azure: used to be $50~$100 per month but now paid by .NET Foundation</li>
+<li>StackPath (CDN): $10 per month, can be moved to Azure</li>
+<li>Google Cloud Service: $5 per month</li>
+<li>DigitalOcean: $30 per month (teamcity and forums server), can be moved to Azure</li>
+<li>GitHub: $40 per month
+<ul>
+<li>Some demo's use LFS. If .NET foundation were to cover those costs too, we could add additional demo's.</li>
+</ul>
+</li>
+<li>SSL: used to be expensive but now free (auto renew let's encrypt or Azure)</li>
+<li>Domains: cheap, $10 per year</li>
+</ul>
+</li>
+<li>Applying for a grant with Epic, Microsoft etc.
+<ul>
+<li>Although this is something that we want to pursue, we first want to have a new donation service in place. The next community meeting will cover this topic again.</li>
+</ul>
+</li>
+</ul>
+<h2 id="stride-4.1" tabindex="-1">Stride 4.1 <a class="direct-link" href="#stride-4.1">🔗</a></h2>
+<p>Stride 4.1 is on its way, but when exactly and what can we expect this year?</p>
+<ul>
+<li>Stride 4.1 BETA will include the upgrade to .NET 6</li>
+<li>Stride 4.1 targeted around november/december 2021</li>
+<li>Although full Linux support is not possible right now, we will look at having the Linux runtime working again with Stride 4.1</li>
+<li>Aggror will start collect info for the release notes</li>
+</ul>
+<h2 id="remaining-topics" tabindex="-1">Remaining Topics <a class="direct-link" href="#remaining-topics">🔗</a></h2>
+<p>For the remaining topics, we ran out of time, so these will be picked up at another community meeting.</p>
+</div>
+                <hr>
+                <p>
+<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Meeting</span></p>
+                <p>
+                    Any comments? You can start 🗨 at <i class="fa-brands fa-github text-decoration-none"></i> <a href="https://github.com/stride3d/stride/discussions" target="_blank" rel="noreferrer">GitHub Discussions</a> or <i class="fa-brands fa-discord text-decoration-none"></i> <a class="" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener">Discord</a>.
+                </p>
+                <p>
+                    <a href="https://github.com/VaclavElias/stride-website-next/blob/eleventy/./posts/2021-10-01-community-meeting-october-2021.md" target="_blank" rel="noreferrer">Edit</a> this page on
+                    <i class="fa-brands fa-github text-decoration-none"></i>.
+                </p>
+            </article>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-12">
-            <div class="box-style">
-                <div class="devblogs-widget">
-                    <div class="card mb-4">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item active">
-            <h4 class="mb-0 fw-normal">Popular Posts</h4>
-        </li>
-        
-        
-        <li class="list-group-item  list-group-item-action">
-            <a href="/blog/community-meeting-february-2022/">
-                Community Meeting February 2022
-            </a>
-        </li>
-        
-        
-        
-        <li class="list-group-item  list-group-item-action">
-            <a href="/blog/community-meeting-november-2021/">
-                Community Meeting November 2021
-            </a>
-        </li>
-        
-        
-        
-        <li class="list-group-item  list-group-item-action">
-            <a href="/blog/open-collective/">
-                Open Collective
-            </a>
-        </li>
-        
-        
-        
-        
-        
-        <li class="list-group-item  list-group-item-action">
-            <a href="/blog/release-stride-4-0/">
-                Stride 4.0 is Now Live
-            </a>
-        </li>
-        
-        
-    </ul>
-</div>
-<div class="card mb-4 p-3">
-    
-<form action="/search/" method="get">
-    <div class="mb-3">
-        <input class="form-control" id="search-form-post" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
     </div>
-    <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
-</form>
-    <hr>
-    <h4>Latest Posts</h4>
-    <ul style="padding-left: 17px;">
+    <div class="row mb-5">
         
-        <li>
-            <a href="/blog/community-meeting-february-2022/">
-                Community Meeting February 2022
-            </a>
-        </li>
         
-        <li>
-            <a href="/blog/community-meeting-november-2021/">
-                Community Meeting November 2021
-            </a>
-        </li>
-        
-        <li>
-            <a href="/blog/open-collective/">
-                Open Collective
-            </a>
-        </li>
-        
-        <li>
-            <a href="/blog/community-meeting-october-2021/">
-                Community Meeting October 2021
-            </a>
-        </li>
-        
-        <li>
-            <a href="/blog/release-stride-4-0/">
-                Stride 4.0 is Now Live
-            </a>
-        </li>
-        
-    </ul>
-    <hr>
-    <h4>Resources</h4>
-    <ul style="padding-left: 17px;">
-        <li>
-            <a title="Silk.NET" href="https://dotnet.github.io/Silk.NET/" target="_blank" rel="noopener">Silk.NET</a>
-        </li>
-        <li>
-            <a title="Blender" href="https://www.blender.org/" target="_blank" rel="noopener">Blender - Free and Open 3D Creation Software</a>
-        </li>
-        <li>
-            <a title="Microsoft C# Docs" href="https://devblogs.microsoft.com/dotnet/category/csharp/" target="_blank" rel="noopener">C# Blog</a>
-        </li>
-        <li>
-            <a title="Microsoft Docs" href="https://docs.microsoft.com/en-us/" target="_blank" rel="noopener" class="x-hidden-focus">Microsoft Docs</a>
-        </li>
-        <li>
-            <a title="Visual Studio Blog" href="https://devblogs.microsoft.com/visualstudio" target="_blank" rel="noopener">
-                Visual Studio Blog
-            </a>
-        </li>
-        <li>
-            <a title="Visual Studio Download" href="https://visualstudio.microsoft.com/downloads/" target="_blank" rel="noopener">
-                Download Visual Studio Community
-            </a>
-        </li>
-        <li>
-            <a title="Visual Studio Code Download" href="https://code.visualstudio.com/" target="_blank" rel="noopener">
-                Download Visual Studio Code
-            </a>
-        </li>
-    </ul>
-    <hr>
-    <h4>Other</h4>
-    <ul style="padding-left: 17px;">
-        <li>
-            <a title="Stride Post Archive" href="/archive/">Archive</a>
-        </li>
-        <li>
-            <a title="Stride Tags" href="/tags/">Tags</a>
-        </li>
-        <li>
-            <a href="/feed.xml"><i class="fa-solid fa-rss text-decoration-none"></i> Stride RSS Feed</a>
-        </li>
-    </ul>
-</div>
+        <div class="col-md-6 mb-4">
+            
+            <div class="card px-3">
+                <div class="card-body p-4">
+                    <h5>Previous Post</h5>
+                    <a class="prev stretched-link" href="/blog/release-stride-4-0/">Stride 4.0 is Now Live</a>
                 </div>
             </div>
+            
+        </div>
+        <div class="col-md-6 text-md-end">
+            
+            <div class="card px-3">
+                <div class="card-body p-4">
+                    <h5>Next Post</h5>
+                    <a class="next stretched-link" href="/blog/open-collective/">Open Collective</a>
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>
-<script src="/scripts/search.js?site-version=2.0"></script>
+
     <div class="bg-footer show text-light mt-auto">
     <div class="container">
         <footer class="pt-5 px-2">

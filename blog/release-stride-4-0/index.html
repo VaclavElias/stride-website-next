@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stride Game Engine - Search</title>
-    <meta name="description" content="">
+    <title>Stride Game Engine - Stride 4.0 is Now Live</title>
+    <meta name="description" content="Stride 4.0 is now out of beta, and the Xenko game engine has been renamed to Stride. This release brings Voxel Cone Tracing GI, .NET 5 support, flexible GPU ...">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="canonical" href="https://stride3d.net/search/">
+    <link rel="canonical" href="https://stride3d.net/blog/release-stride-4-0/">
     <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
     <link rel="stylesheet" href="/css/styles.css?site-version=2.0">
     
@@ -31,7 +31,7 @@
                     <a class="nav-link" aria-current="page" href="/features/">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/blog/">Blog</a>
+                    <a class="nav-link active text-primary" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
@@ -131,152 +131,123 @@
     </div>
 </nav>
     <div class="container">
-    <h1 class="my-3">Search result for <span id="search-result-term"></span></h1>
-    <div class="row">
-        <div class="col-lg-9 col-md-8 col-sm-12" id="search-results">
-            <div class="fa-3x">
-                <i class="fa-solid fa-spinner text-primary fa-spin-pulse"></i>
-            </div>
+    <div class="row postcontent">
+        <div class="col-12">
+            <article itemscope itemtype="http://schema.org/BlogPosting">
+                <h1 itemprop="name">Stride 4.0 is Now Live</h1>
+                <div class="text-center mb-3 pt-2">
+                    <div>
+                        
+                        <div class="mt-4 mb-2">
+                            <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/xen2?size=58">
+                        </div>
+                        Virgile Bello
+                    </div>
+                    
+                    <p style="color:#616161;border-top: 2px solid #979593;" class="x-hidden-focus mt-2 pt-1 small text-muted date d-inline-block">
+                        <i class="fa-solid fa-calendar-days"></i> <time datetime="2021-02-01T00:00:00+0000" itemprop="datePublished"> February 01, 2021</time>
+                    </p>
+                </div><div itemprop="articleBody">
+                <p>Stride 4.0 is now out of beta, and the Xenko game engine has been renamed to Stride. This release brings Voxel Cone Tracing GI, .NET 5 support, flexible GPU instancing, Vulkan improvements, and new documentation and tutorials. The Stride team is also welcoming new developers to contribute to the engine's development.</p>
+<p>Stride 4.0 has been around for a while, but it's now time to remove the <code>-beta</code> tag!</p>
+<p>Many thanks to the community and all the contributors who made this release possible!</p>
+<h2 id="summary" tabindex="-1">Summary <a class="direct-link" href="#summary">🔗</a></h2>
+<p><div class="table-of-contents"><ul><li><a href="#summary">Summary </a></li><li><a href="#xenko-is-now-stride!">Xenko is now Stride! </a></li><li><a href="#voxel-cone-tracing-gi">Voxel Cone Tracing GI </a></li><li><a href="#.net-5">.NET 5 </a></li><li><a href="#flexible-gpu-instancing">Flexible GPU Instancing </a></li><li><a href="#graphics-api%3A-different-selection-mechanism-%2B-vulkan-improvements">Graphics API: Different Selection Mechanism + Vulkan Improvements </a></li><li><a href="#documentation-%26-tutorials">Documentation &amp; Tutorials </a></li><li><a href="#new-developers-are-welcome!">New Developers are Welcome! </a></li></ul></div></p>
+<h2 id="xenko-is-now-stride!" tabindex="-1">Xenko is now Stride! <a class="direct-link" href="#xenko-is-now-stride!">🔗</a></h2>
+<p>The Xenko game engine has been renamed to Stride. From now on, all source code, blogs, and tutorials will use the name ‘Stride’ instead of ‘Xenko’.</p>
+<p>Here is the new logo:</p>
+<img alt="Stride Logo" src="/images/blog/2021-02-01-release-stride-4-0/stride-logo.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2021-02-01-release-stride-4-0/stride-logo.png">
+<p>More details available on the <a href="/blog/xenko-has-been-renamed-to-stride/">dedicated blog post</a>.</p>
+<h2 id="voxel-cone-tracing-gi" tabindex="-1">Voxel Cone Tracing GI <a class="direct-link" href="#voxel-cone-tracing-gi">🔗</a></h2>
+<p>Thanks to a substantial contribution from Sean Boettger and sponsored by David Jeske, Stride now supports Voxel Cone Tracing GI!</p>
+<p>Here it is in action:</p>
+<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/AZytf15FRks" title="YouTube video" allowfullscreen></iframe></div>
+<p>As you can see, there are many customizations and settings available in the editor:</p>
+<p><a href="/images/blog/2021-02-01-release-stride-4-0/voxelgi.jpg" title="Voxel Cone Tracing GI" class="mb-2"><img alt="Voxel Cone Tracing GI" src="/images/blog/2021-02-01-release-stride-4-0/voxelgi.jpg" class="img-fluid" loading="lazy" data-src="/images/blog/2021-02-01-release-stride-4-0/voxelgi.jpg"></a></p>
+<p>There's a documentation page explaining <a href="https://doc.stride3d.net/4.0/en/manual/graphics/lights-and-shadows/voxel-cone-tracing-gi.html">how to set up the project with Voxel Cone Tracing GI</a>.</p>
+<p>Here's the original <a href="https://forums.stride3d.net/t/voxel-gi-implementation/1947">forum post</a> and <a href="https://github.com/stride3d/stride/pull/583">pull request</a>. Thanks again for this great contribution!</p>
+<h2 id=".net-5" tabindex="-1">.NET 5 <a class="direct-link" href="#.net-5">🔗</a></h2>
+<p>Stride editor and toolchain is now running with .NET 5! Runtime has been working with .NET Core for a few versions already.</p>
+<p>This allows us to have scripts and custom assets in a project targetting <code>.NET Standard 2.1</code> or <code>.NET 5</code>.</p>
+<p>If you have scripts or custom assets in a .NET Framework project rather than a .NET Standard project, you can still choose between <code>.NET 5</code> and <code>.NET Framework</code> within the launcher:</p>
+<img alt="Framework selection in launcher" src="/images/blog/2021-02-01-release-stride-4-0/launcher-net5.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2021-02-01-release-stride-4-0/launcher-net5.png">
+<p>The framework will also be displayed in the Game Studio toolbar for easier identification while both coexist.</p>
+<p>.NET Framework version can be considered deprecated and will likely be removed in a future release (likely 4.1) to allow us to take full advantage of <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8">C# 8.0</a> and soon-to-come <a href="https://devblogs.microsoft.com/dotnet/welcome-to-c-9-0/">C# 9.0</a>.</p>
+<p>We also expect dropping .NET Framework and supporting only .NET 5 will greatly simplify our installation process since we won't depend on specific workloads or packages of Visual Studio being installed anymore. This was a recurring issue with our users.</p>
+<h2 id="flexible-gpu-instancing" tabindex="-1">Flexible GPU Instancing <a class="direct-link" href="#flexible-gpu-instancing">🔗</a></h2>
+<p>Aka geometry instancing. Thanks to another big community contribution sponsored by <a href="https://visualprogramming.net/">vvvv</a>, Stride now supports GPU instancing per model.</p>
+<img alt="Instancing Header" src="/images/blog/2021-02-01-release-stride-4-0/instancing-header.jpg" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2021-02-01-release-stride-4-0/instancing-header.jpg">
+<p>The nice thing about it is, that it plays together with the entity-component system: Simply add an Instancing component to an entity with a model. Then you can choose between 3 ways of how you generate the instances:</p>
+<ul>
+<li><em>EntityTransform</em>, uses the transformation of other entities with an Instance component. This allows you to add components like physics, audio, etc. to each instance.</li>
+<li><em>UserArray</em>, for providing an array of matrices via script</li>
+<li><em>UserBuffer</em>, for providing a structured buffer (GPU resource) of matrices via script</li>
+</ul>
+<img alt="Instancing Types" src="/images/blog/2021-02-01-release-stride-4-0/instancing-types.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2021-02-01-release-stride-4-0/instancing-types.png">
+<p><em>UserArray</em> and <em>UserBuffer</em> even allow you to specify how the matrix is multiplied with the parent transformation.</p>
+<p>It even works with skinning:</p>
+<img alt="Instancing Skinning" src="/images/blog/2021-02-01-release-stride-4-0/instancing-skinning.jpg" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2021-02-01-release-stride-4-0/instancing-skinning.jpg">
+<p>Picking individual instances in Game Studio works as well and selects the entity with the respective Instance component.</p>
+<p>There are also two new entity templates for easy setup:</p>
+<img alt="Instancing Templates" src="/images/blog/2021-02-01-release-stride-4-0/instancing-templates.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2021-02-01-release-stride-4-0/instancing-templates.png">
+<p>An example project that shows the new features can be found here: <a href="https://github.com/tebjan/StrideTransformationInstancing">StrideTransformationInstancing</a></p>
+<h2 id="graphics-api%3A-different-selection-mechanism-%2B-vulkan-improvements" tabindex="-1">Graphics API: Different Selection Mechanism + Vulkan Improvements <a class="direct-link" href="#graphics-api%3A-different-selection-mechanism-%2B-vulkan-improvements">🔗</a></h2>
+<p>There's been a big overhaul on Stride build system to make Graphics API selection work in a more future-proof way.</p>
+<p>It was previously relying on the custom <code>RuntimeIdentifier</code> being set in the solution. This didn't work very well because it was completely orthogonal to the existing <code>RuntimeIdentifier</code>, and sometimes not having good fallbacks.</p>
+<p>From now on, the user project will use <code>StrideGraphicsApi</code> in the <code>.csproj</code> project file to specify the graphics API. We hope to expose this in the editor later.</p>
+<p>We also took the opportunity to improve the state of Vulkan renderer (thanks to a switch to <a href="https://github.com/amerkoleci/Vortice.Vulkan">Vortice.Vulkan bindings</a> from <a href="https://github.com/amerkoleci">Amer Koleci</a>) and automatize graphics unit tests, currently running for D3D11 and Vulkan.</p>
+<p>It's still a work in progress so expect more in future releases.</p>
+<h2 id="documentation-%26-tutorials" tabindex="-1">Documentation &amp; Tutorials <a class="direct-link" href="#documentation-%26-tutorials">🔗</a></h2>
+<p>The first 10 C# beginner tutorials are recorded and uploaded to the official Stride Youtube channel. You check out <a href="https://www.youtube.com/playlist?list=PLRZx2y7uC8mNySUMfOQf-TLNVnnHkLfPi">the playlist here</a>.</p>
+<img alt="Youtube Playlist" src="/images/blog/2021-02-01-release-stride-4-0/doc-playlist.jpg" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2021-02-01-release-stride-4-0/doc-playlist.jpg">
+<p>These videos are the video equivalent of the existing <a href="https://doc.stride3d.net/latest/en/tutorials/csharpbeginner/index.html">online documentation</a> for the C# beginner template tutorials and the 'new project' template when creating a new project from the Stride launcher.</p>
+<p>The C# beginner series should be fully recorded by the end of July 2020.<br>
+After those videos are done, Jorn will put his focus on the C# Intermediate project template. Here a is work in progress screenshot on the raycasting tutorial:</p>
+<img alt="Raycast tutorial" src="/images/blog/2021-02-01-release-stride-4-0/doc-raycast-tutorial.jpg" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2021-02-01-release-stride-4-0/doc-raycast-tutorial.jpg">
+<h2 id="new-developers-are-welcome!" tabindex="-1">New Developers are Welcome! <a class="direct-link" href="#new-developers-are-welcome!">🔗</a></h2>
+<p>The Stride GitHub repository has more closed pull requests than open issues. This is a good sign! But in order to move faster and adapt to new technologies, we would be very happy to see more new talents in our friendly and professional developer community.</p>
+<p>There are several good reasons to join us:</p>
+<ul>
+<li>Writing engine code in C# is fun and quite productive</li>
+<li>Stride users will work with what you create</li>
+<li>We are happy to help, should you get stuck</li>
+<li>You can learn a lot, the Stride code base is very professional and has high-quality standards</li>
+<li>An open-source contribution is a great addition to your portfolio</li>
+</ul>
+<p>No matter whether you (or someone you know) can contribute documentation updates, UI improvements, bug fixes, or new rendering technologies, we welcome everyone!</p>
+</div>
+                <hr>
+                <p>
+<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">4.0</span><span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Release</span><span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Tutorials</span></p>
+                <p>
+                    Any comments? You can start 🗨 at <i class="fa-brands fa-github text-decoration-none"></i> <a href="https://github.com/stride3d/stride/discussions" target="_blank" rel="noreferrer">GitHub Discussions</a> or <i class="fa-brands fa-discord text-decoration-none"></i> <a class="" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener">Discord</a>.
+                </p>
+                <p>
+                    <a href="https://github.com/VaclavElias/stride-website-next/blob/eleventy/./posts/2021-02-01-release-stride-4-0.md" target="_blank" rel="noreferrer">Edit</a> this page on
+                    <i class="fa-brands fa-github text-decoration-none"></i>.
+                </p>
+            </article>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-12">
-            <div class="box-style">
-                <div class="devblogs-widget">
-                    <div class="card mb-4">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item active">
-            <h4 class="mb-0 fw-normal">Popular Posts</h4>
-        </li>
-        
-        
-        <li class="list-group-item  list-group-item-action">
-            <a href="/blog/community-meeting-february-2022/">
-                Community Meeting February 2022
-            </a>
-        </li>
-        
-        
-        
-        <li class="list-group-item  list-group-item-action">
-            <a href="/blog/community-meeting-november-2021/">
-                Community Meeting November 2021
-            </a>
-        </li>
-        
-        
-        
-        <li class="list-group-item  list-group-item-action">
-            <a href="/blog/open-collective/">
-                Open Collective
-            </a>
-        </li>
-        
-        
-        
-        
-        
-        <li class="list-group-item  list-group-item-action">
-            <a href="/blog/release-stride-4-0/">
-                Stride 4.0 is Now Live
-            </a>
-        </li>
-        
-        
-    </ul>
-</div>
-<div class="card mb-4 p-3">
-    
-<form action="/search/" method="get">
-    <div class="mb-3">
-        <input class="form-control" id="search-form-post" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
     </div>
-    <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
-</form>
-    <hr>
-    <h4>Latest Posts</h4>
-    <ul style="padding-left: 17px;">
+    <div class="row mb-5">
         
-        <li>
-            <a href="/blog/community-meeting-february-2022/">
-                Community Meeting February 2022
-            </a>
-        </li>
         
-        <li>
-            <a href="/blog/community-meeting-november-2021/">
-                Community Meeting November 2021
-            </a>
-        </li>
-        
-        <li>
-            <a href="/blog/open-collective/">
-                Open Collective
-            </a>
-        </li>
-        
-        <li>
-            <a href="/blog/community-meeting-october-2021/">
-                Community Meeting October 2021
-            </a>
-        </li>
-        
-        <li>
-            <a href="/blog/release-stride-4-0/">
-                Stride 4.0 is Now Live
-            </a>
-        </li>
-        
-    </ul>
-    <hr>
-    <h4>Resources</h4>
-    <ul style="padding-left: 17px;">
-        <li>
-            <a title="Silk.NET" href="https://dotnet.github.io/Silk.NET/" target="_blank" rel="noopener">Silk.NET</a>
-        </li>
-        <li>
-            <a title="Blender" href="https://www.blender.org/" target="_blank" rel="noopener">Blender - Free and Open 3D Creation Software</a>
-        </li>
-        <li>
-            <a title="Microsoft C# Docs" href="https://devblogs.microsoft.com/dotnet/category/csharp/" target="_blank" rel="noopener">C# Blog</a>
-        </li>
-        <li>
-            <a title="Microsoft Docs" href="https://docs.microsoft.com/en-us/" target="_blank" rel="noopener" class="x-hidden-focus">Microsoft Docs</a>
-        </li>
-        <li>
-            <a title="Visual Studio Blog" href="https://devblogs.microsoft.com/visualstudio" target="_blank" rel="noopener">
-                Visual Studio Blog
-            </a>
-        </li>
-        <li>
-            <a title="Visual Studio Download" href="https://visualstudio.microsoft.com/downloads/" target="_blank" rel="noopener">
-                Download Visual Studio Community
-            </a>
-        </li>
-        <li>
-            <a title="Visual Studio Code Download" href="https://code.visualstudio.com/" target="_blank" rel="noopener">
-                Download Visual Studio Code
-            </a>
-        </li>
-    </ul>
-    <hr>
-    <h4>Other</h4>
-    <ul style="padding-left: 17px;">
-        <li>
-            <a title="Stride Post Archive" href="/archive/">Archive</a>
-        </li>
-        <li>
-            <a title="Stride Tags" href="/tags/">Tags</a>
-        </li>
-        <li>
-            <a href="/feed.xml"><i class="fa-solid fa-rss text-decoration-none"></i> Stride RSS Feed</a>
-        </li>
-    </ul>
-</div>
+        <div class="col-md-6 mb-4">
+            
+        </div>
+        <div class="col-md-6 text-md-end">
+            
+            <div class="card px-3">
+                <div class="card-body p-4">
+                    <h5>Next Post</h5>
+                    <a class="next stretched-link" href="/blog/community-meeting-october-2021/">Community Meeting October 2021</a>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>
-<script src="/scripts/search.js?site-version=2.0"></script>
+
     <div class="bg-footer show text-light mt-auto">
     <div class="container">
         <footer class="pt-5 px-2">
