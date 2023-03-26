@@ -175,7 +175,7 @@ Adding responsive images through shorcode. Ensure you write descriptive title as
 
 `{% img 'title' 'url' %}`
 
-rendres as
+renders as
 
 ```html
 <img alt="title" src="url" class="img-fluid mb-2" loading="lazy" data-src="url">
@@ -184,7 +184,7 @@ Similarly you can add a link to the image by using `img-click` shortcode. This w
 
 `{% img-click 'title' 'url' %}`
 
-rendres as
+renders as
 
 ```html
 <a href="url" title="title" class="mb-2"><img alt="title" src="url" class="img-fluid" loading="lazy" data-src="url"></a>
@@ -192,7 +192,21 @@ rendres as
 
 #### Video
 
-`{% youtube 'url' %}`
+`{% youtube 'id' %}`
+
+renders as
+
+```html
+<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/id" title="YouTube video" allowfullscreen></iframe></div>
+```
+
+`{% youtube-playlist 'id' %}`
+
+renders as
+
+```html
+<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/videoseries?list=id" title="YouTube video" allowfullscreen></iframe></div>
+```
 
 ## Eleventy
 

@@ -123,6 +123,10 @@ module.exports = function (eleventyConfig) {
         return `<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/${id}" title="YouTube video" allowfullscreen></iframe></div>`;
     });
 
+    eleventyConfig.addShortcode("youtube-playlist", function (id) {
+        return `<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/videoseries?list=${id}" title="YouTube video" allowfullscreen></iframe></div>`;
+    });
+
     let markdownLibrary = markdownIt({
         html: true,
         breaks: true,

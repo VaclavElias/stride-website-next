@@ -3,7 +3,8 @@
         <li class="list-group-item active">
             <h4 class="mb-0 fw-normal">Popular Posts</h4>
         </li>
-        {% for post in collections.blog reversed limit:5 %}
+        {% assign popularPosts = collections.blog | reverse %}
+        {% for post in popularPosts limit:5 %}
         {% if post.data.popular == true %}
         <li class="list-group-item  list-group-item-action">
             <a href="{{ post.url }}">

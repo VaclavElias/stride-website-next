@@ -3,8 +3,9 @@
     {% include search-form.html id:"search-form-post" %}
     <hr>
     <h4>Latest Posts</h4>
-    <ul style="padding-left: 17px;">
-        {% for post in collections.blog reversed limit:5 %}
+    <ul class="ps-1 ms-3">
+        {% assign latestPosts = collections.blog | reverse %}
+        {% for post in latestPosts limit:5 %}
         <li>
             <a href="{{ post.url }}">
                 {{ post.data.title }}
@@ -14,7 +15,7 @@
     </ul>
     <hr>
     <h4>Resources</h4>
-    <ul style="padding-left: 17px;">
+    <ul class="ps-1 ms-3">
         <li>
             <a title="Silk.NET" href="https://dotnet.github.io/Silk.NET/" target="_blank" rel="noopener">Silk.NET</a>
         </li>
@@ -45,7 +46,7 @@
     </ul>
     <hr>
     <h4>Other</h4>
-    <ul style="padding-left: 17px;">
+    <ul class="ps-1 ms-3">
         <li>
             <a title="Stride Post Archive" href="/archive/">Archive</a>
         </li>
