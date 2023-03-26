@@ -5,6 +5,8 @@ author: virgile
 popular: true
 tags: ['4.0','Release', 'Tutorials']
 ---
+Stride 4.0 is now out of beta, and the Xenko game engine has been renamed to Stride. This release brings Voxel Cone Tracing GI, .NET 5 support, flexible GPU instancing, Vulkan improvements, and new documentation and tutorials. The Stride team is also welcoming new developers to contribute to the engine's development.
+<!-- excerpt -->
 
 Stride 4.0 has been around for a while, but it's now time to remove the `-beta` tag!
 
@@ -101,14 +103,14 @@ It's still a work in progress so expect more in future releases.
 
 The first 10 C# beginner tutorials are recorded and uploaded to the official Stride Youtube channel. You check out [the playlist here](https://www.youtube.com/playlist?list=PLRZx2y7uC8mNySUMfOQf-TLNVnnHkLfPi). 
 
-![Youtube Playlist](/images/blog/2021-02-01-release-stride-4-0/doc-playlist.jpg)
+{% img 'Youtube Playlist' '/images/blog/2021-02-01-release-stride-4-0/doc-playlist.jpg' %}
 
 These videos are the video equivalent of the existing [online documentation](https://doc.stride3d.net/latest/en/tutorials/csharpbeginner/index.html) for the C# beginner template tutorials and the 'new project' template when creating a new project from the Stride launcher.
 
 The C# beginner series should be fully recorded by the end of July 2020. 
 After those videos are done, Jorn will put his focus on the C# Intermediate project template. Here a is work in progress screenshot on the raycasting tutorial:
 
-![Raycast tutorial](/images/blog/2021-02-01-release-stride-4-0/doc-raycast-tutorial.jpg)
+{% img 'Raycast tutorial' '/images/blog/2021-02-01-release-stride-4-0/doc-raycast-tutorial.jpg' %}
 
 ## New Developers are Welcome!
 The Stride GitHub repository has more closed pull requests than open issues. This is a good sign! But in order to move faster and adapt to new technologies, we would be very happy to see more new talents in our friendly and professional developer community.
