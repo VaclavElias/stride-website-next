@@ -22,7 +22,8 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] Web - Update blog post urls so they match the old urls
 - [ ] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
   - CSS Collaborator wanted
-- [x] Web - FAQ - Remove Premium Support sentence
+- [x] Web - Search - Include docs in search
+- [x] - [x] Web - FAQ - Remove Premium Support sentence
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Past Posts - Update and pretify content
 - [x] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
@@ -70,6 +71,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## Known Issues
 - Web - Sponsor - Widgets don't support dark theme. This can be fixed in the future, to fetch data from https://opencollective.com/stride3d/members/all.json and render before deployment or make dynamic. This might be overall better solution to have a full control over the content and design.
+- Web - Search - No pager, max result restricted to 100 till the pages is implemented
 
 ## Phase 1 - Done
 
