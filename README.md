@@ -19,7 +19,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] keep the content as it is and where it is, maybe just improve if needed
 
 ## RC2+ Checklist
-- [ ] Web - Past Posts - Update and pretify content - Done 8/64
+- [ ] Web - Past Posts - Update and pretify content - Done 9/64
 - [ ] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
   - CSS Collaborator wanted
 - [x] Web - Search - Include docs in search
@@ -168,6 +168,10 @@ Run `npm install` to install all dependencies.
 ### Global Data
 
 ### Shortcodes and Includes
+
+### Web Assets
+
+List of web assets used in the website, like logo.
 
 #### Images
 

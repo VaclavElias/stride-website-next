@@ -61,10 +61,10 @@ Also, a friendly reminder, that if you [sponsor Stride through Github](https://g
 ## Links 
 In case you missed them, here are the new links that you should be using:
 
-- Github https://github.com/stride3d/stride
-- Website https://www.stride3d.net/
-- Documentation https://doc.stride3d.net/latest/en/manual/index.html
-- Twitter https://twitter.com/stridedotnet
-- Youtube https://www.youtube.com/c/Stride3D
+- Github: [{{site.links.github-stride-url}}]({{site.links.github-stride-url}})
+- Website: [{{site.links.stride-url}}]({{site.links.stride-url}})
+- Documentation: [{{site.links.docs-manual-url}}]({{site.links.docs-manual-url}})
+- Twitter: [{{site.links.twitter-url}}]({{site.links.twitter-url}})
+- Youtube: [{{site.links.youtube-url}}]({{site.links.youtube-url}})
 
 If you have any further questions, feel free to reach out on Discord or the forum.

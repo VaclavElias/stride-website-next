@@ -16,6 +16,7 @@
   "paginate": 10,
   "links": {
     "discord-url": "https://discord.gg/f6aerfE",
+    "stride-url": "https://stride3d.net/",
     "docs-url": "https://doc.stride3d.net/latest/en/",
     "docs-api-url": "https://doc.stride3d.net/latest/en/api/",
     "docs-manual-url": "https://doc.stride3d.net/latest/en/manual/",

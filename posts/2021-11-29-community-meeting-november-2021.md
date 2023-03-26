@@ -2,7 +2,6 @@
 layout: post
 title: 'Community Meeting November 2021'
 author: jorn
-popular: true
 tags: ['Meeting']
 ---
 After a month on Open Collective, the Stride collective reached $1,984.31 USD and discussed funding for various projects. Plans for requesting an Epic grant are in progress. Ongoing development includes physics constraints, splines, and the upcoming release of version 4.1.
