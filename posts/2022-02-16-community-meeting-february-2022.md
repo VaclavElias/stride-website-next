@@ -22,8 +22,7 @@ With a budget of **$4,220.48 USD** at the moment of the community meeting happen
 * {% include sponsor-org.md key:'vvvv' emoji:'🥇' %}
 * {% include sponsor-user.md key:'vaclav' emoji:'🥇' %}
 
-<img alt="Ore Logo" src="/images/sponsors/ore_system-next_gen_nfts_dark.png" class="img-fluid mb-2" loading="lazy" data-src="/images/sponsors/ore_system-next_gen_nfts_dark.png">
-
+{% img 'Ore Logo' '/images/sponsors/ore_system-next_gen_nfts_dark.png' %}
 
 ## Funding for bug bounties
 * Fullscreen Vulkan support

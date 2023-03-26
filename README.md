@@ -19,7 +19,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] keep the content as it is and where it is, maybe just improve if needed
 
 ## RC2+ Checklist
-- [ ] Web - Past Posts - Update and pretify content - Done 5/64
+- [ ] Web - Past Posts - Update and pretify content - Done 6/64
 - [ ] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
   - CSS Collaborator wanted
 - [x] Web - Search - Include docs in search
@@ -120,9 +120,44 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 This Contet will be moved to GitHub Wiki
 
+## Website Updates
+
+If you want to update the website, please follow the instructions below.
+
+Small updates can be done directly in the GitHub web interface, for bigger updates please follow the instructions below.
+
+### Small Updates
+
+We can define small updates as changes to the content of the website, like adding a new blog post, updating the content of the existing blog post, updating the content of the existing page, etc.
+
+1. Go to the [Stride Website GitHub repository](https://github.com/VaclavElias/stride-website-next) and click on the `Edit this page` button on the top right corner.
+1. Make your changes and click on `Propose changes` button.
+1. Click on `Create pull request` button.
+1. Click on `Create pull request` button again.
+1. Wait for the review and merge.
+
+### Bigger Updates
+
+We can define bigger updates as changes to the design of the website, adding new pages, adding new sections, etc.
+
 ## Installation
 
+### Prerequisites
+
+1. Install Node.js and npm. You can download the installer from the [Node.js website](https://nodejs.org/en/download/).
+   - Or if already installed make sure you have got Node.js version 16 or higher. You can check your version by running `node -v` in a terminal.
+1. Clone the repository `git clone https://github.com/VaclavElias/stride-website-next.git`
+
+### Install
+Run `npm install` to install all dependencies.
+
+### Run
+1. Run `npm start` to start the development server.
+1. Open the site in your browser `http://localhost:8080/`
+
 ## Content
+
+### Bootstrap
 
 ### Updates
 
@@ -134,9 +169,28 @@ This Contet will be moved to GitHub Wiki
 
 ### Shortcodes and Includes
 
+#### Images
+
+Adding responsive images through shorcode. Ensure you write descriptive title as it will help our posts to be found in search engines.
+
 `{% img 'title' 'url' %}`
 
+rendres as
+
+```html
+<img alt="title" src="url" class="img-fluid mb-2" loading="lazy" data-src="url">
+```
+Similarly you can add a link to the image by using `img-click` shortcode. This will allow also open the image and zoom in.
+
 `{% img-click 'title' 'url' %}`
+
+rendres as
+
+```html
+<a href="url" title="title" class="mb-2"><img alt="title" src="url" class="img-fluid" loading="lazy" data-src="url"></a>
+```
+
+#### Video
 
 `{% youtube 'url' %}`
 

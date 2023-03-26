@@ -23,7 +23,7 @@ Started of with a thank you to all those who donated on the new sponsor platform
 * {% include sponsor-org.md key:'vvvv' emoji:'🥇' %}
 * {% include sponsor-user.md key:'vaclav' emoji:'🥇' %}
 
-<img alt="Ore Logo" src="/images/sponsors/ore_system-next_gen_nfts_dark.png" class="img-fluid mb-2" loading="lazy" data-src="/images/sponsors/ore_system-next_gen_nfts_dark.png">
+{% img 'Ore Logo' '/images/sponsors/ore_system-next_gen_nfts_dark.png' %}
 
 ## A Month of Open Collective
 After a month using the new sponsor platform, the Stride collective has reached a balance of **$1,984.31** USD. We started discussing how and where the money should be distributed to. We want to do this with the help of Open collective 'Projects'. These projects are listed on Stride's Open collective page, and have their own tiers, targets and description. Users can sponsor projects directly instead of the main Stride collective if they want to.

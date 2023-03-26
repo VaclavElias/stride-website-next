@@ -15,10 +15,7 @@ To solve this we have been looking at a different platform that allows us to com
 
 [[TOC]]
 
-<div class="ratio ratio-16x9 mb-4">
- <iframe width="560" height="315" src="https://www.youtube.com/embed/ufKkAsaJNTM" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
+{% youtube 'ufKkAsaJNTM' %}
 
 ## Open (Source) Collective
 

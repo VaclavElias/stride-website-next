@@ -14,9 +14,7 @@ Stride contributors are proud to announce a new release now running on .NET 6 su
 ## Stride On .NET Live
 We had the pleasure to be on a live stream with the .NET team! We gave an introduction, overview and some live demos:
 
-<div class="ratio ratio-16x9 mb-4">
- <iframe width="560" height="315" src="https://www.youtube.com/embed/J6g5y8m26zs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% youtube 'J6g5y8m26zs' %}
 
 ## Improvements Summary
 
@@ -49,13 +47,16 @@ Here's a non-exhaustive list of new improvements:
 ### Dithered shadows for semi-transparent materials
 Produces semi-transparent shadows by poking more and more holes in the shadow map based on the transparency of the object, shadow map filtering will blur those holes with their neighbor which will result in those partially opaque pixels.
 
-<img alt="Dithered shadow settings" src="https://i.imgur.com/xFzuNbl.png" class="img-fluid" loading="lazy" data-src="https://i.imgur.com/xFzuNbl.png">
-<img alt="Dithered shadow effect comparison" src="https://i.imgur.com/kHvSy8a.png" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/kHvSy8a.png">
+{% img 'Dithered shadow settings' 'https://i.imgur.com/xFzuNbl.png' %}
+
+{% img 'Dithered shadow effect comparison' 'https://i.imgur.com/kHvSy8a.png' %}
 
 ### Physics constraints
 Stride's physics system Bullet comes with a set of constraints for you to use in your projects. These constraints are now all visible inside the editor, previewing the constraints using various editor gizmo.
 
 <img alt="preview(to be removed)]()" src="https://i.imgur.com/qiaBBpm.png" class="img-fluid mb-3">
+
+{% img 'title' 'url' %}
 
 For more information on all the types of constraints, you can read up about them in the [Stride documentation](https://doc.stride3d.net/latest/en/manual/physics/constraints.html) or watch the video below. 
 
