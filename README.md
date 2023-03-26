@@ -115,3 +115,45 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - Maybe we can include this somewhere https://github.com/Doprez/Awesome-Stride
 - Web, Docs, GitHub Wiki
 - https://khalidabuhakmeh.com/combining-11ty-static-site-generator-with-aspnet-core
+
+## Wiki
+
+This Contet will be moved to GitHub Wiki
+
+## Installation
+
+## Content
+
+### Updates
+
+### New Posts
+
+### New Pages
+
+### Global Data
+
+### Shortcodes and Includes
+
+`{% img 'title' 'url' %}`
+
+`{% img-click 'title' 'url' %}`
+
+`{% youtube 'url' %}`
+
+## Eleventy
+
+### Packages
+### Layouts
+### Includes
+
+## Configuration
+
+## Folder Structure
+
+## Deployment
+
+## Styling
+
+## Advance
+
+### Adding new Shortcodes and Includes
