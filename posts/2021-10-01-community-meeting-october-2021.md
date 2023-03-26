@@ -2,11 +2,15 @@
 layout: post
 title: 'Community Meeting October 2021'
 author: jorn
-popular: false
 tags: ['Meeting']
 ---
 
-It has been quite a while since we had a community meeting with the Stride community. On the 1st of October 2021 we had a good 2 hour chat about various topics on the Stride game engine. 
+It has been quite a while since we had a community meeting with the Stride community. On the 1st of October 2021 we had a good 2 hour chat about various topics on the Stride game engine.
+<!-- excerpt -->
+
+## Summary
+
+[[TOC]]
 
 ## Access Rights
 First topic was about clearing up access rights of the Stride source contributors and how this can be displayed better to the rest of the world. 
