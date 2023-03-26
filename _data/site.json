@@ -35,7 +35,7 @@
     "open-collective-url": "https://opencollective.com/stride3d",
     "stackexchange-url": "https://gamedev.stackexchange.com/questions/tagged/stride",
     "twitter-url": "https://twitter.com/stridedotnet",
-    "youtube-url": "https://www.youtube.com/c/Stride3D"
+    "youtube-url": "https://www.youtube.com/@Stride3D"
   },
   "authors": {
     "virgile": {
@@ -53,6 +53,12 @@
     "jorn": {
       "name": "Jorn Theunissen",
       "github": "Aggror",
+      "linkedin": "",
+      "twitter": ""
+    },
+    "vvvv": {
+      "name": "vvvv",
+      "github": "vvvv",
       "linkedin": "",
       "twitter": ""
     },
