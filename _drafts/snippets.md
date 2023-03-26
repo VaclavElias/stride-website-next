@@ -7,4 +7,12 @@
 - site.links.docs-tutorial-url
 
 # Img
-<img alt="Image Title" src="" class="img-fluid mb-2" loading="lazy" data-src="">
+<img alt="ImageTitle" src="" class="img-fluid mb-2" loading="lazy" data-src="">
+{% img 'title' 'url' %}
+
+# Iframe
+- Note: no frameborder
+
+<div class="ratio ratio-16x9 mb-4">
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/ufKkAsaJNTM" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

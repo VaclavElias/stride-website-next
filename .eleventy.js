@@ -63,26 +63,6 @@ module.exports = function (eleventyConfig) {
         }
     });
 
-    eleventyConfig.addFilter('jsonify', function (variable) {
-        return JSON.stringify(variable);
-    });
-
-    eleventyConfig.addFilter('normalize_whitespace', function (text) {
-
-        //Remove tabs
-        text = text.replace(/\t/g, '');
-
-        text = text.replace(/\r/g, '');
-
-        //Remove big spaces and punctuation
-        text = text.replace(/\n/g, ' ');
-
-        //remove repeated spaces
-        text = text.replace(/ +(?= )/g, '');
-
-        return text;
-    });
-
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
         // Optional, default is "---"
@@ -107,8 +87,32 @@ module.exports = function (eleventyConfig) {
         return Array.from(new Set(uniqueyears));
     });
 
+    eleventyConfig.addFilter('jsonify', function (variable) {
+        return JSON.stringify(variable);
+    });
+
+    eleventyConfig.addFilter('normalize_whitespace', function (text) {
+
+        //Remove tabs
+        text = text.replace(/\t/g, '');
+
+        text = text.replace(/\r/g, '');
+
+        //Remove big spaces and punctuation
+        text = text.replace(/\n/g, ' ');
+
+        //remove repeated spaces
+        text = text.replace(/ +(?= )/g, '');
+
+        return text;
+    });
+
     eleventyConfig.addFilter("md", function (content = "") {
         return markdownIt({ html: true }).render(content);
+    });
+
+    eleventyConfig.addShortcode("img", function (title, url) {
+        return `<img alt="${title}" src="${url}" class="img-fluid mb-2" loading="lazy" data-src="${url}">`;
     });
 
     let markdownLibrary = markdownIt({

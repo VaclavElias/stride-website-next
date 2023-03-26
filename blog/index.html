@@ -10,9 +10,9 @@ description: Stay up-to-date with the latest in game development. Explore the St
 {% include banner.html h1:true title:"Stride Blog" sub-title:"Free. Cross-platform. Open source. A game engine for building all your apps." image-url:"/images/backgrounds/download.jpg" %}
 <div class="container mt-5">
     <div class="row">
-        <div class="col-lg-9 col-md-8 col-sm-12">
+        <div class="col-lg-9 col-md-8 col-sm-12" itemscope itemtype="http://schema.org/Blog">
             {% for post in pagination.items %}
-            <article class="card mb-4 p-4">
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
                 <div class="row justify-content-center pt-3 pb-1">
                     <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
                         {% if post.data.image_thumb %}
@@ -30,11 +30,9 @@ description: Stay up-to-date with the latest in game development. Explore the St
                         {% endif %}
                     </div>
                     <div class="col-lg-8 col-md-12 post-card-header">
-                        <h2 class="entry-title h3"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                        <h2 class="entry-title h3" itemprop="name"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
                         {% include post/meta.html %}
-                        <p>
-                            {{ post.data.page.excerpt | md }}
-                        </p>
+                        {{ post.data.page.excerpt | md }}
                         <p>{% include tags.html tags: post.data.tags %}</p>
                     </div>
                 </div>
