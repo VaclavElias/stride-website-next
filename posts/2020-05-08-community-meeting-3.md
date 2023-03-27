@@ -4,8 +4,10 @@ title: 'Community Meeting May 2020'
 author: jorn
 tags: ['Meeting']
 ---
+
 On May the 8th we held another community meeting in the Discord. Its main goal was to talk about the ongoing work on Stride and its first official release after the rename to Stride.
-<!-- excerpt -->
+
+---
 
 [[TOC]]
 

@@ -6,8 +6,10 @@ popular: true
 image: https://i.imgur.com/7GVEiSR.jpg
 tags: ['4.1','Physics','Tutorials','Release']
 ---
+
 Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.
-<!-- excerpt -->
+
+---
 
 [[TOC]]
 

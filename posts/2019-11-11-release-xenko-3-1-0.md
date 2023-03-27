@@ -7,15 +7,22 @@ tags: ['Release', 'Tutorials']
 
 It took some time to stabilize everything with the new Xenko packages, but we now feel confident enough to release Xenko 3.1!
 
+---
+
+[[TOC]]
+
+## Highlights
+
 One of the major change is turning the engine into **modular NuGet packages**, published on [NuGet.org](https://www.nuget.org/profiles/xenko.com).
 
 Please note that Visual Studio 2017 is not supported anymore, please upgrade to 2019.
 
+## Community
+
 Many thanks to the community and all the contributors who made this release possible: [aggror](https://github.com/aggror), [Eideren](https://github.com/Eideren), [alexb910](https://github.com/alexb910), [comradekingu](https://github.com/comradekingu), [flabbie](https://github.com/flabbie), [CharlesWoodhill](https://github.com/CharlesWoodhill), [Artaki](https://github.com/Artaki), [indigozero](https://github.com/indigozero), [dfkeenan](https://github.com/dfkeenan), [dominikjancik](https://github.com/dominikjancik), [erictuvesson](https://github.com/erictuvesson), [Hyperpred](https://github.com/Hyperpred), [louies0623](https://github.com/louies0623), [Lucifer2031](https://github.com/Lucifer2031), [Ethereal77](https://github.com/Ethereal77), [mostafa901](https://github.com/mostafa901), [Kryptos-FR](https://github.com/Kryptos-FR), [shinkitsunemaru](https://github.com/shinkitsunemaru), [phr00t](https://github.com/phr00t), [Polymo](https://github.com/Polymo), [profan](https://github.com/profan), [xendez](https://github.com/xendez), [Scorp-121](https://github.com/Scorp-121), [SleepyMode](https://github.com/SleepyMode), [tebjan](https://github.com/tebjan), [xen2](https://github.com/xen2), [WhyPenguins](https://github.com/WhyPenguins), [OoElectron](https://github.com/OoElectron), [joreg](https://github.com/joreg), [meriaizen86](https://github.com/meriaizen86), [rgawry](https://github.com/rgawry), [SantosSi](https://github.com/SantosSi), [xwellingtonx](https://github.com/xwellingtonx), [SilentCLD](https://github.com/SilentCLD), [HoSeCoin](https://github.com/HoSeCoin), Swann Martinet, WaldiS and pansan.
 
-## Highlights
 
-### Xenko 3.1 Loves NuGet!
+## Xenko 3.1 Loves NuGet!
 
 Xenko was always a big proponent of NuGet: since first version, Xenko was distributed as a NuGet package.
 
@@ -48,7 +55,7 @@ If you don't reference those packages, they won't be packaged with your game eit
 
 Also, you will be free to replace those functionalities with alternative libraries.
 
-#### Package layout: following best NuGet practices
+### Package layout: following best NuGet practices
 
 Previously Xenko references were added to the project using custom targets.
 
@@ -57,17 +64,17 @@ New packages are now be layout as NuGet/Visual Studio expects them, in folders l
 We still have a few custom MSBuild targets but reduced them to minimum.
 
 
-#### Xenko assets are also distributed as part of package
+### Xenko assets are also distributed as part of package
 
 NuGet packages have a `xenko` folder containing Xenko assets. As a result, user are able to generate nuget package containing Xenko assets out of the box from Visual Studio and publish them on NuGet for general consumption.
 
-#### Xenko Packages are now distributed on nuget.org
+### Xenko Packages are now distributed on nuget.org
 
 With all those changes, it makes sense to stop distributing Xenko on our custom nuget server and use [nuget.org](https://nuget.org) instead.
 
 This will greatly reduce friction to try Xenko (any project would work out of the box in Visual Studio). This might also make our launcher completely optional in the long run.
 
-#### Xenko tooling resolves assemblies dynamically using NuGet API
+### Xenko tooling resolves assemblies dynamically using NuGet API
 
 Tools such as GameStudio or Asset Compiler are distributed as NuGet packages. However, it won't bundle Xenko Runtime, which will simply be encoded as dependency.
 
@@ -77,19 +84,19 @@ This allows for distributing those tools as very small and easy-to-upgrade packa
 
 This brings lot of technical challenges but should allow us in the future to be more flexible in the future to load the exact runtime and plugins that the user project reference rather than the one hardcoded with the tool.
 
-#### Future: plugin support for editor
+### Future: plugin support for editor
 
 Xenko 3.1 editor will still be monolithic: editor support for UI, SpriteStudio, Video and other optional modules will be hardcoded.
 
 However, the target is to get rid of them as soon as possible, and treat them as what they are: plugins.
 
-### Full switch to .NET Standard
+## Full switch to .NET Standard
 
 Xenko supports .NET Standard for most of its runtime assemblies.
 
 Xenko games can run on .NET Core for both Windows and Linux.
 
-### Tutorials
+## Tutorials
 
 Xenko now has a [tutorial section](https://doc.xenko.com/3.1/en/tutorials/index.html) in the documentation!
 
@@ -103,7 +110,7 @@ The amount of tutorials, as well as intermediate and advanced tutorials, will be
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zGFYFhBfxVs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### BulletSharp update
+## BulletSharp update
 
 [Eideren](https://github.com/eideren) worked on updating our old custom modified version of [BulletSharp](https://github.com/Eideren/BulletSharpPInvoke) (the wrapper library we use for our physics engine).
 

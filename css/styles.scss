@@ -28,9 +28,13 @@ a {
     text-decoration: none;
 }
 
-a:hover :not(.navbar a):not(.navbar-icons a small) {
+/*a:hover {
     text-decoration: underline;
-}
+}*/
+
+/*a:hover :not(.navbar a):not(.navbar-icons a small) {
+    text-decoration: underline;
+}*/
 
 .carousel .carousel-inner img {
     object-fit: cover;

@@ -5,8 +5,10 @@ author: aggror
 popular: true
 tags: ['Meeting']
 ---
+
 The Striders discussed allocating their $4,220.48 USD budget for bug bounties and new features. Funding proposals include fullscreen Vulkan support, UI slowness bug research, Linux runtime support, decal support, morphing target animation support, and embedding Stride into UI frameworks. Release 4.1 is in progress, and an Epic grant proposal is being prepared.
-<!-- excerpt -->
+
+---
 
 ## Summary
 

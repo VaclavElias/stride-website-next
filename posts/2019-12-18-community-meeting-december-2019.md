@@ -5,7 +5,9 @@ author: jorn
 tags: ['Meeting']
 ---
 
-On the 18th of december 2019 we had our third and final community meeting for 2019. Below you can find a summary of what has been discussed.
+On December the 18th we held a community meeting in the Discord. Its main goal was to talk about the logo, roadmap and ongoing work on Stride.
+
+---
 
 * Final Stride logo deadline: 22 december 2019
 * With the current amount of developers and resources, larger features like features are simply not possible. Features like cross-platform support, Visual studio Code, rebuilding the editor for Linux, Terrain and vegetation.

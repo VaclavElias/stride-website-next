@@ -5,8 +5,10 @@ author: jorn
 popular: true
 tags: ['Announcement']
 ---
+
 The Xenko game engine has been renamed to Stride. From now on, all source code, blogs and tutorials will use the name 'Stride' instead of 'Xenko'.
-<!-- excerpt -->
+
+---
 
 ## Why the name change?
 

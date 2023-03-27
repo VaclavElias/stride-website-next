@@ -5,8 +5,10 @@ author: 'vvvv'
 image_thumb: /images/blog/2020-10-02-vl.stride-announce/vl.stride.png
 tags: ['Announcement']
 ---
+
 We're excited to announce that vvvv has released a new 3D engine for vvvv, our visual live-programming environment for .NET. Named "VL.Stride," it is essentially a wrapper around the Stride engine and can be used independently from the Stride Game Studio.
-<!-- excerpt -->
+
+---
 
 Read more about the release and its details in this [release blog post](https://vvvv.org/blog/vl.stride-for-evvvveryone).
 
