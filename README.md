@@ -28,7 +28,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [ ] Wiki - Review and update
 - [ ] Web - Ensure excerpt and page description is set for all pages
 - [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
-- [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/
+- [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/. We could use the new and add web.config redirects for the old ones.
 
 ## RC1 Checklist
 - [x] Web - Update blog post urls so they match the old urls
