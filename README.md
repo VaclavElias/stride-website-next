@@ -72,6 +72,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
   - [ ] New Section Download
      - [ ] Direct link to Release Notes
      - [ ] Direct link to Requirements
+- [ ] Docs - Move wiki to repo and push to wiki - https://github.com/marketplace/actions/publish-to-github-wiki        
 
 ## Known Issues
 - Web - Sponsor - Widgets don't support dark theme. This can be fixed in the future, to fetch data from https://opencollective.com/stride3d/members/all.json and render before deployment or make dynamic. This might be overall better solution to have a full control over the content and design.

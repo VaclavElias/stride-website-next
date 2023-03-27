@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Xenko 1.0 Released'
+title: 'Xenko 1.0 Alpha Released'
 author: silicon-studio
 image: /images/blog/release-1.0-alpha/dragon_banner.jpg
 image_thumb: /images/blog/release-1.0-alpha/thumb.jpg

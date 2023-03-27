@@ -10,6 +10,8 @@ The Xenko game engine has been renamed to Stride. From now on, all source code, 
 
 ---
 
+[[TOC]]
+
 ## Why the name change?
 
 Changing product names always is a lot of work and comes with some downsides. However, we would not do this if there weren't any good reasons for us to do so. Since 2019, [xen2](https://github.com/xen2), has been trying to affiliate Xenko with the [.NET Foundation](https://dotnetfoundation.org/), a non-profit organization (NPO).

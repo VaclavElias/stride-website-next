@@ -26,15 +26,6 @@ module.exports = function (eleventyConfig) {
         "node_modules/@fortawesome/fontawesome-free/webfonts": "webfonts/",
     });
 
-    //eleventyConfig.exc
-
-    //eleventyConfig.addCollection("posts", (collection) => {
-    //    return collection.getFilteredByTag("blog");
-    //});
-
-    //eleventyConfig.addWatchTarget("./assets/css");
-    //eleventyConfig.addWatchTarget("./assets/css");
-
     eleventyConfig.setLiquidOptions({
         dynamicPartials: false,
         strictFilters: false
@@ -134,7 +125,7 @@ module.exports = function (eleventyConfig) {
             symbol: "🔗",
             class: "direct-link"
         })
-    }).use(markdownItToc);
+    }).use(markdownItToc, { includeLevel: [2, 3] });
 
     eleventyConfig.setLibrary("md", markdownLibrary);
 
