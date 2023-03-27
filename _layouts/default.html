@@ -3,6 +3,7 @@
 {% include _head.html %}
 <body class="bg-dark d-flex flex-column min-vh-100">
     {% include _top-navigation.html %}
+    {% if banner %}{% include banner.html title:banner.title sub-title:banner.sub-title image-url:banner.image-url h1:banner.h1 %}{% endif %}
     {{ content }}
     {% include footer.html bg:"bg-footer show text-light" btn-class:"link-primary" social-class:"link-primary" %}
     {% include footer.html bg:"bg-footer show text-light" btn-class:"link-danger" social-class:"link-danger" %}
