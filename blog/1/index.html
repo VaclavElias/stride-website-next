@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stride Game Engine - Blog</title>
+    <meta name="description" content="Stay up-to-date with the latest in game development. Explore the Stride game engine blog for expert insights, tutorials, and news on the latest features and updates.">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="canonical" href="https://stride3d.net/blog/1/">
+    <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
+    <link rel="stylesheet" href="/css/styles.css?site-version=2.0">
+    
+    <meta property="og:image" content="/images/og/ogp.jpg">
+    
+    <script src="/scripts/theme-selector.js?site-version=2.0"></script>
+</head>
+<body class="bg-dark d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-xxl">
+        <a class="navbar-brand" href="/">
+            <img height="37" width="124" src="/images/svg/logo.svg" alt="Stride logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+            
+            
+            <ul class="navbar-nav navbar-nav--text me-auto mb-2 mb-lg-0 ms-sm-2">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/features/">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-primary" href="/blog/">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/manual/" target="_blank" rel="noopener"><i class="fa-solid fa-book fa-fw text-decoration-none"></i> Manual (EN)</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/jp/manual/" target="_blank" rel="noopener"><i class="fa-solid fa-book fa-fw text-decoration-none"></i> Manual (JP)</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/api/" target="_blank" rel="noopener"><i class="fa-solid fa-gears fa-fw text-decoration-none"></i> API</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/releasenotes/" target="_blank" rel="noopener"><i class="fa-brands fa-readme fa-fw text-decoration-none"></i> Release Notes</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/tutorials/" target="_blank" rel="noopener"><i class="fa-solid fa-glasses fa-fw text-decoration-none"></i> Tutorials</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/community/">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/download/">
+                        Download
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sponsor/">
+                        <i class="fa-solid fa-heart text-decoration-none"></i> Sponsor
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto navbar-icons">
+                <li class="nav-item col-12 col-lg-auto dropdown">
+                    <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false" onclick="document.getElementById('search-input').focus()" aria-label="Search button"><i class="fa-solid fa-magnifying-glass text-decoration-none"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end p-3" style="width: 280px;">
+                        
+<form action="/search/" method="get">
+    <div class="mb-3">
+        <input class="form-control" id="search-input" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
+    </div>
+    <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
+</form>
+                    </div>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-github text-decoration-none"></i>
+                        <small class="d-lg-none">GitHub</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-twitter text-decoration-none"></i>
+                        <small class="d-lg-none">Twitter</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-discord text-decoration-none"></i>
+                        <small class="d-lg-none">Discord</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link px-0 px-lg-2" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-6px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                        <small class="d-lg-none">Open Collective</small>
+                    </a>
+                </li>
+                <li class="nav-item dropdown d-flex align-items-center ms-2">
+                    <a title="Change theme" class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="themeDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#" id="lightTheme">
+                                <svg data-theme="light" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
+                                    <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                                </svg>
+                                <span class="ms-2 text-decoration-none">Light</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" id="darkTheme">
+                                <svg data-theme="dark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+                                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+                                </svg>
+                                <span class="ms-2 text-decoration-none">Dark</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" id="autoTheme">
+                                <svg data-theme="auto" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+                                </svg>
+                                <span class="ms-2 text-decoration-none">Auto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+<div style="background-image: url(/images/backgrounds/download.jpg); background-position: 50% 50%; background-size: cover">
+    <div class="cover text-center py-5">
+        <h1 class="text-light pt-4">Stride Blog</h1>
+        <p class="text-light lead pb-3">Free. Cross-platform. Open source. A game engine for building all your apps.</p>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-9 col-md-8 col-sm-12" itemscope itemtype="http://schema.org/Blog">
+            
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="row justify-content-center pt-3 pb-1">
+                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                        
+                        <a href="/blog/december-2019/">
+                            <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/2019-12-31-december-2019/thumb.jpg" alt="Recap December 2019" data-src="/images/blog/2019-12-31-december-2019/thumb.jpg">
+                        </a>
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 post-card-header">
+                        <h2 class="entry-title h3" itemprop="name"><a href="/blog/december-2019/">Recap December 2019</a></h2>
+                        <p class="d-flex justify-content-between">
+    <span>
+        <i class="fa-solid fa-calendar-days me-1"></i> <time datetime="2019-12-31T00:00:00+0000" itemprop="datePublished"> December 31, 2019</time>
+    </span>
+</p>
+
+
+<p>
+    
+    <img class="rounded-circle me-1" alt="author" height="40" width="40" src="https://avatars.githubusercontent.com/Aggror?size=40">
+    
+    Jorn Theunissen
+</p>
+
+                        
+                        <p>Happy new year everybody. In this blog we do a quick recap of the final developments of Xenko in 2019 and what the community has been up to.</p>
+
+                        <p>
+<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Meeting</span></p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="row justify-content-center pt-3 pb-1">
+                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                        
+                        <a href="/blog/community-meeting-december-2019/">
+                            <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
+                        </a>
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 post-card-header">
+                        <h2 class="entry-title h3" itemprop="name"><a href="/blog/community-meeting-december-2019/">Community Meeting December 2019</a></h2>
+                        <p class="d-flex justify-content-between">
+    <span>
+        <i class="fa-solid fa-calendar-days me-1"></i> <time datetime="2019-12-18T00:00:00+0000" itemprop="datePublished"> December 18, 2019</time>
+    </span>
+</p>
+
+
+<p>
+    
+    <img class="rounded-circle me-1" alt="author" height="40" width="40" src="https://avatars.githubusercontent.com/Aggror?size=40">
+    
+    Jorn Theunissen
+</p>
+
+                        
+                        <p>On December the 18th we held a community meeting in the Discord. Its main goal was to talk about the logo, roadmap and ongoing work on Stride.</p>
+
+                        <p>
+<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Meeting</span></p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="row justify-content-center pt-3 pb-1">
+                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                        
+                        <a href="/blog/release-xenko-3-1-0/">
+                            <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
+                        </a>
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 post-card-header">
+                        <h2 class="entry-title h3" itemprop="name"><a href="/blog/release-xenko-3-1-0/">Xenko 3.1 Released</a></h2>
+                        <p class="d-flex justify-content-between">
+    <span>
+        <i class="fa-solid fa-calendar-days me-1"></i> <time datetime="2019-11-11T00:00:00+0000" itemprop="datePublished"> November 11, 2019</time>
+    </span>
+</p>
+
+
+<p>
+    
+    <img class="rounded-circle me-1" alt="author" height="40" width="40" src="https://avatars.githubusercontent.com/xen2?size=40">
+    
+    Virgile Bello
+</p>
+
+                        
+                        <p>It took some time to stabilize everything with the new Xenko packages, but we now feel confident enough to release Xenko 3.1!</p>
+
+                        <p>
+<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Release</span><span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Tutorials</span></p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="row justify-content-center pt-3 pb-1">
+                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                        
+                        <a href="/blog/october-2019/">
+                            <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/2019-10-31-october-2019/thumb.jpg" alt="Recap October 2019" data-src="/images/blog/2019-10-31-october-2019/thumb.jpg">
+                        </a>
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 post-card-header">
+                        <h2 class="entry-title h3" itemprop="name"><a href="/blog/october-2019/">Recap October 2019</a></h2>
+                        <p class="d-flex justify-content-between">
+    <span>
+        <i class="fa-solid fa-calendar-days me-1"></i> <time datetime="2019-10-31T00:00:00+0000" itemprop="datePublished"> October 31, 2019</time>
+    </span>
+</p>
+
+
+<p>
+    
+    <img class="rounded-circle me-1" alt="author" height="40" width="40" src="https://avatars.githubusercontent.com/Aggror?size=40">
+    
+    Jorn Theunissen
+</p>
+
+                        
+                        <p>Welcome to our October edition. Here's a quick recap on Xenko development and its community. Official 3.1 Release is in final testing phases. You can now sponsor Xenko through Github sponsors. Possible name change is being discussed. The first tutorial project is almost ready.</p>
+
+                        <p>
+<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Meeting</span></p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="row justify-content-center pt-3 pb-1">
+                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                        
+                        <a href="/blog/xenko-meets-vvvv/">
+                            <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/2019-10-04-xenko-meets-vvvv/thumb.png" alt="Xenko meets vvvv" data-src="/images/blog/2019-10-04-xenko-meets-vvvv/thumb.png">
+                        </a>
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 post-card-header">
+                        <h2 class="entry-title h3" itemprop="name"><a href="/blog/xenko-meets-vvvv/">Xenko meets vvvv</a></h2>
+                        <p class="d-flex justify-content-between">
+    <span>
+        <i class="fa-solid fa-calendar-days me-1"></i> <time datetime="2019-10-04T00:00:00+0000" itemprop="datePublished"> October 04, 2019</time>
+    </span>
+</p>
+
+
+<p>Unknown author</p>
+
+                        
+                        
+                        <p>
+</p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="row justify-content-center pt-3 pb-1">
+                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                        
+                        <a href="/blog/contributor-meeting-1/">
+                            <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
+                        </a>
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 post-card-header">
+                        <h2 class="entry-title h3" itemprop="name"><a href="/blog/contributor-meeting-1/">Contributor Meeting #1</a></h2>
+                        <p class="d-flex justify-content-between">
+    <span>
+        <i class="fa-solid fa-calendar-days me-1"></i> <time datetime="2019-10-01T00:00:00+0000" itemprop="datePublished"> October 01, 2019</time>
+    </span>
+</p>
+
+
+<p>Unknown author</p>
+
+                        
+                        
+                        <p>
+</p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="row justify-content-center pt-3 pb-1">
+                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                        
+                        <a href="/blog/september-2019/">
+                            <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/2019-09-23-september-2019/thumb.jpg" alt="September 2019" data-src="/images/blog/2019-09-23-september-2019/thumb.jpg">
+                        </a>
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 post-card-header">
+                        <h2 class="entry-title h3" itemprop="name"><a href="/blog/september-2019/">September 2019</a></h2>
+                        <p class="d-flex justify-content-between">
+    <span>
+        <i class="fa-solid fa-calendar-days me-1"></i> <time datetime="2019-09-23T00:00:00+0000" itemprop="datePublished"> September 23, 2019</time>
+    </span>
+</p>
+
+
+<p>Unknown author</p>
+
+                        
+                        
+                        <p>
+</p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="row justify-content-center pt-3 pb-1">
+                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                        
+                        <a href="/blog/community-meeting-2/">
+                            <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/default_thumb.png" alt="Image not found" data-src="/images/blog/default_thumb.png">
+                        </a>
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 post-card-header">
+                        <h2 class="entry-title h3" itemprop="name"><a href="/blog/community-meeting-2/">Community Meeting #2</a></h2>
+                        <p class="d-flex justify-content-between">
+    <span>
+        <i class="fa-solid fa-calendar-days me-1"></i> <time datetime="2019-07-19T00:00:00+0000" itemprop="datePublished"> July 19, 2019</time>
+    </span>
+</p>
+
+
+<p>Unknown author</p>
+
+                        
+                        
+                        <p>
+</p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="row justify-content-center pt-3 pb-1">
+                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                        
+                        <a href="/blog/starbreach-demo/">
+                            <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/2019-05-31-starbreach-demo/starbreach_thumb.jpg" alt="Starbreach Demo" data-src="/images/blog/2019-05-31-starbreach-demo/starbreach_thumb.jpg">
+                        </a>
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 post-card-header">
+                        <h2 class="entry-title h3" itemprop="name"><a href="/blog/starbreach-demo/">Starbreach Demo</a></h2>
+                        <p class="d-flex justify-content-between">
+    <span>
+        <i class="fa-solid fa-calendar-days me-1"></i> <time datetime="2019-05-31T00:00:00+0000" itemprop="datePublished"> May 31, 2019</time>
+    </span>
+</p>
+
+
+<p>
+    
+    <img class="rounded-circle me-1" alt="author" height="40" width="40" src="https://avatars.githubusercontent.com/xen2?size=40">
+    
+    Virgile Bello
+</p>
+
+                        
+                        <p>Explore the impressive Starbreach demo, a testament to Stride's powerful 3D game development capabilities, featuring stunning visuals, smooth gameplay experiences, and a glimpse into the engine's potential for creating immersive and engaging gaming worlds.</p>
+
+                        <p>
+</p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card mb-4 p-4" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div class="row justify-content-center pt-3 pb-1">
+                    <div class="text-center col-lg-4 col-md-12 d-none d-lg-block">
+                        
+                        <a href="/blog/turboplay-gold-sponsor/">
+                            <img loading="lazy" class="mt-2 px-4 lazyloaded img-fluid" src="/images/blog/2019-02-12-turboplay-gold-sponsor/logo_turboplay.png" alt="Welcome TurboPlay as Gold Sponsor" data-src="/images/blog/2019-02-12-turboplay-gold-sponsor/logo_turboplay.png">
+                        </a>
+                        
+                    </div>
+                    <div class="col-lg-8 col-md-12 post-card-header">
+                        <h2 class="entry-title h3" itemprop="name"><a href="/blog/turboplay-gold-sponsor/">Welcome TurboPlay as Gold Sponsor</a></h2>
+                        <p class="d-flex justify-content-between">
+    <span>
+        <i class="fa-solid fa-calendar-days me-1"></i> <time datetime="2019-02-12T00:00:00+0000" itemprop="datePublished"> February 12, 2019</time>
+    </span>
+</p>
+
+
+<p>
+    
+    <img class="rounded-circle me-1" alt="author" height="40" width="40" src="https://avatars.githubusercontent.com/xen2?size=40">
+    
+    Virgile Bello
+</p>
+
+                        
+                        <p>We're happy to announce TurboPlay is helping Xenko not only as a Gold Sponsor, but also have further plans to support Xenko in the future.</p>
+
+                        <p>
+<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Announcement</span></p>
+                    </div>
+                </div>
+            </article>
+            
+            <nav class="justify-content-center d-flex">
+                
+                <ul class="pagination stride-custom-pagination">
+                    
+                    <li class="page-item">
+                        <a href="/blog/" class="stride-paginate-arrow-prev page-link">&laquo; Previous</a>
+                    </li>
+                    
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="/blog">1</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="page-item disabled">
+                        <span class="page-link">2</span>
+                    </li>
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="/blog/2/">3</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    <li class="page-item">
+                        <a href="/blog/2/" class="stride-paginate-arrow-next page-link">Next &raquo;</a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="box-style">
+                <div class="devblogs-widget">
+                    <div class="card mb-4">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item active">
+            <h4 class="mb-0 fw-normal">Popular Posts</h4>
+        </li>
+        
+        <li class="list-group-item  list-group-item-action">
+            <a href="/blog/release-stride-4-1/">
+                Stride 4.1 is Now Live
+            </a>
+        </li>
+        <li class="list-group-item  list-group-item-action">
+            <a href="/blog/community-meeting-february-2022/">
+                Community Meeting February 2022
+            </a>
+        </li>
+        <li class="list-group-item  list-group-item-action">
+            <a href="/blog/open-collective/">
+                Open Collective
+            </a>
+        </li>
+        <li class="list-group-item  list-group-item-action">
+            <a href="/blog/release-stride-4-0/">
+                Stride 4.0 is Now Live
+            </a>
+        </li>
+        <li class="list-group-item  list-group-item-action">
+            <a href="/blog/xenko-has-been-renamed-to-stride/">
+                Xenko Has Been Renamed to Stride
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="card mb-4 p-3">
+    
+<form action="/search/" method="get">
+    <div class="mb-3">
+        <input class="form-control" id="search-form-post" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
+    </div>
+    <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
+</form>
+    <hr>
+    <h4>Latest Posts</h4>
+    <ul class="ps-1 ms-3">
+        
+        
+        <li>
+            <a href="/blog/release-stride-4-1/">
+                Stride 4.1 is Now Live
+            </a>
+        </li>
+        
+        <li>
+            <a href="/blog/community-meeting-february-2022/">
+                Community Meeting February 2022
+            </a>
+        </li>
+        
+        <li>
+            <a href="/blog/community-meeting-november-2021/">
+                Community Meeting November 2021
+            </a>
+        </li>
+        
+        <li>
+            <a href="/blog/open-collective/">
+                Open Collective
+            </a>
+        </li>
+        
+        <li>
+            <a href="/blog/community-meeting-october-2021/">
+                Community Meeting October 2021
+            </a>
+        </li>
+        
+    </ul>
+    <hr>
+    <h4>Resources</h4>
+    <ul class="ps-1 ms-3">
+        <li>
+            <a title="Silk.NET" href="https://dotnet.github.io/Silk.NET/" target="_blank" rel="noopener">Silk.NET</a>
+        </li>
+        <li>
+            <a title="Blender" href="https://www.blender.org/" target="_blank" rel="noopener">Blender - Free and Open 3D Creation Software</a>
+        </li>
+        <li>
+            <a title="Microsoft C# Docs" href="https://devblogs.microsoft.com/dotnet/category/csharp/" target="_blank" rel="noopener">C# Blog</a>
+        </li>
+        <li>
+            <a title="Microsoft Docs" href="https://docs.microsoft.com/en-us/" target="_blank" rel="noopener" class="x-hidden-focus">Microsoft Docs</a>
+        </li>
+        <li>
+            <a title="Visual Studio Blog" href="https://devblogs.microsoft.com/visualstudio" target="_blank" rel="noopener">
+                Visual Studio Blog
+            </a>
+        </li>
+        <li>
+            <a title="Visual Studio Download" href="https://visualstudio.microsoft.com/downloads/" target="_blank" rel="noopener">
+                Download Visual Studio Community
+            </a>
+        </li>
+        <li>
+            <a title="Visual Studio Code Download" href="https://code.visualstudio.com/" target="_blank" rel="noopener">
+                Download Visual Studio Code
+            </a>
+        </li>
+    </ul>
+    <hr>
+    <h4>Other</h4>
+    <ul class="ps-1 ms-3">
+        <li>
+            <a title="Stride Post Archive" href="/archive/">Archive</a>
+        </li>
+        <li>
+            <a title="Stride Tags" href="/tags/">Tags</a>
+        </li>
+        <li>
+            <a href="/feed.xml"><i class="fa-solid fa-rss text-decoration-none"></i> Stride RSS Feed</a>
+        </li>
+    </ul>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-primary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-primary">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-primary">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-primary">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-primary">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-primary" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-primary">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-primary">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Blog</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Posts</a></li>
+                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-primary">Tags</a></li>
+                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-primary">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
+                    <a class="link-primary me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-primary" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-danger">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-danger">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-danger">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-danger">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-danger">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-danger">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-danger" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-danger">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-danger">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Blog</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-danger">Posts</a></li>
+                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-danger">Tags</a></li>
+                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-danger">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
+                    <a class="link-danger me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-info">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-info">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-info">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-info">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-info">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-info">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-info" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-info" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-info" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-info" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-info">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-info">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-info" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Blog</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-info">Posts</a></li>
+                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-info">Tags</a></li>
+                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-info">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
+                    <a class="link-info me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-info" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-warning">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-warning">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-warning">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-warning">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-warning">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-warning">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-warning" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-warning">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-warning">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Blog</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-warning">Posts</a></li>
+                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-warning">Tags</a></li>
+                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-warning">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
+                    <a class="link-warning me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-warning" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-success">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-success">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-success">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-success">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-success">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-success" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-success" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-success" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-success">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-success">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Blog</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Posts</a></li>
+                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-success">Tags</a></li>
+                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-success">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
+                    <a class="link-success me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-success" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0"></script>
+</body>
+</html>

@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://stride3d.net/blog/online/</loc>
+    <lastmod>2014-09-05T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/new-version-1-0-alpha/</loc>
+    <lastmod>2014-09-06T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/new-version-open-sourcing/</loc>
+    <lastmod>2014-10-17T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/forums-opened-new-release-with-cubemap-image-based-lighting/</loc>
+    <lastmod>2014-11-11T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/release-xenko-3-1-0-beta/</loc>
+    <lastmod>2018-12-24T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/developer-meeting-1/</loc>
+    <lastmod>2019-01-19T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/turboplay-gold-sponsor/</loc>
+    <lastmod>2019-02-12T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/starbreach-demo/</loc>
+    <lastmod>2019-05-31T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/community-meeting-2/</loc>
+    <lastmod>2019-07-19T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/september-2019/</loc>
+    <lastmod>2019-09-23T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/contributor-meeting-1/</loc>
+    <lastmod>2019-10-01T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/xenko-meets-vvvv/</loc>
+    <lastmod>2019-10-04T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/october-2019/</loc>
+    <lastmod>2019-10-31T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/release-xenko-3-1-0/</loc>
+    <lastmod>2019-11-11T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/community-meeting-december-2019/</loc>
+    <lastmod>2019-12-18T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/december-2019/</loc>
+    <lastmod>2019-12-31T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/january-2020-recap/</loc>
+    <lastmod>2020-02-03T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/xenko-has-been-renamed-to-stride/</loc>
+    <lastmod>2020-04-20T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/community-meeting-3/</loc>
+    <lastmod>2020-05-08T00:00:00+0000</lastmod>
+  </url>
+  <url>
+    <loc>https://stride3d.net/blog/vvvv-releases-VL.Stride/</loc>
+    <lastmod>2020-10-02T00:00:00+0000</lastmod>
+  </url>
+  <url>
     <loc>https://stride3d.net/blog/release-stride-4-0/</loc>
     <lastmod>2021-02-01T00:00:00+0000</lastmod>
   </url>
@@ -26,58 +106,58 @@
   </url>
   <url>
     <loc>https://stride3d.net/404.html</loc>
-    <lastmod>2023-03-26T19:41:16+0000</lastmod>
+    <lastmod>2023-03-27T22:17:19+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/archive/</loc>
-    <lastmod>2023-03-26T19:41:16+0000</lastmod>
+    <lastmod>2023-03-27T22:17:19+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/blog/</loc>
-    <lastmod>2023-03-26T19:41:16+0000</lastmod>
+    <lastmod>2023-03-27T22:17:19+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/community/</loc>
-    <lastmod>2023-03-26T19:41:16+0000</lastmod>
+    <lastmod>2023-03-27T22:17:19+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/contact/</loc>
-    <lastmod>2023-03-26T19:41:16+0000</lastmod>
+    <lastmod>2023-03-27T22:17:19+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/download/</loc>
-    <lastmod>2023-03-26T19:41:16+0000</lastmod>
+    <lastmod>2023-03-27T22:17:19+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/faq/</loc>
-    <lastmod>2023-03-26T19:41:16+0000</lastmod>
+    <lastmod>2023-03-27T22:17:19+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/features/</loc>
-    <lastmod>2023-03-26T19:41:16+0000</lastmod>
+    <lastmod>2023-03-27T22:17:19+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/</loc>
-    <lastmod>2023-03-26T19:41:17+0000</lastmod>
+    <lastmod>2023-03-27T22:17:21+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/legal/</loc>
-    <lastmod>2023-03-26T19:41:17+0000</lastmod>
+    <lastmod>2023-03-27T22:17:21+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/legal/privacy-policy/</loc>
-    <lastmod>2023-03-26T19:41:17+0000</lastmod>
+    <lastmod>2023-03-27T22:17:21+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/search/</loc>
-    <lastmod>2023-03-26T19:41:17+0000</lastmod>
+    <lastmod>2023-03-27T22:17:21+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/sponsor/</loc>
-    <lastmod>2023-03-26T19:41:17+0000</lastmod>
+    <lastmod>2023-03-27T22:17:21+0000</lastmod>
   </url>
   <url>
     <loc>https://stride3d.net/tags/</loc>
-    <lastmod>2023-03-26T19:41:17+0000</lastmod>
+    <lastmod>2023-03-27T22:17:21+0000</lastmod>
   </url>
 </urlset>

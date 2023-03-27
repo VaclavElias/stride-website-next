@@ -97,7 +97,7 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown d-flex align-items-center ms-2">
-                    <a title="Change theme" class="nav-link dropdown-toggle d-flex align-items-center mt-1" href="#" id="themeDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <a title="Change theme" class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="themeDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
                         <li>
                             <a class="dropdown-item" href="#" id="lightTheme">
@@ -149,12 +149,10 @@
                     </p>
                 </div><div itemprop="articleBody">
                 <p>Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.</p>
-<p><div class="table-of-contents"><ul><li><a href="#stride-on-.net-live">Stride On .NET Live </a></li><li><a href="#improvements-summary">Improvements Summary </a></li><li><a href="#improvement-details">Improvement Details </a></li><li><a href="#known-issues">Known Issues </a></li><li><a href="#a-little-help">A Little Help </a></li></ul></div></p>
+<p><div class="table-of-contents"><ul><li><a href="#stride-on-.net-live">Stride On .NET Live </a></li><li><a href="#improvements-summary">Improvements Summary </a></li><li><a href="#improvement-details">Improvement Details </a><ul><li><a href="#dithered-shadows-for-semi-transparent-materials">Dithered shadows for semi-transparent materials </a></li><li><a href="#physics-constraints">Physics constraints </a></li><li><a href="#physics-optimizations">Physics optimizations </a></li><li><a href="#improved-editor-gizmos">Improved editor gizmos </a></li><li><a href="#intermediate-tutorials">Intermediate tutorials </a></li></ul></li><li><a href="#known-issues">Known Issues </a><ul><li><a href="#integrated-c%23-editor">Integrated C# Editor </a></li></ul></li><li><a href="#a-little-help">A Little Help </a><ul><li><a href="#contributors">Contributors </a></li><li><a href="#financial-contributors">Financial contributors </a></li></ul></li></ul></div></p>
 <h2 id="stride-on-.net-live" tabindex="-1">Stride On .NET Live <a class="direct-link" href="#stride-on-.net-live">🔗</a></h2>
 <p>We had the pleasure to be on a live stream with the .NET team! We gave an introduction, overview and some live demos:</p>
-<div class="ratio ratio-16x9 mb-4">
- <iframe width="560" height="315" src="https://www.youtube.com/embed/J6g5y8m26zs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/J6g5y8m26zs" title="YouTube video" allowfullscreen></iframe></div>
 <h2 id="improvements-summary" tabindex="-1">Improvements Summary <a class="direct-link" href="#improvements-summary">🔗</a></h2>
 <p>Here's a non-exhaustive list of new improvements:</p>
 <ul>
@@ -195,15 +193,13 @@
 <h2 id="improvement-details" tabindex="-1">Improvement Details <a class="direct-link" href="#improvement-details">🔗</a></h2>
 <h3 id="dithered-shadows-for-semi-transparent-materials" tabindex="-1">Dithered shadows for semi-transparent materials <a class="direct-link" href="#dithered-shadows-for-semi-transparent-materials">🔗</a></h3>
 <p>Produces semi-transparent shadows by poking more and more holes in the shadow map based on the transparency of the object, shadow map filtering will blur those holes with their neighbor which will result in those partially opaque pixels.</p>
-<img alt="Dithered shadow settings" src="https://i.imgur.com/xFzuNbl.png" class="img-fluid" loading="lazy" data-src="https://i.imgur.com/xFzuNbl.png">
+<img alt="Dithered shadow settings" src="https://i.imgur.com/xFzuNbl.png" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/xFzuNbl.png">
 <img alt="Dithered shadow effect comparison" src="https://i.imgur.com/kHvSy8a.png" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/kHvSy8a.png">
 <h3 id="physics-constraints" tabindex="-1">Physics constraints <a class="direct-link" href="#physics-constraints">🔗</a></h3>
 <p>Stride's physics system Bullet comes with a set of constraints for you to use in your projects. These constraints are now all visible inside the editor, previewing the constraints using various editor gizmo.</p>
-<img alt="preview(to be removed)]()" src="https://i.imgur.com/qiaBBpm.png" class="img-fluid mb-3">
+<img alt="" src="https://i.imgur.com/qiaBBpm.png" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/qiaBBpm.png">
 <p>For more information on all the types of constraints, you can read up about them in the <a href="https://doc.stride3d.net/latest/en/manual/physics/constraints.html">Stride documentation</a> or watch the video below.</p>
-<div class="ratio ratio-16x9 mb-4">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uMZMYpMD3Wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/uMZMYpMD3Wg" title="YouTube video" allowfullscreen></iframe></div>
 <h3 id="physics-optimizations" tabindex="-1">Physics optimizations <a class="direct-link" href="#physics-optimizations">🔗</a></h3>
 <p>Retrieving collision and contact information was previously done by re-testing all components for collisions, which, as one might expect, led to awful performance for physics heavy scenes (could take up to and above 90% of the frame).</p>
 <p>Contacts are now lazily evaluated to reduce overhead when nothing ends up reading them. Users can now read and iterate over all collisions through Simulation.CurrentCollisions.</p>
@@ -230,9 +226,7 @@
 <li>Navigation</li>
 </ol>
 <p>Each tutorial has a video tutorial accompanying it, which can be found on Stride's <a href="https://www.youtube.com/c/Stride3D">Youtube channel</a>. Below you can find the full playlist.</p>
- <div class="ratio ratio-16x9 mb-4">
- <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
- </div>
+<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/videoseries?list=PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7" title="YouTube video" allowfullscreen></iframe></div>
 <h2 id="known-issues" tabindex="-1">Known Issues <a class="direct-link" href="#known-issues">🔗</a></h2>
 <h3 id="integrated-c%23-editor" tabindex="-1">Integrated C# Editor <a class="direct-link" href="#integrated-c%23-editor">🔗</a></h3>
 <p>The transition to .NET6 unfortunately broke the help tooltips and the code completion of the integrated C# code editor. But we decided to accept it for now, as everyone is using a proper C# editor anyways, such as Visual Studio, Rider or Visual Studio Code.</p>
@@ -339,7 +333,7 @@
                 <div class="col-6 col-lg-2 mb-3">
                     <h5>Community</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Open Collective</a></li>
                         <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discord</a></li>
                         <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-primary" target="_blank" rel="noopener">GitHub</a></li>
                         <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Twitter</a></li>
@@ -374,7 +368,7 @@
                     <a class="link-primary me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
                         <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
                     </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                    <a class="link-primary me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
                         <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
                     </a>
                     <a class="link-primary me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
@@ -417,7 +411,7 @@
                 <div class="col-6 col-lg-2 mb-3">
                     <h5>Community</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Open Collective</a></li>
                         <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Discord</a></li>
                         <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-danger" target="_blank" rel="noopener">GitHub</a></li>
                         <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Twitter</a></li>
@@ -452,7 +446,7 @@
                     <a class="link-danger me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
                         <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
                     </a>
-                    <a class="link-danger me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                    <a class="link-danger me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
                         <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
                     </a>
                     <a class="link-danger me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
@@ -495,7 +489,7 @@
                 <div class="col-6 col-lg-2 mb-3">
                     <h5>Community</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-info" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-info" target="_blank" rel="noopener">Open Collective</a></li>
                         <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-info" target="_blank" rel="noopener">Discord</a></li>
                         <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-info" target="_blank" rel="noopener">GitHub</a></li>
                         <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-info" target="_blank" rel="noopener">Twitter</a></li>
@@ -530,7 +524,7 @@
                     <a class="link-info me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
                         <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
                     </a>
-                    <a class="link-info me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                    <a class="link-info me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
                         <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
                     </a>
                     <a class="link-info me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
@@ -573,7 +567,7 @@
                 <div class="col-6 col-lg-2 mb-3">
                     <h5>Community</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Open Collective</a></li>
                         <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Discord</a></li>
                         <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-warning" target="_blank" rel="noopener">GitHub</a></li>
                         <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Twitter</a></li>
@@ -608,7 +602,7 @@
                     <a class="link-warning me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
                         <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
                     </a>
-                    <a class="link-warning me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                    <a class="link-warning me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
                         <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
                     </a>
                     <a class="link-warning me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
@@ -651,7 +645,7 @@
                 <div class="col-6 col-lg-2 mb-3">
                     <h5>Community</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-success" target="_blank" rel="noopener">Open Colective</a></li>
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-success" target="_blank" rel="noopener">Open Collective</a></li>
                         <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discord</a></li>
                         <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-success" target="_blank" rel="noopener">GitHub</a></li>
                         <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-success" target="_blank" rel="noopener">Twitter</a></li>
@@ -686,7 +680,7 @@
                     <a class="link-success me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
                         <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
                     </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://www.youtube.com/c/Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                    <a class="link-success me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
                         <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
                     </a>
                     <a class="link-success me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">

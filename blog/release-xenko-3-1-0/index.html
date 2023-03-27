@@ -1,0 +1,1488 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stride Game Engine - Xenko 3.1 Released</title>
+    <meta name="description" content="It took some time to stabilize everything with the new Xenko packages, but we now feel confident enough to release Xenko 3.1!">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="canonical" href="https://stride3d.net/blog/release-xenko-3-1-0/">
+    <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
+    <link rel="stylesheet" href="/css/styles.css?site-version=2.0">
+    
+    <meta property="og:image" content="/images/og/ogp.jpg">
+    
+    <script src="/scripts/theme-selector.js?site-version=2.0"></script>
+</head>
+<body class="bg-dark d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-xxl">
+        <a class="navbar-brand" href="/">
+            <img height="37" width="124" src="/images/svg/logo.svg" alt="Stride logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+            
+            
+            <ul class="navbar-nav navbar-nav--text me-auto mb-2 mb-lg-0 ms-sm-2">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/features/">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-primary" href="/blog/">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/manual/" target="_blank" rel="noopener"><i class="fa-solid fa-book fa-fw text-decoration-none"></i> Manual (EN)</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/jp/manual/" target="_blank" rel="noopener"><i class="fa-solid fa-book fa-fw text-decoration-none"></i> Manual (JP)</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/api/" target="_blank" rel="noopener"><i class="fa-solid fa-gears fa-fw text-decoration-none"></i> API</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/releasenotes/" target="_blank" rel="noopener"><i class="fa-brands fa-readme fa-fw text-decoration-none"></i> Release Notes</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/tutorials/" target="_blank" rel="noopener"><i class="fa-solid fa-glasses fa-fw text-decoration-none"></i> Tutorials</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/community/">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/download/">
+                        Download
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sponsor/">
+                        <i class="fa-solid fa-heart text-decoration-none"></i> Sponsor
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto navbar-icons">
+                <li class="nav-item col-12 col-lg-auto dropdown">
+                    <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false" onclick="document.getElementById('search-input').focus()" aria-label="Search button"><i class="fa-solid fa-magnifying-glass text-decoration-none"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end p-3" style="width: 280px;">
+                        
+<form action="/search/" method="get">
+    <div class="mb-3">
+        <input class="form-control" id="search-input" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
+    </div>
+    <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
+</form>
+                    </div>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-github text-decoration-none"></i>
+                        <small class="d-lg-none">GitHub</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-twitter text-decoration-none"></i>
+                        <small class="d-lg-none">Twitter</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link py-2 px-0 px-lg-2" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-discord text-decoration-none"></i>
+                        <small class="d-lg-none">Discord</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-lg-auto">
+                    <a class="nav-link px-0 px-lg-2" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-6px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                        <small class="d-lg-none">Open Collective</small>
+                    </a>
+                </li>
+                <li class="nav-item dropdown d-flex align-items-center ms-2">
+                    <a title="Change theme" class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="themeDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#" id="lightTheme">
+                                <svg data-theme="light" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
+                                    <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+                                </svg>
+                                <span class="ms-2 text-decoration-none">Light</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" id="darkTheme">
+                                <svg data-theme="dark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+                                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+                                </svg>
+                                <span class="ms-2 text-decoration-none">Dark</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" id="autoTheme">
+                                <svg data-theme="auto" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+                                </svg>
+                                <span class="ms-2 text-decoration-none">Auto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+    <div class="row postcontent">
+        <div class="col-12">
+            <article itemscope itemtype="http://schema.org/BlogPosting">
+                <h1 itemprop="name">Xenko 3.1 Released</h1>
+                <div class="text-center mb-3 pt-2">
+                    <div>
+                        
+                        <div class="mt-4 mb-2">
+                            <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/xen2?size=58">
+                        </div>
+                        Virgile Bello
+                    </div>
+                    
+                    <p style="color:#616161;border-top: 2px solid #979593;" class="x-hidden-focus mt-2 pt-1 small text-muted date d-inline-block">
+                        <i class="fa-solid fa-calendar-days"></i> <time datetime="2019-11-11T00:00:00+0000" itemprop="datePublished"> November 11, 2019</time>
+                    </p>
+                </div><div itemprop="articleBody">
+                <p>It took some time to stabilize everything with the new Xenko packages, but we now feel confident enough to release Xenko 3.1!</p>
+<p><div class="table-of-contents"><ul><li><a href="#highlights">Highlights </a></li><li><a href="#community">Community </a></li><li><a href="#xenko-3.1-loves-nuget!">Xenko 3.1 Loves NuGet! </a><ul><li><a href="#package-layout%3A-following-best-nuget-practices">Package layout: following best NuGet practices </a></li><li><a href="#xenko-assets-are-also-distributed-as-part-of-package">Xenko assets are also distributed as part of package </a></li><li><a href="#xenko-packages-are-now-distributed-on-nuget.org">Xenko Packages are now distributed on <a href="http://nuget.org">nuget.org</a> </a></li><li><a href="#xenko-tooling-resolves-assemblies-dynamically-using-nuget-api">Xenko tooling resolves assemblies dynamically using NuGet API </a></li><li><a href="#future%3A-plugin-support-for-editor">Future: plugin support for editor </a></li></ul></li><li><a href="#full-switch-to-.net-standard">Full switch to .NET Standard </a></li><li><a href="#tutorials">Tutorials </a></li><li><a href="#bulletsharp-update">BulletSharp update </a></li><li><a href="#changelog">Changelog </a></li></ul></div></p>
+<h2 id="highlights" tabindex="-1">Highlights <a class="direct-link" href="#highlights">🔗</a></h2>
+<p>One of the major change is turning the engine into <strong>modular NuGet packages</strong>, published on <a href="https://www.nuget.org/profiles/xenko.com">NuGet.org</a>.</p>
+<p>Please note that Visual Studio 2017 is not supported anymore, please upgrade to 2019.</p>
+<h2 id="community" tabindex="-1">Community <a class="direct-link" href="#community">🔗</a></h2>
+<p>Many thanks to the community and all the contributors who made this release possible: <a href="https://github.com/aggror">aggror</a>, <a href="https://github.com/Eideren">Eideren</a>, <a href="https://github.com/alexb910">alexb910</a>, <a href="https://github.com/comradekingu">comradekingu</a>, <a href="https://github.com/flabbie">flabbie</a>, <a href="https://github.com/CharlesWoodhill">CharlesWoodhill</a>, <a href="https://github.com/Artaki">Artaki</a>, <a href="https://github.com/indigozero">indigozero</a>, <a href="https://github.com/dfkeenan">dfkeenan</a>, <a href="https://github.com/dominikjancik">dominikjancik</a>, <a href="https://github.com/erictuvesson">erictuvesson</a>, <a href="https://github.com/Hyperpred">Hyperpred</a>, <a href="https://github.com/louies0623">louies0623</a>, <a href="https://github.com/Lucifer2031">Lucifer2031</a>, <a href="https://github.com/Ethereal77">Ethereal77</a>, <a href="https://github.com/mostafa901">mostafa901</a>, <a href="https://github.com/Kryptos-FR">Kryptos-FR</a>, <a href="https://github.com/shinkitsunemaru">shinkitsunemaru</a>, <a href="https://github.com/phr00t">phr00t</a>, <a href="https://github.com/Polymo">Polymo</a>, <a href="https://github.com/profan">profan</a>, <a href="https://github.com/xendez">xendez</a>, <a href="https://github.com/Scorp-121">Scorp-121</a>, <a href="https://github.com/SleepyMode">SleepyMode</a>, <a href="https://github.com/tebjan">tebjan</a>, <a href="https://github.com/xen2">xen2</a>, <a href="https://github.com/WhyPenguins">WhyPenguins</a>, <a href="https://github.com/OoElectron">OoElectron</a>, <a href="https://github.com/joreg">joreg</a>, <a href="https://github.com/meriaizen86">meriaizen86</a>, <a href="https://github.com/rgawry">rgawry</a>, <a href="https://github.com/SantosSi">SantosSi</a>, <a href="https://github.com/xwellingtonx">xwellingtonx</a>, <a href="https://github.com/SilentCLD">SilentCLD</a>, <a href="https://github.com/HoSeCoin">HoSeCoin</a>, Swann Martinet, WaldiS and pansan.</p>
+<h2 id="xenko-3.1-loves-nuget!" tabindex="-1">Xenko 3.1 Loves NuGet! <a class="direct-link" href="#xenko-3.1-loves-nuget!">🔗</a></h2>
+<p>Xenko was always a big proponent of NuGet: since first version, Xenko was distributed as a NuGet package.</p>
+<p>However, due to limitations (hello packages.config and project.json!), we were leveraging NuGet more as a distribution medium than proper NuGet packages: Xenko 3.0 is still a monolithic single package and it would not work out of the box when referenced from Visual Studio without using Xenko Launcher and Game Studio.</p>
+<p>Xenko 3.0 paved the way by making Xenko compatible with the new project system (game projects were referencing Xenko using a <code>PackageReference</code>).</p>
+<p><img src="/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-old.png" alt="GitHub"></p>
+<p>Today, Xenko 3.1 brings Xenko as a set of smaller NuGet package, each containing one assembly, with proper dependencies:</p>
+<p><img src="/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-new.png" alt="GitHub"></p>
+<p>As a result, it is now possible to create a game project that references only the packages you want. Here are a few examples of &quot;core&quot; packages:</p>
+<ul>
+<li><code>Xenko.Engine</code>: allows you to use core engine runtime (including its dependencies)</li>
+<li><code>Xenko.Core.Assets.CompilerApp</code>: compile assets at build time</li>
+<li><code>Xenko.Core.Mathematics</code> or <code>Xenko.Graphics</code>: yes, if you want to make a custom project only using Xenko mathematics or graphics API without the full Xenko engine, you can!</li>
+<li><code>Xenko.Core.Assets</code>, <code>Xenko.Presentation</code> or <code>Xenko.Quantum</code>: all those piece of tech being used to build Xenko tooling are also available for reuse in other projects. Nothing prevents you from generating assets on the fly too!</li>
+</ul>
+<p>Then, various parts of the engine are distributed as <strong>optional</strong> packages:</p>
+<ul>
+<li><code>Xenko.Physics</code></li>
+<li><code>Xenko.Particles</code></li>
+<li><code>Xenko.UI</code></li>
+<li><code>Xenko.SpriteStudio</code></li>
+<li><code>Xenko.Video</code></li>
+</ul>
+<p>If you don't reference those packages, they won't be packaged with your game either. In many situations, it will result in a smaller packaged game and improved startup time.</p>
+<p>Also, you will be free to replace those functionalities with alternative libraries.</p>
+<h3 id="package-layout%3A-following-best-nuget-practices" tabindex="-1">Package layout: following best NuGet practices <a class="direct-link" href="#package-layout%3A-following-best-nuget-practices">🔗</a></h3>
+<p>Previously Xenko references were added to the project using custom targets.</p>
+<p>New packages are now be layout as NuGet/Visual Studio expects them, in folders like <code>lib/net45</code> and <code>lib/monodroid10</code>.</p>
+<p>We still have a few custom MSBuild targets but reduced them to minimum.</p>
+<h3 id="xenko-assets-are-also-distributed-as-part-of-package" tabindex="-1">Xenko assets are also distributed as part of package <a class="direct-link" href="#xenko-assets-are-also-distributed-as-part-of-package">🔗</a></h3>
+<p>NuGet packages have a <code>xenko</code> folder containing Xenko assets. As a result, user are able to generate nuget package containing Xenko assets out of the box from Visual Studio and publish them on NuGet for general consumption.</p>
+<h3 id="xenko-packages-are-now-distributed-on-nuget.org" tabindex="-1">Xenko Packages are now distributed on <a href="http://nuget.org">nuget.org</a> <a class="direct-link" href="#xenko-packages-are-now-distributed-on-nuget.org">🔗</a></h3>
+<p>With all those changes, it makes sense to stop distributing Xenko on our custom nuget server and use <a href="https://nuget.org">nuget.org</a> instead.</p>
+<p>This will greatly reduce friction to try Xenko (any project would work out of the box in Visual Studio). This might also make our launcher completely optional in the long run.</p>
+<h3 id="xenko-tooling-resolves-assemblies-dynamically-using-nuget-api" tabindex="-1">Xenko tooling resolves assemblies dynamically using NuGet API <a class="direct-link" href="#xenko-tooling-resolves-assemblies-dynamically-using-nuget-api">🔗</a></h3>
+<p>Tools such as GameStudio or Asset Compiler are distributed as NuGet packages. However, it won't bundle Xenko Runtime, which will simply be encoded as dependency.</p>
+<p>When running those tools, they are resolving Xenko runtime assemblies directly in the NuGet cache.</p>
+<p>This allows for distributing those tools as very small and easy-to-upgrade packages, avoiding file duplications. This is similar to what <code>dotnet-cli</code> is doing with deps file.</p>
+<p>This brings lot of technical challenges but should allow us in the future to be more flexible in the future to load the exact runtime and plugins that the user project reference rather than the one hardcoded with the tool.</p>
+<h3 id="future%3A-plugin-support-for-editor" tabindex="-1">Future: plugin support for editor <a class="direct-link" href="#future%3A-plugin-support-for-editor">🔗</a></h3>
+<p>Xenko 3.1 editor will still be monolithic: editor support for UI, SpriteStudio, Video and other optional modules will be hardcoded.</p>
+<p>However, the target is to get rid of them as soon as possible, and treat them as what they are: plugins.</p>
+<h2 id="full-switch-to-.net-standard" tabindex="-1">Full switch to .NET Standard <a class="direct-link" href="#full-switch-to-.net-standard">🔗</a></h2>
+<p>Xenko supports .NET Standard for most of its runtime assemblies.</p>
+<p>Xenko games can run on .NET Core for both Windows and Linux.</p>
+<h2 id="tutorials" tabindex="-1">Tutorials <a class="direct-link" href="#tutorials">🔗</a></h2>
+<p>Xenko now has a <a href="https://doc.xenko.com/3.1/en/tutorials/index.html">tutorial section</a> in the documentation!</p>
+<p>The first project <a href="https://doc.xenko.com/3.1/en/tutorials/csharpbeginner/index.html">“C# Beginner”</a>, demonstrates 12 beginner programming concepts.</p>
+<p>Users will be able to select the tutorial template when creating a new Xenko project to practice and experiment with the code.</p>
+<p>Additionally, the code used in the project is directly referenced by the new documentation section which explains each individual tutorial level.</p>
+<p>The amount of tutorials, as well as intermediate and advanced tutorials, will be extended/added from now on.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zGFYFhBfxVs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 id="bulletsharp-update" tabindex="-1">BulletSharp update <a class="direct-link" href="#bulletsharp-update">🔗</a></h2>
+<p><a href="https://github.com/eideren">Eideren</a> worked on updating our old custom modified version of <a href="https://github.com/Eideren/BulletSharpPInvoke">BulletSharp</a> (the wrapper library we use for our physics engine).</p>
+<p>Things should be much easier to maintain from now on.</p>
+<h2 id="changelog" tabindex="-1">Changelog <a class="direct-link" href="#changelog">🔗</a></h2>
+<p>This release also contains numerous improvements, bugfixes and new translations.</p>
+<p>Here is the full changelog in all its glory:</p>
+<p>Alex (1):</p>
+<ul>
+<li>Fixed spelling error in Quaternion.cs <a href="https://github.com/xenko3d/xenko/commit/805453edde1b0bd36fd305086c12d9d064c7eff5">view commit</a></li>
+</ul>
+<p>Allan Nordhøy (9):</p>
+<ul>
+<li>Added translation using Weblate (Norwegian Bokmål) <a href="https://github.com/xenko3d/xenko/commit/bbe53b4a28619dccb9aee04fd5d16631a2ae3ed7">view commit</a></li>
+<li>Added translation using Weblate (Norwegian Bokmål) <a href="https://github.com/xenko3d/xenko/commit/21144b14ebe24034e669796d0bc6d46d37b20a88">view commit</a></li>
+<li>Added translation using Weblate (Norwegian Bokmål) <a href="https://github.com/xenko3d/xenko/commit/c2086a20092fa574010a1adfbf01d1a8526a0a14">view commit</a></li>
+<li>Added translation using Weblate (Norwegian Bokmål) <a href="https://github.com/xenko3d/xenko/commit/668b190a51dca3918cebc3faad77fbe667a34ff5">view commit</a></li>
+<li>Translated using Weblate (Norwegian Bokmål) <a href="https://github.com/xenko3d/xenko/commit/2e57bbcf88dd4f29de49c22657b0ab65257ea6d6">view commit</a></li>
+<li>Translated using Weblate (Norwegian Bokmål) <a href="https://github.com/xenko3d/xenko/commit/92942e739c064c7197783620b609cdcdb03dd944">view commit</a></li>
+<li>Translated using Weblate (Norwegian Bokmål) <a href="https://github.com/xenko3d/xenko/commit/cc404c5d82bb70b70e21ecce74698e9a389c6d98">view commit</a></li>
+<li>Translated using Weblate (Norwegian Bokmål) <a href="https://github.com/xenko3d/xenko/commit/b1931aac98bd53458ddcd349ee1df79418986c5e">view commit</a></li>
+<li>Translated using Weblate (Norwegian Bokmål) <a href="https://github.com/xenko3d/xenko/commit/a4f10055e7d016967290e5aa6fddca5077065053">view commit</a></li>
+</ul>
+<p>Andrea Aruta (6):</p>
+<ul>
+<li>Added translation using Weblate (Italian) <a href="https://github.com/xenko3d/xenko/commit/77614db7005a057dcd73dc9edeb23287f300adde">view commit</a></li>
+<li>Added translation using Weblate (Italian) <a href="https://github.com/xenko3d/xenko/commit/aa82b474fc82de456d1ddcf5818213560096a01e">view commit</a></li>
+<li>Added translation using Weblate (Italian) <a href="https://github.com/xenko3d/xenko/commit/ec10cfccf42b9e40d90460c9f827a786a391ea75">view commit</a></li>
+<li>Translated using Weblate (Italian) <a href="https://github.com/xenko3d/xenko/commit/2774ef8c8c005c14df4c9c18fc116b8cf4283459">view commit</a></li>
+<li>Translated using Weblate (Italian) <a href="https://github.com/xenko3d/xenko/commit/ad91bb34aded698f0b4f6ca8ace7f83f6a45421e">view commit</a></li>
+<li>Translated using Weblate (Italian) <a href="https://github.com/xenko3d/xenko/commit/d61883c048e34325d2d101bff28c8b08001b2599">view commit</a></li>
+</ul>
+<p>Charles Woodhill (1):</p>
+<ul>
+<li>[UI/INPUT] Expose mouseOverElement <a href="https://github.com/xenko3d/xenko/commit/21399ae559fe078a9e8ff38a8bc04cf71e43506b">view commit</a></li>
+</ul>
+<p>Christian Georgiev (2):</p>
+<ul>
+<li>Added translation using Weblate (Macedonian) <a href="https://github.com/xenko3d/xenko/commit/290dcbdeebef5bc54142c8169ac6ab114a123bc2">view commit</a></li>
+<li>Translated using Weblate (Macedonian) <a href="https://github.com/xenko3d/xenko/commit/de63b27794e6df0e5ed6e68d9364473689f381bb">view commit</a></li>
+</ul>
+<p>Cody Lee (4):</p>
+<ul>
+<li>Added issue templates for bugs and feature requests (<a href="https://github.com/xenko3d/xenko/issues/327">#327</a>) <a href="https://github.com/xenko3d/xenko/commit/538f915d81dc8f2fefa45d5f5544c3d4140f51a4">view commit</a></li>
+<li>Moved pull_request_template.md to correct location <a href="https://github.com/xenko3d/xenko/commit/28e8c82df7ddde766e7f181cba36533b0bb0e120">view commit</a></li>
+<li>Removed any pluralization of the word question in the question_request.md for consistency <a href="https://github.com/xenko3d/xenko/commit/7cb857462a35ca758120ac5f302f86a954f0d158">view commit</a></li>
+<li>Updated <a href="http://CONTRIBUTING.md">CONTRIBUTING.md</a> and added a 'submitting changes' section <a href="https://github.com/xenko3d/xenko/commit/b8b5fcd814a4d0e528bd16f9177d0bcb8f457083">view commit</a></li>
+</ul>
+<p>Daniel Keenan (2):</p>
+<ul>
+<li>Change the ObjectToTypeName value converter to give prettier C# names. (<a href="https://github.com/xenko3d/xenko/issues/400">#400</a>) <a href="https://github.com/xenko3d/xenko/commit/89e92e45368301f11cd884cc3d365ed0caebf014">view commit</a></li>
+<li>[GameStudio] Improve &quot;Add component&quot; button usability. (<a href="https://github.com/xenko3d/xenko/issues/411">#411</a>) <a href="https://github.com/xenko3d/xenko/commit/a569a2056885092736f745838e147dcb4bb685b6">view commit</a></li>
+</ul>
+<p>Dominik Jančík (6):</p>
+<ul>
+<li>Initial SDL Finger Multitouch support <a href="https://github.com/xenko3d/xenko/commit/73dc9ae2f6550de4cc642291f562ae3396e9a74c">view commit</a></li>
+<li>Removed lastCtrl field <a href="https://github.com/xenko3d/xenko/commit/45d3dd684fe76d12e9cd8d5b53996e46b8188f2e">view commit</a></li>
+<li>FingerSDL GUID <a href="https://github.com/xenko3d/xenko/commit/479dc95727817132721da05481982d3e1c08f811">view commit</a></li>
+<li>FingerSDL PointerID generator <a href="https://github.com/xenko3d/xenko/commit/238676ddf8199301d5e1f24823885d76f8a1b1a7">view commit</a></li>
+<li>Renamed FingerSDL to PointerSDL <a href="https://github.com/xenko3d/xenko/commit/581f8d9da4ab6687daecf1e163258d3e1da2a5ac">view commit</a></li>
+<li>SDL Touch&gt;Mouse synth. disabled when PointerSDL is used <a href="https://github.com/xenko3d/xenko/commit/f94602d4b6b6813506fabc01a24c1de5c7d5808e">view commit</a></li>
+</ul>
+<p>Eideren (55):</p>
+<ul>
+<li>Include nuget to proj <a href="https://github.com/xenko3d/xenko/commit/6d4eb5a1bf6ecf3967596167646039279aa90571">view commit</a></li>
+<li>Straightforward changes <a href="https://github.com/xenko3d/xenko/commit/adf536642f7f93cca99e218c7b62c7de5e2dd7cf">view commit</a></li>
+<li>Potentially harmful changes <a href="https://github.com/xenko3d/xenko/commit/fde0242bfd0ee0433b7cf384fd28f9ac5c0d66ae">view commit</a></li>
+<li>Minor proj update <a href="https://github.com/xenko3d/xenko/commit/f8137535c08037539c460bb8a03be9e155de020f">view commit</a></li>
+<li>Matrix conversion fix <a href="https://github.com/xenko3d/xenko/commit/222b70252d1428ac116c60458789f9101a391ba4">view commit</a></li>
+<li>Main conversion done, next up the rest of the CharacterComponent <a href="https://github.com/xenko3d/xenko/commit/f23ed4670e18c78469352aec926323c18ceb17b4">view commit</a></li>
+<li>Character component, waiting on bullet wrapper for the rest <a href="https://github.com/xenko3d/xenko/commit/09648564fa4edb98b64ea8d2326ab69f75d91571">view commit</a></li>
+<li>Static mesh base <a href="https://github.com/xenko3d/xenko/commit/cbcc27dc7848bdd212a1c31e2f679abf88824c69">view commit</a></li>
+<li>Static Mesh: Update shape factories <a href="https://github.com/xenko3d/xenko/commit/5c11f1f2ac1eb34042a7e767085d2f9c47b42e04">view commit</a></li>
+<li>[Core] ThreadPool: shutdown idle threads (<a href="https://github.com/xenko3d/xenko/issues/302">#302</a>) <a href="https://github.com/xenko3d/xenko/commit/993704f60316615c10f6665e2ace830739fa35b0">view commit</a></li>
+<li>[Samples] Misc camera controller fixes (<a href="https://github.com/xenko3d/xenko/issues/359">#359</a>) <a href="https://github.com/xenko3d/xenko/commit/8b24b276c18797c7ec00d4835d60a2a4d12d5188">view commit</a></li>
+<li>Fix for <a href="https://github.com/xenko3d/xenko/issues/422">#422</a> <a href="https://github.com/xenko3d/xenko/commit/9705f84b085b33014cc375a8769fa0a822b93e29">view commit</a></li>
+<li>Revert nugget <a href="https://github.com/xenko3d/xenko/commit/6e7f70f34a28d97daa2cde8900feebed57aaa34a">view commit</a></li>
+<li>[Bullet] Update libs <a href="https://github.com/xenko3d/xenko/commit/06e22b335819f79a05f716ead2c31f30e79ade30">view commit</a></li>
+<li>[Bullet] Update projects mapping <a href="https://github.com/xenko3d/xenko/commit/45a89aa6ef98a3d16c686f20d9c751a5e147d52a">view commit</a></li>
+<li>[Bullet] Remove bullet refs within mathematics <a href="https://github.com/xenko3d/xenko/commit/9b22e548b339764d1690c617dc83b73a17bfaf66">view commit</a></li>
+<li>Merge branch 'master' into bulletsharp_nuget <a href="https://github.com/xenko3d/xenko/commit/392c86d1d76740fc9c901ebd20635e7f16ef491a">view commit</a></li>
+<li>[Bullet] Rely on our bullet for math conversions <a href="https://github.com/xenko3d/xenko/commit/635d83914320dc3208a966545c3b5a6fcad769fd">view commit</a></li>
+<li>[Bullet] Finish height field mappings <a href="https://github.com/xenko3d/xenko/commit/e975e1fcd11cef5fa3b35b712b0d971195862b01">view commit</a></li>
+<li>[Physics] Remove unused enum and previous namespace import for inlining <a href="https://github.com/xenko3d/xenko/commit/751b6fccb95b227b40e1935f4815c01791866cb7">view commit</a></li>
+<li>[Bullet] Update all platforms to latest libs <a href="https://github.com/xenko3d/xenko/commit/465a52cdee1581c8fef8ffeb6b400f243e0fa9b3">view commit</a></li>
+<li>[Physics] Reduced physics test allocations (<a href="https://github.com/xenko3d/xenko/issues/443">#443</a>), cleaned up Simulation <a href="https://github.com/xenko3d/xenko/commit/0d19b3c6cc63cc0401f918f1e90a4992ac7b68f1">view commit</a></li>
+<li>[Physics] Implement ignore collision between two specific components <a href="https://github.com/xenko3d/xenko/commit/8a7126ab05910a0cfad48bfc62d56a20f4f6a8f1">view commit</a></li>
+<li>[Physics] In-editor static mesh collider <a href="https://github.com/xenko3d/xenko/commit/3a96ee3f0da9c02e5f1221669745316567122e5e">view commit</a></li>
+<li>[Physics] Avoid duplicate allocations for colliders based on models <a href="https://github.com/xenko3d/xenko/commit/b6c9191a0794e317ce9a0aca3ade73f036645e2e">view commit</a></li>
+<li>[Physics] Fix initial collider scaling <a href="https://github.com/xenko3d/xenko/commit/83c971ce17f037311f51c667f9764d7418b065a2">view commit</a></li>
+<li>[Misc] Exception prone basic functions <a href="https://github.com/xenko3d/xenko/commit/e024d327a71369fbcc1151ee145dd9ca18799fd7">view commit</a></li>
+<li>[Transform] Deal with ChildrenCollection todo <a href="https://github.com/xenko3d/xenko/commit/8b0821cbfe3bff90d9be16500e4556a3934542b3">view commit</a></li>
+<li>Merge branch 'master' into bulletsharp_nuget <a href="https://github.com/xenko3d/xenko/commit/3be3ca71a6fd925a7bfeeeb3ec86cd63bcd5f92a">view commit</a></li>
+<li>[Physics] Use asset cloner for shape desc <a href="https://github.com/xenko3d/xenko/commit/0cc07bd85873cbcef0beb087774b5ee3e8cb9d60">view commit</a></li>
+<li>Merge remote-tracking branch 'origin/master' into bulletsharp_nuget <a href="https://github.com/xenko3d/xenko/commit/755810da258037454076782eb19911c8e5a4b63c">view commit</a></li>
+<li>[Physics] Replace ColliderShapes' TrackingCollection <a href="https://github.com/xenko3d/xenko/commit/494b235316e61c2a2b43ea0baed5c69a09bc2743">view commit</a></li>
+<li>[Physics] Replace Rigidbody's hacky delegate usage <a href="https://github.com/xenko3d/xenko/commit/28de8941ebccea0e5c33c96e41dd8e4914a6f2e4">view commit</a></li>
+<li>[Physics] Rollback unused serialization workaround <a href="https://github.com/xenko3d/xenko/commit/79ef2b1bf199f84d73053bbd5fd4de85d92be6e2">view commit</a></li>
+<li>[Physics] Cleanup RigidbodyComponent <a href="https://github.com/xenko3d/xenko/commit/4db7f42f34725e3a4471403ff1fe6bf3dce5ef55">view commit</a></li>
+<li>[Physics] Clarify comments in StaticMeshColliderShape <a href="https://github.com/xenko3d/xenko/commit/e547ad6b57c7ce58988050a6ef5c394fdd2c2e1e">view commit</a></li>
+<li>[Physics] Fix <a href="https://github.com/xenko3d/xenko/issues/463">#463</a> <a href="https://github.com/xenko3d/xenko/commit/0241b1571cfee376429649b2bd03180152a7caf4">view commit</a></li>
+<li>[Physics] Fix very large meshes throwing <a href="https://github.com/xenko3d/xenko/commit/42f0910775773ca902e2ea393f12dedbe5c3f7af">view commit</a></li>
+<li>[Physics] Expose Capsule's readonly data <a href="https://github.com/xenko3d/xenko/commit/a6c8e901b1b7637eadeaed5f82ea07e40f855c71">view commit</a></li>
+<li>[Physics] Provide read access to collider shape's data <a href="https://github.com/xenko3d/xenko/commit/0dda0553c3187556a190ac4675806e1c92851886">view commit</a></li>
+<li>[Physics] Split static mesh collider into new PR <a href="https://github.com/xenko3d/xenko/commit/05421ae96fb2232e1e94dbc2c4148ea578dc214b">view commit</a></li>
+<li>[Physics] Fix ShapeSweeps output <a href="https://github.com/xenko3d/xenko/commit/c527b174935ebae7eeaf52387d01f7c3f2f6760c">view commit</a></li>
+<li>[Physics] Provide public access to callbacks' recycle and buffer <a href="https://github.com/xenko3d/xenko/commit/ae1f4b4fb5e31cca18741af4d409cbe19f40b998">view commit</a></li>
+<li>[Physics] Clarify bullet lib's usage and sources <a href="https://github.com/xenko3d/xenko/commit/a09fa7ee09a6d437c5dee485ddd8336db3e13ea8">view commit</a></li>
+<li>[Editor] Fix orbit editor camera stutter <a href="https://github.com/xenko3d/xenko/commit/268a7ed70e93c8433480d68b60e0b638ee913d85">view commit</a></li>
+<li>[Editor] Re-order code execution <a href="https://github.com/xenko3d/xenko/commit/0c0ed336b59d558380005b055be85db479f78772">view commit</a></li>
+<li>[SceneManagement] Assign Entity.sceneValue before firing events <a href="https://github.com/xenko3d/xenko/commit/e8f027284e77d33f0e2963156119e32b5f6c09b2">view commit</a></li>
+<li>[Camera] Fix processor's cameraSlotsDirty not being reset after process <a href="https://github.com/xenko3d/xenko/commit/5493c91023ed0cce47e73eea745595485b555713">view commit</a></li>
+<li>[SceneManagement] Fix loop skipping items when collection is modified <a href="https://github.com/xenko3d/xenko/commit/caa44fea8bdbc2cb19f3e9be7161635a4016a644">view commit</a></li>
+<li>Avoid unnecessary alloc <a href="https://github.com/xenko3d/xenko/commit/2612f987c5408e3a845f6ba7186c61f021e58739">view commit</a></li>
+<li>Deal with Add(), sub-optimal implementation <a href="https://github.com/xenko3d/xenko/commit/50bfc1747870461a05148049ea5462301b75dee7">view commit</a></li>
+<li>[Threading] ThreadPool refactor, reduce allocation, fix wrong argument <a href="https://github.com/xenko3d/xenko/commit/b6a4833e27e948ad60d131fb7357e574224a87e4">view commit</a></li>
+<li>Move PooledDelegateHelper outside lock <a href="https://github.com/xenko3d/xenko/commit/55371ea340660e34bcfbbd0f6b97f87064fafcee">view commit</a></li>
+<li>Swap task factory <a href="https://github.com/xenko3d/xenko/commit/b7451e4a8867015f70a1bedf142f815f586bb0f2">view commit</a></li>
+<li>[GameSystems] Fix removing systems not clearing it from update and draw <a href="https://github.com/xenko3d/xenko/commit/9b4e65fc505856ef0fe79836ead0c68d259d0633">view commit</a></li>
+</ul>
+<p>Eric Tuvesson (1):</p>
+<ul>
+<li>Assets Compiler Support MSBuild Toolset Version 16.0  (<a href="https://github.com/xenko3d/xenko/issues/421">#421</a>) (fixes <a href="https://github.com/xenko3d/xenko/issues/420">#420</a>) <a href="https://github.com/xenko3d/xenko/commit/60b21cd6d3fe0047b580b54655d186e8e3a42e09">view commit</a></li>
+</ul>
+<p>Félix Dion-Robidoux (1):</p>
+<ul>
+<li>Update <a href="http://BACKERS.md">BACKERS.md</a> <a href="https://github.com/xenko3d/xenko/commit/e32c91fc557fcc0ead3a0aeb04eeb4042a449fa2">view commit</a></li>
+</ul>
+<p>Hyperpred (1):</p>
+<ul>
+<li>Remove cast to Game in AudioSystem (<a href="https://github.com/xenko3d/xenko/issues/472">#472</a>) <a href="https://github.com/xenko3d/xenko/commit/0a8d7bad749d2d4b08afe34a4cbea0a5aaf49b5a">view commit</a></li>
+</ul>
+<p>Jarrett Robertson (1):</p>
+<ul>
+<li>Fixed issue with scene instance using the wrong collection in for loop count <a href="https://github.com/xenko3d/xenko/commit/d30763723936d7c89f8856071ba8a495146b1734">view commit</a></li>
+</ul>
+<p>Louies (10):</p>
+<ul>
+<li>Added translation using Weblate (Chinese (Traditional)) <a href="https://github.com/xenko3d/xenko/commit/14be8bfc7030b7ac427ef50705b0cf2a444136ae">view commit</a></li>
+<li>Added translation using Weblate (Chinese (Traditional)) <a href="https://github.com/xenko3d/xenko/commit/f022a9dc90ef5feabc6c7165bc525be72cf00782">view commit</a></li>
+<li>Added translation using Weblate (Chinese (Traditional)) <a href="https://github.com/xenko3d/xenko/commit/255b77fb76a1d9e852ebf407792bb037be17f67f">view commit</a></li>
+<li>Added translation using Weblate (Chinese (Traditional)) <a href="https://github.com/xenko3d/xenko/commit/3af08fd596bba64308f22bb5e98156fc8607ef45">view commit</a></li>
+<li>Translated using Weblate (Chinese (Traditional)) <a href="https://github.com/xenko3d/xenko/commit/f34e9d44af47e34b56e4d50047f3e03d65a29aa4">view commit</a></li>
+<li>Translated using Weblate (Chinese (Traditional)) <a href="https://github.com/xenko3d/xenko/commit/2fd9b6a0aa47b4ba943b2c4f359a56dbdc06e7b5">view commit</a></li>
+<li>Translated using Weblate (Chinese (Traditional)) <a href="https://github.com/xenko3d/xenko/commit/eb1e7343f6cdca9644987faf1e13f937d83d95cf">view commit</a></li>
+<li>Translated using Weblate (Chinese (Traditional)) <a href="https://github.com/xenko3d/xenko/commit/443a21b3f38b559dd7cedfe8cdaa44e77ab419b2">view commit</a></li>
+<li>Translated using Weblate (Chinese (Traditional)) <a href="https://github.com/xenko3d/xenko/commit/3c9f7a9605255ce7ede002196f79ceda9551b920">view commit</a></li>
+<li>Translated using Weblate (Chinese (Traditional)) <a href="https://github.com/xenko3d/xenko/commit/c4e44ac757542aec85363960caa3df7749c2522f">view commit</a></li>
+</ul>
+<p>Lucifer (8):</p>
+<ul>
+<li>Added translation using Weblate (Chinese (Simplified)) <a href="https://github.com/xenko3d/xenko/commit/711ee3a82fd382ea0457bb23dfd652dce3bffa23">view commit</a></li>
+<li>Added translation using Weblate (Chinese (Simplified)) <a href="https://github.com/xenko3d/xenko/commit/bc188d71e3726e834941bff26ec9971d66f3b1e6">view commit</a></li>
+<li>Added translation using Weblate (Chinese (Simplified)) <a href="https://github.com/xenko3d/xenko/commit/da76f54a7d63a3dc6eb767d002e5dfca97627588">view commit</a></li>
+<li>Added translation using Weblate (Chinese (Simplified)) <a href="https://github.com/xenko3d/xenko/commit/a195e1efa884beccc5639b865b3df4be1b76acf7">view commit</a></li>
+<li>Translated using Weblate (Chinese (Simplified)) <a href="https://github.com/xenko3d/xenko/commit/e751244fa78a5e796c8f355cc5e2bcb366eb7f64">view commit</a></li>
+<li>Translated using Weblate (Chinese (Simplified)) <a href="https://github.com/xenko3d/xenko/commit/f7415607e3b6ba7c037efd29998055d1df2f8c01">view commit</a></li>
+<li>Translated using Weblate (Chinese (Simplified)) <a href="https://github.com/xenko3d/xenko/commit/6a8045b09d44eba245ed0692738d84069281a764">view commit</a></li>
+<li>Translated using Weblate (Chinese (Simplified)) <a href="https://github.com/xenko3d/xenko/commit/ac41d0231fdac341edb87b5855bd68c03c888b89">view commit</a></li>
+</ul>
+<p>Mario Guerra (10):</p>
+<ul>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/ce95c0fe26e70b4c2f8f589bdef23158a6a45804">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/5f23fe46957f043c147497cc9e2b6f219c3e3498">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/56e9efc27f17acb971fcb3ef103900fc1af4bd76">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/ba5f6959e4b32c30693ab21ca859a4d67ab4f509">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/9c5249c7c73b239024bfa70ec8b832bd6b194c0c">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/3847b09a47bbae30ac02d4275683eb5a0be5eb2a">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/29c5914c4c6c5e8d171782a95a929841beb05885">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/981be7251a5e6f4d2fca4b6a8a3f470709fde000">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/58c8349722a9af4d5520e9dc72614d53ab0b9aeb">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/5eb025a71f076b2baab476e4bdddeffd66f5db0c">view commit</a></li>
+</ul>
+<p>Moustafa khalil (1):</p>
+<ul>
+<li>Update <a href="http://README.md">README.md</a> <a href="https://github.com/xenko3d/xenko/commit/bb504a798f01af82dc3b8205fa4183e1c90e1f2c">view commit</a></li>
+</ul>
+<p>Nicolas Musset (10):</p>
+<ul>
+<li>[Localization] Update extraction script <a href="https://github.com/xenko3d/xenko/commit/b41748068a2b531254a5a155b4d2cb030f94c22f">view commit</a></li>
+<li>[Localization] Update extracted strings <a href="https://github.com/xenko3d/xenko/commit/2ea6b431611cc2ccb8fcbdc4f8b1a85ae01c404d">view commit</a></li>
+<li>[Localization] Update Japanese <a href="https://github.com/xenko3d/xenko/commit/96a876107ceee7944a230f1f971858059aaaf633">view commit</a></li>
+<li>[Localization] Add French <a href="https://github.com/xenko3d/xenko/commit/b3b800cf5a9528e254b02018f2c59855760de240">view commit</a></li>
+<li>[Build] Update solution and project <a href="https://github.com/xenko3d/xenko/commit/a35cc79ef82838ce702e000d2cd0f06dde8749f2">view commit</a></li>
+<li>[Localization] Fix build for path containing spaces (<a href="https://github.com/xenko3d/xenko/issues/381">#381</a>) <a href="https://github.com/xenko3d/xenko/commit/7c63ed9989c438f936f3ce018c429e3ec02d3232">view commit</a></li>
+<li>[Presentation] Bugfix/int3 editor (<a href="https://github.com/xenko3d/xenko/issues/387">#387</a>) (fixes <a href="https://github.com/xenko3d/xenko/issues/383">#383</a>) <a href="https://github.com/xenko3d/xenko/commit/51451347e309ea39b9bbe8f38ffb5a90baa70f81">view commit</a></li>
+<li>[General] Simplify editor and presentation project files <a href="https://github.com/xenko3d/xenko/commit/90733ef068b17a90e57de252d87ac35b13c81df1">view commit</a></li>
+<li>[General] Fixup rule for .xaml.cs files <a href="https://github.com/xenko3d/xenko/commit/7b863475ac9a3bb326e3a4cc0f0fc55bff2b168f">view commit</a></li>
+<li>Update .gitattributes <a href="https://github.com/xenko3d/xenko/commit/c0bad0b4930a1986ea0a6248f933b934b43ba0f9">view commit</a></li>
+</ul>
+<p>Oscar Sanchez (9):</p>
+<ul>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/ba99df0f648bcc6c4797e6e952e2e3b7fd8b425d">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/97cf64ba59189418e6b1f1b4865ad99b9bce279b">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/40893b02d4efe19052b4037926983ef49b0214aa">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/27181e881da0804be82a945bbc68f9b98742fa4a">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/08cf01d1f6bc9f54f3b123bf1dcff1d093c9f7b6">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/af19ac0d49b206a46d7e537538a2986c5dac4412">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/71e4bba482b0ce00aff7fcbda685270162645e76">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/70f01c011af426372ce0ba11d12048a166d4fa41">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/8871c1cd1606a91c663e9e35d4381f1ffe3f40ab">view commit</a></li>
+</ul>
+<p>Phr00t (2):</p>
+<ul>
+<li>[Graphics] Vulkan: add support for R10G10B10A2_UNorm and R11G11B10_Float <a href="https://github.com/xenko3d/xenko/commit/11059c059d54e2d201b657cd1ab3d2981aaf7c35">view commit</a></li>
+<li>[Input] Fix mouse VirtualButtons <a href="https://github.com/xenko3d/xenko/commit/27e5a8ad22e95710aa7d0689ea3b85f1188a7098">view commit</a></li>
+</ul>
+<p>Polymo (1):</p>
+<ul>
+<li>Translated using Weblate (German) <a href="https://github.com/xenko3d/xenko/commit/5f20b48db9d1a33e8ab04068d5be2de51be367a7">view commit</a></li>
+</ul>
+<p>Robin Hübner (2):</p>
+<ul>
+<li>[Physics] correct userdoc for convex hull collider parameters. (<a href="https://github.com/xenko3d/xenko/issues/382">#382</a>) (fixes <a href="https://github.com/xenko3d/xenko/issues/372">#372</a>) <a href="https://github.com/xenko3d/xenko/commit/f56d4f836098f0c9fd5a39eeebffa2d7ed59a179">view commit</a></li>
+<li>Make SDL window user resizable. <a href="https://github.com/xenko3d/xenko/commit/582915a5b5ade7fcb4ac8b57d0de6f51fd7c978f">view commit</a></li>
+</ul>
+<p>Rui Mendes (3):</p>
+<ul>
+<li>Added translation using Weblate (Portuguese) <a href="https://github.com/xenko3d/xenko/commit/a16889306f16c28d56a26a9c61d9ecf5ced71612">view commit</a></li>
+<li>Added translation using Weblate (Portuguese (Brazil)) <a href="https://github.com/xenko3d/xenko/commit/7fa7c670add05f14a9247d4a4930cf465f96a789">view commit</a></li>
+<li>Translated using Weblate (Portuguese) <a href="https://github.com/xenko3d/xenko/commit/1b5ad58fb7f2c326b80ccacf71fa4cfe77e9eb9f">view commit</a></li>
+</ul>
+<p>Scorp-121 (4):</p>
+<ul>
+<li>Added translation using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/f03657e6f32cc449705d647878c72189665e904a">view commit</a></li>
+<li>Added translation using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/c19fe25619c3b8f595cdfca86433f1564e090a75">view commit</a></li>
+<li>Added translation using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/33b30a5053a9bacc018287aed73d4bc63b4788ef">view commit</a></li>
+<li>Added translation using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/792c5dd20b9352c751a79676898a907c7eb2c0c6">view commit</a></li>
+</ul>
+<p>Scorp121 (10):</p>
+<ul>
+<li>Translated using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/215f78a6647e8063607de276b365d7a415e655bf">view commit</a></li>
+<li>Translated using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/601ac16712d758bb4d9488717b112bff5e731165">view commit</a></li>
+<li>Translated using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/9f53f704ce42482a588065b07df628cae50ccbd2">view commit</a></li>
+<li>Translated using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/e1906065c2939ef7dcd0db787580bacaefbec1f0">view commit</a></li>
+<li>Translated using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/5dbfd2602618ec423e71ccdcb915935b1461c522">view commit</a></li>
+<li>Translated using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/635d3601e0f8f6d470070e3ea7c46bebd96df3d3">view commit</a></li>
+<li>Translated using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/ef9800de2d4994e379e755cca43773392b262e11">view commit</a></li>
+<li>Translated using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/5b1831e073ac3ae1b4cc469ba0bc32b83fd3c38c">view commit</a></li>
+<li>Translated using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/3e847cbd275a5543776e5b83f62f852ece38dbfd">view commit</a></li>
+<li>Translated using Weblate (Russian) <a href="https://github.com/xenko3d/xenko/commit/7b267f19b1c665bcbff34a079ec67c15c9aceeab">view commit</a></li>
+</ul>
+<p>SleepyMode (1):</p>
+<ul>
+<li>[Mathematics] Fixes for Color/ColorRGBA float/byte mismatches (<a href="https://github.com/xenko3d/xenko/issues/258">#258</a>) (fixes <a href="https://github.com/xenko3d/xenko/issues/251">#251</a>) <a href="https://github.com/xenko3d/xenko/commit/81331463843bfaf6975a0e418047a208a23a7fe7">view commit</a></li>
+</ul>
+<p>Swann Martinet (2):</p>
+<ul>
+<li>Translated using Weblate (French) <a href="https://github.com/xenko3d/xenko/commit/50a59d5f9d1198ac0baa20bc74691b120d87a6e8">view commit</a></li>
+<li>Translated using Weblate (French) <a href="https://github.com/xenko3d/xenko/commit/b6770869d8f44be8fac9dd862c7b1c6427998b43">view commit</a></li>
+</ul>
+<p>Tebjan Halm (6):</p>
+<ul>
+<li>Quick fix as suggested by @xen2 in chat to avoid crash in shader compiler (<a href="https://github.com/xenko3d/xenko/issues/343">#343</a>) <a href="https://github.com/xenko3d/xenko/commit/d2b09f9259c2991e3aca05122a430ae8e5f0abf5">view commit</a></li>
+<li>Added translation using Weblate (German) <a href="https://github.com/xenko3d/xenko/commit/5f157d19eb20b94ad179b6cac1b7fa6f97c74a4b">view commit</a></li>
+<li>Translated using Weblate (German) <a href="https://github.com/xenko3d/xenko/commit/20f6a80ac7e503282bfd9297e7c98be9ffed1097">view commit</a></li>
+<li>Resetting shader key scope for multi pass materials (<a href="https://github.com/xenko3d/xenko/issues/456">#456</a>) <a href="https://github.com/xenko3d/xenko/commit/7af2c14ce63e7892d1e87c8b723936a0270eaaa7">view commit</a></li>
+<li>added xenko-community-project to <a href="http://README.md">README.md</a> (<a href="https://github.com/xenko3d/xenko/issues/514">#514</a>) <a href="https://github.com/xenko3d/xenko/commit/89f66473be89e8fd7dccd98ff75002f0309e5ce2">view commit</a></li>
+<li>Fix DataBaseFileProvider cast (<a href="https://github.com/xenko3d/xenko/issues/538">#538</a>) <a href="https://github.com/xenko3d/xenko/commit/f678f42443a087cc16d1371a6e8119707abafa0a">view commit</a></li>
+</ul>
+<p>Virgile Bello (510):</p>
+<ul>
+<li>[Design] VisualStudio.Project doesn't need a reference to Solution anymore <a href="https://github.com/xenko3d/xenko/commit/a3bbc24653bd5c64146b0cf384672f496db5069a">view commit</a></li>
+<li>[Assets] Package can now also represent a csproj + package (only new game creation is working) <a href="https://github.com/xenko3d/xenko/commit/1fd003ca0b7b5953d4a96ceebc50d6094722593d">view commit</a></li>
+<li>[Assets] Removed AssetItem.SourceProject <a href="https://github.com/xenko3d/xenko/commit/ab5281aed164b7438316fdce9f416d1ae093fa0e">view commit</a></li>
+<li>[Assets] Move assets to Assets folder for now <a href="https://github.com/xenko3d/xenko/commit/1653165995c724ad16cf8329bf96ac6e7145b0f7">view commit</a></li>
+<li>[Assets] Fix project loading <a href="https://github.com/xenko3d/xenko/commit/284cccdd2e351e84ce1000329e1f24162a21b998">view commit</a></li>
+<li>[Assets] Simplified Package.Profiles into Package.Profile <a href="https://github.com/xenko3d/xenko/commit/9f8f407d4d5796fc3dbf562849ec4f8ea37c1e47">view commit</a></li>
+<li>[Assets] Removed PackageProfile.ProjectReferences <a href="https://github.com/xenko3d/xenko/commit/62266f4a62756f5ddaf1fbfba1d6f85b87b3ed6c">view commit</a></li>
+<li>[Assets] Removed <a href="http://PackageProfile.Name">PackageProfile.Name</a> <a href="https://github.com/xenko3d/xenko/commit/e21932d153708d23c0f8204b9f55734643ce6519">view commit</a></li>
+<li>[Assets] Allow creation of samples (as long as they don't use external packages) <a href="https://github.com/xenko3d/xenko/commit/c444d02c5ce5a0a8f86147f3e0a74b6bdcb4ea6e">view commit</a></li>
+<li>[Assets] Added the concept of Package container (project or standalone) <a href="https://github.com/xenko3d/xenko/commit/eb15b2caaf37ef0d99c691119fde4345c62f6f81">view commit</a></li>
+<li>[Assets] Turned Session.Packages into a readonly collection <a href="https://github.com/xenko3d/xenko/commit/b9e915a49cffb02fdf8b70b5be3db3533ebb5074">view commit</a></li>
+<li>[Assets] Properly process dependency graph using remote info to perform package upgrades before downloading nuget packages <a href="https://github.com/xenko3d/xenko/commit/1d51c472eb7622005881985916c99ab3af0e0a81">view commit</a></li>
+<li>[Assets] Removed LocalDependencies and fixed TemplateSampleGenerator <a href="https://github.com/xenko3d/xenko/commit/5ec594f7a9b7df1b30d24534abaffef959091bd8">view commit</a></li>
+<li>[Assets] Fix platform update <a href="https://github.com/xenko3d/xenko/commit/0c12372ab203fab5baa22dc78ce88b255b88f4d5">view commit</a></li>
+<li>[Assets] AssetCompiler now works against .csproj <a href="https://github.com/xenko3d/xenko/commit/7761135c50b7dbe9d864a982c782f8a51e61e242">view commit</a></li>
+<li>[Assets] Fixed asset compiler get-graphics-platform <a href="https://github.com/xenko3d/xenko/commit/afae09c147b784785b0abfafa5b01a5d2e5ddba5">view commit</a></li>
+<li>[Assets] Fix view models to allow selection as current project <a href="https://github.com/xenko3d/xenko/commit/0e1ad23e3216247a4d9a0b82c54a360d5786f984">view commit</a></li>
+<li>[Assets] Properly regenerate platforms for sample templates <a href="https://github.com/xenko3d/xenko/commit/ab92536a9daaf98c8327b1ec42ac91286501bea8">view commit</a></li>
+<li>[Assets] Ignore assets from executable projects (computed automatically) <a href="https://github.com/xenko3d/xenko/commit/64c251e6435eacc476bdb79f744877386ec9ed72">view commit</a></li>
+<li>[Templates] Moved template packs assets from Assets/Shared to Assets <a href="https://github.com/xenko3d/xenko/commit/02488c49f1c948124182322397ce21c1d3c51b27">view commit</a></li>
+<li>[Assets] NewGameTemplateGenerator: assets were loaded twice, resulting in issues later with cloned AssetItem (fix asset packs) <a href="https://github.com/xenko3d/xenko/commit/857b8b2e63d0385125927f68dac86eee355485a2">view commit</a></li>
+<li>[Templates] Simplify platform projects <a href="https://github.com/xenko3d/xenko/commit/c59381347512a9e5327b54e4051ede30a050f72d">view commit</a></li>
+<li>[Templates] Moved templates packges asset folders from Assets/Shared to Assets and removed intermediate solution folders <a href="https://github.com/xenko3d/xenko/commit/f11fb59e891963c3b154b5a6d1baecc6eb404c47">view commit</a></li>
+<li>[Assets] Adjust PackageProfile.ResourceFolders during package upgrade <a href="https://github.com/xenko3d/xenko/commit/42306db7b35351fea49a851a60c4aaabe155dca8">view commit</a></li>
+<li>[Templates] Sample Templates now works (asset packs are now ProjectReference and their assets are properly copied during template generation) <a href="https://github.com/xenko3d/xenko/commit/24bb053badc62769af951f55246354c1c9768aab">view commit</a></li>
+<li>[Assets] Properly get namespace from project <a href="https://github.com/xenko3d/xenko/commit/fe22dec3f7176a15ed19c236aee3964e942d35c7">view commit</a></li>
+<li>[Assets] Fix CodeViewModel to use ProjectCodeViewModel <a href="https://github.com/xenko3d/xenko/commit/b894a176aedd55b14afe3b1e5d5f0a0ec8a03e68">view commit</a></li>
+<li>[Assets] Fix platform updates <a href="https://github.com/xenko3d/xenko/commit/598f4656f7ca7bf16204b17039f61c95c38db0e8">view commit</a></li>
+<li>[Assets] Rearranged templates for the new xkpkg = csproj change (note: project delete is broken) <a href="https://github.com/xenko3d/xenko/commit/bf975595c09efc63fc0d9514c502cc510a7811ef">view commit</a></li>
+<li>[Assets] Package.Profile is now properly deserialized by discarding default value <a href="https://github.com/xenko3d/xenko/commit/8f017b48e11b36766c54c25c189caebc00acc7bc">view commit</a></li>
+<li>[Assets] Removed PackageProfile.Platform <a href="https://github.com/xenko3d/xenko/commit/68702d5b39b2fc2e94f7a1aa40a00e391b09b465">view commit</a></li>
+<li>[Build] Make sure <a href="http://Package.Id">Package.Id</a> stays is in sync with .sln one <a href="https://github.com/xenko3d/xenko/commit/0b5ba025c753847d31180f8d1e9307c3a9fcbca0">view commit</a></li>
+<li>[Assets] Removed <a href="http://Package.Id">Package.Id</a> <a href="https://github.com/xenko3d/xenko/commit/e59316a8d203f8dc97dced255ea631ec99a2cbd5">view commit</a></li>
+<li>[Assets] Removed PackageProfile <a href="https://github.com/xenko3d/xenko/commit/17d9b2688bb6dc0edbd147c1acc8ef0343031267">view commit</a></li>
+<li>[Assets] Stop adding default folders in Package ctor <a href="https://github.com/xenko3d/xenko/commit/f7a8e099f4a4476be0d0ad6e63fcbbf33723527d">view commit</a></li>
+<li>[Assets] Reunified ProjectState and PackageState <a href="https://github.com/xenko3d/xenko/commit/c5cd46ae0b7bb4800c731e4d96b92858b6cfcefe">view commit</a></li>
+<li>[Assets] Moved Package.Save() to PackageContainer.Save() <a href="https://github.com/xenko3d/xenko/commit/7d43032b698149c41d8d581e7291848b53273ee6">view commit</a></li>
+<li>[Assets] Avoid creating .xkpkg for projects without one in the first place (use implicit one instead) <a href="https://github.com/xenko3d/xenko/commit/f375ae16cbe3e8ed0f40b3a257d010d585b39197">view commit</a></li>
+<li>[Assets] Rework package dependencies <a href="https://github.com/xenko3d/xenko/commit/dc4ef281f38037dd96824b4c63c074a3d93118ea">view commit</a></li>
+<li>[Assets] Also support loading sln with new csproj Guid <a href="https://github.com/xenko3d/xenko/commit/2f446a3bb1e8f62a1d79ac0eee2c18ffca8253d8">view commit</a></li>
+<li>[Assets] Support Packing and consuming simple NuGet packages with Xenko assets <a href="https://github.com/xenko3d/xenko/commit/406a74c3f382756e3b3df172504e51b840dc56d9">view commit</a></li>
+<li>[Assets] New game template: set current project to Windows <a href="https://github.com/xenko3d/xenko/commit/56b6774374acd67ecf7f01c985524fbdba976161">view commit</a></li>
+<li>[Assets] Simplified NuGet package restore (only happens during PreLoadPackageDependencies) <a href="https://github.com/xenko3d/xenko/commit/2958cf0b1f38489ca2c64885d797e74699d67de6">view commit</a></li>
+<li>[Assets] Update Code library template to match others <a href="https://github.com/xenko3d/xenko/commit/9b1fcf2f7fc4aacdfe60d6520d1f25126cea3d81">view commit</a></li>
+<li>[Targets] Stop using XenkoDir.cache file during build <a href="https://github.com/xenko3d/xenko/commit/9eec7ceb0797be38a1bc5491f9c5f3b32f7097c8">view commit</a></li>
+<li>[Build] Bump to 3.1.0.1 <a href="https://github.com/xenko3d/xenko/commit/f933c14fea2aaaea8e98996b753cbf7b8da091f7">view commit</a></li>
+<li>[Assets] Store pendingPackageUpgrades in PackageSession <a href="https://github.com/xenko3d/xenko/commit/335b65354de2fdb1a331cc61c4e995c142ceaae1">view commit</a></li>
+<li>Merge remote-tracking branch 'origin/master' into onecsproj_onexkpkg2 <a href="https://github.com/xenko3d/xenko/commit/f8ca24d1dff7926840acb06f3d0259e02c5eeb4f">view commit</a></li>
+<li>Merge branch 'master' into onecsproj_onexkpkg2 <a href="https://github.com/xenko3d/xenko/commit/a22b62fae68f67e70fa881372def36194ff7ecb0">view commit</a></li>
+<li>[Assets] Process dependencies for RootAssets in view model <a href="https://github.com/xenko3d/xenko/commit/f608ae5598a32f0d5e9695e2b141c8271706cea0">view commit</a></li>
+<li>[Assets] Made !file and !directory tags mandatory in Yaml for easier dependency analysis <a href="https://github.com/xenko3d/xenko/commit/49240a819316616a230d9165e6daf1c4a8976397">view commit</a></li>
+<li>[Assets] Temporary fixes for root assets and default scene opening <a href="https://github.com/xenko3d/xenko/commit/e132f1b6f47e91a92bb36fb4ef6fe575d52e5ab0">view commit</a></li>
+<li>[Assets] Pack assets using actual package data rather than hardcoded rules <a href="https://github.com/xenko3d/xenko/commit/8b0dba7ee7fd412aeea4d3da31d29d02e392661c">view commit</a></li>
+<li>[Build] Reorganize build system (WIP) <a href="https://github.com/xenko3d/xenko/commit/5caacef0dc338a5b93c1124278f316c08b42e79b">view commit</a></li>
+<li>[Build] NuGetAssemblyResolver WIP <a href="https://github.com/xenko3d/xenko/commit/d0c771fe450c5849da21d0715b292eba253cfe0a">view commit</a></li>
+<li>[Engine] Move default assets to individual assemblies rather than global Xenko.xkpkg <a href="https://github.com/xenko3d/xenko/commit/051a8110383946d86c0d1c708d70d38ba0c33f63">view commit</a></li>
+<li>[Assets] Compiler: can now properly compile existing projects <a href="https://github.com/xenko3d/xenko/commit/4c6ca70b399fc77bb0439916bbd0f240350e13f8">view commit</a></li>
+<li>[Launcher] Fix launcher build <a href="https://github.com/xenko3d/xenko/commit/0869d45085a86d07a7ecf7f8a553c112755a738b">view commit</a></li>
+<li>[Editor] Temporarily moved game studio shaders to Engine, until we have proper design-time package references <a href="https://github.com/xenko3d/xenko/commit/34c504ea5cc0e4bca327d60a38890de0984a06c3">view commit</a></li>
+<li>Merge branch 'master-3.0' into onecsproj_onexkpkg2 <a href="https://github.com/xenko3d/xenko/commit/3a4e324c89c5574edb23a8a42e6d9853b37f1450">view commit</a></li>
+<li>[Build] Use RuntimeIdentifier to separate graphics API runtimes <a href="https://github.com/xenko3d/xenko/commit/78b6d2d6090f705f2c9c4e9f22a849a9f4bcbc1f">view commit</a></li>
+<li>[Build] Improved cross compilation <a href="https://github.com/xenko3d/xenko/commit/29d24fe0cde9fe6be8eb2bced3250220c4bdf22b">view commit</a></li>
+<li>[Build] Renamed XenkoRuntime into XenkoNETRuntime <a href="https://github.com/xenko3d/xenko/commit/3c71596cf7bca49511eb7d3c7458d7742fe2bbd0">view commit</a></li>
+<li>[Build] Added XenkoRuntime flag <a href="https://github.com/xenko3d/xenko/commit/79dedb747716f1860c327a040d9f9b46d20e7d99">view commit</a></li>
+<li>[Assets] project.Type evaluation needs to be done after package are restored <a href="https://github.com/xenko3d/xenko/commit/ed826ce2de64990215c51cd5cd84f08193e49120">view commit</a></li>
+<li>[Assets] Reorganized templates <a href="https://github.com/xenko3d/xenko/commit/1f269ac8b8ccdaeca0d94c8ba2555a83df90a1d7">view commit</a></li>
+<li>[Assets] Fix package upgrader <a href="https://github.com/xenko3d/xenko/commit/6c82ca5e10727a779bc2f5bbe77e7f5948701b3b">view commit</a></li>
+<li>[SpriteStudio] Added templates <a href="https://github.com/xenko3d/xenko/commit/a88632d9d361002a36933813b411b9645b5a33b9">view commit</a></li>
+<li>[Assets] Properly find ffmpeg.exe and msdfgen.exe <a href="https://github.com/xenko3d/xenko/commit/b55ab0c7866b655f5ee540c253b0842ee5f36272">view commit</a></li>
+<li>[Assets] Move VHACD to Assets assembly and properly bundle C<a href="https://github.com/xenko3d/xenko/issues/">#</a> wrapper <a href="https://github.com/xenko3d/xenko/commit/6cb333fe58eefa479bf1070b0ee60f39cbf3e24c">view commit</a></li>
+<li>[Assets] Compiler: use thread-safe version of NuGet (when writing lock file) <a href="https://github.com/xenko3d/xenko/commit/b3c6e1205bd324095122a0dd8115ef95ab0c26fe">view commit</a></li>
+<li>[Deps] Switched to NuGet version of Xceed.Wpf.Toolkit/Datagrid/AvalonDock <a href="https://github.com/xenko3d/xenko/commit/5bfb575d11a8cfed5aa718c286b7d236f8c541b3">view commit</a></li>
+<li>[Build] Bump to .NET 4.7.2 <a href="https://github.com/xenko3d/xenko/commit/bc7ff82141756341ebb03dd238ec37dde763ca6e">view commit</a></li>
+<li>[Build] Adjust bindings for System libraries with 4.7.2 changes <a href="https://github.com/xenko3d/xenko/commit/3085735c11a809aaa49d26dd6344b1b5efa566fd">view commit</a></li>
+<li>[Deps] Xenko.Metrics and Xenko.CrashReport are now packaged with NuGet <a href="https://github.com/xenko3d/xenko/commit/e5071464546d294a2e84fa09027448bb532378d8">view commit</a></li>
+<li>[Build] Lot of adjustments for new NuGet resolver system (incl ConnectionRouter, VS Package, etc...) <a href="https://github.com/xenko3d/xenko/commit/cee640deef9b3d107f5143875a5762546f25d42b">view commit</a></li>
+<li>[Samples] Moved samples from Xenko.Assets.Presentation to a dedicated project to have faster rebuild <a href="https://github.com/xenko3d/xenko/commit/501524287b29a18a84c2a0f9f6e5b4cc76a200a4">view commit</a></li>
+<li>[Assets] Some improvements so that unit tests can compile <a href="https://github.com/xenko3d/xenko/commit/4944a4e454169feb424a1413dc21c496940de720">view commit</a></li>
+<li>[Assets] Some improvements so that unit tests can compile <a href="https://github.com/xenko3d/xenko/commit/e7084d5bdf39a3ff44707058afab75c07a023160">view commit</a></li>
+<li>[Build] Removed XenkoDir environment variable <a href="https://github.com/xenko3d/xenko/commit/b7fc19edab35ea9a479c681684fa9d48d44fd6c0">view commit</a></li>
+<li>[Assets] Fixed templates to have proper assembly names and namespaces <a href="https://github.com/xenko3d/xenko/commit/63b14a1635b44b5a98c686e4522b1a1160025b26">view commit</a></li>
+<li>[Build] Readded support for UWP <a href="https://github.com/xenko3d/xenko/commit/d16b2d23b560bccef44ec9e2aa77bc8e3c09b640">view commit</a></li>
+<li>[Build] Readded support for Android <a href="https://github.com/xenko3d/xenko/commit/52728eb895d08bb05015e487dbc40f2c7cfbecbf">view commit</a></li>
+<li>[Build] Readded support for iOS <a href="https://github.com/xenko3d/xenko/commit/8f3e11cdb373b6204b639abe653c330c9563ceca">view commit</a></li>
+<li>[Build] Optimized ProjectReferences <a href="https://github.com/xenko3d/xenko/commit/aab0909e384ee393080177aaea52df929eb70856">view commit</a></li>
+<li>[Build] Check Visual C++ Runtime is properly installed as part of build targets <a href="https://github.com/xenko3d/xenko/commit/47f326f76a4d1cb120f6954c9c134cc393b33544">view commit</a></li>
+<li>[Build] Added Xenko.PackageInstaller to Xenko.GameStudio <a href="https://github.com/xenko3d/xenko/commit/785ba220e7bb651a9d8bcc5d117adec6acd27bc2">view commit</a></li>
+<li>[Build] Use &quot;XenkoPlatforms&quot; to specify which platforms to build <a href="https://github.com/xenko3d/xenko/commit/784b9c988f8970feef94e0fcd74098396d4d169a">view commit</a></li>
+<li>[NuGet] Upgrade to 4.9 and use RestoreRunner to have faster noop restore on second run <a href="https://github.com/xenko3d/xenko/commit/9b985d4f134670018726c689638edeb5c0c0fb65">view commit</a></li>
+<li>[Tests] Fix build of some test projects <a href="https://github.com/xenko3d/xenko/commit/c4e21cc9beb9adbe5225d5f6b1d10a7311ed0959">view commit</a></li>
+<li>[Build] Also deletes .nupkg.metadata on package auto deploy (<a href="https://github.com/NuGet/Home/wiki/Nupkg-Metadata-File">https://github.com/NuGet/Home/wiki/Nupkg-Metadata-File</a>) <a href="https://github.com/xenko3d/xenko/commit/99d6bfa23f96c9994b15bf34b15eef9c3bfc6a46">view commit</a></li>
+<li>[Build] Make sure user projects are always built so that compiler app is checking assets again (until we feed &quot;fast up to date&quot; with proper inputs/outputs) <a href="https://github.com/xenko3d/xenko/commit/764fe201c9d8ac12546e808a70c67aa79f34965f">view commit</a></li>
+<li>[Assets] Make sure to explicitly include Xenko.Core for its targets until VS2019 enables it by default (<a href="https://github.com/NuGet/Home/issues/6091%5B#%5D(https://github.com/xenko3d/xenko/issues/)issuecomment-438073285">https://github.com/NuGet/Home/issues/6091[#](https://github.com/xenko3d/xenko/issues/)issuecomment-438073285</a>) <a href="https://github.com/xenko3d/xenko/commit/5f5e668711f4a1af454787445e1991f4bcc3128f">view commit</a></li>
+<li>[Assets] Don't include package targets when evaluating project files <a href="https://github.com/xenko3d/xenko/commit/15ea5060978a1c78cef840c999197c164d80cbcf">view commit</a></li>
+<li>[Assets] Order windows executable project first in solution files (sln) so that VS uses them as startup project by default <a href="https://github.com/xenko3d/xenko/commit/b226444233e0fefec0e8868967e5d1ab4b2f27a4">view commit</a></li>
+<li>[Build] Added some docs related to new build system <a href="https://github.com/xenko3d/xenko/commit/50412ba3a7dad76e9f3c3147a183932b3f488e9d">view commit</a></li>
+<li>Merge remote-tracking branch 'origin/master' into onecsproj_onexkpkg2 <a href="https://github.com/xenko3d/xenko/commit/be8bb7ddd8fff36c3f2abbb4404f442848f0ea00">view commit</a></li>
+<li>[Build] Fix iOS solution <a href="https://github.com/xenko3d/xenko/commit/4740daa7263939fafb428d941843c2348c18192b">view commit</a></li>
+<li>[Build] Moved PackAssets task in Xenko.Core.Tasks <a href="https://github.com/xenko3d/xenko/commit/76b3c857a63d5ce5a7a1e237eceec620ac982c90">view commit</a></li>
+<li>[Build] Use PackAssets as an exe rather than a Tasks so that MSBuild doesn't lock the files (annoying when rebuilding) <a href="https://github.com/xenko3d/xenko/commit/aae4951f4dae45192ed079d3b4810c9a34715057">view commit</a></li>
+<li>[NuGet] Log everything <a href="https://github.com/xenko3d/xenko/commit/8e01c197185fce13f9cde3fe9d55fb48bbdf5d28">view commit</a></li>
+<li>[NuGet] Restore inside assembly resolver to avoid deadlock and rewrote logging code <a href="https://github.com/xenko3d/xenko/commit/99397c68e73ddb60fd253d8d3e8bdf2ef9833c83">view commit</a></li>
+<li>[Build] Only build default graphics platform when opeining sln unless we explicitly set XenkoGraphicsApiDependentBuildAll <a href="https://github.com/xenko3d/xenko/commit/a4ced9d064ff3bff2b6a3fc069516a9623257a96">view commit</a></li>
+<li>[NuGet] Perform nuget resolve only for entry assembly <a href="https://github.com/xenko3d/xenko/commit/0280495034930e4f84d55a6ae5945ae4b6d043c7">view commit</a></li>
+<li>[Assets] Better resolution of project platform (needed so that windows project is auto selected) <a href="https://github.com/xenko3d/xenko/commit/025f2fedbe1ebf73927fcf89d641593e9879c0bc">view commit</a></li>
+<li>[Build] Fix build when choosing a single graphics API <a href="https://github.com/xenko3d/xenko/commit/091ddeb2f1de3191058f64381420a7452633d8d2">view commit</a></li>
+<li>[NuGet] Add dev store before trying to restore packets <a href="https://github.com/xenko3d/xenko/commit/95f15bd884002a4fe3ade0ac34b33e9489c5d1dd">view commit</a></li>
+<li>[Build] Removed Xenko.xkpkg <a href="https://github.com/xenko3d/xenko/commit/0032576a4b45e8309304e4d0409783b9db2d7b31">view commit</a></li>
+<li>[Build] Moved PackageUpdateVersionTask to a separate assembly to simplify build <a href="https://github.com/xenko3d/xenko/commit/75ea086465b4821afc20d1d96d759629d3e40ed3">view commit</a></li>
+<li>[Build] Unify version management in a single file (except for samples which will be versioned separately) <a href="https://github.com/xenko3d/xenko/commit/a3d3173539631d81a91c11e9af5e3af4f561e997">view commit</a></li>
+<li>Merge remote-tracking branch 'origin/master-3.0' <a href="https://github.com/xenko3d/xenko/commit/59290e7e19a24127f3198d5bf036c4aff3940ed6">view commit</a></li>
+<li>[Build] Added package details <a href="https://github.com/xenko3d/xenko/commit/be22cdf0eab1b07e1c9ded3dcc59f33e7c0fae58">view commit</a></li>
+<li>[Build] Output nupkg in bin\packages <a href="https://github.com/xenko3d/xenko/commit/aea71ef4fb4f254fe992ae4d274d4820e97f5858">view commit</a></li>
+<li>[Build] Xenko.Samples.Templates: add missing dependency <a href="https://github.com/xenko3d/xenko/commit/a92d5b806de8921062e06c739d1be688974ac93c">view commit</a></li>
+<li>[NuGet] If restore failed, try to kill known blocking processes (Connection Router, CompilerApp, etc...) <a href="https://github.com/xenko3d/xenko/commit/f0341a72d5ee359b36ffcad8dc18d009689ff232">view commit</a></li>
+<li>[NuGet] Improve logging if restore failed <a href="https://github.com/xenko3d/xenko/commit/7793e1f757189e811b5692c8ed750ef314548aa5">view commit</a></li>
+<li>[Build] Remove non-existing files from Xenko.sln <a href="https://github.com/xenko3d/xenko/commit/881c97faa32e192088e894e22d473d8c3bed2a37">view commit</a></li>
+<li>[NuGet] Use SourceCacheContext to avoid ArgumentException <a href="https://github.com/xenko3d/xenko/commit/b82520bc82da27d45737b577c64d512e326c2e37">view commit</a></li>
+<li>[Build] Sign dll/exe when building package <a href="https://github.com/xenko3d/xenko/commit/f6761691c7a6234d7cc9b216fa2719d174ebad7e">view commit</a></li>
+<li>[Build] Also sign Launcher executables <a href="https://github.com/xenko3d/xenko/commit/5e7e804b7227d58f6b23dab86734596c84b12032">view commit</a></li>
+<li>[Build] Escape/Unescape XenkoPlatforms for properly passing info from Xenko.build to targets <a href="https://github.com/xenko3d/xenko/commit/f3b67810b6c507836eb965497ddea3589ebaea38">view commit</a></li>
+<li>[Build] Package build improvements <a href="https://github.com/xenko3d/xenko/commit/badb44c405fecc63fae347361b69b8e3327b3ba7">view commit</a></li>
+<li>[Build] Package build improvements (part 2) <a href="https://github.com/xenko3d/xenko/commit/32eb5b3dcadb524f6ace77d6a39a672d73e31888">view commit</a></li>
+<li>[Build] Signing tool was mistakently always enabled <a href="https://github.com/xenko3d/xenko/commit/24799e4e5bc0e48f43f2d8100adbdbf0c27f7d1c">view commit</a></li>
+<li>[Build] Package build improvements (part 3) <a href="https://github.com/xenko3d/xenko/commit/15a05d9a3d1a55c396605b7c6afaaa3fc3dbdc2f">view commit</a></li>
+<li>[Setup] Update to Advanced Installer 15.5.1 <a href="https://github.com/xenko3d/xenko/commit/7a6b1de0bd20bf295abe2f9bbb4a0586907e7de2">view commit</a></li>
+<li>[Build] Remove invalid character from Xenko.build <a href="https://github.com/xenko3d/xenko/commit/d46658b539c179ce64fda5d81726c55871d93d9c">view commit</a></li>
+<li>[Build] Fix Linux Vulkan build <a href="https://github.com/xenko3d/xenko/commit/0703befb94b32162d3bfd7e6c5f686ee936f4890">view commit</a></li>
+<li>[Build] Added bin/packages/.gitignore file <a href="https://github.com/xenko3d/xenko/commit/dfb2deb9e018ed785c8d6d25653ad1a8ca3405b8">view commit</a></li>
+<li>[Build] Fix restore phase in Xenko.build <a href="https://github.com/xenko3d/xenko/commit/1fcbd1d3f02cd3bd6f5f30fd498a480f1489ff14">view commit</a></li>
+<li>[Build] Removed Xenko.SamplesBootstrapper and fixed Xenko.Samples.Tests <a href="https://github.com/xenko3d/xenko/commit/53ce6d3433cf02c51921e673afd3430177c2bbcc">view commit</a></li>
+<li>[Samples] Fixed Xenko.Shaders.Tests <a href="https://github.com/xenko3d/xenko/commit/28c1b8238b9f8d2f1304690431cda729ef16261b">view commit</a></li>
+<li>[Build] Use active build configuration rather than forcing Debug <a href="https://github.com/xenko3d/xenko/commit/51b613f7e84c2e0573c2201467af15fd1ab87b0d">view commit</a></li>
+<li>[Build] Stop using Bin\Windows for unit tests <a href="https://github.com/xenko3d/xenko/commit/f5b0a52848498fb589e4428d01aef1e09829c362">view commit</a></li>
+<li>[NuGet] Couldn't resolve EnvDTE.dll <a href="https://github.com/xenko3d/xenko/commit/13ba08cc9a453934b9a1e5cca20761b2b8691535">view commit</a></li>
+<li>[Assets] Don't try to load vcxproj as package <a href="https://github.com/xenko3d/xenko/commit/303cf2421482d7b33cd78803e4afecf03532325d">view commit</a></li>
+<li>[Samples] PhysicsSample: Update for Vector3 Gravity <a href="https://github.com/xenko3d/xenko/commit/31e2160d495ebb7225482727e9eab5187e28eb7b">view commit</a></li>
+<li>[Tests] Xenko.Assets.Tests: Don't compile assets <a href="https://github.com/xenko3d/xenko/commit/9f35d82f7e742f422accfac482983c20396b170b">view commit</a></li>
+<li>[Tests] Fixed some unit tests <a href="https://github.com/xenko3d/xenko/commit/404b6d4ea4f6a99776696e3c4759434be699900d">view commit</a></li>
+<li>[Tests] Fixed folder for gold image <a href="https://github.com/xenko3d/xenko/commit/d386ff3c657d0e86e2d3e609775a3acb2371cdd7">view commit</a></li>
+<li>[Launcher] Ignore server-side dev packages <a href="https://github.com/xenko3d/xenko/commit/df6aae5a00f602febbfb1e64fe4a5bbd22112836">view commit</a></li>
+<li>[Assets] Fixed TestBasicPackageCreateSaveLoad <a href="https://github.com/xenko3d/xenko/commit/aa227b3f413ee0f121cfe11fdc6bc3487d5e7323">view commit</a></li>
+<li>[Assets] Package upgrade is now working for 3.0 projects <a href="https://github.com/xenko3d/xenko/commit/c1904fc846dd801426dc9b07eeada6df3db8ab38">view commit</a></li>
+<li>[NuGet] Update to NuGet 4.9.1 <a href="https://github.com/xenko3d/xenko/commit/5580bf789adf83eda621e1d86f17fd38dbeb3005">view commit</a></li>
+<li>[Launcher] Ignore invalid NuGet sources (404, 401, etc...) <a href="https://github.com/xenko3d/xenko/commit/4941fdab8c25374f31af5442b271cc3654c02849">view commit</a></li>
+<li>[VSPackage] Fix build of test project <a href="https://github.com/xenko3d/xenko/commit/109eed72e3f5ce6e495f8f90ca888fc92025c01c">view commit</a></li>
+<li>[Launcher] Bump to 3.0.1 <a href="https://github.com/xenko3d/xenko/commit/e446678a90fc839feba266043f22bbe09bc21cca">view commit</a></li>
+<li>[Assets] User can now create GameSettings freely (need to display warning if nothing matching expected name?) <a href="https://github.com/xenko3d/xenko/commit/16eb04e22cefe62c30f1984b12e602ad9c00617f">view commit</a></li>
+<li>[CompilerApp] Removed unused GetGraphicsPlatform code <a href="https://github.com/xenko3d/xenko/commit/d6b6a33fa3174ee1ca29bde3d4167cb28df471e8">view commit</a></li>
+<li>[Build] Removed obsolete target files <a href="https://github.com/xenko3d/xenko/commit/90ce1a0f9c8605ade31504cb7c76eb3905ff1eaf">view commit</a></li>
+<li>[Build] Xenko.build now properly build Launcher <a href="https://github.com/xenko3d/xenko/commit/8ab5690bc3ae0dddec39d5089a16523f33bd9f83">view commit</a></li>
+<li>[Build] Switching unit tests to new targets <a href="https://github.com/xenko3d/xenko/commit/79740098ab6fe979bb1eeabad8e03a7b095a92a6">view commit</a></li>
+<li>[VSPackage] Fix Xenko.build targets <a href="https://github.com/xenko3d/xenko/commit/6005e95fdbd5137a18ced5d0b6ed803e8e88c906">view commit</a></li>
+<li>[Build] Clean packages before full package build <a href="https://github.com/xenko3d/xenko/commit/b498691b12862d3b467875d530554334c90b32b1">view commit</a></li>
+<li>[GameStudio] Asset editors close button is back <a href="https://github.com/xenko3d/xenko/commit/a006a76566cb00a7579dd592a259cc775c2d4e70">view commit</a></li>
+<li>[Graphics] Removed PreferredGraphicsPlatform from RenderingSettings <a href="https://github.com/xenko3d/xenko/commit/fa1acae4e5ebc8eae7342d51b0880c1a29409dd4">view commit</a></li>
+<li>[VSPackage] Fix build when using multiple XenkoPlatforms <a href="https://github.com/xenko3d/xenko/commit/9db1b347eed5b78103a04be024995b3a6bc0fff1">view commit</a></li>
+<li>[Build] Adjust package versioning so that NuGetVersion doesn't contain build metadata <a href="https://github.com/xenko3d/xenko/commit/4bd757dffbf8b128b33366f5270e2912853e9a58">view commit</a></li>
+<li>[Native] Explicitly require related Assembly when loading native library (we can't use GetCallingAssembly as it might be wrong due to optimizations) <a href="https://github.com/xenko3d/xenko/commit/f4a5489254dcdf690b3890ad4fcfc256db31565d">view commit</a></li>
+<li>[Native] PreloadLibrary: Use type rather than assembly (to avoid use of GetTypeInfo() everywhere) <a href="https://github.com/xenko3d/xenko/commit/23bd86129b3730ded7d7d4d62910d0c7da12e4c9">view commit</a></li>
+<li>[GameStudio] About page: added markdown files to package <a href="https://github.com/xenko3d/xenko/commit/a47f7f2dc63ff4e55ba9b471cf969b5353bce524">view commit</a></li>
+<li>[Launcher] Few fixes so that launcher properly separate <a href="https://github.com/xenko3d/xenko/commit/2bd13008907d550bcf2a294c301e09719ed201e6">view commit</a></li>
+<li>[GameStudio] About page: display version with build metadata <a href="https://github.com/xenko3d/xenko/commit/6a5ce5ad0fd8dbc5bbb3f9bb47207e41ce1c2c74">view commit</a></li>
+<li>[Build] Force cross-targeting if there is multiple RuntimeIdentifiers <a href="https://github.com/xenko3d/xenko/commit/c5ed27a84874d885fa2d0b2e60aafe59b81175db">view commit</a></li>
+<li>[Launcher] Stay compatible with Xenko 1.x/2.x <a href="https://github.com/xenko3d/xenko/commit/ec0771e60f4083bd9b4c4791baebfaacac32dd30">view commit</a></li>
+<li>[Build] Properly fix how RuntimeIdentifier is used for multi graphics API per platform <a href="https://github.com/xenko3d/xenko/commit/2000eb74fb2a39634b5d3b387556e10a388f0740">view commit</a></li>
+<li>[Assets] Solution file was generated with empty DefaultVisualStudioVersion <a href="https://github.com/xenko3d/xenko/commit/a8c35f29e5462e969b4daa5d74307efd8f8ee5f6">view commit</a></li>
+<li>[OpenTK] Use win7 runtime rather than win <a href="https://github.com/xenko3d/xenko/commit/fa0d1d943fd580d09e1e07899ca558063dbe9f06">view commit</a></li>
+<li>[Assets] Made DefaultVisualStudioVersion public again <a href="https://github.com/xenko3d/xenko/commit/e6ce005ec91ee47d55342a25f59a348fda11c654">view commit</a></li>
+<li>[Build] Properly forward XenkoGraphicsApiDependentBuildAll <a href="https://github.com/xenko3d/xenko/commit/89424e04065f9f9e5eb140512ea86b51a1e36fff">view commit</a></li>
+<li>[Build] Workaround: Remove RuntimeIdentifier from Solution references (<a href="https://github.com/onovotny/MSBuildSdkExtras/issues/139">https://github.com/onovotny/MSBuildSdkExtras/issues/139</a>) <a href="https://github.com/xenko3d/xenko/commit/88669a587ceea407551487987dedb4e22b9cd13a">view commit</a></li>
+<li>[Assets] Make sure solution/project path use backslashes <a href="https://github.com/xenko3d/xenko/commit/f6fdfa550d3eed3c12a13874fa9fa616eda5e22f">view commit</a></li>
+<li>[Particles] Remove ambiguities in data member order <a href="https://github.com/xenko3d/xenko/commit/053fb654b76e90672406778f9337fdcbb18adf00">view commit</a></li>
+<li>[Assets] Keep solution folders, just remove package info <a href="https://github.com/xenko3d/xenko/commit/703ee5724dd9ee79bfb47347f7323d94e8c89b6d">view commit</a></li>
+<li>[Assets] Improve package upgrade when there is no ProjectReference <a href="https://github.com/xenko3d/xenko/commit/0f827539dd1be57298fe85e5d8fd9eec308686c5">view commit</a></li>
+<li>[Samples] Updated samples <a href="https://github.com/xenko3d/xenko/commit/3d49f37f9f1de1a9a62acddaa1db3f05592c38e9">view commit</a></li>
+<li>[Samples] Removed Xenko.Navigation where not needed <a href="https://github.com/xenko3d/xenko/commit/13abf567db8a55d2402bdbb70e0964db5c106412">view commit</a></li>
+<li>[Samples] Removed Xenko.Physics where not needed <a href="https://github.com/xenko3d/xenko/commit/725264bb6a7578e4c7ab26ce702c5080642fc2f2">view commit</a></li>
+<li>[Assets] Make sure implicit packages have IsDirty set to false when loaded <a href="https://github.com/xenko3d/xenko/commit/fb7296bf7131e47d779a2534f57d612de44756c5">view commit</a></li>
+<li>[Assets] Fix asset upgrade <a href="https://github.com/xenko3d/xenko/commit/bea53b99a317851fca271153514b22225d4cdad9">view commit</a></li>
+<li>[GameStudio] Fixed template samples generator to work with updated project format <a href="https://github.com/xenko3d/xenko/commit/aaf3ce5635dd9e393d9458ef08f886ba4bed3a3a">view commit</a></li>
+<li>[Samples] Updated with 3.1 (step 2) <a href="https://github.com/xenko3d/xenko/commit/794061c497d034d984fc5cad28608fa292b61de4">view commit</a></li>
+<li>[Samples] Keep Xenko.Particles for now, until we have better extensibility in Graphics Compositor <a href="https://github.com/xenko3d/xenko/commit/c2b417c8e8998ca1df16ad4101fefae9f0fca44f">view commit</a></li>
+<li>[Assets] Allow some assets to be non-referenceable (asset name collision is allowed in this case because they exist only at compile-time). This is used for scripts, otherwise they can't have same name as an asset. <a href="https://github.com/xenko3d/xenko/commit/772c37b0ebf0853cc0e121ed2c4538aaeba5ca06">view commit</a></li>
+<li>[Assets] PackAssets: skip excluded files <a href="https://github.com/xenko3d/xenko/commit/98a908be2ee6134879306972ac05608d2bd11f69">view commit</a></li>
+<li>[Settings] Remove the !file when serializing setting keys <a href="https://github.com/xenko3d/xenko/commit/399f5f2b7435777ad909a201372f7d8cd74ee975">view commit</a></li>
+<li>[Build] Package necessary WindowsAPICodePack assemblies with Xenko.Core.Presentation.Dialogs <a href="https://github.com/xenko3d/xenko/commit/fbb99ceaed4b06f38886ecc5893be24973161003">view commit</a></li>
+<li>[Build] XenkoPlatform was not properly set for Linux platforms <a href="https://github.com/xenko3d/xenko/commit/73f6cab9396d7880cf99d9697fa270e9505d3431">view commit</a></li>
+<li>[Assets] PackageUpgrader: react to multiple package names (to support renames and/or package splits in multiple parts) <a href="https://github.com/xenko3d/xenko/commit/2e0bbe3f005c20779af718c57adab5a09b6efe12">view commit</a></li>
+<li>[GameStudio] Improve default asset selection to match opened asset editors <a href="https://github.com/xenko3d/xenko/commit/68add353023da54323eaa6ea1fe9de297dc91efd">view commit</a></li>
+<li>[Assets] Compiler: Move default asset build path to obj\xenko\assetbuild <a href="https://github.com/xenko3d/xenko/commit/168e038bc76d1ff14198c7c3c3271aa4b1b888fd">view commit</a></li>
+<li>[Build] Changed dev/beta versioning to permit upgrading between interleaved dev and beta releases (betaXX.YYYY format with XX = asset version and YYYY = git height) <a href="https://github.com/xenko3d/xenko/commit/4ab3006e1a12a986184d89fe9f8762545a51741c">view commit</a></li>
+<li>[Build] Generate ref folder for all platforms (otherwise Android/iOS/UWP might fallback to ref/netstandard2.0 of Linux) <a href="https://github.com/xenko3d/xenko/commit/7e1adcdc5db0a4a218a12a09c677cfe918e78e4b">view commit</a></li>
+<li>[Build] Fix Android build due to lack of NuGetRuntimeIdentifier <a href="https://github.com/xenko3d/xenko/commit/a2e151a368275f5404919df3e5d95c23c781c68c">view commit</a></li>
+<li>[Templates] Remove the _Game from sample templates <a href="https://github.com/xenko3d/xenko/commit/5467379f14c53af82f7af9685803f6843c524831">view commit</a></li>
+<li>[Build] Adjust PackageVersion for sample templates according to XenkoOfficialBuild rather than XenkoPackageBuild <a href="https://github.com/xenko3d/xenko/commit/916d0741208acb626e8abfa2e5f27422e295f75b">view commit</a></li>
+<li>Updated <a href="http://BACKERS.md">BACKERS.md</a> <a href="https://github.com/xenko3d/xenko/commit/2c9e6ebe08e24b74c5b825feb3906b9c3add6ff4">view commit</a></li>
+<li>[Launcher] Display source in tooltip for Xenko downloads <a href="https://github.com/xenko3d/xenko/commit/2eba4659510149fee35030269f1b062a617ede05">view commit</a></li>
+<li>[VSPackage] Various fixes so that shader highlighting/goto works <a href="https://github.com/xenko3d/xenko/commit/84bad0265a2a74c350bc01bc8ee27efcdcd94168">view commit</a></li>
+<li>[Build] Updated UWP to use uap10.0.16299 <a href="https://github.com/xenko3d/xenko/commit/1b076cad683134e9aac8396ff60dff605c28fc91">view commit</a></li>
+<li>[UWP] Simplified some code (can now use Thread and other newer API) <a href="https://github.com/xenko3d/xenko/commit/48dddcf52dbc0734a588868c3fe66eb4d1e3bd86">view commit</a></li>
+<li>[Build] Hide Microsoft.NETCore.UniversalWindowsPlatform from references and update build doc <a href="https://github.com/xenko3d/xenko/commit/93fe58ec04a7c2a7df063aea8ef065ebcca62044">view commit</a></li>
+<li>[Build] Fix Xenko.Shaders.Tests name <a href="https://github.com/xenko3d/xenko/commit/a8f09bc21acd2b1b67e359ad448cc97608a336a8">view commit</a></li>
+<li>[Assets] New Game template was not properly copying asset package files <a href="https://github.com/xenko3d/xenko/commit/7c9e3a3969074bc9aa0e91c7c464464e8e53122f">view commit</a></li>
+<li>[GameStudio] Use same build folder for game studio as for actual game build <a href="https://github.com/xenko3d/xenko/commit/3b042d9212954224b2bf54b8d9c4ba808411c0c7">view commit</a></li>
+<li>[Templates] Fixed Linux template <a href="https://github.com/xenko3d/xenko/commit/af3c9a957103c2a0fce56460d69d5e64e53a211a">view commit</a></li>
+<li>[Templates] Fixed UWP template <a href="https://github.com/xenko3d/xenko/commit/37ffe2ee40e47f665f7b329f06634fa9c48d569c">view commit</a></li>
+<li>[Build] Use win instead of win7 runtime identifier <a href="https://github.com/xenko3d/xenko/commit/799442a9778a9431f4eee1aadd5a4a69e1aabab9">view commit</a></li>
+<li>[Templates] Additional fix for Linux template <a href="https://github.com/xenko3d/xenko/commit/11f3b066cfc91021ef04eeebf8c87c3edd6a1390">view commit</a></li>
+<li>[Templates] Linux: adjust default runtime identifier <a href="https://github.com/xenko3d/xenko/commit/c681063eeca3eefe7c8eac6dfc3032d4d658652b">view commit</a></li>
+<li>[Launcher] Various fixes for downloading and error reporting <a href="https://github.com/xenko3d/xenko/commit/6c21e9ac03df9a95352fce6ff489d7d25dc5ced4">view commit</a></li>
+<li>[Launcher] Bump to 3.0.4 (3.0.3 was built with incorrect source changes) <a href="https://github.com/xenko3d/xenko/commit/e2b7b271707b780830256ead6765b7a94013e56e">view commit</a></li>
+<li>[VSPackage] Fix NuGet assembly resolve (avoid infinite loop) and handle properly non-Xenko solutions (fixes <a href="https://github.com/xenko3d/xenko/issues/298">#298</a>) <a href="https://github.com/xenko3d/xenko/commit/8e98e23c24e14c41deee8457c811055d6c2dec69">view commit</a></li>
+<li>[Editor] Properly report solution load/save exception to log <a href="https://github.com/xenko3d/xenko/commit/1844890dcc1fa6135ed9e91cf256df45387f3f0b">view commit</a></li>
+<li>[Reflection] Rewrote part of AssemblyContainer to handle deferred loading <a href="https://github.com/xenko3d/xenko/commit/db83d963a4890e2055445820be23462af234156f">view commit</a></li>
+<li>[Build] Updated to MSBuild.Sdk.Extras version 1.6.65 (compatible with VS2019) <a href="https://github.com/xenko3d/xenko/commit/5a7ed9624b5470c6a32ea319dc99e9a7bfd3d7a4">view commit</a></li>
+<li>[Build] Use $(RoslynTargetsPath) rather than $(MSBuildBinPath)\Roslyn (which doesn't work with VS2019) <a href="https://github.com/xenko3d/xenko/commit/ee195bacfb8315a170c7a59e59a5bce28fed68d9">view commit</a></li>
+<li>Change link+badge for chat from gitter to discord <a href="https://github.com/xenko3d/xenko/commit/6ac74bb680b17c22249f3c0c76b5b36f13328787">view commit</a></li>
+<li>[Build] Use netstandard2.0 version of OpenTK <a href="https://github.com/xenko3d/xenko/commit/363f0aaf3e33737ffabc30e9a94179b7e7a2299f">view commit</a></li>
+<li>[Build] Switch to netstandard2.0 wherever possible for the runtime <a href="https://github.com/xenko3d/xenko/commit/2213f133744fa821d710e343e59d82ba5622f7d7">view commit</a></li>
+<li>[Build] Switch game projects to use netstandard2.0 <a href="https://github.com/xenko3d/xenko/commit/ad4a6be79bf857e4187b6fb84de06044fe11281e">view commit</a></li>
+<li>[Build] Fix Windows+Linux build <a href="https://github.com/xenko3d/xenko/commit/1b6cc924336fcf5a60b5c060bf515dad5b61f5ea">view commit</a></li>
+<li>[Build] Hide Microsoft.NETCore.UniversalWindowsPlatform from references and update build doc <a href="https://github.com/xenko3d/xenko/commit/40c54176783fae99fdc045dec81a662009c94ab0">view commit</a></li>
+<li>[Build] Fixed build of RenderDocPlugin <a href="https://github.com/xenko3d/xenko/commit/574149f757cc3491e3be5a636ff6d14a194e9fda">view commit</a></li>
+<li>[Build] Additional fixes for single 3d graphics API build mode <a href="https://github.com/xenko3d/xenko/commit/b5f8ea2bd99a9c0cff6618e90521974bb2e50e09">view commit</a></li>
+<li>[Templates] Patching of TargetFramework section is now forcing netstandard2.0 <a href="https://github.com/xenko3d/xenko/commit/e45f1721b3a202463ef821308ebf5221db079ad2">view commit</a></li>
+<li>[Templating] Switch to latest version of Mono.TextTemplating (t4) and add reference to netstandard <a href="https://github.com/xenko3d/xenko/commit/a9999320f08001c0ae9c6a077411b5c936d8f5cc">view commit</a></li>
+<li>[Build] Various fixes for .NET Standard build <a href="https://github.com/xenko3d/xenko/commit/4780b504bdb6f3277744c96632e2862fc8a55dd6">view commit</a></li>
+<li>[Build] Bump Android SDK version from 5.0 to 8.1 (Google Play recent requirement for new app and .NET Standard 2.0 also requires 8.0+) <a href="https://github.com/xenko3d/xenko/commit/8e38e7f907ac32c25846335291e26004b7ea9258">view commit</a></li>
+<li>[Build] Force references to be added only for direct and explicit package references <a href="https://github.com/xenko3d/xenko/commit/be7dcfb571439940cabf8c60fc1590a1bc29b05f">view commit</a></li>
+<li>[Build] Properly forward XenkoGraphicsApi when building a single graphics platform <a href="https://github.com/xenko3d/xenko/commit/e1384ebe811fe6aa2e7f3d2c8e3aabb4f79e7d97">view commit</a></li>
+<li>[Build] Make sure to override RuntimeIdentifiers on UWP otherwise it builds all CPU versions and result in write conflicts <a href="https://github.com/xenko3d/xenko/commit/a86d1de46afa610626e260f8f7c392eb361cb676">view commit</a></li>
+<li>[Build] Use &quot;any&quot; instead of &quot;win&quot; <a href="https://github.com/xenko3d/xenko/commit/5a8f870e976487be43412d34f7116debaa6286a1">view commit</a></li>
+<li>[Build] Make sure &quot;win&quot; is the default when building a netstandard2.0 reference (to make sure a RID-specific project always use RID) <a href="https://github.com/xenko3d/xenko/commit/1f69960fa376151974703a9f85e4ff291d1f0481">view commit</a></li>
+<li>[Build] Define output path (otherwise using a Platform might override them) <a href="https://github.com/xenko3d/xenko/commit/b55b9ec84704c736ba09499aa5bb93afefc9b8ce">view commit</a></li>
+<li>[Build] Properly setup RuntimeIdentifier if it was not a Graphics-API-specific one <a href="https://github.com/xenko3d/xenko/commit/1d59bce041a59622862ff201248444eeb41721f6">view commit</a></li>
+<li>[Build] Pack Xenko assets as part of NuGet packaging <a href="https://github.com/xenko3d/xenko/commit/23d088ee3aca90a49019ae11b486e57ffc976cbe">view commit</a></li>
+<li>[Build] Fix the NuGet publish build file <a href="https://github.com/xenko3d/xenko/commit/3376e62deae026e113e0fc6eb423879ebc061462">view commit</a></li>
+<li>[Build] Removed unnecessary solution references <a href="https://github.com/xenko3d/xenko/commit/1bf755e20fd9ba26cabee8fe8d1d8a560be4fd74">view commit</a></li>
+<li>[Build] Properly compute &amp; restrict RuntimeIdentifier for ProjectReference <a href="https://github.com/xenko3d/xenko/commit/1bd1525db64ee6956d336f01f3280f62c275c59d">view commit</a></li>
+<li>[Build] Better detection of default RuntimeIdentifiers <a href="https://github.com/xenko3d/xenko/commit/d6711de18adf9bb06a77a00cc674f66b7b0c1865">view commit</a></li>
+<li>[Build] Fix RuntimeIdentifiers detection for graphics API mode <a href="https://github.com/xenko3d/xenko/commit/f25b105a0765c30dcf277a6dfec749b466a8cff7">view commit</a></li>
+<li>[Build] Adjust RuntimeIdentifier and XenkoPlatform detection <a href="https://github.com/xenko3d/xenko/commit/855d27e26b109e9884c916beb6ae1ea1a8262989">view commit</a></li>
+<li>[Launcher] Remove custom Http code and decrease concurrency (which might be problematic since our packages are bigger than average) <a href="https://github.com/xenko3d/xenko/commit/affdb7232c8634c23065db2a7beb7b1aa9c73478">view commit</a></li>
+<li>[Launcher] Switch from gitter to discord <a href="https://github.com/xenko3d/xenko/commit/a38afda0ffc7d941ef8d1973b5d49e6087310820">view commit</a></li>
+<li>Updated <a href="http://BACKERS.md">BACKERS.md</a> <a href="https://github.com/xenko3d/xenko/commit/51ff4ead560002119a0d588c659759ef747bf160">view commit</a></li>
+<li>[Launcher] Bump to 3.0.5 <a href="https://github.com/xenko3d/xenko/commit/2b9fbe39afcdc70c760d0aa831091c4028f50817">view commit</a></li>
+<li>Update Crowdin configuration file <a href="https://github.com/xenko3d/xenko/commit/a9352737ddefbf1ff321a9b6fee25d130052ca98">view commit</a></li>
+<li>Update Crowdin configuration file <a href="https://github.com/xenko3d/xenko/commit/a528cff46bf93dbf89d66e8b74d37906f800a83c">view commit</a></li>
+<li>[Launcher] Skip unlisted packages, and don't use cache <a href="https://github.com/xenko3d/xenko/commit/a0459e31eee3c0f649097d812f23c09883169199">view commit</a></li>
+<li>[Launcher] Also use normal output data for error output of PackageInstall.exe <a href="https://github.com/xenko3d/xenko/commit/8608ff091cae91a2f740e5523e09c0d27b7d6476">view commit</a></li>
+<li>[Physics] Enable PhysicsShapesRenderingService only if there is a IGraphicsDeviceService <a href="https://github.com/xenko3d/xenko/commit/eba446713da62822a110f9eda5ef3253818233dd">view commit</a></li>
+<li>Update <a href="http://BACKERS.md">BACKERS.md</a> <a href="https://github.com/xenko3d/xenko/commit/b6333f3285d891bda4053146a0e32a19feedaae6">view commit</a></li>
+<li>Merge remote-tracking branch 'origin/master-3.0' <a href="https://github.com/xenko3d/xenko/commit/b54f35afaf7eb520b2897516e64633e4b2c99297">view commit</a></li>
+<li>[Physics] Add comment for PhysicsShapesRenderingService creation <a href="https://github.com/xenko3d/xenko/commit/94cb4b1c490ee4fdcce94b29e34f1fc9509dea23">view commit</a></li>
+<li>[Build] Added option XenkoPublishSkipSamplesTemplates <a href="https://github.com/xenko3d/xenko/commit/dffa6ee4d0887db64304615f8a59a43a4ac588b8">view commit</a></li>
+<li>[Build] Adjust platform detection (broken for multiplatform) and preparations for OSX <a href="https://github.com/xenko3d/xenko/commit/9c3fa42f753a619d12d78c8c9d08b3e67e3fe150">view commit</a></li>
+<li>[Build] Additional fixes for computing runtime identifiers <a href="https://github.com/xenko3d/xenko/commit/dcf310f81ddb356f28f5d219e9cd35cd3eee37ed">view commit</a></li>
+<li>[Build] Further fixes for computing runtime identifiers <a href="https://github.com/xenko3d/xenko/commit/6542d92acee67b183d8a92c442e8c769d2cdda4c">view commit</a></li>
+<li>[Build] Run Visual C++ checks only on .NET Framework MSBuild <a href="https://github.com/xenko3d/xenko/commit/68bfba4cfce380b4ebc42541dbc70a025716c95e">view commit</a></li>
+<li>[Build] Additional setup for macOS build <a href="https://github.com/xenko3d/xenko/commit/33fea75c991f8974854c37fb7e533fa8008882e7">view commit</a></li>
+<li>Merge pull request <a href="https://github.com/xenko3d/xenko/issues/323">#323</a> from Kryptos-FR/feature/l10n <a href="https://github.com/xenko3d/xenko/commit/f719acaecdaf93e52f3e547156ca04158642f7e9">view commit</a></li>
+<li>[Build] Native: Generate only x64 for macOS (.NET Core only supports x64) <a href="https://github.com/xenko3d/xenko/commit/fc6e267cadc795fbb47b961f46696e3134d2f746">view commit</a></li>
+<li>[Graphics] Update to SDL 2.0.9 <a href="https://github.com/xenko3d/xenko/commit/19f3fdcaec44e2e7a67bc8a4f171ae7a12b9929e">view commit</a></li>
+<li>[Graphics] SDL: Load from proper directory <a href="https://github.com/xenko3d/xenko/commit/ae63fcf683e5ba830ae5318407f5c839c43f07bf">view commit</a></li>
+<li>[Shaders] Added macOS glslangValidator <a href="https://github.com/xenko3d/xenko/commit/76cd37b15b0e87324e73e28b8aa6193ae06152d1">view commit</a></li>
+<li>[Shaders] Vulkan: Add &quot;NoSampler&quot; to reflection <a href="https://github.com/xenko3d/xenko/commit/cd609ad45f10c4e6587ebb87f635d4e6516c6143">view commit</a></li>
+<li>[<a href="http://Core.IO">Core.IO</a>] Disable LockFile code from macOS (not supported) <a href="https://github.com/xenko3d/xenko/commit/661bd8513bb2e6aeae4e141c42322bc33568d8d7">view commit</a></li>
+<li>[Core] Copy native libs for more platforms, and only if CopyLocalLockFileAssemblies is not set to false <a href="https://github.com/xenko3d/xenko/commit/66ba0cd28404bb4fad91658ae177e119bf820336">view commit</a></li>
+<li>[Build] macOS: Update NativePath to latest version <a href="https://github.com/xenko3d/xenko/commit/6e12e806905dbb43e811688de643e78c6db2c3c7">view commit</a></li>
+<li>[Graphics] Update SharpVulkan (works on OSX and easier to access NativeHandle) <a href="https://github.com/xenko3d/xenko/commit/6522836725d9d693634c074969b958f61188442e">view commit</a></li>
+<li>[Graphics] macOS: Added MoltenVK <a href="https://github.com/xenko3d/xenko/commit/897a5ac1e8ec2d4bf7baef041b4b9cecd800d935">view commit</a></li>
+<li>[GameStudio] Added project template for macOS <a href="https://github.com/xenko3d/xenko/commit/6a096b401f85aa3cb1f322addcf8ce36be57cbcd">view commit</a></li>
+<li>[Localization] Use $(RoslynTargetsPath) rather than $(MSBuildBinPath)\Roslyn (which doesn't work with VS2019) <a href="https://github.com/xenko3d/xenko/commit/6c1a4cd3c66c66ef9facd201136e252b074e3176">view commit</a></li>
+<li>[Samples] Templates: Added Cache to list of ignored folders (can be leftover from build during previous Xenko versions) <a href="https://github.com/xenko3d/xenko/commit/d47e8cfa77de1ec6a483f2e2e1a52173106cd227">view commit</a></li>
+<li>[Graphics] macOS: Updated MoltenVK <a href="https://github.com/xenko3d/xenko/commit/ccc487751a7d5fddad5dda7e2d2a995842d59119">view commit</a></li>
+<li>[Assets] PackAssets: Use proper asset path when computing resources relative paths (fixes <a href="https://github.com/xenko3d/xenko/issues/326">#326</a>) <a href="https://github.com/xenko3d/xenko/commit/5109915edbd514e154ebc3e914a49f036f392fee">view commit</a></li>
+<li>[VSPackage] Upgrade version to 3.0.3. Add support for VS2019. New release needed since RestoreHelper.cs was updated (fixes <a href="https://github.com/xenko3d/xenko/issues/324">#324</a>) <a href="https://github.com/xenko3d/xenko/commit/5c7159721ebf65b4a9f8107e1380880c9d8cf4d2">view commit</a></li>
+<li>Update license for 2019 <a href="https://github.com/xenko3d/xenko/commit/c21c5da8d2604a8735ea396556fa40cfb4c5063c">view commit</a></li>
+<li>Update <a href="http://BACKERS.md">BACKERS.md</a> <a href="https://github.com/xenko3d/xenko/commit/307be228f328f25ead2347f840879ca5654bdb09">view commit</a></li>
+<li>[Build] Copy .xml and .pdb from NuGet package references when using new csproj format <a href="https://github.com/xenko3d/xenko/commit/555b4f433d1392cfc3e964f14696132f4c1eed4c">view commit</a></li>
+<li>[VSPackage] Run VSIX installer only for VS2017+ (fixes <a href="https://github.com/xenko3d/xenko/issues/332">#332</a>) <a href="https://github.com/xenko3d/xenko/commit/07438702b7761d95351773c5d1ca56c06da61b1f">view commit</a></li>
+<li>[Build] Use latest version of Windows 10 SDK <a href="https://github.com/xenko3d/xenko/commit/e675185ef18cc8b34be7903115ee2d8a4e630a59">view commit</a></li>
+<li>[Build] Update requirements <a href="https://github.com/xenko3d/xenko/commit/e4fd4f0687df1beedf3402710485798a174582c9">view commit</a></li>
+<li>[Build] Publish was not properly copying native libs and compiled assets (fixes <a href="https://github.com/xenko3d/xenko/issues/331">#331</a> and <a href="https://github.com/xenko3d/xenko/issues/334">#334</a>) -- thanks to jazzay for the initial implementation <a href="https://github.com/xenko3d/xenko/commit/05e746a920cf41b8fc699426cc1e8550ae28c03a">view commit</a></li>
+<li>[VSPackage] Make ProjectReference between Commands and Package private so that it doesn't exist as a NuGet dependency <a href="https://github.com/xenko3d/xenko/commit/76d05a4ab7190c80d8b8b27f7b75255065f01b1b">view commit</a></li>
+<li>[VSPackage] Add TODO for restore log <a href="https://github.com/xenko3d/xenko/commit/ad0e048637d229e4cac0931ddbeb38e577f23878">view commit</a></li>
+<li>[Build] Native: use vcxproj directly to avoid TRK0005: Failed to locate: &quot;link.exe&quot; or &quot;cl.exe&quot; (fixes <a href="https://github.com/xenko3d/xenko/issues/337">#337</a>) <a href="https://github.com/xenko3d/xenko/commit/2982d61547ff55c555c2d161f921af87faf87b41">view commit</a></li>
+<li>[Build] Properly include install-prerequisites.exe next to Xenko.GameStudio packageinstall.exe <a href="https://github.com/xenko3d/xenko/commit/59c6713145dcacf86ee4f51c62662acc0f09a8e8">view commit</a></li>
+<li>[Install] Prerequisites installer: improve error reporting and retries (i.e. UAC not clicked) when installing Visual Studio or Build Tools <a href="https://github.com/xenko3d/xenko/commit/3d29a4f0d3b0e9bbda26e81932a8f7c2e7587176">view commit</a></li>
+<li>[Install] Prerequisites: Update to VC++ 2017 prerequisites <a href="https://github.com/xenko3d/xenko/commit/b40d2657bd28736b2e0327fdda239ecd13437276">view commit</a></li>
+<li>[Install] Prerequisites: Add &quot;.NET Core 2.1 development tools&quot; to list of Visual Studio prerequisites <a href="https://github.com/xenko3d/xenko/commit/fe85d992f7bb4213ab810c6a971520ed751afee3">view commit</a></li>
+<li>[Install] Prerequisites: Improve Visual Studio detection/update mechanism <a href="https://github.com/xenko3d/xenko/commit/e435015424568631aabcfbdc9fe409554b1b0fec">view commit</a></li>
+<li>Update <a href="http://BACKERS.md">BACKERS.md</a> <a href="https://github.com/xenko3d/xenko/commit/0dde714bbb370c9c1e41596cdc859984fcaf2a14">view commit</a></li>
+<li>[GameStudio] Switch to Roslyn 2.10 <a href="https://github.com/xenko3d/xenko/commit/989469db9e2749ac8e69b8ea8a5bde06451b7c23">view commit</a></li>
+<li>[Assets] PackAssets: properly copy RootAssets (fixes <a href="https://github.com/xenko3d/xenko/issues/347">#347</a>) <a href="https://github.com/xenko3d/xenko/commit/7144d61795fa6b908443aad1589b9dfac5e17fc5">view commit</a></li>
+<li>[Assets] Perform null check before upgrading PackageProfile <a href="https://github.com/xenko3d/xenko/commit/c5164c5939a0ec7b1edf79d231b2107cf130f998">view commit</a></li>
+<li>[Assets] PackageSession: Properly fallback to AssemblyName if PackageId is not set <a href="https://github.com/xenko3d/xenko/commit/aad3c7519457dc7aa9a4061af314b8420810074c">view commit</a></li>
+<li>[Assets] Remove asset upgrader code for versions before 3.0 <a href="https://github.com/xenko3d/xenko/commit/0521c0d066d005bde496ffe9ab656374e2a51f33">view commit</a></li>
+<li>Explain how CLA is to be signed. <a href="https://github.com/xenko3d/xenko/commit/233d891767dd78148c2ff99a3706f8909cc48f57">view commit</a></li>
+<li>Update <a href="http://BACKERS.md">BACKERS.md</a> <a href="https://github.com/xenko3d/xenko/commit/55092e25f2afc3f4107a57fe8678161c944bda83">view commit</a></li>
+<li>[Build] NuGetVersion reported to TeamCity was wrong <a href="https://github.com/xenko3d/xenko/commit/fd5c4b0eff9ce683ba09b51e0e91c28667514d10">view commit</a></li>
+<li>[VR] Fix UWP build (<a href="https://github.com/xenko3d/xenko/issues/213">#213</a>) <a href="https://github.com/xenko3d/xenko/commit/bdc87cc85e791ef28ab6ea891c531c7a8a6ac1f2">view commit</a></li>
+<li>[Build] Add XenkoBuildDoc parameter to force TargetFramework even if not specified (seems necessary for older version of Roslyn used in docfx) <a href="https://github.com/xenko3d/xenko/commit/35923fa6f570b812fc29c12fddd51710cc51c68f">view commit</a></li>
+<li>[GameStudio] Add missing RoslynPad assemblies in the composition context <a href="https://github.com/xenko3d/xenko/commit/434741423ad6fcf8359cf24435ebd7e4a394088c">view commit</a></li>
+<li>[GameStudio] Allow drag &amp; dropping of read-only assets (as long as they wouldn't be modified) <a href="https://github.com/xenko3d/xenko/commit/f542345bb83b0171e53b0716be3a8fd61b6efb8d">view commit</a></li>
+<li>[GameStudio] CodeLibrary projects were not properly initialized (assets couldn't be created) <a href="https://github.com/xenko3d/xenko/commit/b41a90143408fb08b63e5a280a42fbcfa9fce091">view commit</a></li>
+<li>[Build] Sign packageinstall.exe <a href="https://github.com/xenko3d/xenko/commit/48600c088ef0a4d6e29477a78f85582c316ed6c6">view commit</a></li>
+<li>[Build] Include RoslynPad assemblies with Xenko.Assets.Presentation package <a href="https://github.com/xenko3d/xenko/commit/5470299ed9d8fafb38808cd8f9835f65d180aff4">view commit</a></li>
+<li>Update <a href="http://ContributorLicenseAgreement.md">ContributorLicenseAgreement.md</a> <a href="https://github.com/xenko3d/xenko/commit/5d91b9cf56ce416813aff77162f7d6e33a840f52">view commit</a></li>
+<li>[Build] Unlocking C<a href="https://github.com/xenko3d/xenko/issues/">#</a> 7.3! <a href="https://github.com/xenko3d/xenko/commit/04fec1d138689e05c3f25c87f46d7064b2205c98">view commit</a></li>
+<li>[Core.Design] AssemblyContainer: Process deps.json files (fixes <a href="https://github.com/xenko3d/xenko/issues/365">#365</a>, fixes <a href="https://github.com/xenko3d/xenko/issues/342">#342</a>) <a href="https://github.com/xenko3d/xenko/commit/0dcbaafc442caa8b5d56a1f235387783b6c98df2">view commit</a></li>
+<li>Merge branch 'master-3.0' <a href="https://github.com/xenko3d/xenko/commit/2592f84d7b074da875cf0e2350f1a8d592c9d9bd">view commit</a></li>
+<li>[Physics] Fix ColliderShapeAsset upgraders (was previously enclosed in XENKO_SUPPORT_BETA_UPGRADE) <a href="https://github.com/xenko3d/xenko/commit/2a12c6643ff493b25b85b6e9bd309dd78858bc9f">view commit</a></li>
+<li>Merge remote-tracking branch 'origin/master-3.0' <a href="https://github.com/xenko3d/xenko/commit/762e95559739055993afcb0fe67bc7c4b98acdee">view commit</a></li>
+<li>Merge remote-tracking branch 'origin/master-3.0' <a href="https://github.com/xenko3d/xenko/commit/5f596657e006bfea9ebbf0f04302df5e3f3aed85">view commit</a></li>
+<li>[Build] Add option -NoSymbols to nuget push <a href="https://github.com/xenko3d/xenko/commit/464585288f58c214d302db870d9c38406ae5a70c">view commit</a></li>
+<li>[Graphics] D3D: add support for using typeless textures <a href="https://github.com/xenko3d/xenko/commit/ff28be350deb6dd7492743fe60a208613c4a7a76">view commit</a></li>
+<li>[Reflection] AssemblyContainer: return already loaded assemblies if AssemblyName matches rather than loading new one (it seems that assembly is requested several times because we are not loading in the proper load context) <a href="https://github.com/xenko3d/xenko/commit/feb297a828e051e28e83c15e4132c950ebf2f6d9">view commit</a></li>
+<li>[Build] runtime.json: fix spacing <a href="https://github.com/xenko3d/xenko/commit/062066d635210894575fb7f6d7f34c2a2930ca46">view commit</a></li>
+<li>[Build] Added new CPU-specific variants to runtime.json (<a href="https://github.com/xenko3d/xenko/issues/370">#370</a>) <a href="https://github.com/xenko3d/xenko/commit/d52b6ac6a4e01968c211f5f95806b530f3b0aedb">view commit</a></li>
+<li>[Build] Bumped LLVM to 7.0.1 <a href="https://github.com/xenko3d/xenko/commit/06ee9130144ad4da1e3acaeb608e45243a83fa95">view commit</a></li>
+<li>[Render] Decouple RenderParticleEmitter from ECS <a href="https://github.com/xenko3d/xenko/commit/abfb0060a4405fe5712bcb57e657e2f3715436a5">view commit</a></li>
+<li>[Render] Decouple RenderUIElement from ECS <a href="https://github.com/xenko3d/xenko/commit/fc805ea6b8528d200906102bba59ae5c35ee2820">view commit</a></li>
+<li>[Render] Decouple RenderMesh and others from ECS <a href="https://github.com/xenko3d/xenko/commit/15ffffd2163468ca4c6540bd3a726fec32ebf4c6">view commit</a></li>
+<li>[Rendering] Remove various dependencies from lighting code to LightComponent <a href="https://github.com/xenko3d/xenko/commit/e7ca9d2c58f45077d13e9ecdd7ad6bd5a794988c">view commit</a></li>
+<li>[Rendering] Removed SceneInstance dependency from rendering code <a href="https://github.com/xenko3d/xenko/commit/cc4bd9f071536857bfb9eef5644da6f867dd5c97">view commit</a></li>
+<li>[Rendering] Removed dependency from VisibilityGroup to ShadowMapRenderView <a href="https://github.com/xenko3d/xenko/commit/1cd0f982ac1818fdde11624ad4ceada230c25ec6">view commit</a></li>
+<li>[Rendering] LightSkybox: Removed obsolete comment <a href="https://github.com/xenko3d/xenko/commit/0a519701ce5d1e4ba1e5886b8ccd74d11702db21">view commit</a></li>
+<li>[Rendering] Moved RenderGroup class to Rendering namespace <a href="https://github.com/xenko3d/xenko/commit/25ec89f0391aeedc91616a7a6282aee9a135b3bb">view commit</a></li>
+<li>[Rendering] PostFX: remove dependency to CameraComponent <a href="https://github.com/xenko3d/xenko/commit/ff279b024d5db2a34754ea4d52c83e071d9fce81">view commit</a></li>
+<li>[Rendering] ShadowMapRenderer: remove unused nested class <a href="https://github.com/xenko3d/xenko/commit/20c5f2b4dcd821251115c0cdd70d16c9e1aefef7">view commit</a></li>
+<li>[Rendering] ForceAspectRatioSceneRenderer: Made default aspect ratio local to remove dependency to CameraComponent <a href="https://github.com/xenko3d/xenko/commit/71248f369637397946c9bfb705e6b4bc8e746a8c">view commit</a></li>
+<li>[Engine] Moved IndexingDictionary to Xenko.Core <a href="https://github.com/xenko3d/xenko/commit/9b116257c66e85c4a62be958e8345c95ae1dc510">view commit</a></li>
+<li>[Rendering] EffectSystem: Remove dependency to Game class and move EffectCompilationMode in the same namespace <a href="https://github.com/xenko3d/xenko/commit/0cc21349a0c4c172c53a94ad7fc7f69547708b3e">view commit</a></li>
+<li>[Rendering] EffectSystem: Moved CreateEffectCompiler in a separate static class outside of Rendering code <a href="https://github.com/xenko3d/xenko/commit/b07e77909c4d705085a74044453d94d39aacc817">view commit</a></li>
+<li>[Rendering] Made ForwardLightingRenderFeature not dependent on LightProcessor anymore <a href="https://github.com/xenko3d/xenko/commit/9eceed040ce44d73cf42f16509970a5793ea7250">view commit</a></li>
+<li>[Rendering] Made LightProbe code not dependent on LightProbeProcessor anymore <a href="https://github.com/xenko3d/xenko/commit/921dd9d243379f6bd14dfdfe27ab830cd03139ca">view commit</a></li>
+<li>[Rendering] Made LightShafts independent from LightShaftProcessor <a href="https://github.com/xenko3d/xenko/commit/034abed5674cc05bc9373833e5abf1f0a554a705">view commit</a></li>
+<li>[Rendering] Fixed RenderContext.GetCurrentCamera() tag owner <a href="https://github.com/xenko3d/xenko/commit/c855896753530454e6ed8678ff55817b66724639">view commit</a></li>
+<li>[Streaming] Removed dependency on Engine.Game <a href="https://github.com/xenko3d/xenko/commit/500c4e50fc3124534c65bd23d764f5fb559bb0da">view commit</a></li>
+<li>[Rendering] Splitted most of low-level rendering code into a new Xenko.Rendering assembly <a href="https://github.com/xenko3d/xenko/commit/2cf773e19acabb86d918d0742af9c9e034b4c250">view commit</a></li>
+<li>[SpriteStudio] Fixes for SpriteStudio to work properly again <a href="https://github.com/xenko3d/xenko/commit/c1522239be6e424a3d0362bd726512a3afb69361">view commit</a></li>
+<li>[Rendering] Make Xenko.Rendering platform-specific <a href="https://github.com/xenko3d/xenko/commit/50b9525155455e817a07dd834d173e974422a06d">view commit</a></li>
+<li>[TextTemplating] T4: use a custom version of Mono.TextTemplating, including <a href="https://github.com/xen2/t4/commit/0d0b6db3ca3aba82fd7597951be2361265043e5e">https://github.com/xen2/t4/commit/0d0b6db3ca3aba82fd7597951be2361265043e5e</a> <a href="https://github.com/xenko3d/xenko/commit/4372725f93774bf37f69575deceb910e58b41e74">view commit</a></li>
+<li>[Serializaton] Bump format version (Rendering split) <a href="https://github.com/xenko3d/xenko/commit/a116d28d45d0bf6d0eb445f3226dc64768b7e803">view commit</a></li>
+<li>[Build] Bump to beta02 <a href="https://github.com/xenko3d/xenko/commit/cb233fe3eae5cdf13ac8ce07f5a24b6316502371">view commit</a></li>
+<li>[Build] Fix .usrdoc generation and copy (fixes <a href="https://github.com/xenko3d/xenko/issues/377">#377</a>) <a href="https://github.com/xenko3d/xenko/commit/2c3f881b0008fb63dede4664b7b8ba810af3390d">view commit</a></li>
+<li>[NuGet] Remove deleted xenko sources during startup to avoid restore failures (fixes <a href="https://github.com/xenko3d/xenko/issues/338">#338</a>) <a href="https://github.com/xenko3d/xenko/commit/293d60a2bdc4b6d2773a1da914fd802483828288">view commit</a></li>
+<li>Merge remote-tracking branch 'weblate/master' <a href="https://github.com/xenko3d/xenko/commit/734c49d6d02839603d494cd881662089fd6b804c">view commit</a></li>
+<li>[Localization] Added Russian as a supported language <a href="https://github.com/xenko3d/xenko/commit/123f45ed89d838b8bf25d5fd53ba84d345b272b8">view commit</a></li>
+<li>[Localization] Added a few missing important translations (which were omitted for ApplicationCommands) <a href="https://github.com/xenko3d/xenko/commit/0e9c28fe8b2a681a190169e05aff3ecb4f3ba674">view commit</a></li>
+<li>[CrashReport] Bumped crash report to 1.0.1 (force HTTPS), anonymize reports and make sure it doesn't conflict with NuGetAssemblyResolver <a href="https://github.com/xenko3d/xenko/commit/401496a90cfb05ae84b83a5d9b10e6fb61875290">view commit</a></li>
+<li>[Localization] Updated po files <a href="https://github.com/xenko3d/xenko/commit/8842ed8450c2a051f269fc285c49fc269d83ef71">view commit</a></li>
+<li>[Build] Regenerated sln (which were invalid since Xenko.Rendering was added) <a href="https://github.com/xenko3d/xenko/commit/8ff58adb66baf2f96cb57af4c23a008e552f5ed2">view commit</a></li>
+<li>[Samples] Removed reference to RenderContext.SceneInstance (fixes <a href="https://github.com/xenko3d/xenko/issues/386">#386</a>) <a href="https://github.com/xenko3d/xenko/commit/618f743e1435d59d2a4db6bbc82402d28f278d0a">view commit</a></li>
+<li>Merge remote-tracking branch 'weblate/master' <a href="https://github.com/xenko3d/xenko/commit/c6ae02074bd28789b6eee45e643cc69d2fe3a08c">view commit</a></li>
+<li>Merge remote-tracking branch 'weblate/master' <a href="https://github.com/xenko3d/xenko/commit/30ae84d7a1e87ae51f16a33ff1a933aa9f458996">view commit</a></li>
+<li>[Localization] Only generated when building Release, and added Russian in Xenko.Editor <a href="https://github.com/xenko3d/xenko/commit/d145c85c123455acac052b2b95912e1cdb33d124">view commit</a></li>
+<li>[Localization] Added support for German and Spanish <a href="https://github.com/xenko3d/xenko/commit/f1d652d85d39dfb0e971e7a76aa31962872abca6">view commit</a></li>
+<li>[Localization] Rearranged targets so that localization code is unified <a href="https://github.com/xenko3d/xenko/commit/4ef26603cdd8cba96cc1ad9e42dbc824cbc76588">view commit</a></li>
+<li>Merge remote-tracking branch 'weblate/master' <a href="https://github.com/xenko3d/xenko/commit/def9b2dee260333f9380adac91f61878b7efd781">view commit</a></li>
+<li>[Localization] Added support for Chinese (Simplified) <a href="https://github.com/xenko3d/xenko/commit/5edc9a513c6c1128e6817825cc0bc2d113669204">view commit</a></li>
+<li>[Setup] Don't delete top level installation folder if not empty (esp. if it was installed in a root folder containing other programs by mistake!) <a href="https://github.com/xenko3d/xenko/commit/2e1f3fe293468ef1def17c64bd319878ef219c1a">view commit</a></li>
+<li>[Launcher] Use cache but always refresh it, even when installing. <a href="https://github.com/xenko3d/xenko/commit/5a1b80fa2ef620cbb6aef34963ce773a8fcd4f2f">view commit</a></li>
+<li>[Launcher] Set LauncherApp as default project <a href="https://github.com/xenko3d/xenko/commit/8f407f5c4e63f24bfa3ed598388f006ad3fc2177">view commit</a></li>
+<li>[Launcher] Bump to 3.0.6 <a href="https://github.com/xenko3d/xenko/commit/65aa83110182a00922982eb125a3dde32f23d98e">view commit</a></li>
+<li>[Templates] Fix version in reference to Xenko.Samples.Templates package <a href="https://github.com/xenko3d/xenko/commit/8227cfdb4a2f200bbfbb44772958bc8a8011b890">view commit</a></li>
+<li>[Rendering] Add Sprite to rendering only if it's enabled <a href="https://github.com/xenko3d/xenko/commit/559f0c4d802cc6dca204cf2f508248dc607a1646">view commit</a></li>
+<li>[Rendering] Properly register Xenko.Rendering in AssemblyRegistry (fixes <a href="https://github.com/xenko3d/xenko/issues/409">#409</a> and fixes <a href="https://github.com/xenko3d/xenko/issues/410">#410</a>) <a href="https://github.com/xenko3d/xenko/commit/7be25ab4aceae0a017f133aa495527afa015bdf3">view commit</a></li>
+<li>Update <a href="http://BACKERS.md">BACKERS.md</a> <a href="https://github.com/xenko3d/xenko/commit/ad2c14a852e875628f312c10157dc9c44addf9fa">view commit</a></li>
+<li>Merge remote-tracking branch 'weblate/master' <a href="https://github.com/xenko3d/xenko/commit/e6c7966fc3acca5bad012daeba9fc4c1587fb01f">view commit</a></li>
+<li>[GameStudio] Fast-reloading for types such as Material and Texture were not working as expected, forcing a full model reload on every edit <a href="https://github.com/xenko3d/xenko/commit/03ebfc8c098746da5e2844f766ecaf246215d8b6">view commit</a></li>
+<li>[GameStudio] Fix for fast-reloading <a href="https://github.com/xenko3d/xenko/commit/5cb22fcf0a056001f7a7fa01190adb190194234e">view commit</a></li>
+<li>[GameStudio] Rewrote and simplified code for fast reloading (also support cases such as material layers properly now) <a href="https://github.com/xenko3d/xenko/commit/e4bae817dc810d36db68192a9f12292e6abf5b52">view commit</a></li>
+<li>[GameStudio] AvalonDock: Fix a bug in AvalonDock 3.4.0 which sets CanClose to false once a LayoutAnchorable is dragged into a new floating window or a new pane. <a href="https://github.com/xenko3d/xenko/commit/9076b1eb951d2fced51103725f517155d823dad2">view commit</a></li>
+<li>[Physics] CleanContacts was working on previousFrameContacts rather than currentFrameContacts, resulting in warnings &quot;Pair not present&quot;. Thanks @EternalTamago for the fix! (fixes <a href="https://github.com/xenko3d/xenko/issues/88">#88</a>) <a href="https://github.com/xenko3d/xenko/commit/93c111a179675384a09a6a7c7a43d0a643f63fce">view commit</a></li>
+<li>Update <a href="http://BACKERS.md">BACKERS.md</a> <a href="https://github.com/xenko3d/xenko/commit/0029ebee92db0458b69e1d3cb3b58126aaff335a">view commit</a></li>
+<li>[Graphics] D3D11: Begin/End were not reentrant because of how Query were used (<a href="https://github.com/xenko3d/xenko/issues/427">#427</a> <a href="https://github.com/xenko3d/xenko/issues/428">#428</a>) <a href="https://github.com/xenko3d/xenko/commit/f60d8bba0c38704361699fd735beb4205230e160">view commit</a></li>
+<li>Merge remote-tracking branch 'origin/master-3.0' <a href="https://github.com/xenko3d/xenko/commit/41f9389825ed6d5c2e0423cb17e3c56c1c6efad8">view commit</a></li>
+<li>[Audio] Encode little bit longer to compensate for encoding delay (fixes <a href="https://github.com/xenko3d/xenko/issues/350">#350</a>) <a href="https://github.com/xenko3d/xenko/commit/83e0c19f62b164f23d24866f1b0e587686850a6b">view commit</a></li>
+<li>[Build] Make sure _XenkoGenerateDependencies runs in all situations (otherwise unit tests won't work) <a href="https://github.com/xenko3d/xenko/commit/5837f9181c885427e35ee6f95276334a26aa801e">view commit</a></li>
+<li>[Build] Make sure _XenkoGenerateDependencies runs also for C++ projects <a href="https://github.com/xenko3d/xenko/commit/452af9896e0992e7b35e74b4cbfd58974c6616a8">view commit</a></li>
+<li>[Build] Readjust _XenkoGenerateDependenciesAfterBuild target/comments <a href="https://github.com/xenko3d/xenko/commit/643d09572e4b5046767712e9339e3b50f35af382">view commit</a></li>
+<li>[Build] Unit tests: use proper xunit.console.exe depending on x86 or x64 <a href="https://github.com/xenko3d/xenko/commit/7fa89cadcf9f1088dc1d996ffea648f54e19a142">view commit</a></li>
+<li>[Tests] Fix sample games unit tests <a href="https://github.com/xenko3d/xenko/commit/d9660087fe00284b22d500d7566489b505232534">view commit</a></li>
+<li>[Samples] Fix Sprite Studio demo (missing reference to SpriteStudio runtime) <a href="https://github.com/xenko3d/xenko/commit/52da39c71844bce88cbf6fbda66b3655270c7dc8">view commit</a></li>
+<li>[Editor] Preview View Model was not properly removing event handlers (fixes <a href="https://github.com/xenko3d/xenko/issues/438">#438</a>) <a href="https://github.com/xenko3d/xenko/commit/be47e4ca32d1c4c444f9c05665fed355c50e21cf">view commit</a></li>
+<li>[Launcher] Improve log/error message in an attempt to investigate <a href="https://github.com/xenko3d/xenko/issues/310">#310</a> <a href="https://github.com/xenko3d/xenko/commit/bbb42daa2a7fef9745f1afe27cfad718ef8ecbaf">view commit</a></li>
+<li>[NuGet] Switch to NuGet 5.0 <a href="https://github.com/xenko3d/xenko/commit/d552c9780d83c705efa01257672165c527886efc">view commit</a></li>
+<li>[Build] Require VS2019 instead of VS2017 to take advantage of new NuGet buildTransitive feature <a href="https://github.com/xenko3d/xenko/commit/105bd5cd007eb490f90e8952932c9cff1d971574">view commit</a></li>
+<li>[Build] Removed obsolete props files <a href="https://github.com/xenko3d/xenko/commit/47e10426f1ed56aabd2e69f5544fa0b660c88177">view commit</a></li>
+<li>[Build] Update NuGet.exe to 5.0 <a href="https://github.com/xenko3d/xenko/commit/230b1acd91e9d5d597e0f148121be26f5962dc15">view commit</a></li>
+<li>[Build] Update build instructions <a href="https://github.com/xenko3d/xenko/commit/c6a35d611ecda67f36d8de52c0049961761fc887">view commit</a></li>
+<li>[VSPackage] Update to new AsyncPackage and upgrade/cleanup unecessary PackageReference <a href="https://github.com/xenko3d/xenko/commit/468faa7de46d2cbdc36aef745f15edacc3f841c0">view commit</a></li>
+<li>[Build] Bump MSBuild.Sdk.Extras to 2.0.24 <a href="https://github.com/xenko3d/xenko/commit/01c81aed9c92a5637900f73e217b68fc1f6681c9">view commit</a></li>
+<li>Merge remote-tracking branch 'origin/master' into vs2019 <a href="https://github.com/xenko3d/xenko/commit/e8eb8dd42c88e285f1d560b71c570352fd1e0414">view commit</a></li>
+<li>[AssemblyProcessor] Fix a case where ImportReference was not called for GetTypeFromHandle(). Bumped Cecil to NuGet 0.10.3 rather than custom one. <a href="https://github.com/xenko3d/xenko/commit/f1183afecbda122c90f1f3f02bdd15738b4c52db">view commit</a></li>
+<li>[Assets] Added a new KeepReferences flag to AssetCloner <a href="https://github.com/xenko3d/xenko/commit/2f396b11a5349f695263d65618b4477f47a4279b">view commit</a></li>
+<li>[Build] Stop detecting Android NDK version using folder name (latest VS2019 uses &quot;ndk-build&quot; folder name without version) <a href="https://github.com/xenko3d/xenko/commit/3af4664400c66cc7d4724f516fbc9ab0728fee10">view commit</a></li>
+<li>[Build] VS2019 now understand WindowsTargetPlatformVersion being set to 10.0 rather than a specific version. Also bump PlatformToolset to v142 <a href="https://github.com/xenko3d/xenko/commit/1947227e81d36eb23b97af6e4d3d2fd6f1dffa96">view commit</a></li>
+<li>[Build] Converted some design-time libraries to .NET Standard 2.0 <a href="https://github.com/xenko3d/xenko/commit/4438b73c816ab77fc40660afb868f6297ef06db0">view commit</a></li>
+<li>Revert &quot;[AssemblyProcessor] Fix a case where ImportReference was not called for GetTypeFromHandle(). Bumped Cecil to NuGet 0.10.3 rather than custom one.&quot; <a href="https://github.com/xenko3d/xenko/commit/f55404586c9fc6db5e6a0473b71d856d99ab30c0">view commit</a></li>
+<li>[AssemblyProcessor] Fix a case where ImportReference was not called for GetTypeFromHandle(). <a href="https://github.com/xenko3d/xenko/commit/e2c44d3d229bea7e895d20094356ce5c37aa37aa">view commit</a></li>
+<li>[Assimp] Added error details if something went wrong (and test if scene is null to avoid NullReferenceException). <a href="https://github.com/xenko3d/xenko/commit/fed4c1c95a2bb5fd8d9055f3010c2baaa722f953">view commit</a></li>
+<li>Merge remote-tracking branch 'weblate/master' <a href="https://github.com/xenko3d/xenko/commit/3b9bce0e88c18404483b23707345372a8419d074">view commit</a></li>
+<li>[Build] Reorganized targets to more easily choose multiple graphics platforms at once. <a href="https://github.com/xenko3d/xenko/commit/c37855a945278d4462bf24a9ed7ab8d29fee94b8">view commit</a></li>
+<li>[Build] Bumped sln to use VS2019+ <a href="https://github.com/xenko3d/xenko/commit/dddd4dd3dcfdb1e9d92d0f67a80eb89303575c1a">view commit</a></li>
+<li>Revert &quot;[Build] Reorganized targets to more easily choose multiple graphics platforms at once.&quot; <a href="https://github.com/xenko3d/xenko/commit/5ebf081c342de88223f28c9618664f2d3c869d59">view commit</a></li>
+<li>[Build] Reorganized targets to more easily choose multiple graphics platforms at once. <a href="https://github.com/xenko3d/xenko/commit/50bcd63e40d4df8112f06f51bc8e8dca9ef28662">view commit</a></li>
+<li>[Build] Removed deprecated Android armeabi CPU architecture (fixes <a href="https://github.com/xenko3d/xenko/issues/461">#461</a>) <a href="https://github.com/xenko3d/xenko/commit/09cadb3d143acb56831b0f69c61beb6db7caf5d9">view commit</a></li>
+<li>[Vulkan] Back buffer: add missing ViewType parameter (2D) when creating back buffer <a href="https://github.com/xenko3d/xenko/commit/40b92cb2fbcb5ebde2858ee06c5364db7f2c0a4d">view commit</a></li>
+<li>[Build] Android: Bump TargetSdkVersion to API level 27 (matches VS2019 install and TargetFrameworkVersion set in csproj) <a href="https://github.com/xenko3d/xenko/commit/89936b1e8163062c7136010171f8a42abd10976c">view commit</a></li>
+<li>[Launcher] NuGet: 1 hour timeout instead of 100 seconds as a workaround for <a href="https://github.com/NuGet/Home/issues/8120">https://github.com/NuGet/Home/issues/8120</a> (fixes <a href="https://github.com/xenko3d/xenko/issues/310">#310</a>) <a href="https://github.com/xenko3d/xenko/commit/6723f0cd54feb5e8e786e486da4b8cda16cd5b97">view commit</a></li>
+<li>[Launcher] Bump to 3.0.8 <a href="https://github.com/xenko3d/xenko/commit/fa4f92e1795cad839d9b174b0151c6c9826c75bf">view commit</a></li>
+<li>Revert &quot;[Assimp] Updated assimp to official 4.1.0 and updated references in projects (closes <a href="https://github.com/xenko3d/xenko/issues/458">#458</a>)&quot; <a href="https://github.com/xenko3d/xenko/commit/4f6f3fa1a29a7a5403612c5b42be456e9547ea3c">view commit</a></li>
+<li>[Build] Removed armeabi libraries to completely fix <a href="https://github.com/xenko3d/xenko/issues/461">#461</a> (fixes <a href="https://github.com/xenko3d/xenko/issues/470">#470</a>) <a href="https://github.com/xenko3d/xenko/commit/79d7d75895e81890de1945b09e4fe7bd235c27d1">view commit</a></li>
+<li>[Build] Android: unify all minSdkVersion to 16 and targetSdkVersion to 27 (fixes <a href="https://github.com/xenko3d/xenko/issues/469">#469</a>) <a href="https://github.com/xenko3d/xenko/commit/d19585fe7afafa3df713f939bb2e338f1c3d8e8c">view commit</a></li>
+<li>[VSPackage] Bump to 3.0.5 <a href="https://github.com/xenko3d/xenko/commit/b2a449162b50bb2cbbf478c5de1f5e7082d66d0f">view commit</a></li>
+<li>[Physics] Renamed NewShapeFromDesc to CreateShape <a href="https://github.com/xenko3d/xenko/commit/d65a7f20d60555a05d42be418f9fbea10e2ce63d">view commit</a></li>
+<li>[Launcher] Allow to select Xenko version <a href="https://github.com/xenko3d/xenko/commit/f4d406cede1875f23886a110d64e14fef21f0566">view commit</a></li>
+<li>[Build] Bumped Cecil to NuGet 0.10.4 rather than custom one. <a href="https://github.com/xenko3d/xenko/commit/2079a316301cba76185cbeaf1b53fa2ddcc7b84a">view commit</a></li>
+<li>[Physics] Update <a href="http://README.md">README.md</a> with new BulletSharpPInvoke repo location <a href="https://github.com/xenko3d/xenko/commit/58e4e12d084a2f03beae105efaf806393b85e47f">view commit</a></li>
+<li>Merge pull request <a href="https://github.com/xenko3d/xenko/issues/289">#289</a> from Eideren/bulletsharp_nuget <a href="https://github.com/xenko3d/xenko/commit/5cee86cd3d8807c39446c07d0481348afd7c4131">view commit</a></li>
+<li>[Physics] Fix typo in PhysicsEngineFlags.ContinuosCollisionDetection (fixes <a href="https://github.com/xenko3d/xenko/issues/152">#152</a>) <a href="https://github.com/xenko3d/xenko/commit/5bb43aabbc3568e5793928f63903bdccb48907f8">view commit</a></li>
+<li>[Build] Properly copy back IntDir/OutDir to IntermediateOutputPath/OutputPath for C++ project <a href="https://github.com/xenko3d/xenko/commit/fb6a53c1fb7a512dff5ef2a37ddb66dcea8e5155">view commit</a></li>
+<li>[Input] Fix SDL key mapping for 0 and 1 <a href="https://github.com/xenko3d/xenko/commit/4ef9581f8d48637542d0c0ae0c8a773d123c4d1c">view commit</a></li>
+<li>[Build] Updated editorconfig to contain VS2019 default style (which we use in Xenko) <a href="https://github.com/xenko3d/xenko/commit/8f5f1b8f4c7d2d234375b3c4cfd4b73ed550891a">view commit</a></li>
+<li>[Build] XenkoContent: do not include in NuGet package as Content <a href="https://github.com/xenko3d/xenko/commit/66d869addaac2feeae11010d93fd8a042d494989">view commit</a></li>
+<li>[Graphics] Compare InputElements length before comparing elements <a href="https://github.com/xenko3d/xenko/commit/76dbcc023f8eb9cafd58115ad4c859b5f36d8e9b">view commit</a></li>
+<li>[Graphics] Remove unecessary GraphicsDevice.ThreadCount <a href="https://github.com/xenko3d/xenko/commit/f03a77dae6f340bced56cf71b297f14e65ee6054">view commit</a></li>
+<li>[SDL] AppActivated and AppDeactivated were reverted <a href="https://github.com/xenko3d/xenko/commit/224035d5a3aad33caebf2ea80cc0b46871d9bc4e">view commit</a></li>
+<li>[Vulkan] Fix validation for texture upload <a href="https://github.com/xenko3d/xenko/commit/5eef1bc988e22753b728bb0036e50ee67a8e45f0">view commit</a></li>
+<li>[Vulkan] Update glslang to 7.11.3214 (May 2019) <a href="https://github.com/xenko3d/xenko/commit/04f62331be646cbbdc9cd1d517e8bf2ae4b83d21">view commit</a></li>
+<li>[Vulkan] PipelineState: Entry point name could be GC before used <a href="https://github.com/xenko3d/xenko/commit/7f293fad43028ced8ffc01e196ffab57bb53a55b">view commit</a></li>
+<li>[Vulkan] PipelineState: Properly set PrimitiveRestartEnable <a href="https://github.com/xenko3d/xenko/commit/7c4be8d30a3f760eed82c571b36c2805fa34232d">view commit</a></li>
+<li>Revert &quot;[Graphics] Vulkan: add support for R10G10B10A2_UNorm and R11G11B10_Float&quot; <a href="https://github.com/xenko3d/xenko/commit/2201148377b079cee72547988bc323b238b75951">view commit</a></li>
+<li>[Vulkan] Fixed memory barriers for Clear functions <a href="https://github.com/xenko3d/xenko/commit/4e1bd31226784600412c6bdf89ccb101a26393db">view commit</a></li>
+<li>[Vulkan] UpdateSubresource: Fixed memory barrier <a href="https://github.com/xenko3d/xenko/commit/ab96eab76ef8168fe5855938a05d9a18515a1d35">view commit</a></li>
+<li>[Vulkan] Fixed mixup between Clear DSV and RT <a href="https://github.com/xenko3d/xenko/commit/f70d74cb15ff731c5e7ddf870e04c0d4979ee576">view commit</a></li>
+<li>[Build] Android: Updated to NDK r19 (with proper version check) and remove our custom libc++abi (first step for <a href="https://github.com/xenko3d/xenko/issues/460">#460</a> and <a href="https://github.com/xenko3d/xenko/issues/379">#379</a>) <a href="https://github.com/xenko3d/xenko/commit/abe058e2c25e2976bfcc96c379156c3ed1e77554">view commit</a></li>
+<li>[Build] Android: Avoid &quot;error MSB4044: The &quot;FilterAssemblies&quot; task was not given a value for the required parameter &quot;DesignTimeBuild&quot;.&quot; with latest Xamarin.Android <a href="https://github.com/xenko3d/xenko/commit/7edf54f3b8dd4c60662663e1b5e060572d0534fb">view commit</a></li>
+<li>[Audio] Android: Updated OpenSLES header (which were incompatible with arm64 due to SLuint32 mapping to long instead of int) (fixes <a href="https://github.com/xenko3d/xenko/issues/379">#379</a>) (fixes <a href="https://github.com/xenko3d/xenko/issues/460">#460</a>) <a href="https://github.com/xenko3d/xenko/commit/71e6437e698c65ff5191a803eb9df367edbcd804">view commit</a></li>
+<li>[Setup] Upgraded Visual C++ prerequisites to latest VS2019 ones <a href="https://github.com/xenko3d/xenko/commit/b506c73e895a29d0e9a3dfe3d233ecdfbb2cb876">view commit</a></li>
+<li>[Assimp] Properly copy Xenko.Assimp.*.dll (fixes <a href="https://github.com/xenko3d/xenko/issues/465">#465</a>) <a href="https://github.com/xenko3d/xenko/commit/8ee49829fb530ff23da0f541cbb465fd9cf6a191">view commit</a></li>
+<li>Merge remote-tracking branch 'weblate/master' <a href="https://github.com/xenko3d/xenko/commit/bfc47b2ded670066bfafaf9976d5778d6bc75cac">view commit</a></li>
+<li>[Build] Android: Workaround for <a href="https://github.com/onovotny/MSBuildSdkExtras/issues/174">https://github.com/onovotny/MSBuildSdkExtras/issues/174</a> <a href="https://github.com/xenko3d/xenko/commit/a91440e963d80edb3679c097924d2896e765fd74">view commit</a></li>
+<li>[Build] Transformed Xenko.Core.BuildEngine into a .NET Standard assembly <a href="https://github.com/xenko3d/xenko/commit/382953c7639a0f767894d5fa72d5d7aa2e0dc06d">view commit</a></li>
+<li>[Build] NETStandard: Switch from AssemblyBuilder.DefineDynamicAssembly <a href="https://github.com/xenko3d/xenko/commit/c291dac0ac88fa3d7493599fa312fa3c6ed5680b">view commit</a></li>
+<li>[Build] NETStandard: Remove unnecessary using <a href="https://github.com/xenko3d/xenko/commit/a726144a9b0e61fac24a76df3dcb930d076c291d">view commit</a></li>
+<li>[Quantum] Renamed Index into NodeIndex to avoid clash with future System.Index <a href="https://github.com/xenko3d/xenko/commit/593754598191c6bc29995478be98962ad959452a">view commit</a></li>
+<li>[Build] NETStandard: Remove unnecessary using <a href="https://github.com/xenko3d/xenko/commit/f61d50d1e88f1023121e651f34817703501ec405">view commit</a></li>
+<li>[Assets] Switch from implicit project to explicit project if necessary (fixes <a href="https://github.com/xenko3d/xenko/issues/442">#442</a>) <a href="https://github.com/xenko3d/xenko/commit/1813edc0e306670f14d8b07ae3381e832ad87144">view commit</a></li>
+<li>[Build] Switched to MSBuild.Sdk.Extras version 2.0.41 <a href="https://github.com/xenko3d/xenko/commit/0f1ff64ea68fdb8b18b9bed8ce37d0266ef30197">view commit</a></li>
+<li>[Build] Doc: Copy .xml file in ref folder <a href="https://github.com/xenko3d/xenko/commit/a4c7c1a748c8a576d5464559c5460b73b3f6ca87">view commit</a></li>
+<li>Revert &quot;[Build] Switched to MSBuild.Sdk.Extras version 2.0.41&quot; <a href="https://github.com/xenko3d/xenko/commit/86344617032260a3935050c00ebcea09684fb1a8">view commit</a></li>
+<li>[Build] Moved Microsoft.NETCore.Platforms reference from Xenko.Graphics to Xenko.Core (otherwise scenarios like referencing only Xenko.Core with win-x64 doesn't work) <a href="https://github.com/xenko3d/xenko/commit/e01b748fabe82b11ea8c9ff58cf30fc3832a3fe9">view commit</a></li>
+<li>[VSPackage] Syntax highlighting service was not properly registered asynchronously (fixes <a href="https://github.com/xenko3d/xenko/issues/651651">#651651</a>) <a href="https://github.com/xenko3d/xenko/commit/285e1a4fefbd38b5b8345a631baf1ce446b7c9ce">view commit</a></li>
+<li>[VSPackage] Fix Xenko detection <a href="https://github.com/xenko3d/xenko/commit/94d82c3c951f1368fc190171d006e2ba8d87dffe">view commit</a></li>
+<li>[VSPackage] Bump version to 3.0.6 <a href="https://github.com/xenko3d/xenko/commit/e0b7fc68d60dea8e240f17cb95b0d5c74df420ad">view commit</a></li>
+<li>[Build] Replaced <None Include=".."> to <None Update=".."> for shaders/effects <a href="https://github.com/xenko3d/xenko/commit/6553d51fbb0455710a56790d6dccf757309bc0e3">view commit</a></li>
+<li>[VSPackage] Add a launchSettings.json with proper parameters for easier debugging <a href="https://github.com/xenko3d/xenko/commit/40d728016005183cdfda11ca6e69491135b182dc">view commit</a></li>
+<li>[Input] SDL: fix OemPlus/Minus mapping (thanks nes) <a href="https://github.com/xenko3d/xenko/commit/b431e3d680757f756e64ad545f578f44f28e7dee">view commit</a></li>
+<li>[UI] Fix comment <a href="https://github.com/xenko3d/xenko/commit/05eba03187cfc18baa674d070abddc82fcb602e2">view commit</a></li>
+<li>[Vulkan] Fix some memory barriers in CommandList.Copy and CopyRegion <a href="https://github.com/xenko3d/xenko/commit/4249625313e1cd12d67fab6750ce87dbb8f7320b">view commit</a></li>
+<li>[Vulkan] CommandList: Don't use ImageView.Null in DescriptorImageInfo <a href="https://github.com/xenko3d/xenko/commit/b5b645029db1b29bedf1ec06d2b78bfbf5820f4c">view commit</a></li>
+<li>[Streaming] Load a few initial mipmaps for streamed texture (otherwise they start as completely uninitialized: bad for rendering, and causes crash on Vulkan) <a href="https://github.com/xenko3d/xenko/commit/1ca201f6f689f954f38b2ce17dfd90534e54d3fb">view commit</a></li>
+<li>[Shaders] Fixed precompiled shader code generation <a href="https://github.com/xenko3d/xenko/commit/76ca6716699a1f95034558d345ed493fbbdf9594">view commit</a></li>
+<li>[Shaders] Added ElementType info to reflection for buffers/textures <a href="https://github.com/xenko3d/xenko/commit/ae24533c7e79d536e73ccf3d0d28e610c1f5d144">view commit</a></li>
+<li>[Vulkan] Properly store info if a texel buffer need to be integer or float. <a href="https://github.com/xenko3d/xenko/commit/cb9b3178ed563a9483c9e3cc9e086785825e32c2">view commit</a></li>
+<li>[Shaders] Make sure NoSampler is added before computing list of resource groups (otherwise it ends up having no location attribute) <a href="https://github.com/xenko3d/xenko/commit/f98890115e4c3d0d80e7768eb3c98797151a0151">view commit</a></li>
+<li>[Input] Fixed copyrights <a href="https://github.com/xenko3d/xenko/commit/2e3591546db05cb0faa8f0ca747296cc15eed86a">view commit</a></li>
+<li>[VSPackage] Fix Xenko version detection to work not only with nuget packages but also solution projects, so that it works with Xenko solution itself. <a href="https://github.com/xenko3d/xenko/commit/964ef5e68c4fa555d890f94c648e871f7e1bb067">view commit</a></li>
+<li>Merge remote-tracking branch 'weblate/master' <a href="https://github.com/xenko3d/xenko/commit/8c97d5d7753185b5111ecb781f45d2b76f05fb90">view commit</a></li>
+<li>[Localization] Added Italian <a href="https://github.com/xenko3d/xenko/commit/c70f07f449c7e4020a92f16c81f161ea7af7a4b5">view commit</a></li>
+<li>[Localization] Added info in doc on how to translate and add new language. <a href="https://github.com/xenko3d/xenko/commit/48692b4baee5b586a4ea5e7e391fe5a73587a287">view commit</a></li>
+<li>[Build] Remove the -beta02 version suffix <a href="https://github.com/xenko3d/xenko/commit/8787a1959ff4dcd1ca9219615463a6dba7b14e56">view commit</a></li>
+<li>[Shaders] D3D: Properly copy ElementType when duplicating resource binding per stage (fixes <a href="https://github.com/xenko3d/xenko/issues/515">#515</a>) <a href="https://github.com/xenko3d/xenko/commit/4e7826874d4b8d4e12222b21f9d2bcf57768f675">view commit</a></li>
+<li>[Samples] Updated to 3.1.0.1 <a href="https://github.com/xenko3d/xenko/commit/3f3158783ec94c9f4705e3afd50e671b05b2ed15">view commit</a></li>
+<li>[Setup] PackageInstall: check if VS Installer needs an update, and if yes try to do it automatically <a href="https://github.com/xenko3d/xenko/commit/aa48bc6479c39f8732d11bb84b2960ff1a1cd593">view commit</a></li>
+<li>[Build] Temporary workaround for .NET Core 3.0 new runtime identifier system (credits go to Solr for finding this fix) <a href="https://github.com/xenko3d/xenko/commit/4a624c6cd8d6f3af95a5586e7190e431b14d2886">view commit</a></li>
+<li>[NuGet] Rewrote how assembly resolver is ordering assemblies found in nuget packages (there was a bug where it could select net46 instead of net461, resulting in crash) <a href="https://github.com/xenko3d/xenko/commit/7ca99e767ab19c2c20fece865c3263706488fc56">view commit</a></li>
+<li>[Build] Moved Xenko.Samples.Templates version in a single unified location to simplify future maintenance <a href="https://github.com/xenko3d/xenko/commit/46bcd063df35ee48dd6edde062ed4b9ac7451da3">view commit</a></li>
+<li>[Setup] PackageInstall: Check VS Installer update if any workload needs to be installed (two UAC, but probably better than an error and extra step) <a href="https://github.com/xenko3d/xenko/commit/fb99c6a35de199b32b5cd999e64b05740054a7d2">view commit</a></li>
+<li>[Build] Bumped MSBuild.Sdk.Extras to 2.0.54 <a href="https://github.com/xenko3d/xenko/commit/339d9e8389b4c44eef0f24bf996235bdb3018397">view commit</a></li>
+<li>[Build] Updated codesign certificates <a href="https://github.com/xenko3d/xenko/commit/006ad132109aefb2c580c938634bd265b2262d27">view commit</a></li>
+<li>[Build] Android: Use AssemblyName rather than RootNamespace for Resource class otherwise it might clash between some assemblies (i.e. Xenko and Xenko.Engine) --&gt; <a href="https://github.com/xenko3d/xenko/commit/b6075c7d75407f7d5daf0e52ff0215c9b8d3dbf9">view commit</a></li>
+<li>Revert &quot;[Build] Remove the -beta02 version suffix&quot; and bump samples accordingly <a href="https://github.com/xenko3d/xenko/commit/238a431e3f6fe10f0e7d9900d16c3cfa365fb9df">view commit</a></li>
+<li>[Build] Use default RuntimeIdentifier for default GraphicsApi, so that even if our custom RuntimeIdentifier are not merged properly, everything still work. <a href="https://github.com/xenko3d/xenko/commit/7d3a9f8a99fd070f90d22300fe3a8f6c424a8e43">view commit</a></li>
+<li>[Build] Removed previous workaround for <a href="https://github.com/NuGet/Home/issues/7351">https://github.com/NuGet/Home/issues/7351</a> <a href="https://github.com/xenko3d/xenko/commit/1f6216fbbe568686e2511ec884caf96280137e16">view commit</a></li>
+<li>[Build] Bump NuGet.exe to 5.3.0 <a href="https://github.com/xenko3d/xenko/commit/7ab69c724a11cc904bdf1aecd39e6ee4c45689b7">view commit</a></li>
+<li>[Build] Improved behavior of XenkoGraphicsApiDependentBuildAll <a href="https://github.com/xenko3d/xenko/commit/98a2a7aaed83326e495e2cca8eb858746aee5f18">view commit</a></li>
+<li>Merge branch 'runtimeid_fixes' into master-3.1 <a href="https://github.com/xenko3d/xenko/commit/297d239cc89ddee88d4cc52448336b35fa93080d">view commit</a></li>
+<li>[Build] Android: Fix NDB platform versions <a href="https://github.com/xenko3d/xenko/commit/c5c2a6402fc480baf45f06225157c213bf7b927a">view commit</a></li>
+<li>[Graphics] Updated SharpDX to 4.2.0 <a href="https://github.com/xenko3d/xenko/commit/d1f18836d6221acc8f79ac38075c95078e53b214">view commit</a></li>
+<li>[UpdateEngine] AssemblyProcessor was generating invalid ldftn for virtual/interface calls (causing crashes with .NET Core 3). Switch to ldvirtftn for those instead. <a href="https://github.com/xenko3d/xenko/commit/e42121aec7db46aab6ce64b58f24df96b05ed720">view commit</a></li>
+<li>[Graphics] Update D3D12 code for SharpDX 4.2.0 <a href="https://github.com/xenko3d/xenko/commit/f5bc7a62af343c082bb7c5ce20222d1c7e30f81d">view commit</a></li>
+<li>[Build] AssemblyProcessor task need to change identity on each change otherwise we can run into <a href="https://github.com/microsoft/msbuild/issues/663%5B#%5D(https://github.com/xenko3d/xenko/issues/)issuecomment-310530046">https://github.com/microsoft/msbuild/issues/663[#](https://github.com/xenko3d/xenko/issues/)issuecomment-310530046</a> <a href="https://github.com/xenko3d/xenko/commit/e2c2eb19fcd6c8f9a2d49945170966cb38a12642">view commit</a></li>
+<li>[Graphics] Streamed compressed texture could end up having their initial texture size not multiple of 4, resulting in error at runtime loading. Skip these cases for now. <a href="https://github.com/xenko3d/xenko/commit/e8c8e4aff1a2fdd610b9f16929fe4104093fe641">view commit</a></li>
+<li>[Fonts] Fix how matrix is computed and compute realVirtualResolutionRatio depending on actual requestedFontSize (fixes <a href="https://github.com/xenko3d/xenko/issues/314">#314</a>) (fixes <a href="https://github.com/xenko3d/xenko/issues/364">#364</a>) <a href="https://github.com/xenko3d/xenko/commit/eafa92f99d5978316b9394f4c3d4e25ae8a1b5d0">view commit</a></li>
+<li>[Fonts] Dynamic fonts: use virtual resolution (otherwise real size changes on every camera move and requests new character, esp. if UI is in 3D) <a href="https://github.com/xenko3d/xenko/commit/22271fb90375a28740e99b3900b5325e4934e6c4">view commit</a></li>
+<li>[Fonts] Do not alter fontSize <a href="https://github.com/xenko3d/xenko/commit/1a9bfd6e775e3cf4d721cbe060299a8dba84a35c">view commit</a></li>
+<li>[Fonts] Turned various internal parameters from ref to in (C<a href="https://github.com/xenko3d/xenko/issues/">#</a> 7.2) <a href="https://github.com/xenko3d/xenko/commit/f1513b93984b2581c13a8adb35bdfee20d6e3817">view commit</a></li>
+<li>[Fonts] Turned various internal parameters from ref to in (C<a href="https://github.com/xenko3d/xenko/issues/">#</a> 7.2) (missing file) <a href="https://github.com/xenko3d/xenko/commit/aaaa975d63bf2014d5ce48fe334f8f6d8636cbff">view commit</a></li>
+<li>[Build] Added a trailing slash at the end of PackageOutputPath (maybe necessary since latest VS2019?) <a href="https://github.com/xenko3d/xenko/commit/f63685447a53dc5cc1b91b43d9eae7bbda1ec7e3">view commit</a></li>
+<li>Revert &quot;[Build] Add XenkoBuildDoc parameter to force TargetFramework even if not specified (seems necessary for older version of Roslyn used in docfx)&quot; <a href="https://github.com/xenko3d/xenko/commit/6c4dfce0191419e6350e0a21cd3c2b533d561124">view commit</a></li>
+<li>[Build] Separated XenkoGraphicsApis into one list per platform (otherwise we can't really control properly and risk overriding a platform with nothing) (fixes <a href="https://github.com/xenko3d/xenko/issues/544">#544</a>) <a href="https://github.com/xenko3d/xenko/commit/d1cb7a553857f27b8a5610dfd39cad2b6cb78f41">view commit</a></li>
+<li>[Build] Remove GetSolutionConfigurationContents hack (which was necessary for WinStore/WinPhone port) (this allows command line build for Android/iOS <a href="https://github.com/xenko3d/xenko/issues/543">#543</a>) <a href="https://github.com/xenko3d/xenko/commit/12094ae9a1e72fcf09bca3e8b121159426cb9d66">view commit</a></li>
+<li>[Build] Remove the -beta02 version suffix and bump samples accordingly <a href="https://github.com/xenko3d/xenko/commit/7419012e054d765dc9434f5beb2442a0db25d7b9">view commit</a></li>
+<li>Updated <a href="http://BACKERS.md">BACKERS.md</a> <a href="https://github.com/xenko3d/xenko/commit/12df753f9549bdf964991d2d4c250d6c11e17630">view commit</a></li>
+</ul>
+<p>WaldiS (3):</p>
+<ul>
+<li>Added translation using Weblate (Polish) <a href="https://github.com/xenko3d/xenko/commit/6ac1950ec85942ac2fc8f54fcc33d6e290ede4bc">view commit</a></li>
+<li>Translated using Weblate (Polish) <a href="https://github.com/xenko3d/xenko/commit/86ab22d454d03da980d5b6f8e0b7244e7e4ec677">view commit</a></li>
+<li>Translated using Weblate (Polish) <a href="https://github.com/xenko3d/xenko/commit/89bef757a76aa87c5370f58826a4daf02e31c85a">view commit</a></li>
+</ul>
+<p>WhyPenguins (1):</p>
+<ul>
+<li>Add output merger UAV binding. (<a href="https://github.com/xenko3d/xenko/issues/478">#478</a>) <a href="https://github.com/xenko3d/xenko/commit/a503e9013938388024b26a0efbab2da54a2f73b4">view commit</a></li>
+</ul>
+<p>Yuuki terumi (5):</p>
+<ul>
+<li>Added translation using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/98fe76f78970af70d443398b6d649ce110ece7e9">view commit</a></li>
+<li>Added translation using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/80b0993254e50b73eabf67df6bbe01d2b1a3be82">view commit</a></li>
+<li>Added translation using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/a47ecf538fc734b4fac9cb2fcfbbe70a41ace909">view commit</a></li>
+<li>Added translation using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/24ef81b8733766ee28fb98a1e5db57615db739cb">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/679a3e0bab06e9b61470bd40029b6570de569947">view commit</a></li>
+</ul>
+<p>dfkeenan (5):</p>
+<ul>
+<li>Allow spaces in TargetDir when building LauncherApp project. <a href="https://github.com/xenko3d/xenko/commit/88811c9cef84073a5fa7a692f57f115673f72350">view commit</a></li>
+<li>Update Roadmap url to github projects. <a href="https://github.com/xenko3d/xenko/commit/24ccfd8bdc29d48cbc0f6b02192cb8e930aa629d">view commit</a></li>
+<li>Add tooltip status text for link buttons. <a href="https://github.com/xenko3d/xenko/commit/aa9577605fa5269c96a2430bf20148d322a9676c">view commit</a></li>
+<li>Add patreon link to launcher. <a href="https://github.com/xenko3d/xenko/commit/70ccdfb760c6cd7324027ea529e019caba7144e4">view commit</a></li>
+<li>Remove AnswerHub link from launcher. <a href="https://github.com/xenko3d/xenko/commit/a29c49d08a6e71602436a22192276d0d800c160e">view commit</a></li>
+</ul>
+<p>ioc (1):</p>
+<ul>
+<li>Fix broken link to Teamcity Android build in ReadMe <a href="https://github.com/xenko3d/xenko/commit/c894473a4d45f4fbb474274b47eba4a43dbbec78">view commit</a></li>
+</ul>
+<p>joreg (1):</p>
+<ul>
+<li>VR tracker support (<a href="https://github.com/xenko3d/xenko/issues/213">#213</a>) <a href="https://github.com/xenko3d/xenko/commit/7e41209357c9abeb45cdba1ff212409e74730d49">view commit</a></li>
+</ul>
+<p>meriaizen86 (3):</p>
+<ul>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/5568199b1d09ed65ee8fb1c0d89ccbe97cc179ca">view commit</a></li>
+<li>Translated using Weblate (Spanish) <a href="https://github.com/xenko3d/xenko/commit/a22fd25eba4dc2c4be834bd65f88ed4a3e7918cd">view commit</a></li>
+<li>Update XenkoDefaultSplashScreen.xktex <a href="https://github.com/xenko3d/xenko/commit/976fae86f8460472f504a57f13a1bf815cf760e7">view commit</a></li>
+</ul>
+<p>pansan (1):</p>
+<ul>
+<li>Translated using Weblate (Chinese (Simplified)) <a href="https://github.com/xenko3d/xenko/commit/98495281053db1686e14fd5285fd24dc9024ef9f">view commit</a></li>
+</ul>
+<p>phr00t (2):</p>
+<ul>
+<li>Make alpha optional in Color4 <a href="https://github.com/xenko3d/xenko/commit/fdad9d838a6c52afb8e3aa6a58c83263d2ebd35a">view commit</a></li>
+<li>[UI] don't invalidate text UI if we set it to the same thing <a href="https://github.com/xenko3d/xenko/commit/0c5a67c0b4e36489c01f0014465457ebc12b8074">view commit</a></li>
+</ul>
+<p>rgawry (1):</p>
+<ul>
+<li>Translated using Weblate (Polish) <a href="https://github.com/xenko3d/xenko/commit/b1909383c11e22e4488d9740dc42ce3eaf32b361">view commit</a></li>
+</ul>
+<p>ssantos (1):</p>
+<ul>
+<li>Translated using Weblate (German) <a href="https://github.com/xenko3d/xenko/commit/b3b1eed9da91cb87a0e05a9d6fccbbbac08be79b">view commit</a></li>
+</ul>
+<p>tebjan (4):</p>
+<ul>
+<li>[Assimp] Updated assimp to official 4.1.0 and updated references in projects (closes <a href="https://github.com/xenko3d/xenko/issues/458">#458</a>) <a href="https://github.com/xenko3d/xenko/commit/abef0e89ab20628bae8d5411173f9dfe8d032623">view commit</a></li>
+<li>[Assimp] Updated assimp to official 4.1.0 and updated references in projects (closes <a href="https://github.com/xenko3d/xenko/issues/458">#458</a>) <a href="https://github.com/xenko3d/xenko/commit/9cdd43c0091991fca36f81842be0fe2259be60e7">view commit</a></li>
+<li>fixed null pointer exceptions in render features <a href="https://github.com/xenko3d/xenko/commit/e3c698465e6d4c1fd1d6b80fcb5131a877c7b7a5">view commit</a></li>
+<li>removing a package did not fire an event, so all related assets where still in the dependency manager <a href="https://github.com/xenko3d/xenko/commit/e822a0411c885af88fcae37727d2d50d741b22e6">view commit</a></li>
+</ul>
+<p>xwellingtonx (1):</p>
+<ul>
+<li>Fix editor resizing and to insert auto hide minimum size (fixes <a href="https://github.com/xenko3d/xenko/issues/189">#189</a> and <a href="https://github.com/xenko3d/xenko/issues/190">#190</a>) <a href="https://github.com/xenko3d/xenko/commit/3aac63f7e580dc36399936c8ffc393fcd81d5b5d">view commit</a></li>
+</ul>
+<p>陈宇航 (1):</p>
+<ul>
+<li>Translated using Weblate (Chinese (Simplified)) <a href="https://github.com/xenko3d/xenko/commit/72700e4fa4f32b4e21844f1eef8141cb0b86b19f">view commit</a></li>
+</ul>
+<p>Generated using</p>
+<pre><code>git shortlog origin/master-3.0..origin/master-3.1 -w0,0,0 --pretty=format:&quot;* %s [view commit](https://github.com/xenko3d/xenko/commit/%H)&quot; | sed -r &quot;s/#([[:digit:]]*)/[#\1](https:\/\/github.com\/xenko3d\/xenko\/issues\/\1)/g&quot;
+</code></pre>
+</div>
+                <hr>
+                <p>
+<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Release</span><span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Tutorials</span></p>
+                <p>
+                    Any comments? You can start 🗨 at <i class="fa-brands fa-github text-decoration-none"></i> <a href="https://github.com/stride3d/stride/discussions" target="_blank" rel="noreferrer">GitHub Discussions</a> or <i class="fa-brands fa-discord text-decoration-none"></i> <a class="" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener">Discord</a>.
+                </p>
+                <p>
+                    <a href="https://github.com/VaclavElias/stride-website-next/blob/eleventy/./posts/2019-11-11-release-xenko-3-1-0.md" target="_blank" rel="noreferrer">Edit</a> this page on
+                    <i class="fa-brands fa-github text-decoration-none"></i>.
+                </p>
+            </article>
+        </div>
+    </div>
+    <div class="row mb-5">
+        
+        
+        <div class="col-md-6 mb-4">
+            
+            <div class="card px-3">
+                <div class="card-body p-4">
+                    <h5>Previous Post</h5>
+                    <a class="prev stretched-link" href="/blog/october-2019/">Recap October 2019</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-6 text-md-end">
+            
+            <div class="card px-3">
+                <div class="card-body p-4">
+                    <h5>Next Post</h5>
+                    <a class="next stretched-link" href="/blog/community-meeting-december-2019/">Community Meeting December 2019</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-primary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-primary">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-primary">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-primary">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-primary">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-primary" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-primary">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-primary">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Blog</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Posts</a></li>
+                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-primary">Tags</a></li>
+                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-primary">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
+                    <a class="link-primary me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-primary me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-primary" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-danger">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-danger">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-danger">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-danger">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-danger">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-danger">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-danger" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-danger">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-danger">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Blog</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-danger">Posts</a></li>
+                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-danger">Tags</a></li>
+                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-danger">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
+                    <a class="link-danger me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-danger me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-info">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-info">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-info">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-info">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-info">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-info">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-info" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-info" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-info" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-info" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-info">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-info">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-info" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Blog</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-info">Posts</a></li>
+                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-info">Tags</a></li>
+                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-info">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
+                    <a class="link-info me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-info me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-info" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-warning">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-warning">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-warning">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-warning">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-warning">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-warning">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-warning" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-warning">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-warning">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Blog</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-warning">Posts</a></li>
+                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-warning">Tags</a></li>
+                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-warning">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
+                    <a class="link-warning me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-warning me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-warning" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <div class="bg-footer show text-light mt-auto">
+    <div class="container">
+        <footer class="pt-5 px-2">
+            <div class="row">
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-success">Features</a></li>
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Blog</a></li>
+                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-success">Download</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-success">Legal</a></li>
+                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-success">Contact us</a></li>
+                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-success">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Docs</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Manual</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Stride API</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Release notes</a></li>
+                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-success" target="_blank" rel="noopener">Open Collective</a></li>
+                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discord</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-success" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-success" target="_blank" rel="noopener">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-success">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-success">Sponsor</a></li>
+                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Blog</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Posts</a></li>
+                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-success">Tags</a></li>
+                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-success">Archive</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
+                    <a class="link-success me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
+                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
+                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
+                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
+                        
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
+                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
+                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
+                    </a>
+                    <a class="link-success me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
+                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
+                <p>Supported by the <a class="link-success" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>© .NET Foundation and Contributors</p>
+            </div>
+        </footer>
+    </div>
+</div>
+    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0"></script>
+</body>
+</html>
