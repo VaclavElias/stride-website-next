@@ -1,15 +1,16 @@
 ---
 layout: post
-title: 'Welcome TurboPlay as Gold Sponsor!'
-author: 'Virgile Bello'
+title: 'Welcome TurboPlay as Gold Sponsor'
+author: virgile
 image_thumb: /images/blog/2019-02-12-turboplay-gold-sponsor/logo_turboplay.png
-popular: true
-disqus_short_name: xenko
+tags: ['Announcement']
 ---
 
 We're happy to announce TurboPlay is helping Xenko not only as a Gold Sponsor, but also have further plans to support Xenko in the future.
 
-![TurboPlay](/images/blog/2019-02-12-turboplay-gold-sponsor/logo_turboplay.png)
+---
+
+{% img 'TurboPlay' '/images/blog/2019-02-12-turboplay-gold-sponsor/logo_turboplay.png' %}
 
 Our respective visions for a more open game engine and decentralized marketplace seem to have a lot in common. 
 
@@ -17,8 +18,6 @@ Thanks TurboPlay for supporting Xenko and its community! This is a very exciting
 
 Open the full post for the press release in all its glory.
 
-<!--more-->
----
 
 ## Press Release: TurboPlay Announces Videogame Engine Support With Xenko
 

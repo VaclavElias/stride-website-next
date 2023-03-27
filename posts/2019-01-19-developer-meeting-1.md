@@ -1,12 +1,15 @@
 ---
 layout: post
-title: 'Developer Meeting #1'
-author: 'Virgile Bello'
-popular: true
-disqus_short_name: xenko
+title: 'Community Meeting January 2019'
+author: virgile
+tags: ['Meeting']
 ---
 
-Now that [Xenko 3.1 beta is well underway](2018-12-24-release-xenko-3-1-0-beta.md), it's time to prepare for the future.
+Get insights from Stride's first developer meeting, covering project status, development progress, and future plans for this versatile game engine.
+
+---
+
+Now that [Xenko 3.1 beta is well underway](/blog/release-xenko-3-1-0-beta/), it's time to prepare for the future.
 
 As part of this process, I would like to involve our newly formed community.
 

@@ -19,7 +19,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] keep the content as it is and where it is, maybe just improve if needed
 
 ## RC2+ Checklist
-- [ ] Web - Past Posts - Update and pretify content - Done 11/64
+- [ ] Web - Past Posts - Update and pretify content - Done 26/64
 - [ ] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
   - CSS Collaborator wanted
 - [x] Web - Search - Include docs in search
@@ -194,6 +194,14 @@ renders as
 
 ```html
 <a href="url" title="title" class="mb-2"><img alt="title" src="url" class="img-fluid" loading="lazy" data-src="url"></a>
+```
+
+`{% img-click 'title' 'url' 'destinationUrl' %}`
+
+renders as
+
+```html
+<a href="destinationUrl" title="title" class="mb-2"><img alt="title" src="url" class="img-fluid" loading="lazy" data-src="url"></a>
 ```
 
 #### Video

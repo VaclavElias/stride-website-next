@@ -104,8 +104,8 @@ module.exports = function (eleventyConfig) {
         return `<img alt="${title}" src="${url}" class="img-fluid mb-2" loading="lazy" data-src="${url}">`;
     });
 
-    eleventyConfig.addShortcode("img-click", function (title, url) {
-        return `<a href="${url}" title="${title}" class="mb-2"><img alt="${title}" src="${url}" class="img-fluid" loading="lazy" data-src="${url}"></a>`;
+    eleventyConfig.addShortcode("img-click", function (title, url, destinationUrl) {
+        return `<a href="${destinationUrl ?? url}" title="${title}" class="mb-2"><img alt="${title}" src="${url}" class="img-fluid" loading="lazy" data-src="${url}"></a>`;
     });
 
     eleventyConfig.addShortcode("youtube", function (id) {
