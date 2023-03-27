@@ -6,17 +6,17 @@ popular: true
 image: https://i.imgur.com/7GVEiSR.jpg
 tags: ['4.1','Physics','Tutorials','Release']
 ---
+
 Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.
-<!-- excerpt -->
+
+---
 
 [[TOC]]
 
 ## Stride On .NET Live
 We had the pleasure to be on a live stream with the .NET team! We gave an introduction, overview and some live demos:
 
-<div class="ratio ratio-16x9 mb-4">
- <iframe width="560" height="315" src="https://www.youtube.com/embed/J6g5y8m26zs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% youtube 'J6g5y8m26zs' %}
 
 ## Improvements Summary
 
@@ -49,19 +49,18 @@ Here's a non-exhaustive list of new improvements:
 ### Dithered shadows for semi-transparent materials
 Produces semi-transparent shadows by poking more and more holes in the shadow map based on the transparency of the object, shadow map filtering will blur those holes with their neighbor which will result in those partially opaque pixels.
 
-<img alt="Dithered shadow settings" src="https://i.imgur.com/xFzuNbl.png" class="img-fluid" loading="lazy" data-src="https://i.imgur.com/xFzuNbl.png">
-<img alt="Dithered shadow effect comparison" src="https://i.imgur.com/kHvSy8a.png" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/kHvSy8a.png">
+{% img 'Dithered shadow settings' 'https://i.imgur.com/xFzuNbl.png' %}
+
+{% img 'Dithered shadow effect comparison' 'https://i.imgur.com/kHvSy8a.png' %}
 
 ### Physics constraints
 Stride's physics system Bullet comes with a set of constraints for you to use in your projects. These constraints are now all visible inside the editor, previewing the constraints using various editor gizmo.
 
-<img alt="preview(to be removed)]()" src="https://i.imgur.com/qiaBBpm.png" class="img-fluid mb-3">
+{% img '' 'https://i.imgur.com/qiaBBpm.png' %}
 
 For more information on all the types of constraints, you can read up about them in the [Stride documentation](https://doc.stride3d.net/latest/en/manual/physics/constraints.html) or watch the video below. 
 
-<div class="ratio ratio-16x9 mb-4">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uMZMYpMD3Wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% youtube 'uMZMYpMD3Wg' %}
 
 ### Physics optimizations
 Retrieving collision and contact information was previously done by re-testing all components for collisions, which, as one might expect, led to awful performance for physics heavy scenes (could take up to and above 90% of the frame).
@@ -71,16 +70,16 @@ Contacts are now lazily evaluated to reduce overhead when nothing ends up readin
 ### Improved editor gizmos
 The old gizmos weren't very nice to look at, so this feature makes them look better and more user-friendly. It also changes how the rotation gizmo works and adds scale planes to the scale gizmo.
 
-<img alt="New gizmos" src="https://i.imgur.com/8siM2Lc.png" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/8siM2Lc.png">
+{% img 'New gizmos' 'https://i.imgur.com/8siM2Lc.png' %}
 
 This feature also updates the text on the CameraOrientationGizmo to be XYZ instead of right/left. Still prefer the old text instead of the XYZ coordinate? Don't worry, there's a setting under the viewport settings that swaps it back to the old text.
 
-<img alt="Rotation" src="https://i.imgur.com/W4zIf7J.png=400x160" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/W4zIf7J.png=400x160">
+{% img 'Rotation' 'https://i.imgur.com/W4zIf7J.png=400x160' %}
 
 ### Intermediate tutorials
 One of the first Open Collective sub-projects is the [intermediate C# tutorials project](https://opencollective.com/stride3d/projects/stride-intermediate-tutorials). After discussion in community meetings and with various contributors donating directly to this project, the amount for this project to be included in Stride quickly became a realization.
 
-<img alt="Intermediate tutorials intro screen" src="https://i.imgur.com/7GVEiSR.jpg" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/7GVEiSR.jpg">
+{% img 'Intermediate tutorials intro screen' 'https://i.imgur.com/7GVEiSR.jpg' %}
 
 With Stride 4.1, you will be able to select the C# intermediate tutorials project as a new template project. The template project contains (at the moment of writing) 11 topics that every developer will want to have a look at.
 
@@ -97,10 +96,8 @@ With Stride 4.1, you will be able to select the C# intermediate tutorials projec
 1. Navigation
 
 Each tutorial has a video tutorial accompanying it, which can be found on Stride's [Youtube channel](https://www.youtube.com/c/Stride3D). Below you can find the full playlist. 
- 
- <div class="ratio ratio-16x9 mb-4">
- <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
- </div>
+
+{% youtube-playlist 'PLRZx2y7uC8mOE6_L0ZiFxNBE7HmzU2dP7' %}
 
 ## Known Issues
 
@@ -109,7 +106,7 @@ The transition to .NET6 unfortunately broke the help tooltips and the code compl
 
 The reason for the error is that [RoslynPad](https://github.com/roslynpad/roslynpad), the underlaying library, also needs an update or fix. We'll adress this in one of the upcoming minor version releases.
 
-<img alt="Integrated Editor Issue" src="https://i.imgur.com/Gn2i6Js.png" class="img-fluid mb-2" loading="lazy" data-src="https://i.imgur.com/Gn2i6Js.png">
+{% img 'Integrated Editor Issue' 'https://i.imgur.com/Gn2i6Js.png' %}
 
 ## A Little Help
 We, contributors, believe that Stride can help .NET game developers make the games they want with ease using their favorite languages. We want to make sure Stride offers the most comfortable environment for developing games, and this takes time and effort.

@@ -12,7 +12,8 @@
 {% img 'title' 'url' %}
 {% img-click 'title' 'url' %}
 
-{% youtube 'url' %}
+{% youtube 'id' %}
+{% youtube-playlist 'id' %}
 
 # Iframe
 - Note: no frameborder

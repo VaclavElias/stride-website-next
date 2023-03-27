@@ -26,15 +26,6 @@ module.exports = function (eleventyConfig) {
         "node_modules/@fortawesome/fontawesome-free/webfonts": "webfonts/",
     });
 
-    //eleventyConfig.exc
-
-    //eleventyConfig.addCollection("posts", (collection) => {
-    //    return collection.getFilteredByTag("blog");
-    //});
-
-    //eleventyConfig.addWatchTarget("./assets/css");
-    //eleventyConfig.addWatchTarget("./assets/css");
-
     eleventyConfig.setLiquidOptions({
         dynamicPartials: false,
         strictFilters: false
@@ -65,8 +56,6 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
-        // Optional, default is "---"
-        excerpt_separator: "<!-- excerpt -->"
     });
 
     eleventyConfig.addCollection('tagList', (collections) => {
@@ -115,12 +104,16 @@ module.exports = function (eleventyConfig) {
         return `<img alt="${title}" src="${url}" class="img-fluid mb-2" loading="lazy" data-src="${url}">`;
     });
 
-    eleventyConfig.addShortcode("img-click", function (title, url) {
-        return `<a href="${url}" title="${title}" class="mb-2"><img alt="${title}" src="${url}" class="img-fluid" loading="lazy" data-src="${url}"></a>`;
+    eleventyConfig.addShortcode("img-click", function (title, url, destinationUrl) {
+        return `<a href="${destinationUrl ?? url}" title="${title}" class="mb-2"><img alt="${title}" src="${url}" class="img-fluid" loading="lazy" data-src="${url}"></a>`;
     });
 
     eleventyConfig.addShortcode("youtube", function (id) {
         return `<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/${id}" title="YouTube video" allowfullscreen></iframe></div>`;
+    });
+
+    eleventyConfig.addShortcode("youtube-playlist", function (id) {
+        return `<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/videoseries?list=${id}" title="YouTube video" allowfullscreen></iframe></div>`;
     });
 
     let markdownLibrary = markdownIt({
@@ -132,7 +125,7 @@ module.exports = function (eleventyConfig) {
             symbol: "🔗",
             class: "direct-link"
         })
-    }).use(markdownItToc);
+    }).use(markdownItToc, { includeLevel: [2, 3] });
 
     eleventyConfig.setLibrary("md", markdownLibrary);
 
