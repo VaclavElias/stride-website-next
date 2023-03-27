@@ -147,8 +147,12 @@ a {
     background-image: url(/images/top/svg/bg_dark.svg);
 }
 
-.bg-light {
-    background-image: url(/images/top/svg/bg_light.svg);
+[data-bs-theme=light] {
+    .bg-light-stride {
+        background-image: url(/images/top/svg/bg_light.svg);
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+    }
 }
 
 [data-bs-theme=dark] {
@@ -158,6 +162,11 @@ a {
 
     .bg-light {
         background-image: url(/images/top/svg/bg_dark-dark-mode.svg);
+    }
+
+    .bg-light-stride {
+        --bs-bg-opacity: 0.6;
+        background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
     }
 
     .image-code-script-wrapper {
