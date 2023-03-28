@@ -1,9 +1,13 @@
 ---
 layout: post
-title: 'Feature spotlight: particle effects'
-author: 'Silicon Studio'
+title: 'Feature Spotlight: Particle Effects'
+author: silicon-studio
 image_thumb: /images/blog/2017-01-18-particles/thumb.png
-disqus_short_name: paradox3d
+tags: ['Particles']
+---
+
+Dive into the world of particle effects with Stride3D's comprehensive guide! Learn how to create mesmerizing visuals in your 3D projects using particles, tips on optimizing performance, and inspiring examples from the industry. Master the art of visual storytelling with Stride3D
+
 ---
 
 Happy 2017! 
