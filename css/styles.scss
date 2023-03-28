@@ -1,6 +1,5 @@
 @import "custom-bootstrap";
 @import "/css/all.min.css";
-/*@import "syntax-highlighting";*/
 :root {
     --main-shadow: 2px 2px 8px #0000001a;
 }
@@ -211,3 +210,4 @@ a {
     background: url(../images/top/svg/dot.svg) repeat 0 0 rgba(0, 0, 0, 0.3);
     background-size: 50px 50px;
 }
+@import "syntax-highlighting";

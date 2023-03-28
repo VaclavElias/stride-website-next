@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Game Spotlight: Children of the Galaxy
+title: 'Game Spotlight: Children of the Galaxy'
 author: silicon-studio
 image_thumb: /images/blog/children-of-galaxy/thumb.jpg
 ---

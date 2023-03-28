@@ -1,21 +1,22 @@
 ---
 layout: post
-title: 'Xenko 2.0 released now!'
-author: 'Silicon Studio'
+title: 'Xenko 2.0 Released'
+author: silicon-studio
 image_thumb: /images/blog/release-2.0/thumbnail.jpg
-popular: true
-disqus_short_name: paradox3d
+tags: ['Release']
 ---
 
-After nearly two years of open beta, we’re proud to announce that **Xenko is now available as a commercial product**. Xenko 2.0 adds features such as full VR support, a pipeline rendering editor, light probes, and scene streaming management, along with greatly improved stability (more details below).
+After nearly two years of open beta, we’re proud to announce that **Xenko is now available as a commercial product**. Xenko 2.0 adds features such as full VR support, a pipeline rendering editor, light probes, and scene streaming management, along with greatly improved stability.
 
-![Starbreach Image](/images/blog/release-2.0/starbreach.jpg)
+---
+
+[[TOC]]
+
+{% img 'Starbreach Image' '/images/blog/release-2.0/starbreach.jpg' %}
 
 We’d like to thank all our beta users for their feedback, which helped us improve Xenko immeasurably over the last two years. We couldn’t have done it without you!
 
-<br/>
-<a class="x_download hidden-sm hidden-xs" href="/download" target="_self"><span>(icon)</span> Get Xenko 2.0</a>
-<br/>
+[Get Xenko 2.0](/download)
 
 ## Pricing
 
@@ -53,19 +54,21 @@ Beta Xenko versions will remain available for now under the same conditions as b
 
 ## What’s new in Xenko 2.0?
 
-#### Scene hierarchy and scene streaming
+### Scene hierarchy and scene streaming
 
 Working with scenes has become more flexible. Instead of a single scene, your game can now use a hierarchy of scenes to organize entities into levels, areas or layers, and let teams collaborate on them more efficiently.
 
 Game Studio displays child scenes together with their parent. Individual scenes can be loaded, unload, locked and moved around.
 
-<video autoplay loop class="responsive-video" poster="/images/blog/release-2.0/scene_editor_640.jpg">
-   <source src="/images/blog/release-2.0/scene_editor_640.mp4" type="video/mp4">
+<div class="ratio ratio-16x9 mb-2">
+<video autoplay controls loop preload="none" poster="/images/blog/release-2.0/scene_editor_640.jpg">
+<source src="/images/blog/release-2.0/scene_editor_640.mp4" type="video/mp4">
 </video>
+</div>
 
 When running your game, the **default scene** set in your **game settings** is loaded as the **root scene** and can be used to store persistent entities. More scenes can be dynamically loaded and unloaded from scripts and added as **child scenes**.
 
-```
+```csharp
 var childScene = Content.Load<Scene>("myChildScene");
 SceneSystem.SceneInstance.RootScene.Children.Add(childScene);
 ```
@@ -80,7 +83,7 @@ You can now use a scene's `Offset` to move its entities both at design time and 
 
 The `ChildSceneComponent` has been removed. We encourage all entities to be managed by a single **entity manager** and rendered by a single **graphics compositor**.
 
-#### Virtual Reality
+### Virtual Reality
 
 Enabling VR is now as simple as a single click!
 
@@ -98,7 +101,7 @@ Save valuable time by visualizing and testing VR directly from the scene editor:
    <source src="/images/blog/release-2.0/vr_editor_640.mp4" type="video/mp4">
 </video>
 
-#### Global illumination with light probes
+### Global illumination with light probes
 
 Light probes capture the lighting at the position you place them. They simulate indirect light, the effect of light bouncing off surfaces and illuminating other surfaces.
 
@@ -112,7 +115,7 @@ Light probes can be **placed freely** and are processed **per pixel**. This mean
 
 Last but not least, you can now very easily capture a DDS cubemap from current camera position in editor, for use as a diffuse or specular skybox light.
 
-#### Light shafts
+### Light shafts
 
 Xenko now supports shadow map-based light shafts for directional lights.
 
@@ -126,7 +129,7 @@ Our implementation uses ray-marching rather than post effects, making the shaft 
    <source src="/images/blog/release-2.0/lightshaft_640.mp4" type="video/mp4">
 </video>
 
-#### Graphics compositor
+### Graphics compositor
 
 The graphics compositor is now a separate asset.
 
@@ -136,7 +139,7 @@ Rendering parameters (such as VR) and post effect parameters can be tweaked in j
 
 This is just the first step towards making the graphics compositor easy to customize and extend. Stay tuned for more changes in future releases! 
 
-#### Improved Visual Studio experience
+### Improved Visual Studio experience
 
 We now have full support for **Visual Studio 2017**!
 
@@ -153,7 +156,7 @@ Programmers working with Xenko often go back and forth between Game Studio and V
 
 Also, our whole build infrastructure and script editor is now based on the latest version of MSBuild 2017 and Roslyn. Supporting the new VS2017 Project System with .NET Standard is just a few steps away!
 
-#### Faster & lighter
+### Faster & lighter
 
 In order to provide a better experience for users, we've been working hard on various fronts to make the editor smoother and more responsive. This is still a work in progress and expect regular progress.
 
