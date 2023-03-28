@@ -1,16 +1,21 @@
 ---
 layout: post
-title: 'Feature spotlight: Xenko 3.1 + NuGet'
-author: 'Virgile Bello'
-popular: true
-disqus_short_name: xenko
+title: 'Feature Spotlight: Xenko 3.1 + NuGet'
+author: virgile
+tags: ['NuGet']
+---
+
+Discover the powerful features of Xenko 3.1, the latest update to the Stride 3D game engine. Learn how NuGet integration streamlines development and enhances your game creation experience. Dive into our detailed blog post now!
+
 ---
 
 Today, I would like to highlight some work being done on Xenko.
 
 Xenko 3.1 will bring some big changes in the way Xenko is packaged, distributed and consumed.
 
-## Xenko 3.0: welcome PackageReference!
+[[TOC]]
+
+## Xenko 3.0: Welcome PackageReference!
 
 Xenko was always a big proponent of NuGet: since first version, Xenko was distributed as a NuGet package.
 
@@ -22,17 +27,17 @@ This Xenko "fat" package is still containing everything: Xenko runtime, editor, 
 
 Additionally, Xenko assembly references are still manually added through complex target files rather than following package reference layout and see them where they should have been, nested inside the Xenko NuGet reference:
 
-![GitHub](/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-old.png)
+{% img 'GitHub' '/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-old.png' %}
 
-## Xenko 3.1: enter modular Xenko!
+## Xenko 3.1: Enter Modular Xenko
 
 Most of the changes discussed in this section are still in a prototype state, but should hopefully be merged soon in master.
 
-### One package per assembly
+### One Package per Assembly
 
 Xenko 3.1 will bring Xenko more in line with a more proper way of organizing NuGet package: one package per assembly, with proper dependencies:
 
-![GitHub](/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-new.png)
+{% img 'GitHub' '/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-new.png' %}
 
 As a result, it is now possible to create a game project that references only the packages you want. Here are a few examples of "core" packages:
 
@@ -53,7 +58,7 @@ If you don't reference those packages, they won't be packaged with your game eit
 
 Also, you will be free to replace those functionalities with alternative libraries.
 
-### Package layout: following best NuGet practices
+### Package Layout: Following Best NuGet Practices
 
 Previously Xenko references were added to the project using custom targets.
 
@@ -66,7 +71,7 @@ We still have a few custom MSBuild targets but reduced them to minimum.
 
 NuGet packages will have a `xenko` folder containing Xenko assets. As a result, user will be able to generate nuget package containing Xenko assets out of the box from Visual Studio and publish them on NuGet for general consumption.
 
-### Distribution platform: time to switch to nuget.org?
+### Distribution Platform: time to switch to nuget.org?
 
 This is still something under consideration and it will need some testing, but it now starts to make sense to distribute Xenko packages on [nuget.org](https://nuget.org) rather than our custom NuGet server.
 
@@ -82,7 +87,7 @@ This allows for distributing those tools as very small and easy-to-upgrade packa
 
 This brings lot of technical challenges but should allow us in the future to be more flexible in the future to load the exact runtime and plugins that the user project reference rather than the one hardcoded with the tool.
 
-### Future: plugin support for editor
+### Future: Plugin Support for Editor
 
 Xenko 3.1 editor will still be monolithic: editor support for UI, SpriteStudio, Video and other optional modules will be hardcoded.
 

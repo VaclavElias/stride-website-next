@@ -1,9 +1,12 @@
 ---
 layout: post
-title: 'Changes to the Xenko license'
-author: 'Silicon Studio'
-popular: true
-disqus_short_name: paradox3d
+title: 'Changes to the Xenko License'
+author: silicon-studio
+tags: ['Announcement']
+---
+
+Dive into the significant changes to Xenko's license and how they impact the Stride 3D game engine community. Understand the new licensing terms, benefits, and opportunities they present for developers. Get all the details in our informative blog post!
+
 ---
 
 Long time no see!

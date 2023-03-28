@@ -1,9 +1,12 @@
 ---
 layout: post
-title: 'Opensourcing done! What''s next?'
-author: 'Virgile Bello'
-popular: true
-disqus_short_name: xenko
+title: Opensourcing Done! What's Next?
+author: virgile
+tags: ['Announcement']
+---
+
+Explore the future of Stride 3D game engine after going open source. Understand the roadmap, exciting developments, and how the community plays a crucial role in shaping its growth. Read our in-depth blog post to learn more!
+
 ---
 
 Now that [Xenko is opensource under the MIT license](2018-08-02-xenko-opensource-mit.md) and the dust settled a little bit (took a few weeks of vacations after the opensource release crunch), it's time to take a step back, think about **what's next**, and start **building it together**!
