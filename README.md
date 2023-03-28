@@ -60,6 +60,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [ ] Web - Futher update existing images and content across pages
 - [ ] Web - Friends - Shall we link to our friends GoDot, others, just to be open and making friends in other C# open source game communities? 
 - [ ] Web - Authors links to author pages
+- [ ] Web - Split Tags to 2 columns in the /tags page
 - [ ] Web - Blog Comments from GitHub Issues - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/, the problem is spam..
 - [ ] Include Avatar, with different asssets like dotnet bot, use also for 2D Games
 - [ ] Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
