@@ -11,6 +11,7 @@
 
 {% img 'title' 'url' %}
 {% img-click 'title' 'url' %}
+{% img-click 'title' 'url' 'destinationUrl' %}
 
 {% youtube 'id' %}
 {% youtube-playlist 'id' %}

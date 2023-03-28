@@ -1,9 +1,12 @@
 ---
 layout: post
-title: 'Community Meeting #2'
-author: 'Virgile Bello'
-popular: true
-disqus_short_name: xenko
+title: 'Community Meeting July 2019'
+author: virgile
+tags: ['Meeting']
+---
+
+Get an overview of Stride's second community meeting, discussing updates, future plans, and addressing questions from developers and users of the game engine.
+
 ---
 
 Time for our second community meeting.
