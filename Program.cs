@@ -1,8 +1,5 @@
-var builder = WebApplication.CreateBuilder(new WebApplicationOptions
-{
-    Args = args,
-    WebRootPath = "_site"
-});
+var builder = WebApplication.CreateBuilder(args);
+
 var app = builder.Build();
 
 //app.MapGet("/stride", () => "Hello Stride!");
