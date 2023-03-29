@@ -1,5 +1,6 @@
 @import "custom-bootstrap";
 @import "/css/all.min.css";
+
 :root {
     --main-shadow: 2px 2px 8px #0000001a;
 }
@@ -142,11 +143,15 @@ a {
     }
 }
 
-.bg-dark {
+.bg-stride {
     background-image: url(/images/top/svg/bg_dark.svg);
 }
 
 [data-bs-theme=light] {
+    .bg-stride {
+        background-image: url(/images/top/svg/bg_dark.svg);
+    }
+
     .bg-light-stride {
         background-image: url(/images/top/svg/bg_light.svg);
         --bs-bg-opacity: 1;
@@ -155,7 +160,7 @@ a {
 }
 
 [data-bs-theme=dark] {
-    .bg-dark {
+    .bg-stride {
         background-image: url(/images/top/svg/bg_dark-dark-mode.svg);
     }
 
@@ -210,4 +215,5 @@ a {
     background: url(../images/top/svg/dot.svg) repeat 0 0 rgba(0, 0, 0, 0.3);
     background-size: 50px 50px;
 }
+
 @import "syntax-highlighting";

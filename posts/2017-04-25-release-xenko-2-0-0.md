@@ -73,6 +73,12 @@ var childScene = Content.Load<Scene>("myChildScene");
 SceneSystem.SceneInstance.RootScene.Children.Add(childScene);
 ```
 
+<div class="ratio ratio-16x9 my-2">
+<video autoplay controls loop preload="none" poster="/images/blog/release-2.0/scene_streaming_640.jpg">
+<source src="/images/blog/release-2.0/scene_streaming_640.mp4" type="video/mp4">
+</video>
+</div>
+
 <video autoplay loop class="responsive-video" poster="/images/blog/release-2.0/scene_streaming_640.jpg">
    <source src="/images/blog/release-2.0/scene_streaming_640.mp4" type="video/mp4">
 </video>
