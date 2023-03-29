@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Some basic Xenko facts'
-author: 'Silicon Studio'
+author: silicon-studio
 image_thumb: /images/blog/release-1.4/XenkoLogoTM_thumb.png
 popular: true
 disqus_short_name: paradox3d

@@ -60,11 +60,7 @@ Working with scenes has become more flexible. Instead of a single scene, your ga
 
 Game Studio displays child scenes together with their parent. Individual scenes can be loaded, unload, locked and moved around.
 
-<div class="ratio ratio-16x9 mb-2">
-<video autoplay controls loop preload="none" poster="/images/blog/release-2.0/scene_editor_640.jpg">
-<source src="/images/blog/release-2.0/scene_editor_640.mp4" type="video/mp4">
-</video>
-</div>
+{% video '/images/blog/release-2.0/scene_editor_640.mp4' %}
 
 When running your game, the **default scene** set in your **game settings** is loaded as the **root scene** and can be used to store persistent entities. More scenes can be dynamically loaded and unloaded from scripts and added as **child scenes**.
 
@@ -73,15 +69,7 @@ var childScene = Content.Load<Scene>("myChildScene");
 SceneSystem.SceneInstance.RootScene.Children.Add(childScene);
 ```
 
-<div class="ratio ratio-16x9 my-2">
-<video autoplay controls loop preload="none" poster="/images/blog/release-2.0/scene_streaming_640.jpg">
-<source src="/images/blog/release-2.0/scene_streaming_640.mp4" type="video/mp4">
-</video>
-</div>
-
-<video autoplay loop class="responsive-video" poster="/images/blog/release-2.0/scene_streaming_640.jpg">
-   <source src="/images/blog/release-2.0/scene_streaming_640.mp4" type="video/mp4">
-</video>
+{% video '/images/blog/release-2.0/scene_streaming_640.mp4' %}
 
 To get started, take a look at the new built-in `SceneStreamingScript`. It demonstrates background scene loading when passing through trigger volumes. 
 
@@ -97,15 +85,11 @@ Xenko's clustered forward rendering, with its multisample anti-aliasing, makes i
 
 Xenko comes with a VR game sample that shows you how to implement VR gameplay, including environment interaction and teleportation:
 
-<video autoplay loop class="responsive-video" poster="/images/blog/release-2.0/vr_template_640.jpg">
-   <source src="/images/blog/release-2.0/vr_template_640.mp4" type="video/mp4">
-</video>
+{% video '/images/blog/release-2.0/vr_template_640.mp4' %}
 
 Save valuable time by visualizing and testing VR directly from the scene editor:
 
-<video autoplay loop class="responsive-video" poster="/images/blog/release-2.0/vr_editor_640.jpg">
-   <source src="/images/blog/release-2.0/vr_editor_640.mp4" type="video/mp4">
-</video>
+{% video '/images/blog/release-2.0/vr_editor_640.mp4' %}
 
 ### Global illumination with light probes
 
@@ -113,35 +97,29 @@ Light probes capture the lighting at the position you place them. They simulate 
 
 They can make a dramatic difference to the mood and appearance of your scene.
 
-<video autoplay loop class="responsive-video" poster="/images/blog/release-2.0/light_probes_640.jpg">
-   <source src="/images/blog/release-2.0/light_probes_640.mp4" type="video/mp4">
-</video>
+{% video '/images/blog/release-2.0/light_probes_640.mp4' %}
 
 Light probes can be **placed freely** and are processed **per pixel**. This means you can use them not only on small dynamic objects, but also large or static objects (until we have light maps for those!).
 
 Last but not least, you can now very easily capture a DDS cubemap from current camera position in editor, for use as a diffuse or specular skybox light.
 
-### Light shafts
+### Light Shafts
 
 Xenko now supports shadow map-based light shafts for directional lights.
 
-<video autoplay loop class="responsive-video" poster="/images/blog/release-2.0/lightshaft_CoS_640.jpg">
-   <source src="/images/blog/release-2.0/lightshaft_CoS_640.mp4" type="video/mp4">
-</video>
+{% video '/images/blog/release-2.0/lightshaft_CoS_640.mp4' %}
 
 Our implementation uses ray-marching rather than post effects, making the shaft visible and cool-looking even if the light source isn't visible.
 
-<video autoplay loop class="responsive-video" poster="/images/blog/release-2.0/lightshaft_640.jpg">
-   <source src="/images/blog/release-2.0/lightshaft_640.mp4" type="video/mp4">
-</video>
+{% video '/images/blog/release-2.0/lightshaft_640.mp4' %}
 
-### Graphics compositor
+### Graphics Compositor
 
 The graphics compositor is now a separate asset.
 
 Rendering parameters (such as VR) and post effect parameters can be tweaked in just a few clicks.
 
-![Graphics compositor](/images/blog/release-2.0/graphics_compositor.jpg)
+{% img-click 'Graphics compositor' '/images/blog/release-2.0/graphics_compositor.jpg' %}
 
 This is just the first step towards making the graphics compositor easy to customize and extend. Stay tuned for more changes in future releases! 
 
@@ -162,7 +140,7 @@ Programmers working with Xenko often go back and forth between Game Studio and V
 
 Also, our whole build infrastructure and script editor is now based on the latest version of MSBuild 2017 and Roslyn. Supporting the new VS2017 Project System with .NET Standard is just a few steps away!
 
-### Faster & lighter
+### Faster & Lighter
 
 In order to provide a better experience for users, we've been working hard on various fronts to make the editor smoother and more responsive. This is still a work in progress and expect regular progress.
 

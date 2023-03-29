@@ -1,16 +1,19 @@
 ---
 layout: post
-title: 'Add Xbox Live service to your Xenko project!'
-author: 'Silicon Studio'
+title: 'Add Xbox Live Service to Your Xenko Project'
+author: silicon-studio
 image_thumb: /images/blog/2017-03-09-xbox-live/xbox-live-resized.png
-popular: true
-disqus_short_name: paradox3d
 ---
-![Achievement Unlocked](../../images/blog/2017-03-09-xbox-live/achievement-unlocked-with-xenko.png)
+
+Discover how to integrate Xbox Live services into your Xenko game project with this step-by-step guide, enhancing player experiences and social features.
+
+---
+
+{% img 'Achievement Unlocked' '/images/blog/2017-03-09-xbox-live/achievement-unlocked-with-xenko.png' %}
 
 We have continued to work hard on our support in Xenko for Microsoft's Universal Windows Platform (UWP). Keeping with this, we've been working closely with our Microsoft partners to add official support for the Xbox Live SDK. So, now Xenko developers will have the opportunity to add Xbox live to their games. 
 
-**What is the Xbox Live SDK?**
+## What is the Xbox Live SDK?
 
 The Xbox Live SDK is a set of APIs that power all social interactions on Xbox Live including friends, achievements, and multiplayer. Started originally on XBox, the service is now available on multiple other platforms.
 

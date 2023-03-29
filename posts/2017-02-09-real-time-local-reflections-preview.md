@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Real-time local reflections preview'
-author: 'Silicon Studio'
+author: silicon-studio
 image_thumb: /images/blog/2017-02-09-real-time-local-reflections/night-reflections.png
 popular: true
 disqus_short_name: paradox3d

@@ -1,10 +1,11 @@
 ---
 layout: post
 title: 'Release and Pricing Information'
-author: 'Silicon Studio'
-image_thumb: /images/blog/release-1.4/XenkoLogoTM_thumb.png
-popular: true
-disqus_short_name: paradox3d
+author: silicon-studio
+---
+
+Explore the latest release details and pricing information for Stride 3D, the versatile game engine designed to power your creative projects.
+
 ---
 
 We are pleased to announce that Xenko will exit its beta stage on April, 2017 with the first commercial version of the engine! 
