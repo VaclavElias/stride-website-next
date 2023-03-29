@@ -17,6 +17,12 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] remove old unnecessary code, AddThis, Discus, JQuery, JavaScript libraries
 - [x] get better website responsivness
 - [x] keep the content as it is and where it is, maybe just improve if needed
+  - [x] add excerpt
+  - [x] fix links
+  - [x] minor fixes and removed unnecessary content
+    
+  
+  
 
 ## RC2+ Checklist
 - [ ] Web - Past Posts - Update and pretify content - Done 26/64
@@ -223,6 +229,17 @@ renders as
 <div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/videoseries?list=id" title="YouTube video" allowfullscreen></iframe></div>
 ```
 
+`{% video 'url' %}`
+
+renders as
+
+```html
+<!-- jpgUrl = url.replace(".mp4", ".jpg") // make sure you have got a pair .mp4 and .jpg -->
+<div class="ratio ratio-16x9 mb-2"><video autoplay loop class="responsive-video" poster="jpgUrl"><source src="url" type="video/mp4"></video></div>
+```
+
+
+
 ## Eleventy
 
 ### Packages
@@ -234,6 +251,10 @@ renders as
 ## Folder Structure
 
 ## Deployment
+
+### GitHub Pages
+### Azure Web Apps - .NET Framework 4.8
+### Azure Web Apps - .NET Core 7
 
 ## Styling
 
