@@ -16,6 +16,8 @@
 {% youtube 'id' %}
 {% youtube-playlist 'id' %}
 
+{% video 'url' %}
+
 # Iframe
 - Note: no frameborder
 
