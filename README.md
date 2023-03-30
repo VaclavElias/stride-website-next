@@ -8,18 +8,17 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## The motivation for the update
 
-- [x] modern looking and simplified design
-- [x] modern static page generator
-- [x] use Bootstrap 5.3
-  - this was also used previously with lots of inconsistency
-- [x] use Fontawesome 6
-  - this was also used previously
-- [x] remove old unnecessary code, AddThis, Discus, JQuery, JavaScript libraries
-- [x] get better website responsivness
-- [x] keep the content as it is and where it is, maybe just improve if needed
-  - [x] add excerpt
-  - [x] fix links
-  - [x] minor fixes and removed unnecessary content
+- [x] Consistency improvements across pages, posts, styling
+- [x] Modern looking and simplified design
+- [x] Modern static page generator - Eleventy 2.0 (previously Jekyll)
+- [x] Bootstrap 5.3 (this was also used previously with lots of inconsistency)
+- [x] Fontawesome 6 (this was also used previously)
+- [x] Remove old unnecessary code, AddThis, Discus, JQuery, JavaScript libraries
+- [x] Get better website responsivness (mobile, table, desktop)
+- [x] Keep the content as it is and where it is, maybe just improve if needed
+  - [x] Add excerpt
+  - [x] Fix links
+  - [x] Minor fixes and removed unnecessary content
     
   
   
