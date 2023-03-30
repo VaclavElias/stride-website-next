@@ -9,6 +9,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 ## The motivation for the update
 
 - [x] Consistency improvements across pages, posts, styling
+- [x] Content readability
 - [x] Modern looking and simplified design
 - [x] Modern static page generator - Eleventy 2.0 (previously Jekyll)
 - [x] Bootstrap 5.3 (this was also used previously with lots of inconsistency)
