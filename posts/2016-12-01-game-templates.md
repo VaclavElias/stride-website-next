@@ -3,7 +3,7 @@ layout: post
 title: 'Newly Added Game Templates'
 author: silicon-studio
 image_thumb: /images/blog/2016-12-01-game-templates/template_thumb.png
-tags: ['Templates', 'Education']
+tags: ['Templates']
 ---
 
 With Xenko 1.9β, we’ve released our brand spanking new Game Templates! Super fun stuff, so open the blog post to see more!
@@ -17,10 +17,6 @@ We’ve started transitioning from small individual samples to more complete gam
 
 
 The three templates we’ve added are:
-
-* First-person shooter**
-* Third-person platformer**  
-* Top-down camera RPG**
 
 [[TOC]]
 
@@ -43,7 +39,7 @@ This template positions the camera at a fixed angle above the character and enab
 
 {% video '/images/blog/navmeshes/NoOutlineAE.mp4' %}
 
-# New Game Template
+## New Game Template
 
 {% img 'New Game Template' '/images/blog/2016-12-01-game-templates/new_game_template.png' %}
 

@@ -3,6 +3,7 @@ layout: post
 title: 'Back to Normals'
 author: silicon-studio
 image_thumb: /images/blog/normals/Normal_map_example_thumb.png
+tags: ['Education']
 ---
 
 Xenko 1.9.2β fixes an important issue with our normal maps. We have recently reviewed our normal map settings and shaders. Unfortunately, a lot of them cover cases that were previously missing or unclear, so automated conversion of the assets is not possible.

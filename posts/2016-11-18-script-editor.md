@@ -1,16 +1,13 @@
 ---
 layout: post
 title: 'Script Editor Preview'
-author: 'Silicon Studio'
-popular: true
+author: silicon-studio
 image_thumb: /images/blog/script_editor/thumb.jpg
-disqus_short_name: paradox3d
 ---
 
-Switching back and forth between your game development editor and your IDE for small changes starting to wear on you? Well, you can look forward to losing many of those unnecessary steps because Xenko is bringing you our new Script Editor feature - available soon in **Xenko β1.9**. Open the blog post for the full details!
+Switching back and forth between your game development editor and your IDE for small changes starting to wear on you? Well, you can look forward to losing many of those unnecessary steps because Xenko is bringing you our new Script Editor feature - available soon in **Xenko 1.9 Beta**. Open the blog post for the full details!
 
-<!--more-->
-
+---
 
 Feeling the pain of switching back and forth between the **Game Studio** and your **IDE**? We hear ya! We know how annoying it can be, so that’s why we think we’ll save you some time and frustration with Xenko’s Script Editor! 
 
@@ -24,13 +21,7 @@ In fact, expect:
 * Auto-reload C# scripts and C# project changes that happened in the background
 * A Visual Studio like experience for all your code editing!
 
-<p>
-  <div class="embed-responsive-anyratio"><div class="video-play-button"></div>
-	<video autoplay loop class="responsive-video" poster="../../images/blog/script_editor/code_completion.jpg" onplay="feature_video_onplay(event)" onpause="feature_video_onpause(event)">
-	   <source src="../../images/blog/script_editor/code_completion.mp4" type="video/mp4">
-	</video>
-  </div>
-</p>
+{% video '/images/blog/script_editor/code_completion.mp4' %}
 
 We had some help from Microsoft’s .NET compiler, [Rosyln](https://github.com/dotnet/roslyn), so Xenko users will also receive the full benefit of all the latest features of .NET. Adding a Rosyln-based Script Editor makes it easier to keep up with the latest C# updates.
 
@@ -43,23 +34,11 @@ Just follow these steps:
 3. Edit the script in Game Studio
 4. (Optional) Click “Reload assembly” when you’re ready
 
-<p>
-  <div class="embed-responsive-anyratio"><div class="video-play-button"></div>
-	<video autoplay loop class="responsive-video" poster="../../images/blog/script_editor/create_script_gamestudio.jpg" onplay="feature_video_onplay(event)" onpause="feature_video_onpause(event)">
-	   <source src="../../images/blog/script_editor/create_script_gamestudio.mp4" type="video/mp4">
-	</video>
-  </div>
-</p>
+{% video '/images/blog/script_editor/create_script_gamestudio.mp4' %}
 
 C# scripts saved on Visual Studio side (or any text editor, for that matter) will automatically be updated in Game Studio without reloading. Same goes for project changes (.csproj): new scripts will appear automatically upon saving. GameStudio will automatically listen for file changes on the hard drive and update them live, or ask you what to do in case of conflicts.
 
-<p>
-  <div class="embed-responsive-anyratio"><div class="video-play-button"></div>
-	<video autoplay loop class="responsive-video" poster="../../images/blog/script_editor/external_changes.jpg" onplay="feature_video_onplay(event)" onpause="feature_video_onpause(event)">
-	   <source src="../../images/blog/script_editor/external_changes.mp4" type="video/mp4">
-	</video>
-  </div>
-</p>
+{% video '/images/blog/script_editor/external_changes.mp4' %}
 
 Under the hood, [Rosyln](https://github.com/dotnet/roslyn) is the underlying technology that can process your Xenko source code. But we didn’t stop there! We were fortunate to find [AvalonEdit](http://avalonedit.net/), which provided us what we wanted for the visual appearance of the UI aspect of the Xenko script editor. We also integrated [RoslynPad](https://roslynpad.net/), which connects Roslyn and AvalonEdit together. We were lucky to be able to take advantage of these great Roslyn related efforts, and appreciate all the hard work the developers and contributors have put into RoslynPad and AvalonEdit, further strengthening the .NET ecosystem.
 
