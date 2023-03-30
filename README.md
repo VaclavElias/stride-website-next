@@ -9,13 +9,13 @@ Please feel free to collaborate, create issues, and submit pull requests.
 ## The motivation for the update
 
 - [x] Consistency improvements across pages, posts, styling
-- [x] Content readability
+- [x] Better Content readability
 - [x] Modern looking and simplified design
 - [x] Modern static page generator - Eleventy 2.0 (previously Jekyll)
 - [x] Bootstrap 5.3 (this was also used previously with lots of inconsistency)
 - [x] Fontawesome 6 (this was also used previously)
 - [x] Remove old unnecessary code, AddThis, Discus, JQuery, JavaScript libraries
-- [x] Get better website responsivness (mobile, table, desktop)
+- [x] Better website responsivness (mobile, table, desktop)
 - [x] Keep the content as it is and where it is, maybe just improve if needed
   - [x] Add excerpt
   - [x] Fix links
