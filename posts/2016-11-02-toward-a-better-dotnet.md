@@ -1,17 +1,13 @@
 ---
 layout: post
 title: 'Toward a Better .NET!'
-author: 'Silicon Studio'
-popular: true
+author: silicon-studio
 image_thumb: /images/blog/microsoft_.net.png
-disqus_short_name: paradox3d
 ---
 
 We’d like to announce some of our plans for the coming months, and also notify our users of some big changes that will be coming with release 1.9. Namely, we’ll be dropping support for Windows Store 8.1 and Windows Phone 8.1.
 
-To find out what else is to come and why, open the full post for more details!
-
-<!--more-->
+---
 
 ## Switch to .NET Standard
 
