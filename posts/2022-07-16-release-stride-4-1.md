@@ -11,6 +11,8 @@ Stride contributors are proud to announce a new release now running on .NET 6 su
 
 ---
 
+{% include _alert.html type:'success|danger|warning|info|dark|light|primary|secondary' icon:'whatever-font-awesome-icon' title:'Some title' %}
+
 {% include _alert.html type:'success' icon:'face-smile' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}
 
 {% include _alert.html type:'warning' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}

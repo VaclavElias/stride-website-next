@@ -12,6 +12,7 @@ $info: $stride-blue;
 $custom-colors: ( "stride": $stride-red-web );
 
 $enable-rounded: false;
+$link-color: $stride-red-web;
 
 @import "../node_modules/bootstrap/scss/mixins/banner";
 @include bsBanner("");

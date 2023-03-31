@@ -1,20 +1,22 @@
 ---
-layout: default
+layout: container
 title: Search
+banner:
+  title: Search
+  sub-title: 'Search result for <span id="search-result-term" class="fw-bold text-stride"></span>'
+  image-url: /images/backgrounds/features_banner.jpg
+  h1: true
 ---
-<div class="container">
-    <h1 class="my-3">Search result for <span id="search-result-term"></span></h1>
-    <div class="row">
-        <div class="col-lg-9 col-md-8 col-sm-12" id="search-results">
-            <div class="fa-3x">
-                <i class="fa-solid fa-spinner text-primary fa-spin-pulse"></i>
-            </div>
+<div class="row">
+    <div class="col-lg-9 col-md-8 col-sm-12" id="search-results">
+        <div class="fa-3x">
+            <i class="fa-solid fa-spinner text-primary fa-spin-pulse"></i>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-12">
-            <div class="box-style">
-                <div class="devblogs-widget">
-                    {% include blog-aside.html %}
-                </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-12">
+        <div class="box-style">
+            <div class="devblogs-widget">
+                {% include blog-aside.html %}
             </div>
         </div>
     </div>
