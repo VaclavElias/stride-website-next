@@ -1,15 +1,17 @@
 ---
 layout: post
 title: 'Roadmap and Survey'
-author: 'Silicon Studio'
-disqus_short_name: paradox3d
+author: silicon-studio
 image_thumb: /images/blog/survey.png
 ---
 
-<h1>Roadmap</h1>
-We just published our roadmap online:
+Discover the latest Stride 3D roadmap and participate in our community survey to help shape the future of our open-source game engine.
 
-<a href="https://trello.com/b/FwbjOjjB" target="_blank" class="readon">View Roadmap</a>
+---
+
+## Roadmap
+
+We just published our roadmap online: <a href="https://trello.com/b/FwbjOjjB" target="_blank" class="readon">view roadmap</a>.
 
 We are excited to share our future plan and work with the community.
 
@@ -23,11 +25,11 @@ We are passionate about building this engine and prioritize features that makes 
 
 Thus hearing the voices of our community is important. Please vote on the features and participate to our survey below!
 
-<h1>Survey</h1>
+## Survey
 We created an online survey that should take around 5mins to complete:
 
 <a href="https://www.surveymonkey.com/r/paradox-beta" target="_blank" class="readon">Participate to Survey (English)</a>
 
 <a href="https://www.surveymonkey.com/r/YGD8VYH" target="_blank" class="readon">Participate to Survey (Japanese)</a>
 
-Since we are constantly refining Xenko roadmap, having your opinion will help a lot to better fit your needs and to make Xenko better!
+Since we are constantly refining Xenko roadmap, having your opinion will help a lot to better fit your needs and to make Xenko better.

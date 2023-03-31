@@ -170,6 +170,8 @@ Run `npm install` to install all dependencies.
 
 ### New Posts
 
+#### Post Naming Convention
+
 ### New Pages
 
 ### Global Data
