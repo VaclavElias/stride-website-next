@@ -8,21 +8,19 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## The motivation for the update
 
-- [x] Consistency improvements across pages, posts, styling
-- [x] Better Content readability
-- [x] Modern looking and simplified design
-- [x] Modern static page generator - Eleventy 2.0 (previously Jekyll)
-- [x] Bootstrap 5.3 (this was also used previously with lots of inconsistency)
-- [x] Fontawesome 6 (this was also used previously)
-- [x] Remove old unnecessary code, AddThis, Discus, JQuery, JavaScript libraries
-- [x] Better website responsivness (mobile, table, desktop)
-- [x] Keep the content as it is and where it is, maybe just improve if needed
-  - [x] Add excerpt
-  - [x] Fix links
-  - [x] Minor fixes and removed unnecessary content
+- [x] Improved consistency across pages, posts, and styling (post styling is similar to Microsoft Dev Blog, which offers an excellent readability experience)
+- [x] Enhanced content readability
+- [x] Modern and simplified design
+- [x] Updated static page generator: Eleventy 2.0 (previously Jekyll)
+- [x] Bootstrap 5.3 (previously used with many inconsistencies)
+- [x] Font Awesome 6 (also previously used)
+- [x] Removal of old, unnecessary code, such as AddThis, Disqus, JQuery, and JavaScript libraries
+- [x] Improved website responsiveness (mobile, tablet, desktop)
+- [x] Retaining existing content and location, with potential improvements if needed
+  - [x] Addition of excerpts
+  - [x] Link fixes
+  - [x] Minor corrections and removal of unnecessary content
     
-  
-  
 
 ## RC2+ Checklist
 - [ ] Web - Past Posts - Update and pretify content - Done 26/64
