@@ -11,28 +11,6 @@ Stride contributors are proud to announce a new release now running on .NET 6 su
 
 ---
 
-{% include _alert.html type:'success|danger|warning|info|dark|light|primary|secondary' icon:'whatever-font-awesome-icon' title:'Some title' %}
-
-{% include _alert.html type:'success' icon:'face-smile' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}
-
-{% include _alert.html type:'warning' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}
-
-{% include _alert.html type:'success' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}
-
-
-{% include _alert.html type:'danger' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}
-
-
-{% include _alert.html type:'info' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}
-
-{% include _alert.html type:'secondary' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}
-
-{% include _alert.html type:'dark' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}
-
-{% include _alert.html type:'light' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}
-
-{% include _alert.html type:'primary' title:'Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.' %}
-
 [[TOC]]
 
 ## Stride On .NET Live
