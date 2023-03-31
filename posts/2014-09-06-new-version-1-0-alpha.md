@@ -16,6 +16,7 @@ A new version is available for download. Run the Xenko Studio to download and in
 {% img 'Dragon Banner' '/images/blog/release-1.0-alpha/dragon_banner.jpg' %}
 
 ## In Progress
+
 <ul>
 <li>General: Integration of <a href="http://esotericsoftware.com/">Spine</a> </li>
 <li>General: Preparations for open-source release</li>
@@ -28,7 +29,9 @@ A new version is available for download. Run the Xenko Studio to download and in
 ## Version 1.0.0-alpha07
 
 <p>Release date: 2014/09/04</p>
-<h4>Issues fixed</h4>
+
+### Issues fixed
+
 <ul>
 <li>Studio: Exiting the Xenko Studio was generating errors.</li>
 </ul>
@@ -36,7 +39,8 @@ A new version is available for download. Run the Xenko Studio to download and in
 ## Version 1.0.0-alpha06
 
 <p>Release date: 2014/09/04</p>
-<h4>New Features</h4>
+
+### New Features
 <ul>
 <li>Integrated release notes in the welcome menu</li>
 <li>Welcome to the new workspace!</li>
@@ -51,7 +55,7 @@ A new version is available for download. Run the Xenko Studio to download and in
 <li>UI: Add image stretch type <code>StretchType.FillOnStretch</code> and modify <code>StretchType.Fill</code> behavior (previous <code>StretchType.Fill</code> mode is now implemented by <code>StretchType.FillOnStretch</code>).</li>
 </ul>
 
-<h4>Enhancements</h4>
+### Enhancements
 
 <ul>
 <li>General: Visual Studio Express 2013 can now open Xenko Projects (with some limitations) (<a href="https://github.com/SiliconStudio/paradox/issues/4">#4</a>)</li>
@@ -68,7 +72,7 @@ A new version is available for download. Run the Xenko Studio to download and in
 <li>UI: Allow user to modify values of the UIRenderingContext.</li>
 </ul>
 
-<h4>Issues fixed</h4>
+### Issues fixed
 
 <ul>
 <li>Build: Android project fails to build (<a href="https://github.com/SiliconStudio/paradox/issues/3">#3</a>)</li>

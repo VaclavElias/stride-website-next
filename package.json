@@ -1,7 +1,7 @@
 {
   "name": "stride-website",
   "version": "1.0.0",
-  "description": "Just playing with different design ideas and possibilities.",
+  "description": "Stride website",
   "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
