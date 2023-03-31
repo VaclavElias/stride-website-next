@@ -1,6 +1,24 @@
-<div class="alert alert-{{ type }} d-flex">
-    <svg class="bi flex-shrink-0 me-2 mt-1" width="24" height="24" role="img"><use xlink:href="#{{ type }}" /></svg>
-    <div>
-        {{ title }}
-    </div>
+{% case type %}
+{% when 'success' %}
+{% assign icon = 'circle-check' %}
+{% when 'danger' %}
+{% assign icon = 'circle-exclamation' %}
+{% when 'warning' %}
+{% assign icon = 'triangle-exclamation' %}
+{% when 'info' %}
+{% assign icon = 'circle-info' %}
+{% when 'secondary' %}
+{% assign icon = 'lightbulb' %}
+{% when 'light' %}
+{% assign icon = 'circle-info' %}
+{% when 'dark' %}
+{% assign icon = 'circle-info' %}
+{% when 'primary' %}
+{% assign icon = 'circle-info' %}
+{% else %}
+{% assign icon = '' %}
+{% endcase %}
+<div class="alert alert-{{ type }} d-flex">{% if icon != '' %}
+    <span class="me-2 mt-1"><i class="fa-solid fa-{{ icon }} fa-lg"></i></span>{% endif %}
+    <div>{{ title }}</div>
 </div>
