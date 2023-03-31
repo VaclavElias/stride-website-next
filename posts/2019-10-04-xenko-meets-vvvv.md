@@ -1,9 +1,13 @@
 ---
 layout: post
 title: 'Xenko meets vvvv'
-author: 'Virgile Bello'
+author: virgile
 image_thumb: /images/blog/2019-10-04-xenko-meets-vvvv/thumb.png
-disqus_short_name: xenko
+tags: ['Announcement']
+---
+
+Explore the integration of Xenko and vvvv, a powerful combination that unlocks new possibilities for creating visually stunning and interactive 3D experiences in real-time.
+
 ---
 
 ## Xenko and vvvv
@@ -14,7 +18,7 @@ When Xenko went fully open-source in 2018, one of my intent was to be able to en
 
 vvvv has been using Xenko under the hood for a while, e.g. for the [Ocean of Air](https://forums.stride3d.net/t/multi-user-vr-done-with-xenko-we-live-in-an-ocean-of-air/1872) project.
 
-![Ocean of Air](/images/blog/2019-10-04-xenko-meets-vvvv/vvvv_meets_xenko_s.jpg)
+{% img-click 'Ocean of Air' '/images/blog/2019-10-04-xenko-meets-vvvv/vvvv_meets_xenko_s.jpg' %}
 
 They also have various plans to leverage Xenko even further in the future [gamma version](https://vvvv.org/blog/vvvv-gamma-2019.1-preview).
 

@@ -11,9 +11,13 @@
 
 {% img 'title' 'url' %}
 {% img-click 'title' 'url' %}
+{% img-click 'title' 'url' 'destinationUrl' %}
 
 {% youtube 'id' %}
 {% youtube-playlist 'id' %}
+
+{% video 'url' %}
+{% video-fluid 'url' %}
 
 # Iframe
 - Note: no frameborder

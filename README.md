@@ -8,15 +8,21 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## The motivation for the update
 
-- [x] modern looking and simplified design
-- [x] modern static page generator
-- [x] use Bootstrap 5.3
-  - this was also used previously with lots of inconsistency
-- [x] use Fontawesome 6
-  - this was also used previously
-- [x] remove old unnecessary code, AddThis, Discus, JQuery, JavaScript libraries
-- [x] get better website responsivness
-- [x] keep the content as it is and where it is, maybe just improve if needed
+- [x] Consistency improvements across pages, posts, styling
+- [x] Better Content readability
+- [x] Modern looking and simplified design
+- [x] Modern static page generator - Eleventy 2.0 (previously Jekyll)
+- [x] Bootstrap 5.3 (this was also used previously with lots of inconsistency)
+- [x] Fontawesome 6 (this was also used previously)
+- [x] Remove old unnecessary code, AddThis, Discus, JQuery, JavaScript libraries
+- [x] Better website responsivness (mobile, table, desktop)
+- [x] Keep the content as it is and where it is, maybe just improve if needed
+  - [x] Add excerpt
+  - [x] Fix links
+  - [x] Minor fixes and removed unnecessary content
+    
+  
+  
 
 ## RC2+ Checklist
 - [ ] Web - Past Posts - Update and pretify content - Done 26/64
@@ -60,6 +66,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [ ] Web - Futher update existing images and content across pages
 - [ ] Web - Friends - Shall we link to our friends GoDot, others, just to be open and making friends in other C# open source game communities? 
 - [ ] Web - Authors links to author pages
+- [ ] Web - Split Tags to 2 columns in the /tags page
 - [ ] Web - Blog Comments from GitHub Issues - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/, the problem is spam..
 - [ ] Include Avatar, with different asssets like dotnet bot, use also for 2D Games
 - [ ] Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
@@ -222,6 +229,17 @@ renders as
 <div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/videoseries?list=id" title="YouTube video" allowfullscreen></iframe></div>
 ```
 
+`{% video 'url' %}`
+
+renders as
+
+```html
+<!-- jpgUrl = url.replace(".mp4", ".jpg") // make sure you have got a pair .mp4 and .jpg -->
+<div class="ratio ratio-16x9 mb-2"><video autoplay loop class="responsive-video" poster="jpgUrl"><source src="url" type="video/mp4"></video></div>
+```
+
+
+
 ## Eleventy
 
 ### Packages
@@ -233,6 +251,10 @@ renders as
 ## Folder Structure
 
 ## Deployment
+
+### GitHub Pages
+### Azure Web Apps - .NET Framework 4.8
+### Azure Web Apps - .NET Core 7
 
 ## Styling
 

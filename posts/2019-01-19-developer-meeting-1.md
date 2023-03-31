@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Community Meeting January 2019'
+title: 'Developer Meeting January 2019'
 author: virgile
 tags: ['Meeting']
 ---
