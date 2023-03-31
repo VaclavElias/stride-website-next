@@ -14,8 +14,8 @@
     
     <script src="/scripts/theme-selector.js?site-version=2.0"></script>
 </head>
-<body class="bg-dark d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg bg-light">
+<body class="bg-stride d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-light-stride">
     <div class="container-xxl">
         <a class="navbar-brand" href="/">
             <img height="37" width="124" src="/images/svg/logo.svg" alt="Stride logo">
@@ -130,6 +130,7 @@
         </div>
     </div>
 </nav>
+    
     <div class="container">
     <div class="row postcontent">
         <div class="col-12">
@@ -159,9 +160,9 @@
 <p>Xenko was always a big proponent of NuGet: since first version, Xenko was distributed as a NuGet package.</p>
 <p>However, due to limitations (hello packages.config and project.json!), we were leveraging NuGet more as a distribution medium than proper NuGet packages: Xenko 3.0 is still a monolithic single package and it would not work out of the box when referenced from Visual Studio without using Xenko Launcher and Game Studio.</p>
 <p>Xenko 3.0 paved the way by making Xenko compatible with the new project system (game projects were referencing Xenko using a <code>PackageReference</code>).</p>
-<p><img src="/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-old.png" alt="GitHub"></p>
+<img alt="GitHub" src="/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-old.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-old.png">
 <p>Today, Xenko 3.1 brings Xenko as a set of smaller NuGet package, each containing one assembly, with proper dependencies:</p>
-<p><img src="/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-new.png" alt="GitHub"></p>
+<img alt="GitHub" src="/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-new.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-new.png">
 <p>As a result, it is now possible to create a game project that references only the packages you want. Here are a few examples of &quot;core&quot; packages:</p>
 <ul>
 <li><code>Xenko.Engine</code>: allows you to use core engine runtime (including its dependencies)</li>
@@ -205,7 +206,7 @@
 <p>Users will be able to select the tutorial template when creating a new Xenko project to practice and experiment with the code.</p>
 <p>Additionally, the code used in the project is directly referenced by the new documentation section which explains each individual tutorial level.</p>
 <p>The amount of tutorials, as well as intermediate and advanced tutorials, will be extended/added from now on.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zGFYFhBfxVs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/zGFYFhBfxVs" title="YouTube video" allowfullscreen></iframe></div>
 <h2 id="bulletsharp-update" tabindex="-1">BulletSharp update <a class="direct-link" href="#bulletsharp-update">🔗</a></h2>
 <p><a href="https://github.com/eideren">Eideren</a> worked on updating our old custom modified version of <a href="https://github.com/Eideren/BulletSharpPInvoke">BulletSharp</a> (the wrapper library we use for our physics engine).</p>
 <p>Things should be much easier to maintain from now on.</p>
