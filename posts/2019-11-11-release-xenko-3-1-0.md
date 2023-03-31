@@ -30,11 +30,11 @@ However, due to limitations (hello packages.config and project.json!), we were l
 
 Xenko 3.0 paved the way by making Xenko compatible with the new project system (game projects were referencing Xenko using a `PackageReference`).
 
-![GitHub](/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-old.png)
+{% img 'GitHub' '/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-old.png' %}
 
 Today, Xenko 3.1 brings Xenko as a set of smaller NuGet package, each containing one assembly, with proper dependencies:
 
-![GitHub](/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-new.png)
+{% img 'GitHub' '/images/blog/2018-11-13-feature-spotlight-xenko-3-1-and-nuget/xenko-ref-new.png' %}
 
 As a result, it is now possible to create a game project that references only the packages you want. Here are a few examples of "core" packages:
 
@@ -108,7 +108,7 @@ Additionally, the code used in the project is directly referenced by the new doc
 
 The amount of tutorials, as well as intermediate and advanced tutorials, will be extended/added from now on.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zGFYFhBfxVs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% youtube 'zGFYFhBfxVs' %}
 
 ## BulletSharp update
 

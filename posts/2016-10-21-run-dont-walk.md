@@ -1,20 +1,14 @@
 ---
 layout: post
 title: 'Run, Don''t Walk'
-author: 'Silicon Studio'
-popular: true
+author: silicon-studio
 image_thumb: /images/blog/run-dont-walk/thumb.jpg
 image: /images/blog/run-dont-walk/banner.jpg
-disqus_short_name: paradox3d
 ---
 
-Xenko team is taking a look into the recent trend of VR.
+Embrace the power of efficient movement in game development with the "Run, Don't Walk" blog post. Explore tips, tricks, and strategies to enhance your workflow and optimize your project's performance using Stride 3D's innovative tools and features.
 
-Open the full post for more details!
-
-<!--more-->
  ---
-
 
 Not so long ago, I heard some advice about supporting new features in a game engine that I hear often: *Walk, don’t run*. Makes sense, doesn’t it? Developers and artists need the basics to make any game, namely, a stable, state-of-the-art rendering system with things like support for PBR, efficient use of lighting technology, a decent physics engine, a functional U.I. system,  pipeline optimizing shortcuts, a way to handle coding frameworks efficiently and much more. However, even for a game engine that needs to accommodate traditional game deployment platforms such as PCs, console and mobile devices, game industry software tool development teams rarely follow any kind of linear or waterfall product management techniques. Agile methods have allowed product managers and teams to sprint to support certain higher priority features as needed, some market driven, some purely technically driven. Not surprisingly, this is the way the Xenko game engine effort is handled at Silicon Studio, which allows us to react quickly to industry trends. Such has been the case with virtual reality (VR).
 
@@ -29,9 +23,3 @@ Therefore, we are now 100% on track to support VR in Xenko. So, what does this m
 
 
 In conclusion, let’s not bury the lead here: the game industry disruption caused by this race to widely support VR, trough of disappointment or not, is the reason why Xenko is now on track to become the first built-from-scratch comprehensive VR engine for game developers. 
-
-
-When? Soon.
-
-
-Stay tuned.

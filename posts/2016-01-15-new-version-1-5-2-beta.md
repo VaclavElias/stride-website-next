@@ -1,8 +1,7 @@
 ---
 layout: post
 title: 'First Fix Update of 2016!'
-author: 'Silicon Studio'
-disqus_short_name: paradox3d
+author: silicon-studio
 ---
 
 Hi everybody!
@@ -13,13 +12,9 @@ Have you made any resolutions? We sure did!
 
 We resolved to keep updating Xenko to give our users a polished, easy-to-use engine.
 
-So for the beginning of this year, we are focusing on smoothing out some major issues reported by the community. As always, we really appreciate your input.
- 
- <br/>
-Open the full post for more details!
+---
 
-<!--more-->
- ---
+So for the beginning of this year, we are focusing on smoothing out some major issues reported by the community. As always, we really appreciate your input.
  
 ## Async Debugging
 There were some problems debugging async functions due to a problem in Mono.Cecil. We fixed that!

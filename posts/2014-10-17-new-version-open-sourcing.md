@@ -14,13 +14,11 @@ We are thrilled to announce that Xenko is going <a href="https://github.com/Sili
 
 ## License
 
-
 <p>Xenko is now delivered with two licences types:</p>
 <ul>
 	<li>Binary Release version</li>
 	<li>Source version</li>
 </ul>
-
 
 ### Binary Release version
 
