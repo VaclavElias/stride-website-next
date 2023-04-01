@@ -1,50 +1,50 @@
 ---
-layout: default
+layout: container
 title: Contact
 permalink: /contact/
+banner:
+  title: Contact us
+  sub-title: We'd love to hear from you
+  image-url: /images/backgrounds/spaceescape.jpg
+  h1: true
 ---
-{% include banner.html h1:true title:"Contact us" sub-title:"We'd love to hear from you" image-url:"/images/backgrounds/spaceescape.jpg" %}
-<div class="container mt-5">
-    <div class="row h-100 g-4">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h2>Community Support</h2>
-                    <p>
-                        If you have a problem learning Stride or need help, please first use the various <a href="/community/">community channels</a>. Stride developers are busy working in making Stride better, so they can't always answer questions. They will, however, be glad to assist you if you can't get an answer from conventional means.
-                    </p>
-                    <h2>Commercial support</h2>
-                    <p>At the moment we don't provide commercial support.</p>
-                    <h2>General inquiries</h2>
-                    <p>For other inquiries please use our <a href="/community/">community channels</a>.</p>
-                    <h2>FAQ</h2>
-                    <p>A list of Frequently Asked Questions covering various topics.</p>
-                </div>
+<div class="card mb-4">
+    <div class="card-body">
+        <h2>Community Support</h2>
+        <p>
+            If you have a problem learning Stride or need help, please first use the various <a href="/community/">community channels</a>. Stride developers are busy working in making Stride better, so they can't always answer questions. They will, however, be glad to assist you if you can't get an answer from conventional means.
+        </p>
+        <h2>Commercial support</h2>
+        <p>At the moment we don't provide commercial support.</p>
+        <h2>General inquiries</h2>
+        <p>For other inquiries please use our <a href="/community/">community channels</a>.</p>
+        <h2>FAQ</h2>
+        <p>A list of Frequently Asked Questions covering various topics.</p>
+    </div>
+</div>
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2>Report a bug</h2>
+                <p>Sometimes bugs happen, but don’t worry! Developers got your back, just <a href="{{ site.links.github-stride-url }}/issues" target="_blank" rel="noopener">report a bug</a> and we’ll all enjoy a more stable Stride.</p>
+                <p>If you’d like to help fixing bugs, we have plenty of ways how you can <a href="/community/">get involved</a> with making Stride better.</p>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2>Report a bug</h2>
-                    <p>Sometimes bugs happen, but don’t worry! Developers got your back, just <a href="{{ site.links.github-stride-url }}/issues" target="_blank" rel="noopener">report a bug</a> and we’ll all enjoy a more stable Stride.</p>
-                    <p>If you’d like to help fixing bugs, we have plenty of ways how you can <a href="/community/">get involved</a> with making Stride better.</p>
-                </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2>Documentation</h2>
+                <p>Stride's <a href="{{ site.links.docs-manual-url }}" target="_blank" rel="noopener">user manual</a> covers all aspects of the engine, from installation and getting started to advanced features and best practices, ensuring a smooth learning curve for users.</p>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2>Documentation</h2>
-                    <p>Stride's <a href="{{ site.links.docs-manual-url }}" target="_blank" rel="noopener">user manual</a> covers all aspects of the engine, from installation and getting started to advanced features and best practices, ensuring a smooth learning curve for users.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2>Tutorials</h2>
-                    <p>Access a variety of <a href="{{ site.links.docs-tutorial-url }}" target="_blank" rel="noopner">tutorials</a> and example projects that demonstrate how to use Stride's features effectively, catering to users with different skill levels and experience.</p>
-                </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2>Tutorials</h2>
+                <p>Access a variety of <a href="{{ site.links.docs-tutorial-url }}" target="_blank" rel="noopner">tutorials</a> and example projects that demonstrate how to use Stride's features effectively, catering to users with different skill levels and experience.</p>
             </div>
         </div>
     </div>

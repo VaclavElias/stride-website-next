@@ -1,19 +1,22 @@
 ---
 layout: post
-title: 'Xenko 1.1β: Scene Editor, PBR and PostFX'
-author: 'Silicon Studio'
-disqus_identifier: 944a518a8e_id24
-disqus_short_name: paradox3d
+title: 'Xenko 1.1 Beta Released'
+author: silicon-studio
 image_thumb: /images/blog/release-1.1/robot_editor_thumb.jpg
+tags: ['Release']
 ---
 
-<p>Everyone in the Xenko team have been working hard to bring you the new features and tools. We are proud to announce that Xenko 1.1.0β version is now available for download.</p>
+Everyone on the Xenko team has been working hard to bring you new features and tools, including the Scene Editor, PBR, and PostFX. We are proud to announce that Xenko 1.1 Beta version is now available for download.
 
-<p>
-<img src="/images/blog/release-1.1/robot_editor.jpg"/>
-</p>
+---
 
-<p>Here are the new features on the new and updated version:</p>
+[[TOC]]
+
+{% img 'Example Asset' '/images/blog/release-1.1/robot_editor.jpg' %}
+
+## Highlights
+
+<p>Here are the new features on the new and updated version 1.1.0-beta:</p>
 
 <ul>
 <li><b>Physically Based Rendering</b> with Layered Material System</li>
@@ -30,13 +33,9 @@ image_thumb: /images/blog/release-1.1/robot_editor_thumb.jpg
 
 <p>Details of upcoming releases will also be posted soon so please keep an eye on this blog!</p>
 
-<hr id="system-readmore" />
-
-<h3>Version 1.1.0-beta</h3>
-
 <p>Release date: 2015/04/28</p>
 
-<h4>New Features</h4>
+## New Features
 
 <ul>
 <li>Launcher: New <strong>launcher</strong> can now manage several versions of the Xenko SDK</li>
@@ -63,7 +62,7 @@ image_thumb: /images/blog/release-1.1/robot_editor_thumb.jpg
 <li>Assets: New asset type <code>ProceduralModelAsset</code></li>
 </ul>
 
-<h4>Enhancements</h4>
+## Enhancements
 
 <ul>
 <li>Assets: Yaml now uses a shorter qualified name without culture and keytoken.</li>
@@ -120,7 +119,7 @@ image_thumb: /images/blog/release-1.1/robot_editor_thumb.jpg
 <li>VisualStudio: Improve error messages when <code>.cs</code> file generation fails</li>
 </ul>
 
-<h4>Issues fixed</h4>
+## Issues fixed
 
 <ul>
 <li>Assets: On OpenGL ES 3.0+ targets, HDR textures were converted to LDR during asset compilation.</li>
@@ -152,7 +151,7 @@ image_thumb: /images/blog/release-1.1/robot_editor_thumb.jpg
 <li>Studio: Fix the sound preview when the source file of the asset has been changed</li>
 </ul>
 
-<h4>Breaking changes</h4>
+## Breaking changes
 
 <ul>
 <li>Android: Android projects should be compiled against Android API v5.0 (only a compile-time requirement, runtime requirement is still Android 2.3+)</li>
@@ -172,7 +171,7 @@ image_thumb: /images/blog/release-1.1/robot_editor_thumb.jpg
 <li>Studio: The studio and asset compilation process are now running only on 64bits machines</li>
 </ul>
 
-<h4>Known Issues</h4>
+## Known Issues
 
 <ul>
 <li>Platforms: Shaders can’t compile due to lack of a proper workflow on other platforms than Windows Desktop  (this will be fixed soon)</li>

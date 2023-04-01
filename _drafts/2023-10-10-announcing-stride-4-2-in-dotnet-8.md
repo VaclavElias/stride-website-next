@@ -26,3 +26,11 @@ You can [download the free Stride 4.2 release](https://doc.stride3d.net/latest/e
 
 ## What's new in Stride 4.2
 
+
+## Links 
+
+- Github: [{{site.links.github-stride-url}}]({{site.links.github-stride-url}})
+- Website: [{{site.links.stride-url}}]({{site.links.stride-url}})
+- Documentation: [{{site.links.docs-manual-url}}]({{site.links.docs-manual-url}})
+- Twitter: [{{site.links.twitter-url}}]({{site.links.twitter-url}})
+- Youtube: [{{site.links.youtube-url}}]({{site.links.youtube-url}})

@@ -4,29 +4,26 @@ title: 'First Fix Update of 2016!'
 author: silicon-studio
 ---
 
-Hi everybody!
-
-Happy New Year's!
-
-Have you made any resolutions? We sure did!
-
-We resolved to keep updating Xenko to give our users a polished, easy-to-use engine.
+Happy New Year's! We resolved to keep updating Xenko to give our users a polished, easy-to-use engine.
 
 ---
 
 So for the beginning of this year, we are focusing on smoothing out some major issues reported by the community. As always, we really appreciate your input.
  
 ## Async Debugging
+
 There were some problems debugging async functions due to a problem in Mono.Cecil. We fixed that!
 
 Now, you'll be able to look at local variables of any async functions. Also, the usage of the namespace in the watch panel is implicit and you can step over any await calls just normally.
 
 ## Windows 10 Certification
+
 We fixed several small issues preventing Windows 10 apps created with Xenko from being compatible with Store certification.
 
 Now you can submit your awesome apps/games to the Windows Store. Can't wait to see your creations!
 
 ## Skybox Compilation
+
 Skybox compilation required a DX11 GPU (compute shaders) preventing some of you from using it.
 
 We moved to a pixel shader version to ensure GameStudio works fine with older GPUs as well.
