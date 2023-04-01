@@ -22,7 +22,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
   - [x] Minor corrections and removal of unnecessary content
     
 
-## RC3+ Checklist
+## RC4+ Checklist
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [ ] Wiki - Review and update
@@ -31,14 +31,14 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/. We could use the new and add web.config redirects for the old ones.
 - [ ] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 
-## RC2 Checklist
+## RC3 Checklist
 - [x] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
   - CSS Collaborator wanted
 - [x] Web - Flip colour for the logo when in dark mode
 - [x] Web - Syntax highlight color added for light and dark theme
 - [x] Web - Update card footers on the home page to keep the same height from the bottom
-- [ ] Web - Features - Add .NET/C# section
-  - [ ] Mention/add section dedicated to scripting, mentioning ```async```, maybe add code snippets?
+- [x] Web - Features - Add .NET/C# section
+  - [x] Mention/add section dedicated to scripting, mentioning ```async```, maybe add code snippets?
 
 ## RC2 Checklist
 - [x] Web - Past Posts - Update and pretify content
