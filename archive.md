@@ -3,8 +3,11 @@ layout: page
 title: Blog Archive
 tags: search
 ---
- Welcome to the Stride Blog Archive page. Explore the blog's archive of .NET and C# posts, organized by year. Catch up on past content and discover new insights, tips, and inspiration.
-<!-- excerpt -->
+
+Welcome to the Stride Blog Archive page. Explore the blog's archive of .NET and C# posts, organized by year. Catch up on past content and discover new insights, tips, and inspiration.
+
+ ---
+
 {% assign reversedPosts = collections.blog %}
 {% for year in collections.yearList %}
 <h3>{{ year }}</h3>

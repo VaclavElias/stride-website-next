@@ -21,15 +21,16 @@ Please feel free to collaborate, create issues, and submit pull requests.
   - [x] Link fixes
   - [x] Minor corrections and removal of unnecessary content
     
-
-## RC4+ Checklist
+## RC5+ Checklist
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [ ] Wiki - Review and update
-- [ ] Web - Ensure excerpt and page description is set for all pages
 - [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
 - [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/. We could use the new and add web.config redirects for the old ones.
 - [ ] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
+
+## RC4 Checklist
+- [x] Web - Ensure excerpt and page description is set for all pages
 
 ## RC3 Checklist
 - [x] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
