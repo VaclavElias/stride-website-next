@@ -21,9 +21,13 @@ This project will live <b>thanks to its community</b> and will have its own GitH
 
 {% img 'GitHub' '/images/blog/2018-06-14-xenko-opensource-mit/github.png' %}
 
-{% include _alert.html type:'warning' title:'Use [Open Collective](https://opencollective.com/stride3d) instead to support further Stride Engine development.' %}
+{%- capture title -%}
+<strong>Updated:</strong> Use <a href="{{site.links.open-collective-url}}" target="_blank" rel="noopener">Open Collective</a> to support further Stride Engine development.
+{%- endcapture -%}
+
+{% include _alert.html type:'warning' title:title %}
  
-OUTDATED:
+**Outdated:**
  ~~Also, I have setup a [Patreon page](https://www.patreon.com/xenko) for people who want to financially support the effort (servers and me working fulltime).~~
 
 We're proud of everything we and our users have achieved with Xenko over the last three years. We can't wait to see what you do with it next!

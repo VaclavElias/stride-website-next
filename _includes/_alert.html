@@ -1,4 +1,4 @@
-{% case type %}
+{%- case type -%}
 {% when 'success' %}
 {% assign icon = 'fa-circle-check' %}
 {% when 'danger' %}
@@ -17,9 +17,8 @@
 {% assign icon = 'fa-circle-info' %}
 {% else %}
 {% assign icon = '' %}
-{% endcase %}
+{%- endcase -%}
 <div class="alert alert-{{ type }} d-flex">
-    {% if icon != '' %}
-    <span class="me-2 mt-1"><i class="fa-solid {{ icon }} fa-lg"></i></span>{% endif %}
+    {% if icon != '' %}<span class="me-3 mt-1"><i class="fa-solid {{ icon }} fa-lg"></i></span>{% endif %}
     <div>{{ title }}</div>
 </div>

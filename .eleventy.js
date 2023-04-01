@@ -101,27 +101,27 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addShortcode("img", function (title, url) {
-        return `<img alt="${title}" src="${url}" class="img-fluid mb-2" loading="lazy" data-src="${url}">`;
+        return `<img alt="${title}" src="${url}" class="img-fluid mb-3" loading="lazy" data-src="${url}">`;
     });
 
     eleventyConfig.addShortcode("img-click", function (title, url, destinationUrl) {
-        return `<a href="${destinationUrl ?? url}" title="${title}" class="mb-2"><img alt="${title}" src="${url}" class="img-fluid" loading="lazy" data-src="${url}"></a>`;
+        return `<a href="${destinationUrl ?? url}" title="${title}" class="mb-3"><img alt="${title}" src="${url}" class="img-fluid" loading="lazy" data-src="${url}"></a>`;
     });
 
     eleventyConfig.addShortcode("youtube", function (id) {
-        return `<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/${id}" title="YouTube video" allowfullscreen></iframe></div>`;
+        return `<div class="ratio ratio-16x9 mb-3"><iframe src="https://www.youtube.com/embed/${id}" title="YouTube video" allowfullscreen></iframe></div>`;
     });
 
     eleventyConfig.addShortcode("youtube-playlist", function (id) {
-        return `<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/videoseries?list=${id}" title="YouTube video" allowfullscreen></iframe></div>`;
+        return `<div class="ratio ratio-16x9 mb-3"><iframe src="https://www.youtube.com/embed/videoseries?list=${id}" title="YouTube video" allowfullscreen></iframe></div>`;
     });
 
     eleventyConfig.addShortcode("video", function (url) {
-        return `<div class="ratio ratio-16x9 mb-2"><video autoplay controls loop preload="none" poster="${url.replace(".mp4", ".jpg") }"><source src="${url}" type="video/mp4"></video></div>`;
+        return `<div class="ratio ratio-16x9 mb-3"><video autoplay controls loop preload="none" poster="${url.replace(".mp4", ".jpg") }"><source src="${url}" type="video/mp4"></video></div>`;
     });
 
     eleventyConfig.addShortcode("video-fluid", function (url) {
-        return `<video class="mb-2 img-fluid" autoplay controls loop preload="none" poster="${url.replace(".mp4", ".jpg")}"><source src="${url}" type="video/mp4"></video>`;
+        return `<video class="mb-3 img-fluid" autoplay controls loop preload="none" poster="${url.replace(".mp4", ".jpg")}"><source src="${url}" type="video/mp4"></video>`;
     });
 
     let markdownLibrary = markdownIt({
