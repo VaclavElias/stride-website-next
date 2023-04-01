@@ -26,6 +26,7 @@ We are passionate about building this engine and prioritize features that makes 
 Thus hearing the voices of our community is important. Please vote on the features and participate to our survey below!
 
 ## Survey
+
 We created an online survey that should take around 5mins to complete:
 
 <a href="https://www.surveymonkey.com/r/paradox-beta" target="_blank" class="readon">Participate to Survey (English)</a>
