@@ -22,17 +22,22 @@ Please feel free to collaborate, create issues, and submit pull requests.
   - [x] Minor corrections and removal of unnecessary content
     
 
-## RC2+ Checklist
-- [ ] Web - Past Posts - Update and pretify content - Done 26/64
+## RC3+ Checklist
 - [ ] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
   - CSS Collaborator wanted
-- [x] Web - Search - Include docs in search
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
+- [ ] Web - User docfx code highligting
+- [ ] Web - Add footer to the home page cards and move there buttons
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [ ] Wiki - Review and update
 - [ ] Web - Ensure excerpt and page description is set for all pages
 - [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
 - [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/. We could use the new and add web.config redirects for the old ones.
+
+## RC2 Checklist
+- [x] Web - Past Posts - Update and pretify content
+- [x] Web - Alert Messages added
+- [x] Web - Search - Include docs in search
 
 ## RC1 Checklist
 - [x] Web - Update blog post urls so they match the old urls

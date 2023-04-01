@@ -16,13 +16,19 @@ eleventyComputed:
                     <h1 class="h1 mb-3">Open-source C# Game Engine</h1>
                     <p class="lead">Stride is a free and open-source 2D and 3D cross-platform game engine.
                     <p class="lead">Stride can be used to create video games for PC, mobile devices and virtual reality or interactive content.</p>
-                    <div class="mt-5">
-                        <a href="/download/" class="btn btn-lg btn-stride me-2 mb-3">
-                            <i class="fa-solid fa-download"></i> Download {{ site.dowload-version }}
-                        </a>
-                        <a href="{{ site.links.github-stride-url }}" class="btn btn-lg btn-outline-stride mb-3" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-github text-decoration-none"></i> Source Code (MIT)
-                        </a>
+                </div>
+                <div class="px-4 mb-4">
+                    <div class="row g-4">
+                        <div class="col-auto">
+                            <a href="/download/" class="btn btn-lg btn-stride me-2">
+                                <i class="fa-solid fa-download"></i> Download {{ site.dowload-version }}
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="{{ site.links.github-stride-url }}" class="btn btn-lg btn-outline-stride" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github text-decoration-none"></i> Source Code (MIT)
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,10 +45,12 @@ eleventyComputed:
                         {% include bullet-point.html text:'Photorealistic rendering' %}
                         {% include bullet-point.html text:'Fully multi-threaded' %}
                         {% include bullet-point.html text:'VR ready' %}
+                        {% include bullet-point.html text:'Fully customizable to your needs' %}
+                        {% include bullet-point.html text:'Long-term code maintainability' %}
                     </ul>
-                    <div class="mt-5">
-                        <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
-                    </div>
+                </div>
+                <div class="px-4 mb-4">
+                    <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
                 </div>
             </div>
         </div>
@@ -57,9 +65,9 @@ eleventyComputed:
                         {% include bullet-point.html text:'Full asset creation toolchain' %}
                         {% include bullet-point.html text:'Flexible and customizable rendering pipeline' %}
                     </ul>
-                    <div class="mt-5">
-                        <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
-                    </div>
+                </div>
+                <div class="px-4 mb-4">
+                    <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
                 </div>
             </div>
         </div>
@@ -74,9 +82,9 @@ eleventyComputed:
                         {% include bullet-point.html text:'Propose changes to the engine and docs' %}
                         {% include bullet-point.html text:'Connect with Stride game engine community' %}
                     </ul>
-                    <div class="mt-5">
-                        <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
-                    </div>
+                </div>
+                <div class="px-4 mb-4">
+                    <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
                 </div>
             </div>
         </div>
@@ -84,15 +92,15 @@ eleventyComputed:
             <div class="card h-100">
                 <img src="/images/top/platforms.webp" alt="Platforms Image" width="816" height="459" class="img-fluid mt-2 mb-lg-5">
                 <div class="card-body p-4">
-                    <h2 class="h1 mb-3 mt-lg-4">Develop once, deploy cross-platform</h2>
+                    <h2 class="h1 mb-3 mt-lg-2">Develop once, deploy cross-platform</h2>
                     <ul class="lead mb-4 fa-ul" style="--fa-li-margin: 1.8em;">
                         {% include bullet-point.html text:'Windows Desktop & Windows Universal' %}
                         {% include bullet-point.html text:'iOS and Android through Xamarin' %}
                         {% include bullet-point.html text:'Xbox One via UWP' %}
                     </ul>
-                    <div class="mt-5">
-                        <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
-                    </div>
+                </div>
+                <div class="px-4 mb-4">
+                    <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
                 </div>
             </div>
         </div>
@@ -108,9 +116,9 @@ eleventyComputed:
                         {% include bullet-point.html text:'Visual Studio, Visual Studio Code or Rider' %}
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span> Game Development with {{ site.dotnet-version }}</li>
                     </ul>
-                    <div class="mt-5">
-                        <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
-                    </div>
+                </div>
+                <div class="px-4 mb-4">
+                    <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
                 </div>
             </div>
         </div>
