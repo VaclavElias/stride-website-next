@@ -28,6 +28,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - User docfx code highligting
 - [x] Web - Flip colour for the logo when in dark mode
+- [x] Web - Syntax highlight color added for light and dark theme
 - [x] Web - Update card footers on the home page to keep the same height from the bottom
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [ ] Wiki - Review and update
