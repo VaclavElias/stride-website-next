@@ -23,18 +23,22 @@ Please feel free to collaborate, create issues, and submit pull requests.
     
 
 ## RC3+ Checklist
-- [x] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
-  - CSS Collaborator wanted
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
-- [ ] Web - User docfx code highligting
-- [x] Web - Flip colour for the logo when in dark mode
-- [x] Web - Syntax highlight color added for light and dark theme
-- [x] Web - Update card footers on the home page to keep the same height from the bottom
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [ ] Wiki - Review and update
 - [ ] Web - Ensure excerpt and page description is set for all pages
 - [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
 - [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/. We could use the new and add web.config redirects for the old ones.
+- [ ] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
+
+## RC2 Checklist
+- [x] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
+  - CSS Collaborator wanted
+- [x] Web - Flip colour for the logo when in dark mode
+- [x] Web - Syntax highlight color added for light and dark theme
+- [x] Web - Update card footers on the home page to keep the same height from the bottom
+- [ ] Web - Features - Add .NET/C# section
+  - [ ] Mention/add section dedicated to scripting, mentioning ```async```, maybe add code snippets?
 
 ## RC2 Checklist
 - [x] Web - Past Posts - Update and pretify content
@@ -50,12 +54,8 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## Release Checklist
 - [ ] Web - Proof reading
-- [ ] Web - Update Ore System Link
-- [ ] Web - Features - Add .NET/C# section
-  - [ ] Mention/add section dedicated to scripting, mentioning ```async```, maybe add code snippets?
 - [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
 - [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
-- [ ] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 - [ ] Web/Wiki - Shall we mention that we use Bootstrap and Fontawesome to support Open Source community?
 
 ## Suggested posts
