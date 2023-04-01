@@ -28,9 +28,11 @@
   setTheme(getPreferredTheme())
 
   const showActiveTheme = theme => {
+    const logo = document.querySelector('#logo');
     const themeDropdownButton = document.querySelector('#themeDropdown');
     const activeThemeIcon = document.querySelector(`[data-theme="${theme}"]`);
     themeDropdownButton.innerHTML = activeThemeIcon.outerHTML;
+    logo.src = `/images/svg/stride-logo-${theme}.svg`;
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {

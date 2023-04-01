@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg bg-light-stride-website">
     <div class="container-xxl">
         <a class="navbar-brand" href="/">
-            <img height="37" width="124" src="/images/svg/logo.svg" alt="Stride logo">
+            <img id="logo" height="37" width="124" src="/images/svg/stride-logo-light.svg" alt="Stride logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -135,18 +135,11 @@
     <div class="cover text-center py-5">
         <h1 class="text-light pt-4">Stride Features</h1>
         <div class=" pt-3">
-            <a href="#game-studio" class="btn px-4 mb-2 btn-stride mx-1">
-                Editor
-            </a>
-            <a href="#graphics" class="btn px-4 mb-2 btn-stride mx-1">
-                Graphics
-            </a>
-            <a href="#engine" class="btn px-4 mb-2 btn-stride mx-1">
-                Engine
-            </a>
-            <a href="#vr" class="btn px-4 mb-2 btn-stride mx-1">
-                VR
-            </a>
+            <a href="#game-studio" class="btn px-4 mb-2 btn-stride mx-1">Editor</a>
+            <a href="#graphics" class="btn px-4 mb-2 btn-stride mx-1">Graphics</a>
+            <a href="#engine" class="btn px-4 mb-2 btn-stride mx-1">Engine</a>
+            <a href="#vr" class="btn px-4 mb-2 btn-stride mx-1">VR</a>
+            <a href="#scripting" class="btn px-4 mb-2 btn-stride mx-1">Scripting</a>
         </div>
     </div>
 </div>
@@ -608,6 +601,83 @@
             
             
             <p>Save valuable time by visualizing and testing VR directly from the scene editor.</p>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+    <div class="card mt-5">
+        <div class="card-body p-4">
+            <div class="row">
+                <a class="anchor" id="scripting"></a>
+                <div class="col-lg-7 col-md-6 rt-left">
+                    <h2 class="h1 mb-3"><span class="rt-accent-color1">C#</span> scripting</h2>
+                    <p class="lead">C# scripting in Stride takes advantage of the latest language features in C# 10 and the .NET 6 framework, providing developers with cutting-edge tools to create game logic and interactivity. </p>
+                    <p class="lead">With Stride's integration into the .NET ecosystem, developers can access a wealth of libraries and resources to enhance their game development experience.</p>
+                    <p class="lead">By utilizing C# 10 and .NET 6, Stride enables developers to employ modern programming concepts and techniques, resulting in robust, efficient, and maintainable game code.</p>
+                </div>
+                <div class="col-lg-5 col-md-6 rt-center feature-block">
+                    <a href="/images/features/vr/overview.jpg" title="VR Game Template" class="feature-image-container image-popup">
+                        <div class="rt-image"><div class="zoom-in"></div><img class="img-fluid" src="/images/features/vr/overview.jpg" alt="VR Game Template"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-1 g-4">
+        
+        
+    <div class="col-lg-4 col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h3 class="card-title">Startup scripts</h3>
+            
+            
+            
+            
+            <a href="/images/features/scripting/startup_scripts.jpg" title="Startup scripts" class="feature-image-container image-popup">
+                <div class="rt-image my-3"><div class="zoom-in"></div><img class="img-fluid" loading="lazy" src="/images/features/scripting/startup_scripts.jpg" alt="Startup scripts"></div>
+            </a>
+            
+            <p>Startup scripts in Stride are executed when the game or a specific scene is loaded, allowing developers to initialize game objects, set up the environment, and prepare any required resources. These scripts can be used to set initial states, configure game settings, or establish connections between game entities. Additionally, startup scripts can be utilized for creating reusable functions, registering event handlers, or setting up custom input systems, ensuring the game is fully prepared and optimized for the player's experience.</p>
+        </div>
+    </div>
+</div>
+
+
+    <div class="col-lg-4 col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h3 class="card-title">Synchronous scripts</h3>
+            
+            
+            
+            
+            <a href="/images/features/scripting/synchronous_scripts.jpg" title="Synchronous scripts" class="feature-image-container image-popup">
+                <div class="rt-image my-3"><div class="zoom-in"></div><img class="img-fluid" loading="lazy" src="/images/features/scripting/synchronous_scripts.jpg" alt="Synchronous scripts"></div>
+            </a>
+            
+            <p>Synchronous scripts in Stride run sequentially within the game loop, ensuring that each step of the game logic is executed in a specific order. This type of scripting is particularly useful for character movements, physics simulations, and other aspects of game logic that require precise and predictable execution. Synchronous scripts ensure that the game state remains consistent across each frame, providing a smooth and coherent gameplay experience.</p>
+        </div>
+    </div>
+</div>
+
+
+    <div class="col-lg-4 col-md-6">
+    <div class="card h-100">
+        <div class="card-body">
+            <h3 class="card-title">Asynchronous scripts</h3>
+            
+            
+            
+            
+            <a href="/images/features/scripting/asynchronous_scripts.jpg" title="Asynchronous scripts" class="feature-image-container image-popup">
+                <div class="rt-image my-3"><div class="zoom-in"></div><img class="img-fluid" loading="lazy" src="/images/features/scripting/asynchronous_scripts.jpg" alt="Asynchronous scripts"></div>
+            </a>
+            
+            <p>Asynchronous scripts in Stride allow developers to perform non-blocking operations, such as loading assets or handling network requests, without interrupting the main game loop. By leveraging the async/await pattern in C# 10 and .NET 6, these scripts enable efficient multitasking and help maintain optimal game performance. Asynchronous scripts are particularly useful for managing time-consuming tasks or background processes, ensuring that the game remains responsive and fluid for the player.</p>
         </div>
     </div>
 </div>

@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg bg-light-stride-website">
     <div class="container-xxl">
         <a class="navbar-brand" href="/">
-            <img height="37" width="124" src="/images/svg/logo.svg" alt="Stride logo">
+            <img id="logo" height="37" width="124" src="/images/svg/stride-logo-light.svg" alt="Stride logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -210,13 +210,19 @@
                     <h1 class="h1 mb-3">Open-source C# Game Engine</h1>
                     <p class="lead">Stride is a free and open-source 2D and 3D cross-platform game engine.
                     <p class="lead">Stride can be used to create video games for PC, mobile devices and virtual reality or interactive content.</p>
-                    <div class="mt-5">
-                        <a href="/download/" class="btn btn-lg btn-stride me-2 mb-3">
-                            <i class="fa-solid fa-download"></i> Download 4.1
-                        </a>
-                        <a href="https://github.com/stride3d/stride" class="btn btn-lg btn-outline-stride mb-3" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-github text-decoration-none"></i> Source Code (MIT)
-                        </a>
+                </div>
+                <div class="px-4 mb-4">
+                    <div class="row g-4">
+                        <div class="col-auto">
+                            <a href="/download/" class="btn btn-lg btn-stride me-2">
+                                <i class="fa-solid fa-download"></i> Download 4.1
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://github.com/stride3d/stride" class="btn btn-lg btn-outline-stride" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github text-decoration-none"></i> Source Code (MIT)
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -233,10 +239,12 @@
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Photorealistic rendering</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Fully multi-threaded</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>VR ready</li>
+                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Fully customizable to your needs</li>
+                        <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Long-term code maintainability</li>
                     </ul>
-                    <div class="mt-5">
-                        <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
-                    </div>
+                </div>
+                <div class="px-4 mb-4">
+                    <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
                 </div>
             </div>
         </div>
@@ -251,9 +259,9 @@
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Full asset creation toolchain</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Flexible and customizable rendering pipeline</li>
                     </ul>
-                    <div class="mt-5">
-                        <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
-                    </div>
+                </div>
+                <div class="px-4 mb-4">
+                    <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
                 </div>
             </div>
         </div>
@@ -268,9 +276,9 @@
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Propose changes to the engine and docs</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Connect with Stride game engine community</li>
                     </ul>
-                    <div class="mt-5">
-                        <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
-                    </div>
+                </div>
+                <div class="px-4 mb-4">
+                    <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
                 </div>
             </div>
         </div>
@@ -278,15 +286,15 @@
             <div class="card h-100">
                 <img src="/images/top/platforms.webp" alt="Platforms Image" width="816" height="459" class="img-fluid mt-2 mb-lg-5">
                 <div class="card-body p-4">
-                    <h2 class="h1 mb-3 mt-lg-4">Develop once, deploy cross-platform</h2>
+                    <h2 class="h1 mb-3 mt-lg-2">Develop once, deploy cross-platform</h2>
                     <ul class="lead mb-4 fa-ul" style="--fa-li-margin: 1.8em;">
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Windows Desktop & Windows Universal</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>iOS and Android through Xamarin</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Xbox One via UWP</li>
                     </ul>
-                    <div class="mt-5">
-                        <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
-                    </div>
+                </div>
+                <div class="px-4 mb-4">
+                    <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
                 </div>
             </div>
         </div>
@@ -302,9 +310,9 @@
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span>Visual Studio, Visual Studio Code or Rider</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check text-stride me-2"></i></span> Game Development with .NET 6</li>
                     </ul>
-                    <div class="mt-5">
-                        <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
-                    </div>
+                </div>
+                <div class="px-4 mb-4">
+                    <a href="/features" class="btn btn-lg btn-outline-stride me-md-2">Read more</a>
                 </div>
             </div>
         </div>
@@ -344,7 +352,7 @@
 <div class="col-lg-4">
     <div class="card box-shadow">
         <div class="card-body">
-            <h5 class="card-title mt-2">David Jeske</h5>
+            <h3 class="card-title mt-2">David Jeske</h3>
         </div>
     </div>
 </div>
