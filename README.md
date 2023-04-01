@@ -133,6 +133,44 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 This Contet will be moved to GitHub Wiki
 
+- Installation
+  - Prerequisites
+  - Installation Steps
+  - Running the Development Server
+- Content
+  - Content Updates
+    - Small Updates
+    - Major Updates
+  - Creating New Posts
+    - Post Naming Convention
+  - Creating New Pages
+  - Shortcodes and Includes
+  - Web Assets
+    - Images
+    - Videos
+  - Styling
+    - Bootstrap Customization
+    - CSS Guidelines
+- Eleventy
+ - Packages and Dependencies
+ - Configuration
+ - Global Data
+ - Folder Structure
+ - Layouts and Templates
+ - Includes and Partials
+ - Advanced Topics
+   - Creating Custom Shortcodes and Includes
+   - Performance Optimization
+- Deployment
+  - GitHub Pages
+  - Azure Web Apps
+    - Deploying with .NET Framework 4.8
+    - Deploying with .NET Core 7
+- Troubleshooting and FAQ
+  - Common Issues and Solutions
+  - Frequently Asked Questions
+
+
 ## Website Updates
 
 If you want to update the website, please follow the instructions below.
@@ -247,7 +285,6 @@ renders as
 
 
 ## Eleventy
-
 ### Packages
 ### Layouts
 ### Includes
@@ -257,7 +294,6 @@ renders as
 ## Folder Structure
 
 ## Deployment
-
 ### GitHub Pages
 ### Azure Web Apps - .NET Framework 4.8
 ### Azure Web Apps - .NET Core 7
@@ -265,5 +301,4 @@ renders as
 ## Styling
 
 ## Advance
-
 ### Adding new Shortcodes and Includes
