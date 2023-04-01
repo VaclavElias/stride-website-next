@@ -20,14 +20,21 @@ Please feel free to collaborate, create issues, and submit pull requests.
   - [x] Addition of excerpts
   - [x] Link fixes
   - [x] Minor corrections and removal of unnecessary content
+
+## Release Checklist
+- [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
+- [ ] Web/Wiki - Shall we mention that we use Bootstrap and Fontawesome to support Open Source community?
     
 ## RC5+ Checklist
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
-- [ ] Wiki - Review and update
-- [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
+- [x] Wiki - Review and update
 - [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/. We could use the new and add web.config redirects for the old ones.
 - [ ] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
+- [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
+- [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
+- [ ] Wiki - New post instructions (e.g. using webp images)
+- [ ] Wiki - Update post instructions
 
 ## RC4 Checklist
 - [x] Web - Ensure excerpt and page description is set for all pages
@@ -52,30 +59,21 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] Web - Do we need Contact Form? Is Contact page good enough as it is (I will add missing links to GitHub and Discussions)?
 - [x] Web - Staging web - Check image caching and gzip (web.config)
 
-
-## Release Checklist
-- [ ] Web - Proof reading
-- [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
-- [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
-- [ ] Web/Wiki - Shall we mention that we use Bootstrap and Fontawesome to support Open Source community?
-
 ## Suggested posts
 - [ ] Posts about all Stride tutorials, internal and external tutorials
+- [ ] Separate post about .NET Live
 
 ## Post Release Update / Future Updates and Improvements
 - [ ] Web - Encourage community to contribute with articles
 - [ ] Web - Search - Exclude API Search on the Web, or checkbox to include/exclude API
 - [ ] Web - Add/List GitHub contributors automatically to a dedicated page (link from the footer)
-- [ ] Wiki - New post instructions (e.g. using webp images)
-- [ ] Wiki - Update post instructions
 - [ ] Web - Features - Create dedicated page for some features
-- [ ] Web - Futher update existing images and content across pages
 - [ ] Web - Friends - Shall we link to our friends GoDot, others, just to be open and making friends in other C# open source game communities? 
 - [ ] Web - Authors links to author pages
 - [ ] Web - Split Tags to 2 columns in the /tags page
 - [ ] Web - Blog Comments from GitHub Issues - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/, the problem is spam..
 - [ ] Include Avatar, with different asssets like dotnet bot, use also for 2D Games
-- [ ] Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
+- [ ] Web - Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
 - [ ] Web - Keep only used FontAwesome references in all.css, to reduce the file sie
 - [ ] Metrics - Update to ASP.NET Core / Blazor https://github.com/stride3d/stride/tree/master/sources/metrics/Stride.Metrics
 - [ ] Web - Change all images to webp
