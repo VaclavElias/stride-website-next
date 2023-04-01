@@ -23,11 +23,12 @@ Please feel free to collaborate, create issues, and submit pull requests.
     
 
 ## RC3+ Checklist
-- [ ] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
+- [x] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
   - CSS Collaborator wanted
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - User docfx code highligting
-- [ ] Web - Add footer to the home page cards and move there buttons
+- [x] Web - Flip colour for the logo when in dark mode
+- [x] Web - Update card footers on the home page to keep the same height from the bottom
 - [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [ ] Wiki - Review and update
 - [ ] Web - Ensure excerpt and page description is set for all pages
