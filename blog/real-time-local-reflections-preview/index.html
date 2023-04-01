@@ -8,14 +8,14 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="canonical" href="https://stride3d.net/blog/real-time-local-reflections-preview/">
     <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
-    <link rel="stylesheet" href="/css/styles.css?site-version=2.0">
+    <link rel="stylesheet" href="/css/styles.css?site-version=2.0.0.2">
     
     <meta property="og:image" content="/images/og/ogp.jpg">
     
-    <script src="/scripts/theme-selector.js?site-version=2.0"></script>
+    <script src="/scripts/theme-selector.js?site-version=2.0.0.2"></script>
 </head>
-<body class="bg-stride d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg bg-light-stride">
+<body class="bg-stride-website d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-light-stride-website">
     <div class="container-xxl">
         <a class="navbar-brand" href="/">
             <img height="37" width="124" src="/images/svg/logo.svg" alt="Stride logo">
@@ -31,7 +31,7 @@
                     <a class="nav-link" aria-current="page" href="/features/">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-primary" href="/blog/">Blog</a>
+                    <a class="nav-link active text-stride" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
@@ -66,7 +66,7 @@
     <div class="mb-3">
         <input class="form-control" id="search-input" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
     </div>
-    <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
+    <button class="btn btn-stride" name="submit" type="submit" value="Search">Search</button>
 </form>
                     </div>
                 </li>
@@ -150,18 +150,18 @@
                     </p>
                 </div><div itemprop="articleBody">
                 <p>We're excited to be working on Xenko's real-time local reflections feature, coming in Xenko's next release. Real-time local reflections are a great way to visually ground objects in a scene. They give your games richer scenes and increased realism in rendering.</p>
-<img alt="Without local reflections" src="/images/blog/2017-02-09-real-time-local-reflections/ball-and-cube-r-off.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2017-02-09-real-time-local-reflections/ball-and-cube-r-off.png">
+<img alt="Without local reflections" src="/images/blog/2017-02-09-real-time-local-reflections/ball-and-cube-r-off.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/2017-02-09-real-time-local-reflections/ball-and-cube-r-off.png">
 <p><i>Without local reflections</i></p>
-<img alt="With local reflections" src="/images/blog/2017-02-09-real-time-local-reflections/ball-and-cube-r-on.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2017-02-09-real-time-local-reflections/ball-and-cube-r-on.png">
+<img alt="With local reflections" src="/images/blog/2017-02-09-real-time-local-reflections/ball-and-cube-r-on.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/2017-02-09-real-time-local-reflections/ball-and-cube-r-on.png">
 <p><i>With local reflections</i></p>
 <p>Where the local reflections effect is available, it replaces image-based lighting (called environment lighting in Game Studio). This has the useful side effect of darkening surfaces where the object meets other objects, similarly to ambient occlusion.</p>
-<img alt="Darkened area" src="/images/blog/2017-02-09-real-time-local-reflections/darkened-area.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2017-02-09-real-time-local-reflections/darkened-area.png">
+<img alt="Darkened area" src="/images/blog/2017-02-09-real-time-local-reflections/darkened-area.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/2017-02-09-real-time-local-reflections/darkened-area.png">
 <p>Local reflections are most obvious when they project bright spots onto other surfaces. The effect looks great in night scenes, which have high contrast, and in rainy conditions with lots of reflective surfaces and highlights. Notice how the vending machine lights are reflected in the ground surface in this screenshot:</p>
-<img alt="Night reflections" src="/images/blog/2017-02-09-real-time-local-reflections/night-reflections.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2017-02-09-real-time-local-reflections/night-reflections.png">
+<img alt="Night reflections" src="/images/blog/2017-02-09-real-time-local-reflections/night-reflections.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/2017-02-09-real-time-local-reflections/night-reflections.png">
 <p>In games without lightmaps or global illumination, objects don't interact with each other as they do in reality, making them appear as if they have simply been Photoshopped in. With local reflections, objects appear to be part of the world rather than having been placed arbitrarily. It makes scenes feel much more grounded, and gives objects a feeling of weight.</p>
 <p>To create local reflections, Xenko reflects the current rendered frame on itself. The technique employs a <strong>Hi-Z trace</strong> as described in Yasin Uludag's essay &quot;Hi-Z Screen-Space Cone-Traced Reflections&quot; in the book, &quot;GPU Pro 5: Advanced Rendering Techniques&quot;.</p>
 <p>Essentially, the effect allows the ray steps during the marching phase to skip large amounts of space. When the ray hits hierarchical depth cells, the algorithm progressively refines the level against which cells are checked until it hits the finest level.</p>
-<img alt="Local reflections graph" src="/images/blog/2017-02-09-real-time-local-reflections/local-reflections-graph.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/2017-02-09-real-time-local-reflections/local-reflections-graph.png">
+<img alt="Local reflections graph" src="/images/blog/2017-02-09-real-time-local-reflections/local-reflections-graph.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/2017-02-09-real-time-local-reflections/local-reflections-graph.png">
 <p><i>(Image courtesy of <a href="http://www.frostbite.com/2015/08/stochastic-screen-space-reflections/">Yasin Uludag and Tomasz Stachowiak's talk on screen space reflections</a>) </i></p>
 <p>A series of later treatments generates blurriness to approximate how reflections behave on rough surfaces. We've managed to keep the time per frame relatively low (3ms at 720p on GTX960), but the feature works best on high-end computers.</p>
 <p>Local reflections are a great tool to have in your kit, but aren't appropriate for every object. It's a <strong>screenspace effect</strong>, meaning it only reflects images that are already on the screen; it doesn't reflect objects that are off-screen or obscured from the player by other objects. Put simply, if the player can't see an object at that moment, then the object isn't reflected. This means local reflections work well in enclosed areas such as corridors and rooms, but less well in open spaces. They also work best on bumpy surfaces, whose chaotic properties hide imperfections in the reflection. They work less well on glossy, mirror-like surfaces, because you naturally expect these surfaces to reflect the whole world.</p>
@@ -206,84 +206,6 @@
     </div>
 </div>
 
-    <div class="bg-footer show text-light mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-primary">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-primary">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-primary">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-primary">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-primary">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-primary" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-primary">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-primary">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-primary">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-primary">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-primary me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-primary" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
     <div class="bg-footer show text-light mt-auto">
     <div class="container">
         <footer class="pt-5 px-2">
@@ -357,6 +279,7 @@
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
@@ -435,6 +358,7 @@
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-info" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
@@ -513,89 +437,12 @@
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-warning" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
     </div>
 </div>
-    <div class="bg-footer show text-light mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-success">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-success">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-success">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-success">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-success">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-success" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-success" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-success" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-success">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-success">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-success">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-success">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-success me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-success" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
-    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0"></script>
+    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0.0.2"></script>
 </body>
 </html>

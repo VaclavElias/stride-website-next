@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stride Game Engine - Huge Update! Paradox Name Change!</title>
-    <meta name="description" content="##New Name: Xenko![Xenko](/images/blog/release-1.4/XenkoLogoTM.png){: .center-image }With the end of the year upon us, we are starting to get excited for Par...">
+    <meta name="description" content="With the end of the year upon us, we are starting to get excited for Paradox’s official release for next year. With a new year comes a fresh start, so we’ve ...">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="canonical" href="https://stride3d.net/blog/new-name-xenko/">
     <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
-    <link rel="stylesheet" href="/css/styles.css?site-version=2.0">
+    <link rel="stylesheet" href="/css/styles.css?site-version=2.0.0.2">
     
     <meta property="og:image" content="/images/og/ogp.jpg">
     
-    <script src="/scripts/theme-selector.js?site-version=2.0"></script>
+    <script src="/scripts/theme-selector.js?site-version=2.0.0.2"></script>
 </head>
-<body class="bg-stride d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg bg-light-stride">
+<body class="bg-stride-website d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-light-stride-website">
     <div class="container-xxl">
         <a class="navbar-brand" href="/">
             <img height="37" width="124" src="/images/svg/logo.svg" alt="Stride logo">
@@ -31,7 +31,7 @@
                     <a class="nav-link" aria-current="page" href="/features/">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-primary" href="/blog/">Blog</a>
+                    <a class="nav-link active text-stride" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
@@ -66,7 +66,7 @@
     <div class="mb-3">
         <input class="form-control" id="search-input" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
     </div>
-    <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
+    <button class="btn btn-stride" name="submit" type="submit" value="Search">Search</button>
 </form>
                     </div>
                 </li>
@@ -137,49 +137,52 @@
             <article itemscope itemtype="http://schema.org/BlogPosting">
                 <h1 itemprop="name">Huge Update! Paradox Name Change!</h1>
                 <div class="text-center mb-3 pt-2">
+                    <div>
+                        
+                        <div class="mt-4 mb-2">
+                            <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/SiliconStudio?size=58">
+                        </div>
+                        Silicon Studio Corporation
+                    </div>
+                    
                     <p style="color:#616161;border-top: 2px solid #979593;" class="x-hidden-focus mt-2 pt-1 small text-muted date d-inline-block">
                         <i class="fa-solid fa-calendar-days"></i> <time datetime="2015-12-01T00:00:00+0000" itemprop="datePublished"> December 01, 2015</time>
                     </p>
                 </div><div itemprop="articleBody">
-                <p>##New Name: Xenko</p>
-<br/>
-![Xenko](/images/blog/release-1.4/XenkoLogoTM.png){: .center-image }
-<br/>
-<p>With the end of the year upon us, we are starting to get excited for Paradox’s official release for next year.<br>
-With a new year comes a fresh start, so we’ve decided to update the Paradox name to more fully encompass what we think is great about our game engine and what direction we want to move toward.</p>
-<!--more-->
+                <p>With the end of the year upon us, we are starting to get excited for Paradox’s official release for next year. With a new year comes a fresh start, so we’ve decided to update the Paradox name to more fully encompass what we think is great about our game engine and what direction we want to move toward.</p>
+<p><div class="table-of-contents"><ul><li><a href="#new-name%3A-xenko">New Name: Xenko </a></li><li><a href="#new-features-with-this-release">New Features With This Release </a><ul><li><a href="#users-can-now-edit-documentation">Users Can Now Edit Documentation </a></li><li><a href="#automatic-symbols-and-source-code-download">Automatic Symbols and Source Code Download </a></li></ul></li><li><a href="#coming-later-december">Coming Later December </a><ul><li><a href="#new-animation-system">New Animation System </a></li><li><a href="#simple%2C-in-game-profiler">Simple, In-Game Profiler </a></li><li><a href="#debug-physics-collision-shapes-at-run-time">Debug Physics Collision Shapes At Run-Time </a></li><li><a href="#built-in-scripts">Built-In Scripts </a></li></ul></li></ul></div></p>
+<h2 id="new-name%3A-xenko" tabindex="-1">New Name: Xenko <a class="direct-link" href="#new-name%3A-xenko">🔗</a></h2>
 <p>So, on to the big news! Paradox is officially changing its name to <em>Xenko</em>.<br>
-We wanted to show our roots a bit more since we are one of the few Japanese-based gaming engines.<br>
-<em>Xenko</em> was inspired by the Japanese word, <em>Zenko</em> 善光. The Japanese characters signify perfection and light. Sticking with the Xenko theme, we will strive to improve your experience with the Xenko engine (ah, feels good to say the new name).</p>
+We wanted to show our roots a bit more since we are one of the few Japanese-based gaming engines.</p>
+<img alt="Xenko" src="/images/blog/release-1.4/XenkoLogoTM.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-1.4/XenkoLogoTM.png">
+<p><em>Xenko</em> was inspired by the Japanese word, <em>Zenko</em> 善光. The Japanese characters signify perfection and light. Sticking with the Xenko theme, we will strive to improve your experience with the Xenko engine (ah, feels good to say the new name).</p>
 <p>We know this is a big change, and we truly appreciate your patience as we have been honing in on this transition.<br>
 Please note that support and download access to any previous Paradox releases will end on <strong><u>December, 25th, 2015</u></strong>.</p>
 <p>We will also be releasing a new version that reflects the transition to the Xenko name. We invite you to download it here.</p>
 <p>And before you ask, yes, this new release can be used without affecting the old Paradox releases and contains migration tools so you can continue to work on your Paradox projects with Xenko. The newest update is a transitional release, so it will be mostly similar to the latest version of Paradox (1.3.4) in terms of features.</p>
-<h3 id="new-features-with-this-release" tabindex="-1">New Features With This Release <a class="direct-link" href="#new-features-with-this-release">🔗</a></h3>
-<p>####Users Can Now Edit Documentation!</p>
+<h2 id="new-features-with-this-release" tabindex="-1">New Features With This Release <a class="direct-link" href="#new-features-with-this-release">🔗</a></h2>
+<h3 id="users-can-now-edit-documentation" tabindex="-1">Users Can Now Edit Documentation <a class="direct-link" href="#users-can-now-edit-documentation">🔗</a></h3>
 <p>We're so glad to have added this feature that allows users to share information about how to best use Xenko. We know our documentation is not entirely complete yet, so we are really looking forward to hearing and sharing information through the community.</p>
 <p>The process for adding to Xenko documentation is real simple. ‘Improve this Doc’ in the top right hand corner and you will be able to edit our documentation. If the user-submitted information passes the verification process, we will add it to the documentation.</p>
-<p><img src="/images/blog/release-1.4/EditDocOnGithub.png" alt="Edit documentation on GitHub">{: .center-image }<br>
-<br/></p>
-<p>####Automatic Symbols and Source Code Download</p>
+<img alt="Edit documentation on GitHub" src="/images/blog/release-1.4/EditDocOnGithub.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-1.4/EditDocOnGithub.png">
+<h3 id="automatic-symbols-and-source-code-download" tabindex="-1">Automatic Symbols and Source Code Download <a class="direct-link" href="#automatic-symbols-and-source-code-download">🔗</a></h3>
 <p>Being open source is great, but only if you can find the sources matching the binary version you are using. From now on, Xenko will download the right sources and symbols for an optimal debug and programming experience so you don’t have to worry about doing it yourself.</p>
 <p>The process is simple. All you need to do is open Visual Studio options, go to Debugging &gt; General, and check “Enable Source Server Support”:</p>
-<p><img src="/images/blog/release-1.4/EnablePDB.png" alt="Enable PDB">{: .center-image }<br>
-<br/></p>
-<h3 id="coming-later-december" tabindex="-1">Coming Later December <a class="direct-link" href="#coming-later-december">🔗</a></h3>
+<img alt="Enable PDB" src="/images/blog/release-1.4/EnablePDB.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-1.4/EnablePDB.png">
+<h2 id="coming-later-december" tabindex="-1">Coming Later December <a class="direct-link" href="#coming-later-december">🔗</a></h2>
 <p>We currently are planning to release updates for the following features later this December:</p>
-<p>####New Animation System</p>
+<h3 id="new-animation-system" tabindex="-1">New Animation System <a class="direct-link" href="#new-animation-system">🔗</a></h3>
 <p>We've added a new animation system that allows you to animate any game property throughout the engine. Animating models is great but why limit animation only to the models? With the newest version of the engine, you will be able to animate material color, UI transparency, and generally any property of your game!</p>
-<p>####Simple, In-Game Profiler</p>
+<h3 id="simple%2C-in-game-profiler" tabindex="-1">Simple, In-Game Profiler <a class="direct-link" href="#simple%2C-in-game-profiler">🔗</a></h3>
 <p>As good as a game engine can get, at some point, you're always going to be limited by the hardware's performance. To help with this, we've added a built-in profiler so that you will easily be able to identify problems and bottlenecks in your game. Even better, you will be able to turn on the built-in profiler at any point during the process of making your game.</p>
-<p>####Debug Physics Collision Shapes At Run-Time</p>
+<h3 id="debug-physics-collision-shapes-at-run-time" tabindex="-1">Debug Physics Collision Shapes At Run-Time <a class="direct-link" href="#debug-physics-collision-shapes-at-run-time">🔗</a></h3>
 <p>Debugging physics is never easy. To streamline this, you will be able to display all the physics collision shapes at any time in your game.</p>
-<p>####Built-In Scripts</p>
+<h3 id="built-in-scripts" tabindex="-1">Built-In Scripts <a class="direct-link" href="#built-in-scripts">🔗</a></h3>
 <p>Writing scripts takes time and is not necessarily accessible to everyone. To improve on this, we added some built-in scripts to the engine so that users will be able to do basic operations with ease. Things like animating the camera, displaying physics debug shapes, and adding profiling information can be done in just a few clicks.</p>
 </div>
                 <hr>
                 <p>
-</p>
+<span class="badge text-bg-stride text-stride me-1" style="--bs-bg-opacity: .20;">Announcement</span></p>
                 <p>
                     Any comments? You can start 🗨 at <i class="fa-brands fa-github text-decoration-none"></i> <a href="https://github.com/stride3d/stride/discussions" target="_blank" rel="noreferrer">GitHub Discussions</a> or <i class="fa-brands fa-discord text-decoration-none"></i> <a class="" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener">Discord</a>.
                 </p>
@@ -198,7 +201,7 @@ Please note that support and download access to any previous Paradox releases wi
             <div class="card px-3">
                 <div class="card-body p-4">
                     <h5>Previous Post</h5>
-                    <a class="prev stretched-link" href="/blog/new-version-1-3-0-beta/">Xenko 1.3β is out!</a>
+                    <a class="prev stretched-link" href="/blog/new-version-1-3-0-beta/">Xenko 1.3 Beta Released</a>
                 </div>
             </div>
             
@@ -216,84 +219,6 @@ Please note that support and download access to any previous Paradox releases wi
     </div>
 </div>
 
-    <div class="bg-footer show text-light mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-primary">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-primary">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-primary">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-primary">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-primary">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-primary" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-primary">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-primary">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-primary">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-primary">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-primary me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-primary" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
     <div class="bg-footer show text-light mt-auto">
     <div class="container">
         <footer class="pt-5 px-2">
@@ -367,6 +292,7 @@ Please note that support and download access to any previous Paradox releases wi
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
@@ -445,6 +371,7 @@ Please note that support and download access to any previous Paradox releases wi
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-info" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
@@ -523,89 +450,12 @@ Please note that support and download access to any previous Paradox releases wi
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-warning" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
     </div>
 </div>
-    <div class="bg-footer show text-light mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-success">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-success">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-success">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-success">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-success">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-success" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-success" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-success" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-success">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-success">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-success">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-success">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-success me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-success" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
-    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0"></script>
+    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0.0.2"></script>
 </body>
 </html>

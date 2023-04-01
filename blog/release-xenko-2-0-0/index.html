@@ -8,14 +8,14 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="canonical" href="https://stride3d.net/blog/release-xenko-2-0-0/">
     <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
-    <link rel="stylesheet" href="/css/styles.css?site-version=2.0">
+    <link rel="stylesheet" href="/css/styles.css?site-version=2.0.0.2">
     
     <meta property="og:image" content="/images/og/ogp.jpg">
     
-    <script src="/scripts/theme-selector.js?site-version=2.0"></script>
+    <script src="/scripts/theme-selector.js?site-version=2.0.0.2"></script>
 </head>
-<body class="bg-stride d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg bg-light-stride">
+<body class="bg-stride-website d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-light-stride-website">
     <div class="container-xxl">
         <a class="navbar-brand" href="/">
             <img height="37" width="124" src="/images/svg/logo.svg" alt="Stride logo">
@@ -31,7 +31,7 @@
                     <a class="nav-link" aria-current="page" href="/features/">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-primary" href="/blog/">Blog</a>
+                    <a class="nav-link active text-stride" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
@@ -66,7 +66,7 @@
     <div class="mb-3">
         <input class="form-control" id="search-input" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
     </div>
-    <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
+    <button class="btn btn-stride" name="submit" type="submit" value="Search">Search</button>
 </form>
                     </div>
                 </li>
@@ -151,7 +151,7 @@
                 </div><div itemprop="articleBody">
                 <p>After nearly two years of open beta, we’re proud to announce that <strong>Xenko is now available as a commercial product</strong>. Xenko 2.0 adds features such as full VR support, a pipeline rendering editor, light probes, and scene streaming management, along with greatly improved stability.</p>
 <p><div class="table-of-contents"><ul><li><a href="#pricing">Pricing </a></li><li><a href="#xenko-pro-is-free-until-december-31st">Xenko Pro is free until December 31st </a></li><li><a href="#no-need-to-make-your-game-open-source">No need to make your game open-source </a></li><li><a href="#what-about-the-beta-versions%3F">What about the beta versions? </a></li><li><a href="#what%E2%80%99s-new-in-xenko-2.0%3F">What’s new in Xenko 2.0? </a><ul><li><a href="#scene-hierarchy-and-scene-streaming">Scene hierarchy and scene streaming </a></li><li><a href="#virtual-reality">Virtual Reality </a></li><li><a href="#global-illumination-with-light-probes">Global illumination with light probes </a></li><li><a href="#light-shafts">Light Shafts </a></li><li><a href="#graphics-compositor">Graphics Compositor </a></li><li><a href="#improved-visual-studio-experience">Improved Visual Studio experience </a></li><li><a href="#faster-%26-lighter">Faster &amp; Lighter </a></li></ul></li></ul></div></p>
-<img alt="Starbreach Image" src="/images/blog/release-2.0/starbreach.jpg" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.0/starbreach.jpg">
+<img alt="Starbreach Image" src="/images/blog/release-2.0/starbreach.jpg" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.0/starbreach.jpg">
 <p>We’d like to thank all our beta users for their feedback, which helped us improve Xenko immeasurably over the last two years. We couldn’t have done it without you!</p>
 <p><a href="/download">Get Xenko 2.0</a></p>
 <h2 id="pricing" tabindex="-1">Pricing <a class="direct-link" href="#pricing">🔗</a></h2>
@@ -179,10 +179,10 @@
 <h3 id="scene-hierarchy-and-scene-streaming" tabindex="-1">Scene hierarchy and scene streaming <a class="direct-link" href="#scene-hierarchy-and-scene-streaming">🔗</a></h3>
 <p>Working with scenes has become more flexible. Instead of a single scene, your game can now use a hierarchy of scenes to organize entities into levels, areas or layers, and let teams collaborate on them more efficiently.</p>
 <p>Game Studio displays child scenes together with their parent. Individual scenes can be loaded, unload, locked and moved around.</p>
-<div class="ratio ratio-16x9 mb-2"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/scene_editor_640.jpg"><source src="/images/blog/release-2.0/scene_editor_640.mp4" type="video/mp4"></video></div>
+<div class="ratio ratio-16x9 mb-3"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/scene_editor_640.jpg"><source src="/images/blog/release-2.0/scene_editor_640.mp4" type="video/mp4"></video></div>
 <p>When running your game, the <strong>default scene</strong> set in your <strong>game settings</strong> is loaded as the <strong>root scene</strong> and can be used to store persistent entities. More scenes can be dynamically loaded and unloaded from scripts and added as <strong>child scenes</strong>.</p>
 <pre class="language-csharp"><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> childScene <span class="token operator">=</span> Content<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">Load</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>Scene<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token string">"myChildScene"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>SceneSystem<span class="token punctuation">.</span>SceneInstance<span class="token punctuation">.</span>RootScene<span class="token punctuation">.</span>Children<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>childScene<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<div class="ratio ratio-16x9 mb-2"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/scene_streaming_640.jpg"><source src="/images/blog/release-2.0/scene_streaming_640.mp4" type="video/mp4"></video></div>
+<div class="ratio ratio-16x9 mb-3"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/scene_streaming_640.jpg"><source src="/images/blog/release-2.0/scene_streaming_640.mp4" type="video/mp4"></video></div>
 <p>To get started, take a look at the new built-in <code>SceneStreamingScript</code>. It demonstrates background scene loading when passing through trigger volumes.</p>
 <p>You can now use a scene's <code>Offset</code> to move its entities both at design time and runtime.</p>
 <p>The <code>ChildSceneComponent</code> has been removed. We encourage all entities to be managed by a single <strong>entity manager</strong> and rendered by a single <strong>graphics compositor</strong>.</p>
@@ -190,24 +190,24 @@
 <p>Enabling VR is now as simple as a single click!</p>
 <p>Xenko's clustered forward rendering, with its multisample anti-aliasing, makes it ideal for VR. Xenko uses a single API for every device, with native support for Oculus and HTV Vive (more devices coming very soon).</p>
 <p>Xenko comes with a VR game sample that shows you how to implement VR gameplay, including environment interaction and teleportation:</p>
-<div class="ratio ratio-16x9 mb-2"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/vr_template_640.jpg"><source src="/images/blog/release-2.0/vr_template_640.mp4" type="video/mp4"></video></div>
+<div class="ratio ratio-16x9 mb-3"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/vr_template_640.jpg"><source src="/images/blog/release-2.0/vr_template_640.mp4" type="video/mp4"></video></div>
 <p>Save valuable time by visualizing and testing VR directly from the scene editor:</p>
-<div class="ratio ratio-16x9 mb-2"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/vr_editor_640.jpg"><source src="/images/blog/release-2.0/vr_editor_640.mp4" type="video/mp4"></video></div>
+<div class="ratio ratio-16x9 mb-3"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/vr_editor_640.jpg"><source src="/images/blog/release-2.0/vr_editor_640.mp4" type="video/mp4"></video></div>
 <h3 id="global-illumination-with-light-probes" tabindex="-1">Global illumination with light probes <a class="direct-link" href="#global-illumination-with-light-probes">🔗</a></h3>
 <p>Light probes capture the lighting at the position you place them. They simulate indirect light, the effect of light bouncing off surfaces and illuminating other surfaces.</p>
 <p>They can make a dramatic difference to the mood and appearance of your scene.</p>
-<div class="ratio ratio-16x9 mb-2"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/light_probes_640.jpg"><source src="/images/blog/release-2.0/light_probes_640.mp4" type="video/mp4"></video></div>
+<div class="ratio ratio-16x9 mb-3"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/light_probes_640.jpg"><source src="/images/blog/release-2.0/light_probes_640.mp4" type="video/mp4"></video></div>
 <p>Light probes can be <strong>placed freely</strong> and are processed <strong>per pixel</strong>. This means you can use them not only on small dynamic objects, but also large or static objects (until we have light maps for those!).</p>
 <p>Last but not least, you can now very easily capture a DDS cubemap from current camera position in editor, for use as a diffuse or specular skybox light.</p>
 <h3 id="light-shafts" tabindex="-1">Light Shafts <a class="direct-link" href="#light-shafts">🔗</a></h3>
 <p>Xenko now supports shadow map-based light shafts for directional lights.</p>
-<div class="ratio ratio-16x9 mb-2"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/lightshaft_CoS_640.jpg"><source src="/images/blog/release-2.0/lightshaft_CoS_640.mp4" type="video/mp4"></video></div>
+<div class="ratio ratio-16x9 mb-3"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/lightshaft_CoS_640.jpg"><source src="/images/blog/release-2.0/lightshaft_CoS_640.mp4" type="video/mp4"></video></div>
 <p>Our implementation uses ray-marching rather than post effects, making the shaft visible and cool-looking even if the light source isn't visible.</p>
-<div class="ratio ratio-16x9 mb-2"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/lightshaft_640.jpg"><source src="/images/blog/release-2.0/lightshaft_640.mp4" type="video/mp4"></video></div>
+<div class="ratio ratio-16x9 mb-3"><video autoplay controls loop preload="none" poster="/images/blog/release-2.0/lightshaft_640.jpg"><source src="/images/blog/release-2.0/lightshaft_640.mp4" type="video/mp4"></video></div>
 <h3 id="graphics-compositor" tabindex="-1">Graphics Compositor <a class="direct-link" href="#graphics-compositor">🔗</a></h3>
 <p>The graphics compositor is now a separate asset.</p>
 <p>Rendering parameters (such as VR) and post effect parameters can be tweaked in just a few clicks.</p>
-<p><a href="/images/blog/release-2.0/graphics_compositor.jpg" title="Graphics compositor" class="mb-2"><img alt="Graphics compositor" src="/images/blog/release-2.0/graphics_compositor.jpg" class="img-fluid" loading="lazy" data-src="/images/blog/release-2.0/graphics_compositor.jpg"></a></p>
+<p><a href="/images/blog/release-2.0/graphics_compositor.jpg" title="Graphics compositor" class="mb-3"><img alt="Graphics compositor" src="/images/blog/release-2.0/graphics_compositor.jpg" class="img-fluid" loading="lazy" data-src="/images/blog/release-2.0/graphics_compositor.jpg"></a></p>
 <p>This is just the first step towards making the graphics compositor easy to customize and extend. Stay tuned for more changes in future releases!</p>
 <h3 id="improved-visual-studio-experience" tabindex="-1">Improved Visual Studio experience <a class="direct-link" href="#improved-visual-studio-experience">🔗</a></h3>
 <p>We now have full support for <strong>Visual Studio 2017</strong>!</p>
@@ -231,7 +231,7 @@
 </div>
                 <hr>
                 <p>
-<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Release</span></p>
+<span class="badge text-bg-stride text-stride me-1" style="--bs-bg-opacity: .20;">Release</span></p>
                 <p>
                     Any comments? You can start 🗨 at <i class="fa-brands fa-github text-decoration-none"></i> <a href="https://github.com/stride3d/stride/discussions" target="_blank" rel="noreferrer">GitHub Discussions</a> or <i class="fa-brands fa-discord text-decoration-none"></i> <a class="" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener">Discord</a>.
                 </p>
@@ -268,84 +268,6 @@
     </div>
 </div>
 
-    <div class="bg-footer show text-light mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-primary">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-primary">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-primary">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-primary">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-primary">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-primary" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-primary">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-primary">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-primary">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-primary">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-primary me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-primary" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
     <div class="bg-footer show text-light mt-auto">
     <div class="container">
         <footer class="pt-5 px-2">
@@ -419,6 +341,7 @@
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
@@ -497,6 +420,7 @@
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-info" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
@@ -575,89 +499,12 @@
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-warning" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
     </div>
 </div>
-    <div class="bg-footer show text-light mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-success">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-success">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-success">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-success">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-success">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-success" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-success" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-success" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-success">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-success">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-success">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-success">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-success me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-success" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
-    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0"></script>
+    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0.0.2"></script>
 </body>
 </html>

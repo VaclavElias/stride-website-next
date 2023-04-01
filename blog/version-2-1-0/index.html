@@ -8,14 +8,14 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="canonical" href="https://stride3d.net/blog/version-2-1-0/">
     <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
-    <link rel="stylesheet" href="/css/styles.css?site-version=2.0">
+    <link rel="stylesheet" href="/css/styles.css?site-version=2.0.0.2">
     
     <meta property="og:image" content="/images/og/ogp.jpg">
     
-    <script src="/scripts/theme-selector.js?site-version=2.0"></script>
+    <script src="/scripts/theme-selector.js?site-version=2.0.0.2"></script>
 </head>
-<body class="bg-stride d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg bg-light-stride">
+<body class="bg-stride-website d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-light-stride-website">
     <div class="container-xxl">
         <a class="navbar-brand" href="/">
             <img height="37" width="124" src="/images/svg/logo.svg" alt="Stride logo">
@@ -31,7 +31,7 @@
                     <a class="nav-link" aria-current="page" href="/features/">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-primary" href="/blog/">Blog</a>
+                    <a class="nav-link active text-stride" href="/blog/">Blog</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
@@ -66,7 +66,7 @@
     <div class="mb-3">
         <input class="form-control" id="search-input" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
     </div>
-    <button class="btn btn-primary" name="submit" type="submit" value="Search">Search</button>
+    <button class="btn btn-stride" name="submit" type="submit" value="Search">Search</button>
 </form>
                     </div>
                 </li>
@@ -156,13 +156,13 @@
 <p><div class="table-of-contents"><ul><li><a href="#summary">Summary </a></li><li><a href="#local-reflections">Local reflections </a></li><li><a href="#clear-coat-shading">Clear coat shading </a></li><li><a href="#thin-glass-materials">Thin glass materials </a></li><li><a href="#improved-light-shafts">Improved light shafts </a></li><li><a href="#texture-streaming">Texture streaming </a></li><li><a href="#render-masks">Render masks </a></li><li><a href="#improved-profiler">Improved profiler </a></li><li><a href="#debug-text">Debug text </a></li><li><a href="#rewritten-input-system">Rewritten input system </a></li><li><a href="#improved-direct3d-12-support">Improved Direct3D 12 support </a></li><li><a href="#improved-environment-fresnel">Improved environment fresnel </a></li><li><a href="#japanese-documentation">Japanese documentation </a></li></ul></div></p>
 <h2 id="local-reflections" tabindex="-1">Local reflections <a class="direct-link" href="#local-reflections">🔗</a></h2>
 <p>Xenko 2.1 introduces <strong>local reflections</strong>. We wrote about this feature <a href="https://stride3d.net/blog/real-time-local-reflections-preview/">back in March</a>; it's been through several revisions since then.</p>
-<img alt="Local reflections" src="/images/blog/release-2.1/local-reflections.jpg" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/local-reflections.jpg">
+<img alt="Local reflections" src="/images/blog/release-2.1/local-reflections.jpg" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/local-reflections.jpg">
 <p>You can enable and customize local reflections in the graphics compositor on the <strong>post effects</strong> properties.</p>
-<img alt="Enable local reflections" src="/images/blog/release-2.1/enable-local-reflections.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/enable-local-reflections.png">
+<img alt="Enable local reflections" src="/images/blog/release-2.1/enable-local-reflections.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/enable-local-reflections.png">
 <p>For details, see the <a href="http://doc.stride3d.net/latest/en/manual/graphics/post-effects/local-reflections.html">local reflections documentation</a>.</p>
 <h2 id="clear-coat-shading" tabindex="-1">Clear coat shading <a class="direct-link" href="#clear-coat-shading">🔗</a></h2>
 <p>Xenko 2.1 includes a <strong>clear-coat material</strong> template that uses physically-based rendering to simulate vehicle paint.</p>
-<img alt="Clear coat" src="/images/blog/release-2.1/clear-coat-2.jpg" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/clear-coat-2.jpg">
+<img alt="Clear coat" src="/images/blog/release-2.1/clear-coat-2.jpg" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/clear-coat-2.jpg">
 <p>Clear-coat shading has several advantages over creating the effect manually with material layers:</p>
 <ul>
 <li>layers are blended based on distance</li>
@@ -170,33 +170,33 @@
 <li>improved visualization</li>
 </ul>
 <p>You can add a predefined <strong>clear coat</strong> material from the <strong>Asset view</strong> under <strong>Add asset &gt; Material</strong>.</p>
-<img alt="Add clear coat" src="/images/blog/release-2.1/add-clear-coat.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/add-clear-coat.png">
+<img alt="Add clear coat" src="/images/blog/release-2.1/add-clear-coat.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/add-clear-coat.png">
 <p>For details, see the <a href="http://doc.stride3d.net/latest/en/manual/graphics/materials/clear-coat-shading.html">clear coat shading documentation</a>.</p>
 <h2 id="thin-glass-materials" tabindex="-1">Thin glass materials <a class="direct-link" href="#thin-glass-materials">🔗</a></h2>
 <p>You can now render thin glass materials such as windshields. The diffuse color controls the tint of the glass and how much light is blocked (darker colors block more light).</p>
-<img alt="Thin Glass materials" src="/images/blog/release-2.1/glass-materials.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/glass-materials.png">
+<img alt="Thin Glass materials" src="/images/blog/release-2.1/glass-materials.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/glass-materials.png">
 <p>You can add a predefined <strong>Glass</strong> material from the <strong>Asset view</strong> under <strong>Add asset &gt; Material</strong>.</p>
-<img alt="Select thin glass material" src="/images/blog/release-2.1/select-thin-glass-material.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/select-thin-glass-material.png">
+<img alt="Select thin glass material" src="/images/blog/release-2.1/select-thin-glass-material.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/select-thin-glass-material.png">
 <h2 id="improved-light-shafts" tabindex="-1">Improved light shafts <a class="direct-link" href="#improved-light-shafts">🔗</a></h2>
 <p>You can now use <strong>light shafts</strong> with any kind of light that casts shadows (ie point lights, directional lights, or spot lights). You can also use them with multiple shadow cascades.</p>
 <p>Additionally, Game Studio now displays light shaft bounding volumes in the scene editor, so you can easily see the areas where light shafts are created. To show or hide navigation light shaft bounding volumes, in the <strong>scene editor toolbar</strong>, open the <strong>gizmo options</strong> menu and use the <strong>Light shaft bounding volumes</strong> checkbox.</p>
-<img alt="Show light shaft bounding volumes" src="/images/blog/release-2.1/show-or-hide-light-shaft-bounding-volume.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/show-or-hide-light-shaft-bounding-volume.png">
+<img alt="Show light shaft bounding volumes" src="/images/blog/release-2.1/show-or-hide-light-shaft-bounding-volume.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/show-or-hide-light-shaft-bounding-volume.png">
 <p>The <code>LightShaftComponent</code> settings have been simplified and now have settings to control quality and performance.</p>
 <p>For details, see the <a href="http://doc.stride3d.net/latest/en/manual/graphics/lights-and-shadows/light-shafts.html">light shaft documentation</a>.</p>
 <h2 id="texture-streaming" tabindex="-1">Texture streaming <a class="direct-link" href="#texture-streaming">🔗</a></h2>
 <p>Xenko now supports streaming for textures. This significantly decreases the time it takes to load a game or scene, uses less memory, and makes your game easier to scale.</p>
 <p>Streaming is enabled for textures by default. You can find the option in the texture properties under <strong>Format</strong>.</p>
-<img alt="Enable streaming" src="/images/blog/release-2.1/enable-streaming.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/enable-streaming.png">
+<img alt="Enable streaming" src="/images/blog/release-2.1/enable-streaming.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/enable-streaming.png">
 <p>You can also set the global <strong>Streaming</strong> settings in <strong>Game settings</strong>.</p>
-<img alt="Streaming settings" src="/images/blog/release-2.1/streaming-settings.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/streaming-settings.png">
+<img alt="Streaming settings" src="/images/blog/release-2.1/streaming-settings.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/streaming-settings.png">
 <p>For details, see <a href="http://doc.stride3d.net/latest/en/manual/graphics/textures/streaming.html">streaming documentation</a>.</p>
 <h2 id="render-masks" tabindex="-1">Render masks <a class="direct-link" href="#render-masks">🔗</a></h2>
 <p>You can now set which render groups a camera renders under <strong>Graphics Compositor &gt; Entry points &gt; Render masks</strong>. For example, you can have a model be visible to Camera A but invisible to Camera B.</p>
-<img alt="Render mask" src="/images/blog/release-2.1/change-render-mask.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/change-render-mask.png">
+<img alt="Render mask" src="/images/blog/release-2.1/change-render-mask.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/change-render-mask.png">
 <p>For details, see the <a href="http://doc.stride3d.net/latest/en/manual/graphics/graphics-compositor/render-groups-and-masks.html">Render groups and masks documentation</a>.</p>
 <h2 id="improved-profiler" tabindex="-1">Improved profiler <a class="direct-link" href="#improved-profiler">🔗</a></h2>
 <p>The <strong>Game Profiler</strong> script now displays more information and is easier to use.</p>
-<img alt="Profiler at runtime" src="/images/blog/release-2.1/profiling-profiler-at-runtime.jpg" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/profiling-profiler-at-runtime.jpg">
+<img alt="Profiler at runtime" src="/images/blog/release-2.1/profiling-profiler-at-runtime.jpg" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/profiling-profiler-at-runtime.jpg">
 <p>You can now:</p>
 <ul>
 <li>profile GPU information</li>
@@ -206,11 +206,11 @@
 <li>jump to a results page with the <strong>number keys</strong>, or move forward and backwards with <strong>F3</strong> and <strong>F4</strong></li>
 <li>set parameters in Game Studio:</li>
 </ul>
-<img alt="Profiler properties" src="/images/blog/release-2.1/profiler-properties.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/profiler-properties.png">
+<img alt="Profiler properties" src="/images/blog/release-2.1/profiler-properties.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/profiler-properties.png">
 <p>For details, see the <a href="http://doc.stride3d.net/latest/en/manual/troubleshooting/profiling.html">Profiling documentation</a>.</p>
 <h2 id="debug-text" tabindex="-1">Debug text <a class="direct-link" href="#debug-text">🔗</a></h2>
 <p>You can now display debug text at runtime. For more information, see the <a href="http://doc.stride3d.net/latest/en/manual/troubleshooting/debug-text.html">debug text documentation</a>.</p>
-<img alt="Debug text" src="/images/blog/release-2.1/my-debug-text.jpg" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/my-debug-text.jpg">
+<img alt="Debug text" src="/images/blog/release-2.1/my-debug-text.jpg" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/my-debug-text.jpg">
 <h2 id="rewritten-input-system" tabindex="-1">Rewritten input system <a class="direct-link" href="#rewritten-input-system">🔗</a></h2>
 <p>The input system has been rewritten to track different input devices and allow for better extensibility.</p>
 <ul>
@@ -237,10 +237,10 @@
 <h2 id="japanese-documentation" tabindex="-1">Japanese documentation <a class="direct-link" href="#japanese-documentation">🔗</a></h2>
 <p><a href="http://doc.stride3d.net/latest/jp/manual/get-started/index.html">ドキュメントは日本語での表示も可能です</a>。言語を切り替えるには、右上のLANGUAGEボタンをクリックしてください。</p>
 <p>The Xenko documentation is now <a href="http://doc.stride3d.net/latest/jp/manual/get-started/index.html">available in Japanese</a>. To switch languages, use the <strong>Language</strong> button in the top-right of the documentation site.</p>
-<img alt="Switch language" src="/images/blog/release-2.1/switch-language.png" class="img-fluid mb-2" loading="lazy" data-src="/images/blog/release-2.1/switch-language.png"></div>
+<img alt="Switch language" src="/images/blog/release-2.1/switch-language.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/switch-language.png"></div>
                 <hr>
                 <p>
-<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">Release</span></p>
+<span class="badge text-bg-stride text-stride me-1" style="--bs-bg-opacity: .20;">Release</span></p>
                 <p>
                     Any comments? You can start 🗨 at <i class="fa-brands fa-github text-decoration-none"></i> <a href="https://github.com/stride3d/stride/discussions" target="_blank" rel="noreferrer">GitHub Discussions</a> or <i class="fa-brands fa-discord text-decoration-none"></i> <a class="" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener">Discord</a>.
                 </p>
@@ -277,84 +277,6 @@
     </div>
 </div>
 
-    <div class="bg-footer show text-light mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-primary">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-primary">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-primary">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-primary">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-primary">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-primary" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-primary">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-primary">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-primary" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-primary">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-primary">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-primary">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-primary me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-primary me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-primary" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
     <div class="bg-footer show text-light mt-auto">
     <div class="container">
         <footer class="pt-5 px-2">
@@ -428,6 +350,7 @@
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
@@ -506,6 +429,7 @@
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-info" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
@@ -584,89 +508,12 @@
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p>Supported by the <a class="link-warning" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p>v.2.0.0.2</p>
                 <p>© .NET Foundation and Contributors</p>
             </div>
         </footer>
     </div>
 </div>
-    <div class="bg-footer show text-light mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-success">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-success">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-success">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-success">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-success">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-success" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-success" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-success" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-success" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-success">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-success">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-success" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-success">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-success">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-success">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-success me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-success me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-success" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
-    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0"></script>
+    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0.0.2"></script>
 </body>
 </html>
