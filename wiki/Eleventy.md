@@ -1,0 +1,9 @@
+ - Packages and Dependencies
+ - Configuration
+ - Global Data
+ - Folder Structure
+ - Layouts and Templates
+ - Includes and Partials
+ - Advanced Topics
+   - Creating Custom Shortcodes and Includes
+   - Performance Optimization

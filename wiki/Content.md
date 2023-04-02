@@ -1,0 +1,13 @@
+  - Content Updates
+    - Small Updates
+    - Major Updates
+  - Creating New Posts
+    - Post Naming Convention
+  - Creating New Pages
+  - Shortcodes and Includes
+  - Web Assets
+    - Images
+    - Videos
+  - Styling
+    - Bootstrap Customization
+    - CSS Guidelines
