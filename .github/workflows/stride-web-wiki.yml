@@ -10,12 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - uses: actions/checkout@v3
-     - name: Copy files
-       uses: ./
-       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        OUTPUT_FOLDER: wiki_files
+     - uses: actions/checkout@v3    
      - name: Upload Wiki pages
        uses: docker://decathlon/wiki-page-creator-action:2.0.1
        env:
@@ -24,4 +19,4 @@ jobs:
          ACTION_NAME: VaclavElias
          OWNER: VaclavElias
          REPO_NAME: stride-website-next
-         MD_FOLDER: ./wiki_files/wiki
+         MD_FOLDER: wiki
