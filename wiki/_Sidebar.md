@@ -1,7 +1,7 @@
 - [Installation](Installation)
-  - [Prerequisites](Prerequisites)
-  - Installation Steps
-  - Running the Development Server
+  - [Prerequisites](Installation#prerequisites)
+  - [Installation Steps](Installation#installation-steps)
+  - [Running the Development Server](Installation#running-the-development-server)
 - [Content](Content)
   - Content Updates
     - Small Updates

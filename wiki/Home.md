@@ -1,10 +1,12 @@
 Welcome to the Stride Website Wiki.
 
+If you would like to make minor changes (new posts or pages, updating existing posts or pages, fixing typos), jump right away to ... otherwise read the all following sections.
+
 - [Installation](Installation)
-  - [Prerequisites](Prerequisites)
-  - Installation Steps
-  - Running the Development Server
-- Content(Content)
+  - [Prerequisites](Installation#prerequisites)
+  - [Installation Steps](Installation#installation-steps)
+  - [Running the Development Server](Installation#running-the-development-server)
+- [Content](Content)
   - Content Updates
     - Small Updates
     - Major Updates
@@ -18,21 +20,22 @@ Welcome to the Stride Website Wiki.
   - Styling
     - Bootstrap Customization
     - CSS Guidelines
-- Eleventy(Eleventy)
- - Packages and Dependencies
- - Configuration
- - Global Data
- - Folder Structure
- - Layouts and Templates
- - Includes and Partials
- - Advanced Topics
-   - Creating Custom Shortcodes and Includes
-   - Performance Optimization
-- Deployment(Deployment)
+- [Eleventy](Eleventy)
+  - Packages and Dependencies
+  - Configuration
+  - Global Data
+  - Folder Structure
+  - Layouts and Templates
+  - Includes and Partials
+  - Advanced Topics
+    - Creating Custom Shortcodes and Includes
+    - Performance Optimization
+- [Deployment](Deployment)
   - GitHub Pages
   - Azure Web Apps
     - Deploying with .NET Framework 4.8
     - Deploying with .NET Core 7
-- Troubleshooting and FAQ
+  - Wiki Deployment  
+- [Troubleshooting and FAQ](Troubleshooting-and-FAQ)
   - Common Issues and Solutions
   - Frequently Asked Questions

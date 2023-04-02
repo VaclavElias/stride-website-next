@@ -1,8 +1,8 @@
 # Troubleshooting and FAQ
 
-- Known Issues
-- Common Issues and Solutions
-- Frequently Asked Questions
+- [Known Issues](#known-issues)
+- [Common Issues and Solutions](#common-issues-and-solutions)
+- [Frequently Asked Questions](#frequently-asked-questions)
 
 ## Known Issues
 
@@ -11,4 +11,11 @@
 
 ## Common Issues and Solutions
 
+Any issue should be added to GitHub issues so it can be tracked and elaborated by the community.
+
 ## Frequently Asked Questions
+
+**Q:** I just want to fix a typo in the post, do I need to follow your installation steps?<br>
+**A:** *No, you can fix the typo directly in the GitHub website, but you would need to still fork the repo, make your update on the main or your new branch and then create a pull request*
+
+
