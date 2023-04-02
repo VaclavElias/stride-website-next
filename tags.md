@@ -3,8 +3,11 @@ layout: page
 title: Blog Tags
 tags: search
 ---
-Welcome to the Tags page, where you can explore all the blog posts grouped by topic.
-<!-- excerpt -->
+
+Explore a comprehensive list of topics and tags related to the Stride game engine, covering features, tutorials, updates, and more.
+
+---
+
 {% for tag in collections.tagList %}
   <h3>{{ tag | replace: "-"," " }}</h3>
   <ul>

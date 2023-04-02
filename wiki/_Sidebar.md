@@ -1,0 +1,36 @@
+- [Installation](Installation)
+  - [Prerequisites](Prerequisites)
+  - Installation Steps
+  - Running the Development Server
+- Content(Content)
+  - Content Updates
+    - Small Updates
+    - Major Updates
+  - Creating New Posts
+    - Post Naming Convention
+  - Creating New Pages
+  - Shortcodes and Includes
+  - Web Assets
+    - Images
+    - Videos
+  - Styling
+    - Bootstrap Customization
+    - CSS Guidelines
+- Eleventy(Eleventy)
+ - Packages and Dependencies
+ - Configuration
+ - Global Data
+ - Folder Structure
+ - Layouts and Templates
+ - Includes and Partials
+ - Advanced Topics
+   - Creating Custom Shortcodes and Includes
+   - Performance Optimization
+- Deployment(Deployment)
+  - GitHub Pages
+  - Azure Web Apps
+    - Deploying with .NET Framework 4.8
+    - Deploying with .NET Core 7
+- Troubleshooting and FAQ(Troubleshooting-and-FAQ)
+  - Common Issues and Solutions
+  - Frequently Asked Questions
