@@ -23,9 +23,10 @@ Before updating the Stride website, ensure you are familiar with the following p
 
 ## Installation Steps
 
-1. Create an issue so we can track your contribution.
+1. Create an issue so we can track your contribution and to avoid duplicate work. If you are not sure if your contribution is needed, feel free to create an issue and ask.
 1. Fork the repository by navigating to the [Stride website repository](https://github.com/stride3d/stride-website) and clicking the **Fork** button in the top-right corner.
 1. Clone your forked repository using the following command, replacing `your-username` with your GitHub username: `git clone https://github.com/your-username/stride-website.git`
+   - **Tip:** It's a good idea to create a new branch for each feature or bug fix you work on. This helps keep your forked repository organized and makes it easier to manage multiple pull requests.
 1. Go to the project folder `cd stride-website`
 1. Run `npm install` to install all dependencies.
 
@@ -35,6 +36,7 @@ Before updating the Stride website, ensure you are familiar with the following p
 1. You should see many logs in the command line, indicating the progress and displaying any errors.
    - A Windows Security warning may appear on the first run (Allow Node.js JavaScript Runtime to communicate on these networks). Click **Allow access**.
 1. Open the site in your browser by navigating to `http://localhost:8080/`.
+1. Happy coding!
 
 Assuming you have made all necessary changes and tested them on the development server, follow these steps to contribute your updates:
 
@@ -42,3 +44,8 @@ Assuming you have made all necessary changes and tested them on the development 
    - Commit the changes with a meaningful message
    - Push the changes to your forked repository
 1. Create a pull request to the main repository:
+   - You can create a pull request from your forked repository by navigating to Pull requests page and click **New pull request** button
+   - Select the **main** branch as the base branch and your branch as the compare branch
+   - Click **Create pull request** button
+
+Once your pull request has been reviewed and approved, your changes will be merged into the main repository.
