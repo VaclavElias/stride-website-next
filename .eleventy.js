@@ -1,3 +1,6 @@
+// Description: Eleventy configuration file for the Stride website
+
+// Import dependencies from node_modules / package.json
 const sass = require("sass");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const path = require("node:path");
@@ -5,18 +8,21 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItToc = require("markdown-it-table-of-contents");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const EleventyFetch = require("@11ty/eleventy-fetch");
+const eleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = function (eleventyConfig) {
 
+    // Add plugins
     eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(pluginRss);
 
+    // Add custom files and folders
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addPassthroughCopy("scripts");
     eleventyConfig.addPassthroughCopy("files");
     eleventyConfig.addPassthroughCopy("favicon.ico");
     eleventyConfig.addPassthroughCopy("favicon.png");
-    eleventyConfig.addPassthroughCopy("CNAME");
+    eleventyConfig.addPassthroughCopy("CNAME"); // For GitHub Pages
     eleventyConfig.addPassthroughCopy("web.config");
     eleventyConfig.addPassthroughCopy({
         "node_modules/lunr/lunr.min.js": "scripts/lunr.min.js",
@@ -58,6 +64,7 @@ module.exports = function (eleventyConfig) {
         excerpt: true,
     });
 
+    // Add tagList collection used in the /tags/ page
     eleventyConfig.addCollection('tagList', (collections) => {
         const uniqueTags = collections
             .getFilteredByTag('blog')
@@ -68,6 +75,7 @@ module.exports = function (eleventyConfig) {
         return Array.from(new Set(uniqueTags));
     });
 
+    // Add yearList collection used in the /archive/ page
     eleventyConfig.addCollection('yearList', (collections) => {
         const uniqueyears = collections
             .getFilteredByTag('blog')
@@ -96,6 +104,7 @@ module.exports = function (eleventyConfig) {
         return text;
     });
 
+    // Add custome filters
     eleventyConfig.addFilter("md", function (content = "") {
         return markdownIt({ html: true }).render(content);
     });
@@ -137,17 +146,16 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setLibrary("md", markdownLibrary);
 
-    eleventyConfig.addPlugin(pluginRss);
-
     eleventyConfig.addAsyncShortcode("remote_include", async function (url) {
 
-        const sample = await EleventyFetch(url, {
+        const sample = await eleventyFetch(url, {
             duration: "1d"
         });
 
         return sample;
     });
 
+    // ToDo for fetching external code files
     //eleventyConfig.addAsyncShortcode("remote_include2", async function (urlPath) {
     //    const DOMAIN = "https://raw.githubusercontent.com/stride3d/stride/"
     //    if (urlPath.startsWith("/")) {
@@ -156,7 +164,7 @@ module.exports = function (eleventyConfig) {
     //        urlPath = urlPath.slice(1);
     //    }
     //    const url = new URL(urlPath, DOMAIN).href;
-    //    const sample = await EleventyFetch(url, {
+    //    const sample = await eleventyFetch(url, {
     //        duration: "1d",
     //        type: "cs",
     //    });

@@ -3,9 +3,10 @@
   - [Installation Steps](Installation#installation-steps)
   - [Running the Development Server](Installation#running-the-development-server)
 - [Content](Content)
-  - Content Updates
-    - Small Updates
-    - Major Updates
+  - [Content Updates](Content#content-updates)
+    - [Small Updates](Content#small-updates)
+    - [Major Updates](Content#major-updates)
+    - [Wiki Updates](Content#wiki-updates)
   - Creating New Posts
     - Post Naming Convention
   - Creating New Pages
@@ -17,10 +18,10 @@
     - Bootstrap Customization
     - CSS Guidelines
 - [Eleventy](Eleventy)
-  - Packages and Dependencies
-  - Configuration
-  - Global Data
-  - Folder Structure
+  - [Packages and Dependencies](Eleventy#packages-and-dependencies)
+  - [Configuration](Eleventy#configuration)
+  - [Global Data](Eleventy#global-data)
+  - [Folder Structure](Eleventy#folder-structure)
   - Layouts and Templates
   - Includes and Partials
   - Advanced Topics
@@ -33,5 +34,6 @@
     - Deploying with .NET Core 7
   - Wiki Deployment  
 - [Troubleshooting and FAQ](Troubleshooting-and-FAQ)
-  - Common Issues and Solutions
-  - Frequently Asked Questions
+  - [Known Issues](Troubleshooting-and-FAQ#known-issues)
+  - [Common Issues and Solutions](Troubleshooting-and-FAQ#common-issues-and-solutions)
+  - [Frequently Asked Questions](Troubleshooting-and-FAQ#frequently-asked-questions)

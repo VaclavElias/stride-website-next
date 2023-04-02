@@ -1,15 +1,16 @@
 Welcome to the Stride Website Wiki. Hello Test.
 
-If you would like to make minor changes (new posts or pages, updating existing posts or pages, fixing typos), jump right away to ... otherwise read the all following sections.
+If you would like to make minor changes (a new post or a page, updating existing post or page, fixing a typo), jump right away to [Content Updates](Content#content-updates) section, otherwise read the all following sections 🤯🤯🤯🤦‍♂️.
 
 - [Installation](Installation)
   - [Prerequisites](Installation#prerequisites)
   - [Installation Steps](Installation#installation-steps)
   - [Running the Development Server](Installation#running-the-development-server)
 - [Content](Content)
-  - Content Updates
-    - Small Updates
-    - Major Updates
+  - [Content Updates](Content#content-updates)
+    - [Small Updates](Content#small-updates)
+    - [Major Updates](Content#major-updates)
+    - [Wiki Updates](Content#wiki-updates)
   - Creating New Posts
     - Post Naming Convention
   - Creating New Pages
@@ -21,10 +22,10 @@ If you would like to make minor changes (new posts or pages, updating existing p
     - Bootstrap Customization
     - CSS Guidelines
 - [Eleventy](Eleventy)
-  - Packages and Dependencies
-  - Configuration
-  - Global Data
-  - Folder Structure
+  - [Packages and Dependencies](Eleventy#packages-and-dependencies)
+  - [Configuration](Eleventy#configuration)
+  - [Global Data](Eleventy#global-data)
+  - [Folder Structure](Eleventy#folder-structure)
   - Layouts and Templates
   - Includes and Partials
   - Advanced Topics
@@ -37,5 +38,6 @@ If you would like to make minor changes (new posts or pages, updating existing p
     - Deploying with .NET Core 7
   - Wiki Deployment  
 - [Troubleshooting and FAQ](Troubleshooting-and-FAQ)
-  - Common Issues and Solutions
-  - Frequently Asked Questions
+  - [Known Issues](Troubleshooting-and-FAQ#known-issues)
+  - [Common Issues and Solutions](Troubleshooting-and-FAQ#common-issues-and-solutions)
+  - [Frequently Asked Questions](Troubleshooting-and-FAQ#frequently-asked-questions)

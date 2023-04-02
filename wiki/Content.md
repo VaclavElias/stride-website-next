@@ -1,8 +1,9 @@
 # Content
 
-- Content Updates
-  - Small Updates
-  - Major Updates
+- [Content Updates](#content-updates)
+  - [Small Updates](#small-updates)
+  - [Major Updates](#major-updates)
+  - [Wiki Updates](#wiki-updates)
 - Creating New Posts
   - Post Naming Convention
 - Creating New Pages
@@ -18,11 +19,21 @@
 
 If you want to update the website, please follow the instructions below.
 
-Small updates can be done directly in the GitHub web interface, for bigger updates please follow the instructions below.
+Small updates can be done directly in the GitHub web interface, for bigger updates the local development environment is required, which is described in the [Installation](Installation) section.
 
 ### Small Updates
 
-We can define small updates as changes to the content of the website, like adding a new blog post, updating the content of the existing blog post, updating the content of the existing page, etc.
+#### What is a small update?
+
+We can define small updates as changes to the content of the website:
+
+- Update the content of an existing page
+- Update the content of an existing blog post
+- Add a new page or blog post
+- Fix a typo
+- Update the navigation or footer
+
+#### Steps
 
 1. Go to the [Stride Website GitHub repository](https://github.com/VaclavElias/stride-website-next) and click on the `Edit this page` button on the top right corner.
 1. Make your changes and click on `Propose changes` button.
@@ -32,8 +43,19 @@ We can define small updates as changes to the content of the website, like addin
 
 ### Major Updates
 
-We can define bigger updates as changes to the design of the website, adding new pages, adding new sections, etc.
+We can define bigger updates as changes to the design of the website, where you would like to see the impact of your changes beforehand to assess the desired result:
 
+- Add new Eleventy shortcodes and Liquid includes
+- Update Bootstrap library or other libraries
+- Update layouts
+
+You would start with the local development environment, which is described in the [Installation](Installation) section, and then follow the steps below.
+
+### Wiki Updates
+
+While wikis can be updated directly in the GitHub web interface, this feature is restricted only to contributors who can edit the wiki directly. We have decided to move our wiki pages to a regular folder in the repository called `wiki`, allowing us to use the same process as we do for the website content. If any changes are made directly on the wiki pages, they will be overwritten by the next wiki deployment.
+
+Wiki pages are deployed through a separate GitHub action, `stride-web-wiki.yml`, which is triggered by updates in the `wiki` folder or can be triggered manually. The `wiki` folder is ignored by the Eleventy build process, ensuring that the wiki pages are not deployed to the website. Additionally, any pushes to the `wiki` folder will not trigger the website deployment.
 
 ## Web Assets
 
