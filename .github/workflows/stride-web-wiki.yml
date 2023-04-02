@@ -1,6 +1,9 @@
 name: Publish to GitHub Wiki
 on:
- workflow_dispatch:
+  push:
+    paths:
+      - wiki/**
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,5 +17,5 @@ jobs:
          ACTION_MAIL: vaclavelias@gmail.com
          ACTION_NAME: VaclavElias
          OWNER: VaclavElias
-         REPO_NAME: stride-website-next
+         REPO_NAME: stride-website-next.wiki
          MD_FOLDER: ./wiki
