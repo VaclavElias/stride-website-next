@@ -15,4 +15,4 @@ jobs:
          ACTION_NAME: VaclavElias
          OWNER: VaclavElias
          REPO_NAME: stride-website-next
-         MD_FOLDER: wiki
+         MD_FOLDER: ./wiki
