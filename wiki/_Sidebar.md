@@ -28,11 +28,11 @@
     - Creating Custom Shortcodes and Includes
     - Performance Optimization
 - [Deployment](Deployment)
-  - GitHub Pages
-  - Azure Web Apps
-    - Deploying with .NET Framework
-    - Deploying with .NET Core
-  - Wiki Deployment  
+  - [GitHub Pages](Deployment#github-pages)
+  - [Azure Web Apps](Deployment#azure-web-apps)
+    - [Deploying with .NET Framework](Deployment#deploying-with-net-framework)
+    - [Deploying with .NET Core](Deployment#deploying-with-net-core)
+  - [Wiki Deployment](Deployment#wiki-deployment) 
 - [Troubleshooting and FAQ](Troubleshooting-and-FAQ)
   - [Known Issues](Troubleshooting-and-FAQ#known-issues)
   - [Common Issues and Solutions](Troubleshooting-and-FAQ#common-issues-and-solutions)
