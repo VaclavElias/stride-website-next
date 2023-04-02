@@ -1,20 +1,43 @@
-  - Content Updates
-    - Small Updates
-    - Major Updates
-  - Creating New Posts
-    - Post Naming Convention
-  - Creating New Pages
-  - Shortcodes and Includes
-  - Web Assets
-    - Images
-    - Videos
-  - Styling
-    - Bootstrap Customization
-    - CSS Guidelines
+# Content
 
+- Content Updates
+  - Small Updates
+  - Major Updates
+- Creating New Posts
+  - Post Naming Convention
+- Creating New Pages
+- Shortcodes and Includes
+- Web Assets
+  - Images
+  - Videos
+- Styling
+  - Bootstrap Customization
+  - CSS Guidelines
+
+## Content Updates
+
+If you want to update the website, please follow the instructions below.
+
+Small updates can be done directly in the GitHub web interface, for bigger updates please follow the instructions below.
+
+### Small Updates
+
+We can define small updates as changes to the content of the website, like adding a new blog post, updating the content of the existing blog post, updating the content of the existing page, etc.
+
+1. Go to the [Stride Website GitHub repository](https://github.com/VaclavElias/stride-website-next) and click on the `Edit this page` button on the top right corner.
+1. Make your changes and click on `Propose changes` button.
+1. Click on `Create pull request` button.
+1. Click on `Create pull request` button again.
+1. Wait for the review and merge.
+
+### Major Updates
+
+We can define bigger updates as changes to the design of the website, adding new pages, adding new sections, etc.
 
 
 ## Web Assets
+
+ToDo: List of web assets used in the website, like logo.
 
 ### Images
 
@@ -82,3 +105,13 @@ Replace `url` with the video URL (e.g., .mp4 file). Make sure you have a matchin
 <!-- jpgUrl = url.replace(".mp4", ".jpg") // make sure you have a pair .mp4 and .jpg -->
 <div class="ratio ratio-16x9 mb-2"><video autoplay loop class="responsive-video" poster="jpgUrl"><source src="url" type="video/mp4"></video></div>
 ```
+
+## Styling
+
+### Bootstrap Customization
+
+Our website is using the [Bootstrap](https://getbootstrap.com/) framework, version **5.3**. The default Bootstrap theme is customized in the `src/_includes/css/bootstrap-custom.css` file. The customizations are applied to the `src/_includes/css/main.css` file.
+
+### CSS Guidelines
+
+We are using also [FontAwesome](https://fontawesome.com/) free icons, version **6.3**. The icons are loaded in the `src/_includes/css/main.css` file.

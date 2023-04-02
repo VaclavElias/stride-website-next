@@ -23,12 +23,10 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## Release Checklist
 - [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
-- [ ] Web/Wiki - Shall we mention that we use Bootstrap and Fontawesome to support Open Source community?
     
 ## RC5+ Checklist
-- [ ] Web - Code refactoring and code clean up - Once the new design update is settled
-- [ ] Web - Community - What should we do with Q&A Game Dev, if this is going to be used, how can we be notified on Discord, maybe GitHub Discussions should be encouraged?
 - [x] Wiki - Review and update
+- [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/. We could use the new and add web.config redirects for the old ones.
 - [ ] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 - [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
@@ -38,6 +36,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## RC4 Checklist
 - [x] Web - Ensure excerpt and page description is set for all pages
+- [x] Web/Wiki - Shall we mention that we use Bootstrap and Fontawesome to support Open Source community?
 
 ## RC3 Checklist
 - [x] Web - Dark theme - Update `[data-bs-theme=dark]` in css or disable in `site.json`
@@ -84,10 +83,6 @@ Please feel free to collaborate, create issues, and submit pull requests.
      - [ ] Direct link to Release Notes
      - [ ] Direct link to Requirements
 - [ ] Docs - Move wiki to repo and push to wiki - https://github.com/marketplace/actions/publish-to-github-wiki        
-
-## Known Issues
-- Web - Sponsor - Widgets don't support dark theme. This can be fixed in the future, to fetch data from https://opencollective.com/stride3d/members/all.json and render before deployment or make dynamic. This might be overall better solution to have a full control over the content and design.
-- Web - Search - No pager, max result restricted to 100 till the pages is implemented
 
 ## Phase 1 - Done
 
@@ -169,92 +164,4 @@ This Contet will be moved to GitHub Wiki
 - Troubleshooting and FAQ
   - Common Issues and Solutions
   - Frequently Asked Questions
-
-
-## Website Updates
-
-If you want to update the website, please follow the instructions below.
-
-Small updates can be done directly in the GitHub web interface, for bigger updates please follow the instructions below.
-
-### Small Updates
-
-We can define small updates as changes to the content of the website, like adding a new blog post, updating the content of the existing blog post, updating the content of the existing page, etc.
-
-1. Go to the [Stride Website GitHub repository](https://github.com/VaclavElias/stride-website-next) and click on the `Edit this page` button on the top right corner.
-1. Make your changes and click on `Propose changes` button.
-1. Click on `Create pull request` button.
-1. Click on `Create pull request` button again.
-1. Wait for the review and merge.
-
-### Bigger Updates
-
-We can define bigger updates as changes to the design of the website, adding new pages, adding new sections, etc.
-
-## Installation
-
-### Prerequisites
-
-1. Install Node.js and npm. You can download the installer from the [Node.js website](https://nodejs.org/en/download/).
-   - Or if already installed make sure you have got Node.js version 16 or higher. You can check your version by running `node -v` in a terminal.
-1. Clone the repository `git clone https://github.com/VaclavElias/stride-website-next.git`
-
-### Install
-Run `npm install` to install all dependencies.
-
-### Run
-1. Run `npm start` to start the development server.
-1. Open the site in your browser `http://localhost:8080/`
-
-## Content
-
-### Bootstrap
-
-### Updates
-
-### New Posts
-
-#### Post Naming Convention
-
-### New Pages
-
-### Global Data
-
-### Shortcodes and Includes
-
-### Web Assets
-
-List of web assets used in the website, like logo.
-
-#### Images
-
-Adding responsive images through shorcode. Ensure you write descriptive title as it will help our posts to be found in search engines.
-
-`{% img 'title' 'url' %}`
-
-renders as
-
-```html
-<img alt="title" src="url" class="img-fluid mb-2" loading="lazy" data-src="url">
-```
-Similarly you can add a link to the image by using `img-click` shortcode. This will allow also open the image and zoom in.
-
-`{% img-click 'title' 'url' %}`
-
-renders as
-
-```html
-<a href="url" title="title" class="mb-2"><img alt="title" src="url" class="img-fluid" loading="lazy" data-src="url"></a>
-```
-
-`{% img-click 'title' 'url' 'destinationUrl' %}`
-
-renders as
-
-```html
-<a href="destinationUrl" title="title" class="mb-2"><img alt="title" src="url" class="img-fluid" loading="lazy" data-src="url"></a>
-```
-
-
-
 
