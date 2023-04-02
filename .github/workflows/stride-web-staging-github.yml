@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'README.md'
+      - 'wiki/**'
   workflow_dispatch:
 
 jobs:
