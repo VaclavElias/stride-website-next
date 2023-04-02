@@ -4,7 +4,7 @@ title: Blog Tags
 tags: search
 ---
 
-Explore a comprehensive list of topics and tags related to the Stride game engine, covering features, tutorials, updates, and more.
+Explore a comprehensive list of topics and tags related to the Stride game engine, covering features, tutorials, updates, and more. Alternatively, you can view the [Blog Archive](/archive/) for a chronological list of posts.
 
 ---
 
