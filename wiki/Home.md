@@ -1,6 +1,6 @@
-Welcome to the Stride Website Wiki. Hello Test.
+Welcome to the Stride Website Wiki.
 
-If you would like to make minor changes (a new post or a page, updating existing post or page, fixing a typo), jump right away to [Content Updates](Content#content-updates) section, otherwise read the all following sections 🤯🤯🤯🤦‍♂️.
+This wiki serves as a comprehensive guide to help you navigate and contribute to the Stride website. If you're looking to make minor changes, such as adding or updating a post or page, or fixing a typo, you can jump straight to the [Content Updates](Content#content-updates) section. For more extensive updates 🤯🤦‍♂️ and a deeper understanding of the project, we recommend exploring all the sections provided. Happy browsing and contributing!
 
 - [Installation](Installation)
   - [Prerequisites](Installation#prerequisites)
@@ -32,11 +32,11 @@ If you would like to make minor changes (a new post or a page, updating existing
     - Creating Custom Shortcodes and Includes
     - Performance Optimization
 - [Deployment](Deployment)
-  - GitHub Pages
-  - Azure Web Apps
-    - Deploying with .NET Framework 4.8
-    - Deploying with .NET Core 7
-  - Wiki Deployment  
+  - [GitHub Pages](Deployment#github-pages)
+  - [Azure Web Apps](Deployment#azure-web-apps)
+    - [Deploying with .NET Framework](Deployment#deploying-with-net-framework)
+    - [Deploying with .NET Core](Deployment#deploying-with-net-core)
+  - [Wiki Deployment](Deployment#wiki-deployment) 
 - [Troubleshooting and FAQ](Troubleshooting-and-FAQ)
   - [Known Issues](Troubleshooting-and-FAQ#known-issues)
   - [Common Issues and Solutions](Troubleshooting-and-FAQ#common-issues-and-solutions)

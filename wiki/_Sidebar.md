@@ -30,8 +30,8 @@
 - [Deployment](Deployment)
   - GitHub Pages
   - Azure Web Apps
-    - Deploying with .NET Framework 4.8
-    - Deploying with .NET Core 7
+    - Deploying with .NET Framework
+    - Deploying with .NET Core
   - Wiki Deployment  
 - [Troubleshooting and FAQ](Troubleshooting-and-FAQ)
   - [Known Issues](Troubleshooting-and-FAQ#known-issues)
