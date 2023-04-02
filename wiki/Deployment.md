@@ -1,6 +1,4 @@
-# Deployment
-
-## Table of Contents
+# Table of Contents
 
 - [GitHub Pages](#github-pages)
 - [Azure Web Apps](#azure-web-apps)
@@ -8,7 +6,7 @@
   - [Deploying with .NET Core](#deploying-with-net-core)
 - [Wiki Deployment](#wiki-deployment)
 
-## GitHub Pages
+# GitHub Pages
 
 GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files directly from a repository on GitHub, optionally processes the files through a build process, and publishes a website. It is an excellent way to host a website for free and serves as an effective method for testing a website before deploying it to a paid hosting service.
 
@@ -32,15 +30,15 @@ The GitHub action `stride-web-staging-github.yml` works as follows:
    - Current exclusions: `README.md`, `wiki/**`, `.github/**`
 1. The remaining steps in the action are self-explanatory
 
-## Azure Web Apps
+# Azure Web Apps
 
-### Deploying with .NET Framework
+## Deploying with .NET Framework
 
 .NET Framework is using IIS to host the website, so any static files will be served by IIS. The static files are located in the `wwwroot` folder. The `wwwroot` folder is the root folder of the website. The `wwwroot` folder is also the root folder of the website when it is deployed to GitHub Pages.
 
-### Deploying with .NET Core
+## Deploying with .NET Core
 
-## Wiki Deployment
+# Wiki Deployment
 
 While the GitHub wiki offers a convenient way to document a project, it has some drawbacks, such as not being part of the repository by default and restricting edits to collaborators. To address these issues and allow community editing, we have implemented an alternative approach.
 
