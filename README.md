@@ -255,50 +255,6 @@ renders as
 <a href="destinationUrl" title="title" class="mb-2"><img alt="title" src="url" class="img-fluid" loading="lazy" data-src="url"></a>
 ```
 
-#### Video
-
-`{% youtube 'id' %}`
-
-renders as
-
-```html
-<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/id" title="YouTube video" allowfullscreen></iframe></div>
-```
-
-`{% youtube-playlist 'id' %}`
-
-renders as
-
-```html
-<div class="ratio ratio-16x9 mb-2"><iframe src="https://www.youtube.com/embed/videoseries?list=id" title="YouTube video" allowfullscreen></iframe></div>
-```
-
-`{% video 'url' %}`
-
-renders as
-
-```html
-<!-- jpgUrl = url.replace(".mp4", ".jpg") // make sure you have got a pair .mp4 and .jpg -->
-<div class="ratio ratio-16x9 mb-2"><video autoplay loop class="responsive-video" poster="jpgUrl"><source src="url" type="video/mp4"></video></div>
-```
 
 
 
-## Eleventy
-### Packages
-### Layouts
-### Includes
-
-## Configuration
-
-## Folder Structure
-
-## Deployment
-### GitHub Pages
-### Azure Web Apps - .NET Framework 4.8
-### Azure Web Apps - .NET Core 7
-
-## Styling
-
-## Advance
-### Adding new Shortcodes and Includes

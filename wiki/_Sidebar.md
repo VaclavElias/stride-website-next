@@ -17,20 +17,21 @@
     - Bootstrap Customization
     - CSS Guidelines
 - [Eleventy](Eleventy)
- - Packages and Dependencies
- - Configuration
- - Global Data
- - Folder Structure
- - Layouts and Templates
- - Includes and Partials
- - Advanced Topics
-   - Creating Custom Shortcodes and Includes
-   - Performance Optimization
+  - Packages and Dependencies
+  - Configuration
+  - Global Data
+  - Folder Structure
+  - Layouts and Templates
+  - Includes and Partials
+  - Advanced Topics
+    - Creating Custom Shortcodes and Includes
+    - Performance Optimization
 - [Deployment](Deployment)
   - GitHub Pages
   - Azure Web Apps
     - Deploying with .NET Framework 4.8
     - Deploying with .NET Core 7
+  - Wiki Deployment  
 - [Troubleshooting and FAQ](Troubleshooting-and-FAQ)
   - Common Issues and Solutions
   - Frequently Asked Questions
