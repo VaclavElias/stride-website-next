@@ -26,7 +26,6 @@ Please feel free to collaborate, create issues, and submit pull requests.
     
 ## RC6+ Checklist
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
-- [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/. We could use the new and add web.config redirects for the old ones.
 - [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
 - [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
 - [ ] Wiki - New post instructions (e.g. using webp images)
@@ -35,6 +34,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 ## RC5 Checklist
 - [x] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 - [x] Wiki - Review and update
+- [x] Web - Do we want to preserve paging url as /blog/pageX/ or new /blog/X/. I added redericts to web.config to new pattern.
 
 ## RC4 Checklist
 - [x] Web - Ensure excerpt and page description is set for all pages
