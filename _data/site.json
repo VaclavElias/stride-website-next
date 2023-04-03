@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0.3",
+  "version": "2.0.0.4",
   "engine": "Eleventy 2.0",
   "title": "Stride Game Engine",
   "description": "C# Stride Game Engine is a powerful and versatile game development engine that is based on the C# programming language",
@@ -66,6 +66,12 @@
     "vaclav": {
       "name": "Vaclav Elias",
       "github": "VaclavElias",
+      "linkedin": "",
+      "twitter": ""
+    },
+    "youness": {
+      "name": "Youness KAFIA",
+      "github": "ykafia",
       "linkedin": "",
       "twitter": ""
     },

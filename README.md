@@ -24,15 +24,17 @@ Please feel free to collaborate, create issues, and submit pull requests.
 ## Release Checklist
 - [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
     
-## RC5+ Checklist
-- [x] Wiki - Review and update
+## RC6+ Checklist
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
-- [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/. We could use the new and add web.config redirects for the old ones.
-- [ ] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 - [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
 - [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
 - [ ] Wiki - New post instructions (e.g. using webp images)
 - [ ] Wiki - Update post instructions
+
+## RC5 Checklist
+- [x] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
+- [x] Wiki - Review and update
+- [x] Web - Do we want to preserve paging url as /blog/pageX/ or new /blog/X/. I added redericts to web.config to new pattern.
 
 ## RC4 Checklist
 - [x] Web - Ensure excerpt and page description is set for all pages
@@ -124,44 +126,5 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - Web, Docs, GitHub Wiki
 - https://khalidabuhakmeh.com/combining-11ty-static-site-generator-with-aspnet-core
 
-## Wiki
 
-This Contet will be moved to GitHub Wiki
-
-- Installation
-  - Prerequisites
-  - Installation Steps
-  - Running the Development Server
-- Content
-  - Content Updates
-    - Small Updates
-    - Major Updates
-  - Creating New Posts
-    - Post Naming Convention
-  - Creating New Pages
-  - Shortcodes and Includes
-  - Web Assets
-    - Images
-    - Videos
-  - Styling
-    - Bootstrap Customization
-    - CSS Guidelines
-- Eleventy
- - Packages and Dependencies
- - Configuration
- - Global Data
- - Folder Structure
- - Layouts and Templates
- - Includes and Partials
- - Advanced Topics
-   - Creating Custom Shortcodes and Includes
-   - Performance Optimization
-- Deployment
-  - GitHub Pages
-  - Azure Web Apps
-    - Deploying with .NET Framework 4.8
-    - Deploying with .NET Core 7
-- Troubleshooting and FAQ
-  - Common Issues and Solutions
-  - Frequently Asked Questions
 
