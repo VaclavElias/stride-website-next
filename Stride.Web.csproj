@@ -7,15 +7,18 @@
         <EnableDefaultContentItems>false</EnableDefaultContentItems>
     </PropertyGroup>
 
-    <ItemGroup>
+    <!--<ItemGroup>
         <Content Remove="_data\**" />
         <Content Remove="posts\**" />
-    </ItemGroup>
+    </ItemGroup>-->
 
     <ItemGroup>
-        <Content Include="_site\**" CopyToPublishDirectory="PreserveNewest" Exclude="_site\web.config">
-            <Link>wwwroot\%(RecursiveDir)%(Filename)%(Extension)</Link>
-        </Content>
+        <Content Include="_site\**\*.*" CopyToPublishDirectory="PreserveNewest" Exclude="_site\web.config" />
     </ItemGroup>
+
+    <Target Name="11ty" BeforeTargets="Build">
+        <Exec Command="npm run build" />
+        <!--<Exec Command="npm run build" WorkingDirectory="site" />-->
+    </Target>
 
 </Project>
