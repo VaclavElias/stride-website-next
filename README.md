@@ -25,14 +25,16 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
     
 ## RC5+ Checklist
-- [x] Wiki - Review and update
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
 - [ ] Web - Do you want to preserve paging url as /blog/pageX/ or new /blog/X/. We could use the new and add web.config redirects for the old ones.
-- [ ] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 - [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
 - [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
 - [ ] Wiki - New post instructions (e.g. using webp images)
 - [ ] Wiki - Update post instructions
+
+## RC5 Checklist
+- [x] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
+- [x] Wiki - Review and update
 
 ## RC4 Checklist
 - [x] Web - Ensure excerpt and page description is set for all pages

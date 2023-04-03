@@ -34,19 +34,29 @@ banner:
         </div>
     </div>
 </div>
-<div class="card mt-5">
+{% comment %}<div class="card mt-5">
     <div class="card-body p-4">
         <h2 class="mb-3">Diamond Striders</h2>
         <div class="row">
             {% include sponsor-diamond.html %}
         </div>
-
         <h2 class="mb-3 mt-4">Platinnum Striders</h2>
         <div class="row">
             {% include sponsor-platinum.html %}
         </div>
     </div>
+</div>{% endcomment %}
+<div class="col-12 mt-5">
+    <div class="card">
+        <div class="card-body p-4">
+            <h2 class="mb-0">Featured Sponsors</h2>
+        </div>
+    </div>
 </div>
+<div class="row mt-5">
+    {% include sponsor-generic.html %}
+</div>
+{% comment %} The styling is difficult as those widgets are not responsive. We can fix in the future by fetching json and display what we want and how we want. {% endcomment %}
 <div class="card mt-5">
     <div class="card-body p-4">
         <div class="row mb-3 mt-4">
@@ -71,6 +81,9 @@ banner:
             <div class="col-12 text-center">
                 <h2>All Stride Sponsors</h2>
                 <script src="https://opencollective.com/stride3d/banner.js"></script>
+                <h3>Additional Sponsors</h3>
+                <p>Thank you to all our additional sponsors who have contributed to the Stride project.</p>
+                <p>David Jeske</p>
             </div>
         </div>
     </div>

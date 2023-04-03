@@ -137,17 +137,18 @@ eleventyComputed:
             </div>
         </div>
         <div class="col-12">
-            <div class="card h-100">
+            <div class="card">
                 <div class="card-body p-4">
-                    <h2 class="h1 mb-3">Our Platinum Sponsors</h2>
-                    <p class="lead">Many thanks to them for supporting Stride.</p>
+                    <h2 class="h1 mb-3">Our Featured Sponsors</h2>
+                    <p class="lead">Thanks to our Featured Sponsors for supporting Stride and empowering creators with the resources they need to bring their visions to life.</p>
                 </div>
             </div>
         </div>
-        <div class="col-12 text-center">
-            <div class="row g-5 row-cols-1 row-cols-md-3 text-center">
-                {% include sponsor-diamond.html %}
-                {% include sponsor-platinum.html %}
+        <div class="col-12">
+            <div class="row g-5 row-cols-1 row-cols-md-3">
+                {% comment %}{% include sponsor-diamond.html %}
+                {% include sponsor-platinum.html %}{% endcomment %}
+                {% include sponsor-generic.html %}
             </div>
         </div>
     </div>
