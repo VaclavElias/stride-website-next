@@ -2,17 +2,23 @@
 <html lang="en" class="h-100">
 <head>
     <meta charset="utf-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9CVGC9YV1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());gtag('config', 'G-Y9CVGC9YV1');
+</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stride Game Engine - Examples</title>
     <meta name="description" content="Example Stride Website styling">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="canonical" href="https://stride3d.net/blog/example/">
+    <link rel="canonical" href="https://stride3d.net/blog/examples/">
     <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
-    <link rel="stylesheet" href="/css/styles.css?site-version=2.0.0.4">
+    <link rel="stylesheet" href="/css/styles.css?site-version=2.0.0.5">
     
     <meta property="og:image" content="/images/og/ogp.jpg">
     
-    <script src="/scripts/theme-selector.js?site-version=2.0.0.4"></script>
+    <script src="/scripts/theme-selector.js?site-version=2.0.0.5"></script>
 </head>
 <body class="bg-stride-website d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg bg-light-stride-website">
@@ -97,32 +103,32 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown d-flex align-items-center ms-2">
-                    <a title="Change theme" class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="themeDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <button title="Change theme" class="btn btn-link nav-link dropdown-toggle d-flex align-items-center" id="themeDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
                         <li>
-                            <a class="dropdown-item" href="#" id="lightTheme">
+                            <button class="dropdown-item" id="lightTheme">
                                 <svg data-theme="light" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
                                     <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
                                 </svg>
                                 <span class="ms-2 text-decoration-none">Light</span>
-                            </a>
+                            </button>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#" id="darkTheme">
+                            <button class="dropdown-item" id="darkTheme">
                                 <svg data-theme="dark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
                                     <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
                                     <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
                                 </svg>
                                 <span class="ms-2 text-decoration-none">Dark</span>
-                            </a>
+                            </button>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#" id="autoTheme">
+                            <button class="dropdown-item" id="autoTheme">
                                 <svg data-theme="auto" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
                                     <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
                                 </svg>
                                 <span class="ms-2 text-decoration-none">Auto</span>
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </li>
@@ -135,7 +141,7 @@
     <div class="row postcontent">
         <div class="col-12">
             <h1 class="mb-5">Examples</h1>
-            <p><div class="table-of-contents"><ul><li><a href="#includes">Includes </a><ul><li><a href="#sponsor">Sponsor </a></li><li><a href="#alert">Alert </a></li></ul></li><li><a href="#c%23-code-highlighting">C# Code Highlighting </a></li></ul></div></p>
+            <p><div class="table-of-contents"><ul><li><a href="#includes">Includes </a><ul><li><a href="#sponsor">Sponsor </a></li><li><a href="#alert">Alert </a></li></ul></li><li><a href="#c%23-code-highlighting">C# Code Highlighting </a><ul><li><a href="#example">Example </a></li><li><a href="#async-script">Async Script </a></li></ul></li></ul></div></p>
 <h2 id="includes" tabindex="-1">Includes <a class="direct-link" href="#includes">🔗</a></h2>
 <h3 id="sponsor" tabindex="-1">Sponsor <a class="direct-link" href="#sponsor">🔗</a></h3>
 <p>We can include sponsor logos and links to their websites.</p>
@@ -195,18 +201,22 @@
 </div>
 <h2 id="c%23-code-highlighting" tabindex="-1">C# Code Highlighting <a class="direct-link" href="#c%23-code-highlighting">🔗</a></h2>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token class-name"><span class="token keyword">var</span></span> game <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Game</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>game<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token named-parameter punctuation">start</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token class-name">Scene</span> rootScene<span class="token punctuation">)</span> <span class="token operator">=></span><br><span class="token punctuation">{</span><br>    game<span class="token punctuation">.</span><span class="token function">SetupBase3DScene</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    <span class="token class-name"><span class="token keyword">var</span></span> entity <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Entity</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">Vector3</span><span class="token punctuation">(</span><span class="token number">1f</span><span class="token punctuation">,</span> <span class="token number">0.5f</span><span class="token punctuation">,</span> <span class="token number">3f</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    entity<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">ModelComponent</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">CubeProceduralModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Generate</span><span class="token punctuation">(</span>game<span class="token punctuation">.</span>Services<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    entity<span class="token punctuation">.</span>Scene <span class="token operator">=</span> rootScene<span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="example" tabindex="-1">Example <a class="direct-link" href="#example">🔗</a></h3>
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">Stride<span class="token punctuation">.</span>Core<span class="token punctuation">.</span>Mathematics</span><span class="token punctuation">;</span><br><span class="token keyword">using</span> <span class="token namespace">Stride<span class="token punctuation">.</span>Engine</span><span class="token punctuation">;</span><br><br><span class="token keyword">namespace</span> <span class="token namespace">CSharpBeginner<span class="token punctuation">.</span>Code</span><br><span class="token punctuation">{</span><br>    <span class="token comment">/// &lt;summary></span><br>    <span class="token comment">/// This script demonstrates how to access the entity where the script is attached to. </span><br>    <span class="token comment">/// We also learn how to access a parent of our entity and how to check if that entity exists.</span><br>    <span class="token comment">/// &lt;/summary></span><br>    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GettingTheEntityDemo</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">SyncScript</span></span><br>    <span class="token punctuation">{</span><br>        <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">string</span></span> name <span class="token operator">=</span> <span class="token keyword">string</span><span class="token punctuation">.</span>Empty<span class="token punctuation">;</span><br>        <span class="token keyword">private</span> <span class="token class-name"><span class="token keyword">string</span></span> parentName <span class="token operator">=</span> <span class="token keyword">string</span><span class="token punctuation">.</span>Empty<span class="token punctuation">;</span><br><br>        <span class="token comment">// Executes only once, at the start of the game</span><br>        <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><br>        <span class="token punctuation">{</span><br>            <span class="token comment">// We store the name of the Entity that we are attached to</span><br>            name <span class="token operator">=</span> Entity<span class="token punctuation">.</span>Name<span class="token punctuation">;</span><br><br>            <span class="token comment">// We retrieve the parent entity by using the GetParent() command.</span><br>            <span class="token class-name"><span class="token keyword">var</span></span> parentEntity <span class="token operator">=</span> Entity<span class="token punctuation">.</span><span class="token function">GetParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>            <span class="token comment">// It is possible that our entity does not have a parent. We therefore check if the parent is not null.</span><br>            <span class="token keyword">if</span> <span class="token punctuation">(</span>parentEntity <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><br>            <span class="token punctuation">{</span><br>                <span class="token comment">// We store the name of our Parent entity</span><br>                parentName <span class="token operator">=</span> parentEntity<span class="token punctuation">.</span>Name<span class="token punctuation">;</span><br>            <span class="token punctuation">}</span><br><br>            <span class="token comment">// The above code can be shortened to 1 line by using the '?' operator  </span><br>            parentName <span class="token operator">=</span> Entity<span class="token punctuation">.</span><span class="token function">GetParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">?.</span>Name <span class="token operator">??</span> <span class="token keyword">string</span><span class="token punctuation">.</span>Empty<span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br><br>        <span class="token comment">// Updates every frame</span><br>        <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><br>        <span class="token punctuation">{</span><br>            <span class="token comment">// Using the 'DebugText.Print' command, we can quickly print information to the screen</span><br>            <span class="token comment">// NOTE: DebugText only works when debugging the game. During release it is automatically disabled</span><br>            DebugText<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span>parentName<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Int2</span><span class="token punctuation">(</span><span class="token number">580</span><span class="token punctuation">,</span> <span class="token number">580</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>            DebugText<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Int2</span><span class="token punctuation">(</span><span class="token number">800</span><span class="token punctuation">,</span> <span class="token number">580</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>    <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<h3 id="async-script" tabindex="-1">Async Script <a class="direct-link" href="#async-script">🔗</a></h3>
+<pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyAsyncScript</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">AsyncScript</span></span><br><span class="token punctuation">{</span>        <br>    <span class="token keyword">public</span> <span class="token keyword">override</span> <span class="token keyword">async</span> <span class="token return-type class-name">Task</span> <span class="token function">Execute</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <br>    <span class="token punctuation">{</span><br>        <span class="token keyword">while</span> <span class="token punctuation">(</span>Game<span class="token punctuation">.</span>IsRunning<span class="token punctuation">)</span><br>        <span class="token punctuation">{</span><br>            <span class="token keyword">await</span> MyEvent<span class="token punctuation">;</span><br><br>            <span class="token comment">// Add your game-specific logic here</span><br><br>            <span class="token keyword">await</span> Script<span class="token punctuation">.</span><span class="token function">NextFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>    <span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
 
         </div>
     </div>
 </div>
 
-    <div class="bg-footer show text-light mt-auto">
+    
+<div class="bg-footer mt-auto">
     <div class="container">
         <footer class="pt-5 px-2">
             <div class="row">
                 <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
+                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Links</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-danger">Features</a></li>
                         <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-danger">Blog</a></li>
@@ -217,7 +227,7 @@
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
+                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Docs</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Manual</a></li>
                         <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Stride API</a></li>
@@ -227,7 +237,7 @@
                 </div>
 
                 <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
+                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Community</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Open Collective</a></li>
                         <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-danger" target="_blank" rel="noopener">Discord</a></li>
@@ -239,7 +249,7 @@
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
+                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Blog</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-danger">Posts</a></li>
                         <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-danger">Tags</a></li>
@@ -273,177 +283,20 @@
                 </div>
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>v.2.0.0.4</p>
-                <p>© .NET Foundation and Contributors</p>
+                <p class="text-light" style="--bs-text-opacity: 0.85;">Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p class="text-light" style="--bs-text-opacity: 0.85;">v.2.0.0.5</p>
+                <p class="text-light" style="--bs-text-opacity: 0.85;">© .NET Foundation and Contributors</p>
             </div>
         </footer>
     </div>
 </div>
-    <div class="bg-footer show text-light mt-auto">
+    
+<div class="bg-footer mt-auto">
     <div class="container">
         <footer class="pt-5 px-2">
             <div class="row">
                 <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-info">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-info">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-info">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-info">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-info">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-info">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-info" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-info" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-info" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-info" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-info" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-info">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-info">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-info" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-info">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-info">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-info">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-info me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-info me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-info me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-info me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-info me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-info me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-info me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-info" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>v.2.0.0.4</p>
-                <p>© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
-    <div class="bg-footer show text-light mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-warning">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-warning">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-warning">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-warning">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-warning">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-warning">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-warning" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-warning">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-warning">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-warning" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-warning">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-warning">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-warning">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-warning me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-warning me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-warning me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-warning me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-warning me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-warning me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-warning me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-warning" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>v.2.0.0.4</p>
-                <p>© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
-    <div class="bg-footer show text-light mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5>Links</h5>
+                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Links</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-light">Features</a></li>
                         <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-light">Blog</a></li>
@@ -454,7 +307,7 @@
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2 mb-3">
-                    <h5>Docs</h5>
+                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Docs</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-light" target="_blank" rel="noopener">Manual</a></li>
                         <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-light" target="_blank" rel="noopener">Stride API</a></li>
@@ -464,7 +317,7 @@
                 </div>
 
                 <div class="col-6 col-lg-2 mb-3">
-                    <h5>Community</h5>
+                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Community</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-light" target="_blank" rel="noopener">Open Collective</a></li>
                         <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-light" target="_blank" rel="noopener">Discord</a></li>
@@ -476,7 +329,7 @@
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2 mb-3">
-                    <h5>Blog</h5>
+                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Blog</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-light">Posts</a></li>
                         <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-light">Tags</a></li>
@@ -510,13 +363,13 @@
                 </div>
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p>Supported by the <a class="link-light" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p>v.2.0.0.4</p>
-                <p>© .NET Foundation and Contributors</p>
+                <p class="text-light" style="--bs-text-opacity: 0.85;">Supported by the <a class="link-light" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
+                <p class="text-light" style="--bs-text-opacity: 0.85;">v.2.0.0.5</p>
+                <p class="text-light" style="--bs-text-opacity: 0.85;">© .NET Foundation and Contributors</p>
             </div>
         </footer>
     </div>
 </div>
-    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0.0.4"></script>
+    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0.0.5"></script>
 </body>
 </html>
