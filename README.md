@@ -22,7 +22,6 @@ Please feel free to collaborate, create issues, and submit pull requests.
   - [x] Minor corrections and removal of unnecessary content
 
 ## Release Checklist
-- [ ] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
     
 ## RC6+ Checklist
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
@@ -32,7 +31,8 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [ ] Wiki - Update post instructions
 
 ## RC5 Checklist
-- [x] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
+- [x] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
+- [x] - [x] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 - [x] Wiki - Review and update
 - [x] Web - Do we want to preserve paging url as /blog/pageX/ or new /blog/X/. I added redericts to web.config to new pattern.
 

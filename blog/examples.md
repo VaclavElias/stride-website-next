@@ -98,6 +98,8 @@ game.Run(start: (Scene rootScene) =>
 });
 ```
 
+### Example
+
 ```csharp
 using Stride.Core.Mathematics;
 using Stride.Engine;
@@ -140,6 +142,25 @@ namespace CSharpBeginner.Code
             // NOTE: DebugText only works when debugging the game. During release it is automatically disabled
             DebugText.Print(parentName, new Int2(580, 580));
             DebugText.Print(name, new Int2(800, 580));
+        }
+    }
+}
+```
+
+### Async Script
+
+```csharp
+public class MyAsyncScript : AsyncScript
+{        
+    public override async Task Execute() 
+    {
+        while (Game.IsRunning)
+        {
+            await MyEvent;
+
+            // Add your game-specific logic here
+
+            await Script.NextFrame();
         }
     }
 }

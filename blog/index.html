@@ -39,7 +39,7 @@ description: Stay up-to-date with the latest in game development. Explore the St
                 </div>
             </article>
             {% endfor %}
-            <nav class="justify-content-center d-flex">
+            <nav class="justify-content-center d-flex mb-4">
                 {% assign paginator_divider =  pagination.pages.size | minus:pagination.pageNumber %}
                 <ul class="pagination stride-custom-pagination">
                     {% if pagination.href.previous %}

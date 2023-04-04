@@ -1,6 +1,6 @@
 <head>
-    <meta charset="utf-8">{% comment %}
-    {% include google-tag.html %}{% endcomment %}
+    <meta charset="utf-8">{% if site.google-analytics %}
+    {% include google-tag.html %}{% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ site.title }}{% if title != 'Home' %} - {{ title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ description }}{% endif %}">

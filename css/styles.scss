@@ -28,14 +28,6 @@ a {
     text-decoration: none;
 }
 
-/*a:hover {
-    text-decoration: underline;
-}*/
-
-/*a:hover :not(.navbar a):not(.navbar-icons a small) {
-    text-decoration: underline;
-}*/
-
 .carousel .carousel-inner img {
     object-fit: cover;
     object-position: center;
@@ -170,25 +162,12 @@ svg path.logo-path {
 
     --logo: url(/images/svg/stride-logo-dark-theme.svg) no-repeat;
 
-    /*.navbar-brand {
-        display: block;
-        box-sizing: border-box;
-        background: var(--logo);
-        background-size: 60px;
-        height: 37px;
-        width: 124px;
-    }*/
-
     .bg-stride-website {
         background-image: url(/images/top/svg/bg_dark-dark-mode.svg);
     }
 
-    .bg-light {
-        background-image: url(/images/top/svg/bg_dark-dark-mode.svg);
-    }
-
     .bg-light-stride-website {
-        --bs-bg-opacity: 0.6;
+        --bs-bg-opacity: 0.8;
         background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
     }
 
