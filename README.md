@@ -66,13 +66,14 @@ Please feel free to collaborate, create issues, and submit pull requests.
 
 ## Post Release Update / Future Updates and Improvements
 - [ ] Web - Encourage community to contribute with articles
+- [ ] Web - It would be nice to have a jump to the top button like on the Microsoft Dev Blog
 - [ ] Web - Search - Exclude API Search on the Web, or checkbox to include/exclude API
 - [ ] Web - Add/List GitHub contributors automatically to a dedicated page (link from the footer)
 - [ ] Web - Features - Create dedicated page for some features
 - [ ] Web - Friends - Shall we link to our friends GoDot, others, just to be open and making friends in other C# open source game communities? 
 - [ ] Web - Authors links to author pages
 - [ ] Web - Split Tags to 2 columns in the /tags page
-- [ ] Web - Blog Comments from GitHub Issues - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/, the problem is spam..
+- [ ] Web - Blog Comments from GitHub Issues (replacement for old Discuss) - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/, the problem is spam..
 - [ ] Include Avatar, with different asssets like dotnet bot, use also for 2D Games
 - [ ] Web - Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
 - [ ] Web - Keep only used FontAwesome references in all.css, to reduce the file sie
