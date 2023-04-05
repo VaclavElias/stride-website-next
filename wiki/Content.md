@@ -16,6 +16,7 @@
 - Styling
   - Bootstrap Customization
   - CSS Guidelines
+- [Submitting your Changes](#submitting-your-changes)
 
 # Content Updates
 
@@ -37,10 +38,16 @@ We can define small updates as changes to the content of the website:
 
 ### Steps
 
-1. Go to the [Stride Website GitHub repository](https://github.com/VaclavElias/stride-website-next) and click on the `Edit this page` button on the top right corner.
-1. Make your changes and click on `Propose changes` button.
-1. Click on `Create pull request` button.
-1. Click on `Create pull request` button again.
+**Note:** This guide assumes you are already familiar with updating files in GitHub.
+
+1. Go to the [Stride Website GitHub](https://github.com/VaclavElias/stride-website-next) repository.
+1. Locate the file you wish to edit.
+1. Click the `Edit this file` (pencil) icon in the top right corner.
+1. If prompted, fork the repository by clicking `Fork this repository`.
+1. Make your changes to the file, then write a brief commit message describing the changes.
+1. Click on the `Propose changes` button.
+1. On the next screen, click the `Create pull request` button.
+1. Provide a title and description for your pull request, and click on `Create pull request` again.
 1. Wait for the review and merge.
 
 ## Major Updates
@@ -55,9 +62,13 @@ You would start with the local development environment, which is described in th
 
 ## Wiki Updates
 
-While wikis can be updated directly in the GitHub web interface, this feature is restricted only to contributors who can edit the wiki directly. We have decided to move our wiki pages to a regular folder in the repository called `wiki`, allowing us to use the same process as we do for the website content. If any changes are made directly on the wiki pages, they will be overwritten by the next wiki deployment.
+While wiki pages can be updated directly in the GitHub web interface, this feature is restricted only to contributors who can edit the wiki directly. We have decided to move our wiki pages to a regular folder in this repository called `wiki`, allowing us to use the same process as we do for the website content. If any changes are made directly on the wiki pages, they will be overwritten by the next wiki deployment.
 
 Wiki pages are deployed through a separate GitHub action, `stride-web-wiki.yml`, which is triggered by updates in the `wiki` folder or can be triggered manually. The `wiki` folder is ignored by the Eleventy build process, ensuring that the wiki pages are not deployed to the website. Additionally, any pushes to the `wiki` folder will not trigger the website deployment.
+
+You can update the wiki pages as any other content pages, by following the steps in the [Small Updates](#small-updates) section.
+
+**Important:** If you are updating any headers in the wiki pages, please make sure to update the *table of contents* at the top of the page, [Home](Home) page and `_Sidebar.md`. Also, you might need to search for all the links to the updated header and update them as well.
 
 # Web Assets
 
@@ -148,3 +159,19 @@ Our website is using the [Bootstrap](https://getbootstrap.com/) framework, versi
 ## CSS Guidelines
 
 We are using also [FontAwesome](https://fontawesome.com/) free icons, version **6.3**. The icons are loaded in the `src/_includes/css/main.css` file.
+
+# Submitting your Changes
+
+Assuming you have made all necessary changes and tested them on the development server, you can submit a pull request to the `master` branch. The pull request will be reviewed and merged by the website maintainers.
+
+Steps to contribute your updates:
+
+1. Commit your changes to your forked repository:
+   - Commit the changes with a meaningful message
+   - Push the changes to your forked repository
+1. Create a pull request to the main repository:
+   - You can create a pull request from your forked repository by navigating to Pull requests page and click **New pull request** button
+   - Select the **master** branch as the base branch and your branch as the compare branch
+   - Click **Create pull request** button
+
+Once your pull request has been reviewed and approved, your changes will be merged into the main repository and deployed to the website.

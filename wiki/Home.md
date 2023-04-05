@@ -1,6 +1,22 @@
 Welcome to the Stride Website Wiki.
 
-This wiki serves as a comprehensive guide to help you navigate and contribute to the Stride website. If you're looking to make minor changes, such as adding or updating a post or page, or fixing a typo, you can jump straight to the [Content Updates](Content#content-updates) section. For more extensive updates 🤯🤦‍♂️ and a deeper understanding of the project, we recommend exploring all the sections provided. Happy browsing and contributing!
+This wiki serves as a comprehensive guide to help you navigate and contribute to the **Stride website**.
+
+If you're looking to make minor changes, such as adding or updating a post or page, or fixing a typo, you can jump straight to the [Content Updates](Content#content-updates) section.
+
+For more extensive updates 🤯🤦‍♂️ and a deeper understanding of the website project, we recommend exploring all the sections provided. Happy browsing and contributing!
+
+Technologies we use to build our website:
+
+- [Eleventy](https://www.11ty.dev/docs/) (static site generator)
+- Markdown
+- Mainly [Liquid](https://shopify.github.io/liquid/) and a bit Nunjucks (template engines)
+- Bootstrap
+- Font Awesome
+- GitHub Wiki
+- HTML, JavaScript, CSS, SCSS, and JSON
+
+## Table of Contents
 
 - [Installation](Installation)
   - [Prerequisites](Installation#prerequisites)
@@ -21,6 +37,7 @@ This wiki serves as a comprehensive guide to help you navigate and contribute to
   - Styling
     - Bootstrap Customization
     - CSS Guidelines
+  - [Submitting your Changes](Content#submitting-your-changes)
 - [Eleventy](Eleventy)
   - [Packages and Dependencies](Eleventy#packages-and-dependencies)
   - [Configuration](Eleventy#configuration)

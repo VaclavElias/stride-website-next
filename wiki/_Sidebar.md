@@ -18,6 +18,7 @@
   - Styling
     - Bootstrap Customization
     - CSS Guidelines
+  - [Submitting your Changes](Content#submitting-your-changes)
 - [Eleventy](Eleventy)
   - [Packages and Dependencies](Eleventy#packages-and-dependencies)
   - [Configuration](Eleventy#configuration)
