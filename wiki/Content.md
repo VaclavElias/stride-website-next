@@ -24,6 +24,8 @@ If you want to update the website, please follow the instructions below.
 
 Small updates can be done directly in the GitHub web interface, for bigger updates the local development environment is required, which is described in the [Installation](Installation) section.
 
+You can use any text editor to make changes. If you are using Visual Studio, you can open `Stride.Web.sln` solution file in the root of the repository and start making your updates directly from this IDE. 
+
 ## Small Updates
 
 ### What is a small update?

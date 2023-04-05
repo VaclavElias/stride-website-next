@@ -37,7 +37,7 @@
   - [Azure Web Apps](Deployment#azure-web-apps)
     - [Deploying with .NET Framework](Deployment#deploying-with-net-framework)
     - [Deploying with .NET Core](Deployment#deploying-with-net-core)
-  - [Wiki Deployment](Deployment#wiki-deployment) 
+  - [Deployment To Wiki](Deployment#deployment-to-wiki) 
 - [Troubleshooting and FAQ](Troubleshooting-and-FAQ)
   - [Known Issues](Troubleshooting-and-FAQ#known-issues)
   - [Common Issues and Solutions](Troubleshooting-and-FAQ#common-issues-and-solutions)
