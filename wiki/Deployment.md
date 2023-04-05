@@ -4,7 +4,7 @@
 - [Azure Web Apps](#azure-web-apps)
   - [Deploying with .NET Framework](#deploying-with-net-framework)
   - [Deploying with .NET Core](#deploying-with-net-core)
-- [Wiki Deployment](#wiki-deployment)
+- [Deployment To Wiki](#deployment-to-wiki)
 
 # GitHub Pages
 
@@ -59,7 +59,7 @@ The GitHub action `eleventy_stride-web-rc.yml` builds the website and deploys it
 
 This wasn't tested yet.
 
-# Wiki Deployment
+# Deployment To Wiki
 
 While the GitHub wiki offers a convenient way to document a project, it has some drawbacks, such as not being part of the repository by default and restricting edits to collaborators. To address these issues and allow community editing, we have implemented an alternative approach.
 
