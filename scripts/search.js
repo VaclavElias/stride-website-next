@@ -78,7 +78,7 @@
 
     function getTags(post) {
         var tags = post.tags.split(', ');
-        return tags.filter(s => s !== 'blog' && s !== 'search').map(s => `<span class="badge text-bg-primary text-primary me-1" style="--bs-bg-opacity: .20;">${s.replace('-', ' ')}</span>`).join('');
+        return tags.filter(s => s !== 'blog' && s !== 'search').map(s => `<span class="badge text-bg-stride text-stride me-1" style="--bs-bg-opacity: .20;">${s.replace('-', ' ')}</span>`).join('');
     }
 
     function getQueryVariable(variable) {
