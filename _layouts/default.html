@@ -6,7 +6,7 @@
     {% if banner %}{% include banner.html title:banner.title sub-title:banner.sub-title image-url:banner.image-url h1:banner.h1 %}{% endif %}
     {{ content }}
     {% include footer.html btn-class:"link-danger" social-class:"link-danger" %}
-    {% include footer.html btn-class:"link-light" social-class:"link-light" %}
+    {% comment %}{% include footer.html btn-class:"link-light" social-class:"link-light" %}{% endcomment %}
     <script src="{{ site.baseurl}}/scripts/bootstrap.bundle.min.js?site-version={{site.version}}"></script>
 </body>
 </html>
