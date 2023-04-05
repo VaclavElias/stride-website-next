@@ -16,7 +16,7 @@ banner:
                     <h2 class="h1 mb-3">General</h2>
                     <div class="accordion">
                         {% capture body %}
-                        <p>You can find the Stride system requirements on the <a href="{{ site.docs-requirements-url }}">Requirements</a> page in the Stride manual.</p>
+                        <p>You can find the Stride system requirements on the <a href="{{ site.links.docs-requirements-url }}">Requirements</a> page in the Stride manual.</p>
                         {% endcapture %}
                         {% include accordion-item-faq.html id:"system-requirements"
                         title:"What are the Stride system requirements?"
@@ -29,7 +29,7 @@ banner:
                         %}
 
                         {% capture body %}
-                        <p>You can find information about Stride features on the <a href="/features/" target="_self">Stride features page</a>, in the <a href="{{ site.docs-manual-url }}" target="_self">Stride documentation</a>, on the <a href="/blog/" target="_self">Stride blog</a>, and in the <a href="{{ site.docs-release-notes-url }}" target="_self">Stride release notes</a>. If you can't find what you're looking for, ask us on the <a href="{{ site.github-discussions-url }}" target="_self">Stride Github Discussions</a>.</p>
+                        <p>You can find information about Stride features on the <a href="/features/" target="_self">Stride features page</a>, in the <a href="{{ site.links.docs-manual-url }}" target="_self">Stride documentation</a>, on the <a href="/blog/" target="_self">Stride blog</a>, and in the <a href="{{ site.links.docs-release-notes-url }}" target="_self">Stride release notes</a>. If you can't find what you're looking for, ask us on the <a href="{{ site.links.github-discussions-url }}" target="_self">Stride Github Discussions</a>.</p>
                         {% endcapture %}
                         {% include accordion-item-faq.html id:"question-what-features"
                         title:"What features does Stride support?"
@@ -42,7 +42,7 @@ banner:
                         %}
 
                         {% capture body %}
-                        <p>Yes. Stride is free. If you want, you can support the project through the <a href="{{ site.open-collective-url }}" target="_blank" rel="noopener">Open Collective</a>.</p>
+                        <p>Yes. Stride is free. If you want, you can support the project through the <a href="{{ site.links.open-collective-url }}" target="_blank" rel="noopener">Open Collective</a>.</p>
                         {% endcapture %}
                         {% include accordion-item-faq.html id:"is-stride-free"
                         title:"Is Stride free?"

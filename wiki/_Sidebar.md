@@ -3,6 +3,7 @@
   - [Prerequisites](Installation#prerequisites)
   - [Installation Steps](Installation#installation-steps)
   - [Running the Development Server](Installation#running-the-development-server)
+  - [ASP.NET Core](Installation#asp-net-core)
 - [Content](Content)
   - [Content Updates](Content#content-updates)
     - [Small Updates](Content#small-updates)
@@ -15,9 +16,12 @@
   - Web Assets
     - Images
     - Videos
+    - Alert
+    - Banner
   - Styling
     - Bootstrap Customization
     - CSS Guidelines
+  - [Submitting your Changes](Content#submitting-your-changes)
 - [Eleventy](Eleventy)
   - [Packages and Dependencies](Eleventy#packages-and-dependencies)
   - [Configuration](Eleventy#configuration)

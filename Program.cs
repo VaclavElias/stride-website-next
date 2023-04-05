@@ -13,7 +13,7 @@ var app = builder.Build();
 
 app.UseResponseCompression();
 
-// Just a test
+// Just a test, if we would like to use ASP.NET Core with static files
 app.MapGet("/stride", () => "Hello Stride!");
 
 // Configure the application to redirect 404 (Not Found) errors to a custom 404.html page

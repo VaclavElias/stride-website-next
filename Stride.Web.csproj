@@ -18,7 +18,6 @@
 
     <Target Name="11ty" BeforeTargets="Build">
         <Exec Command="npm run build" />
-        <!--<Exec Command="npm run build" WorkingDirectory="site" />-->
     </Target>
 
 </Project>
