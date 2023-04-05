@@ -14,11 +14,7 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="canonical" href="https://stride3d.net/blog/feature-spotlight-xenko-3-1-and-nuget/">
     <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
-    <link rel="stylesheet" href="/css/styles.css?site-version=2.0.0.5">
-    
-    <meta property="og:image" content="/images/og/ogp.jpg">
-    
-    <script src="/scripts/theme-selector.js?site-version=2.0.0.5"></script>
+    <link rel="stylesheet" href="/css/styles.css?site-version=2.0.0.6"><meta property="og:image" content="/images/og/ogp.jpg"><script src="/scripts/theme-selector.js?site-version=2.0.0.6"></script>
 </head>
 <body class="bg-stride-website d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg bg-light-stride-website">
@@ -29,10 +25,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarMain">
-            
-            
-            <ul class="navbar-nav navbar-nav--text me-auto mb-2 mb-lg-0 ms-sm-2">
+        <div class="collapse navbar-collapse" id="navbarMain"><ul class="navbar-nav navbar-nav--text me-auto mb-2 mb-lg-0 ms-sm-2">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="/features/">Features</a>
                 </li>
@@ -63,18 +56,16 @@
                     </a>
                 </li>
             </ul>
-            <ul class="navbar-nav flex-row flex-wrap ms-md-auto navbar-icons">
+            <ul class="navbar-nav flex-row flex-wrap ms-sm-2 navbar-icons">
                 <li class="nav-item col-12 col-lg-auto dropdown">
                     <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false" onclick="document.getElementById('search-input').focus()" aria-label="Search button"><i class="fa-solid fa-magnifying-glass text-decoration-none"></i></a>
                     <div class="dropdown-menu dropdown-menu-end p-3" style="width: 280px;">
-                        
 <form action="/search/" method="get">
     <div class="mb-3">
         <input class="form-control" id="search-input" name="query" type="text" value="" autofocus tabindex="0" aria-label="Search">
     </div>
     <button class="btn btn-stride" name="submit" type="submit" value="Search">Search</button>
-</form>
-                    </div>
+</form></div>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
                     <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
@@ -102,7 +93,7 @@
                         <small class="d-lg-none">Open Collective</small>
                     </a>
                 </li>
-                <li class="nav-item dropdown d-flex align-items-center ms-2">
+                <li class="nav-item dropdown d-lg-flex align-items-center">
                     <button title="Change theme" class="btn btn-link nav-link dropdown-toggle d-flex align-items-center" id="themeDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
                         <li>
@@ -135,27 +126,19 @@
             </ul>
         </div>
     </div>
-</nav>
-    
-    <div class="container">
+</nav><div class="container">
     <div class="row postcontent">
         <div class="col-12">
             <article itemscope itemtype="http://schema.org/BlogPosting">
                 <h1 itemprop="name">Feature Spotlight: Xenko 3.1 + NuGet</h1>
-                <div class="text-center mb-3 pt-2">
-                    <div>
-                        
-                        <div class="mt-4 mb-2">
+                <div class="text-center mb-3 pt-2"><div><div class="mt-4 mb-2">
                             <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/xen2?size=58">
-                        </div>
-                        Virgile Bello
-                    </div>
-                    
-                    <p style="color:#616161;border-top: 2px solid #979593;" class="x-hidden-focus mt-2 pt-1 small text-muted date d-inline-block">
-                        <i class="fa-solid fa-calendar-days"></i> <time datetime="2018-11-13T00:00:00+0000" itemprop="datePublished"> November 13, 2018</time>
+                        </div>Virgile Bello
+                    </div><p style="border-top: 2px solid #979593;" class="x-hidden-focus mt-4 pt-1 small text-secondary date d-inline-block">
+                        <small><i class="fa-solid fa-calendar-days"></i> <time datetime="2018-11-13T00:00:00+0000" itemprop="datePublished"> November 13, 2018</time></small>
                     </p>
                 </div><div itemprop="articleBody">
-                <p>Discover the powerful features of Xenko 3.1, the latest update to the Stride 3D game engine. Learn how NuGet integration streamlines development and enhances your game creation experience. Dive into our detailed blog post now!</p>
+                    <p>Discover the powerful features of Xenko 3.1, the latest update to the Stride 3D game engine. Learn how NuGet integration streamlines development and enhances your game creation experience. Dive into our detailed blog post now!</p>
 <p>Today, I would like to highlight some work being done on Xenko.</p>
 <p>Xenko 3.1 will bring some big changes in the way Xenko is packaged, distributed and consumed.</p>
 <p><div class="table-of-contents"><ul><li><a href="#xenko-3.0%3A-welcome-packagereference!">Xenko 3.0: Welcome PackageReference! </a></li><li><a href="#xenko-3.1%3A-enter-modular-xenko">Xenko 3.1: Enter Modular Xenko </a><ul><li><a href="#one-package-per-assembly">One Package per Assembly </a></li><li><a href="#package-layout%3A-following-best-nuget-practices">Package Layout: Following Best NuGet Practices </a></li><li><a href="#xenko-assets-are-also-distributed-as-part-of-package">Xenko assets are also distributed as part of package </a></li><li><a href="#distribution-platform%3A-time-to-switch-to-nuget.org%3F">Distribution Platform: time to switch to <a href="http://nuget.org">nuget.org</a>? </a></li><li><a href="#xenko-tooling-will-resolve-assemblies-dynamically-using-nuget-api">Xenko tooling will resolve assemblies dynamically using NuGet API </a></li><li><a href="#future%3A-plugin-support-for-editor">Future: Plugin Support for Editor </a></li></ul></li><li><a href="#conclusion">Conclusion </a></li></ul></div></p>
@@ -208,7 +191,8 @@
 <h2 id="conclusion" tabindex="-1">Conclusion <a class="direct-link" href="#conclusion">🔗</a></h2>
 <p>This is just the beginning, laying out foundations to turn Xenko into a set of reusable libraries. Much more to come soon!</p>
 <p>This is an exciting era for Xenko. Hopefully it will open doors to many new use cases, and bring us lot of new potential users and developers!</p>
-</div>
+
+                </div>
                 <hr>
                 <p>
 <span class="badge text-bg-stride text-stride me-1" style="--bs-bg-opacity: .20;">NuGet</span></p>
@@ -222,10 +206,7 @@
             </article>
         </div>
     </div>
-    <div class="row mb-5">
-        
-        
-        <div class="col-md-6 mb-4">
+    <div class="row mb-4"><div class="col-md-6 mb-4">
             
             <div class="card px-3">
                 <div class="card-body p-4">
@@ -248,7 +229,6 @@
     </div>
 </div>
 
-    
 <div class="bg-footer mt-auto">
     <div class="container">
         <footer class="pt-5 px-2">
@@ -322,92 +302,11 @@
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p class="text-light" style="--bs-text-opacity: 0.85;">Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p class="text-light" style="--bs-text-opacity: 0.85;">v.2.0.0.5</p>
+                <p class="text-light" style="--bs-text-opacity: 0.85;">v.2.0.0.6</p>
                 <p class="text-light" style="--bs-text-opacity: 0.85;">© .NET Foundation and Contributors</p>
             </div>
         </footer>
     </div>
-</div>
-    
-<div class="bg-footer mt-auto">
-    <div class="container">
-        <footer class="pt-5 px-2">
-            <div class="row">
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Links</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/features/" class="nav-link p-0 link-light">Features</a></li>
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-light">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="/download/" class="nav-link p-0 link-light">Download</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/" class="nav-link p-0 link-light">Legal</a></li>
-                        <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 link-light">Contact us</a></li>
-                        <li class="nav-item mb-2"><a href="/legal/privacy-policy/" class="nav-link p-0 link-light">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Docs</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/manual/" class="nav-link p-0 link-light" target="_blank" rel="noopener">Manual</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/api/" class="nav-link p-0 link-light" target="_blank" rel="noopener">Stride API</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/releasenotes/" class="nav-link p-0 link-light" target="_blank" rel="noopener">Release notes</a></li>
-                        <li class="nav-item mb-2"><a href="https://doc.stride3d.net/latest/en/tutorials/" class="nav-link p-0 link-light" target="_blank" rel="noopener">Tutorials</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Community</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="https://opencollective.com/stride3d" class="nav-link p-0 link-light" target="_blank" rel="noopener">Open Collective</a></li>
-                        <li class="nav-item mb-2"><a href="https://discord.gg/f6aerfE" class="nav-link p-0 link-light" target="_blank" rel="noopener">Discord</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride" class="nav-link p-0 link-light" target="_blank" rel="noopener">GitHub</a></li>
-                        <li class="nav-item mb-2"><a href="https://twitter.com/stridedotnet" class="nav-link p-0 link-light" target="_blank" rel="noopener">Twitter</a></li>
-                        <li class="nav-item mb-2"><a href="/faq/" class="nav-link p-0 link-light">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="/sponsor/" class="nav-link p-0 link-light">Sponsor</a></li>
-                        <li class="nav-item mb-2"><a href="https://github.com/stride3d/stride/discussions" class="nav-link p-0 link-light" target="_blank" rel="noopener">Discussions</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                    <h5 class="text-light" style="--bs-text-opacity: 0.85;">Blog</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/blog/" class="nav-link p-0 link-light">Posts</a></li>
-                        <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 link-light">Tags</a></li>
-                        <li class="nav-item mb-2"><a href="/archive/" class="nav-link p-0 link-light">Archive</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-12 col-lg-4 mb-3 mt-4 text-center text-lg-end">
-                    <a class="link-light me-2 text-decoration-none mb-3 d-inline-block" href="https://github.com/stride3d/stride" target="_blank" rel="noopener" aria-label="GitHub link">
-                        <i class="fa-brands fa-xl fa-github text-decoration-none"></i>
-                    </a>
-                    <a class="link-light me-2 text-decoration-none" href="https://discord.gg/f6aerfE" target="_blank" rel="noopener" aria-label="Discor link">
-                        <i class="fa-brands fa-xl fa-discord text-decoration-none"></i>
-                    </a>
-                    <a class="link-light me-2 text-decoration-none" href="https://twitter.com/stridedotnet" target="_blank" rel="noopener" aria-label="Twitter link">
-                        <i class="fa-brands fa-xl fa-twitter text-decoration-none"></i>
-                    </a>
-                    <a class="link-light me-2 text-decoration-none" href="https://opencollective.com/stride3d" target="_blank" rel="noopener" aria-label="Open Collective link">
-                        
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" style="margin-top:-5px"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
-
-                    </a>
-                    <a class="link-light me-2 text-decoration-none" href="https://www.facebook.com/stride3d" target="_blank" rel="noopener" aria-label="Facebook link">
-                        <i class="fa-brands fa-xl fa-facebook text-decoration-none"></i>
-                    </a>
-                    <a class="link-light me-2 text-decoration-none" href="https://www.youtube.com/@Stride3D" target="_blank" rel="noopener" aria-label="YouTube link">
-                        <i class="fa-brands fa-xl fa-youtube text-decoration-none"></i>
-                    </a>
-                    <a class="link-light me-2 text-decoration-none" href="/feed.xml" aria-label="RSS feed link">
-                        <i class="fa-solid fa-rss fa-xl text-decoration-none"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
-                <p class="text-light" style="--bs-text-opacity: 0.85;">Supported by the <a class="link-light" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p class="text-light" style="--bs-text-opacity: 0.85;">v.2.0.0.5</p>
-                <p class="text-light" style="--bs-text-opacity: 0.85;">© .NET Foundation and Contributors</p>
-            </div>
-        </footer>
-    </div>
-</div>
-    <script src="/scripts/bootstrap.bundle.min.js?site-version=2.0.0.5"></script>
+</div><script src="/scripts/bootstrap.bundle.min.js?site-version=2.0.0.6"></script>
 </body>
 </html>
