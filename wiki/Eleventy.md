@@ -65,18 +65,38 @@ Our `site.json` file contains these main properties, with only some listed below
 
 # Folder Structure
 
-The folder structure is very important for Eleventy. It is used to determine the output of the build process. The folder structure is as follows:
+The folder structure is crucial for Eleventy, as it determines the output of the build process. The folder structure is organized as follows:
+
+**Folders**
 
 - `/_data` - Global data
-- `/_drafts` - Draft blog posts - excluded from the build process
-- `/_includes` - Reusable snippets of code that can be included in multiple pages
-- `/_layouts` - Main layout pages, `container`, `page`, `post` which use primary layout page `default`
-- `/_site` - This is an outpub build 
-- `/_data` - Global data
-- `/_data` - Global data
-- `/_data` - Global data
-- `/_data` - Global data
- 
+- `/_drafts` - Draft blog posts (excluded from the build process)
+- `/_includes` - Reusable code snippets that can be included in multiple pages
+- `/_layouts` -  Main layout pages (`container`, `page`, `post`) using the primary layout page `default`
+- `/_site` - Output build folder (excluded in `.gitignore` and used for deployment) 
+- `/assets` - Additional assets, such as scripts
+- `/blog` - Blog content page
+- `/css` - Website stylesheets
+- `/files` - Stride installer files
+- `/images` - Images and MP4 files used on the website
+- `/legal` - Content page
+- `/posts` - Blog posts
+- `/wiki` - Excluded from build process, used only for wiki deployment
+
+**Files**
+
+- `*.html` - HTML content pages
+- `*.md` - Markdown content pages
+- `*.njk` - Nunjucks content pages
+- `.eleventy.js` - Eleventy configuration file
+- `.eleventyignore` - Lists files and folders not to be processed by Eleventy
+- `.nojekyll` - Special file for GitHub Pages
+- `appsettings.json` - ASP.NET Core configuration file
+- `package.json` - Eleventy project metadata used by `npm`
+- `Program.cs` - ASP.NET Core startup file
+- `web.config` - Configuration file for IIS deployement
+
+**Note:** This project includes ASP.NET Core solution and files, as they can be used seamlessly with Eleventy. Read more about this in our [Installation](Installation#asp-net-core) section.
 
 
 # Layouts and Templates
@@ -86,4 +106,5 @@ The folder structure is very important for Eleventy. It is used to determine the
 # Advanced Topics
 
 ## Creating Custom Shortcodes and Includes
+
 ## Performance Optimization
