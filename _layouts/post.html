@@ -9,10 +9,10 @@ layout: default
                 <div class="text-center mb-3 pt-2">
                     {%- assign author = site.authors[author] -%}{%- if author -%}
                     <div>
-                        {% if author.github %}
+                        {%- if author.github -%}
                         <div class="mt-4 mb-2">
                             <img class="rounded-circle me-1" alt="author" src="https://avatars.githubusercontent.com/{{ author.github }}?size=58">
-                        </div>{% endif %}
+                        </div>{%- endif -%}
                         {{ author.name }}
                     </div>
                     {%- endif -%}

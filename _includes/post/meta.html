@@ -1,16 +1,16 @@
 <p class="d-flex justify-content-between">
     <span>
-        <i class="fa-solid fa-calendar-days me-1"></i> {% include post/day.html date:post.date %}
+        <i class="fa-solid fa-calendar-days me-1"></i> {%- include post/day.html date:post.date -%}
     </span>
 </p>
-{% assign author = site.authors[post.data.author] %}
-{% if author %}
+{%- assign author = site.authors[post.data.author] -%}
+{%- if author -%}
 <p>
-    {% if author.github %}
+    {%- if author.github -%}
     <img class="rounded-circle me-1" alt="author" height="40" width="40" src="https://avatars.githubusercontent.com/{{ author.github }}?size=40">
-    {% endif %}
+    {%- endif -%}
     {{ author.name }}
 </p>
-{% else %}
+{%- else -%}
 <p>Unknown author</p>
-{% endif %}
+{%- endif -%}

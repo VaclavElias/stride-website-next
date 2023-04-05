@@ -7,8 +7,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarMain">
-            {% assign menu_current = page.url | remove: '/' %}
-            {% assign menu_blog = menu_current | slice: 0,4 %}
+            {%- assign menu_current = page.url | remove: '/' -%}
+            {%- assign menu_blog = menu_current | slice: 0,4 -%}
             <ul class="navbar-nav navbar-nav--text me-auto mb-2 mb-lg-0 ms-sm-2">
                 <li class="nav-item">
                     <a class="nav-link{% if menu_current=='features' %} active text-stride{% endif %}" aria-current="page" href="/features/">Features</a>
@@ -44,7 +44,7 @@
                 <li class="nav-item col-12 col-lg-auto dropdown">
                     <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false" onclick="document.getElementById('search-input').focus()" aria-label="Search button"><i class="fa-solid fa-magnifying-glass text-decoration-none"></i></a>
                     <div class="dropdown-menu dropdown-menu-end p-3" style="width: 280px;">
-                        {% include search-form.html id:"search-input" %}
+                        {%- include search-form.html id:"search-input" -%}
                     </div>
                 </li>
                 <li class="nav-item col-6 col-lg-auto">
