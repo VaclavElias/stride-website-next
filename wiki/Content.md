@@ -9,8 +9,10 @@
 - Creating New Pages
 - Shortcodes and Includes
 - Web Assets
-  - Images
-  - Videos
+  - Image
+  - Video
+  - Alert
+  - Banner
 - Styling
   - Bootstrap Customization
   - CSS Guidelines
@@ -61,7 +63,7 @@ Wiki pages are deployed through a separate GitHub action, `stride-web-wiki.yml`,
 
 ToDo: List of web assets used in the website, like logo.
 
-## Images
+## Image
 
 Add responsive images using shortcodes. Be sure to include a descriptive title, as it will improve your post's search engine visibility. Also, if possible, use the **webp** format for images, which can also be used for transparent images. This will improve the performance of your site.
 
@@ -95,7 +97,7 @@ Replace `title` with a descriptive title for the image, `url` with the image URL
 <a href="destinationUrl" title="title" class="mb-2"><img alt="title" src="url" class="img-fluid" loading="lazy" data-src="url"></a>
 ```
 
-## Videos
+## Video
 
 To embed a **YouTube video**, use the following shortcode:
 
@@ -127,6 +129,15 @@ Replace `url` with the video URL (e.g., .mp4 file). Make sure you have a matchin
 <!-- jpgUrl = url.replace(".mp4", ".jpg") // make sure you have a pair .mp4 and .jpg -->
 <div class="ratio ratio-16x9 mb-2"><video autoplay loop class="responsive-video" poster="jpgUrl"><source src="url" type="video/mp4"></video></div>
 ```
+
+## Alert
+
+To add an alert, use the following shortcode:
+`{% alert 'type' 'title' 'content' %}`
+
+## Banner
+
+A global banner is in `default.html` to be activated with promotions if needed.
 
 # Styling
 
