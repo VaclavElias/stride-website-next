@@ -15,16 +15,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'      
-      
+          node-version: '18.x'
+
       - name: npm install, build, and test
         run: |
           npm install
-          
+
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:

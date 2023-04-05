@@ -34,9 +34,30 @@ The GitHub action `stride-web-staging-github.yml` works as follows:
 
 ## Deploying with .NET Framework
 
-.NET Framework is using IIS to host the website, so any static files will be served by IIS. The static files are located in the `wwwroot` folder. The `wwwroot` folder is the root folder of the website. The `wwwroot` folder is also the root folder of the website when it is deployed to GitHub Pages.
+The .NET Framework uses IIS to host the website, which serves any static files.
+
+The `web.config` file is used to configure IIS, including:
+
+- Mime types for static files
+- Redirects
+- Gzip compression
+- Static file caching
+
+The GitHub action `eleventy_stride-web-rc.yml` builds the website and deploys it to Azure Web Apps.
 
 ## Deploying with .NET Core
+
+We have got these 4 options to deploy our website:
+
+- Azure Web Apps (Windows) with IIS
+- Azure Web Apps (Windows) with Kestrel
+- Azure Web Apps (Linux) with Kestrel
+
+The GitHub action `eleventy_stride-web-rc.yml` builds the website and deploys it to Azure Web Apps.
+
+## Azure Static Web Apps
+
+This wasn't tested yet.
 
 # Wiki Deployment
 
@@ -55,4 +76,4 @@ This GitHub action only monitors changes to the `wiki` folder. Any modifications
 
 We use the [Wiki Page Creator GitHub Action](https://github.com/marketplace/actions/wiki-page-creator-action) to deploy the `wiki` folder to the GitHub wiki.
 
-Please note that a GitHub personal access token (GH_PAT) is required for authentication. This token is stored as a secret in the repository settings.
+**Note**: ⚠️ A GitHub personal access token (GH_PAT) is required for authentication. This token is stored as a secret in the repository settings.⚠️

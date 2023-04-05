@@ -35,6 +35,8 @@ Technologies we use to build our website:
   - Web Assets
     - Images
     - Videos
+    - Alert
+    - Banner
   - Styling
     - Bootstrap Customization
     - CSS Guidelines

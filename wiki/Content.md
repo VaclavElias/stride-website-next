@@ -110,6 +110,8 @@ Replace `title` with a descriptive title for the image, `url` with the image URL
 
 ## Video
 
+### How to encode videos
+
 To embed a **YouTube video**, use the following shortcode:
 
 `{% youtube 'id' %}`

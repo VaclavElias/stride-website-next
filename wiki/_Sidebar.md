@@ -16,6 +16,8 @@
   - Web Assets
     - Images
     - Videos
+    - Alert
+    - Banner
   - Styling
     - Bootstrap Customization
     - CSS Guidelines
