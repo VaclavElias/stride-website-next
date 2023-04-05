@@ -165,3 +165,19 @@ public class MyAsyncScript : AsyncScript
     }
 }
 ```
+
+```csharp
+public static class MyStrideGame
+{
+    public static void Main(string[] args)
+    {
+        using var game = new Game();
+
+        // register service
+        game.Services.AddService(new ScreensService());
+
+        game.Run();
+    }
+}
+
+```
