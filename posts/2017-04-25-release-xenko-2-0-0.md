@@ -12,7 +12,7 @@ After nearly two years of open beta, we’re proud to announce that **Xenko is n
 
 [[TOC]]
 
-{% img 'Starbreach Image' '/images/blog/release-2.0/starbreach.jpg' %}
+{% img 'Starbreach Image' '/images/blog/release-2.0/starbreach.webp' %}
 
 We’d like to thank all our beta users for their feedback, which helped us improve Xenko immeasurably over the last two years. We couldn’t have done it without you!
 
