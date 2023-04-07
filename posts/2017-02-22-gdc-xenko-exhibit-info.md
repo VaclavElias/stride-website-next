@@ -17,6 +17,6 @@ To schedule a meeting, contact us through [our website](http://stride3d.net/cont
 
 We hope to see you soon at GDC 2017 in San Francisco!
 
-{% img 'Cave of Surtr Poster' '/images/blog/2017-02-22-gdc-xenko-exhibit-info/CaveofSurtrposter.jpg' %}
+{% img 'Cave of Surtr Poster' '/images/blog/2017-02-22-gdc-xenko-exhibit-info/CaveofSurtrposter.webp' %}
 
-{% img 'Starbreach Poster' '/images/blog/2017-02-22-gdc-xenko-exhibit-info/Starbreach poster.jpg' %}
+{% img 'Starbreach Poster' '/images/blog/2017-02-22-gdc-xenko-exhibit-info/Starbreach-poster.webp' %}
