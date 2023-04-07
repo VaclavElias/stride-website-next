@@ -9,7 +9,7 @@ This guide assumes you have a basic understanding of the technologies used in th
 - [Prerequisites](#prerequisites)
 - [Installation Steps](#installation-steps)
 - [Running the Development Server](#running-the-development-server)
-- [ASP.NET Core](#asp-net-core)
+- [ASP.NET Core](#aspnet-core)
 
 # Prerequisites
 
