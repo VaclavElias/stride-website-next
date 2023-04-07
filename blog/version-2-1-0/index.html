@@ -145,13 +145,13 @@
 <p><div class="table-of-contents"><ul><li><a href="#summary">Summary </a></li><li><a href="#local-reflections">Local reflections </a></li><li><a href="#clear-coat-shading">Clear coat shading </a></li><li><a href="#thin-glass-materials">Thin glass materials </a></li><li><a href="#improved-light-shafts">Improved light shafts </a></li><li><a href="#texture-streaming">Texture streaming </a></li><li><a href="#render-masks">Render masks </a></li><li><a href="#improved-profiler">Improved profiler </a></li><li><a href="#debug-text">Debug text </a></li><li><a href="#rewritten-input-system">Rewritten input system </a></li><li><a href="#improved-direct3d-12-support">Improved Direct3D 12 support </a></li><li><a href="#improved-environment-fresnel">Improved environment fresnel </a></li><li><a href="#japanese-documentation">Japanese documentation </a></li></ul></div></p>
 <h2 id="local-reflections" tabindex="-1">Local reflections <a class="direct-link" href="#local-reflections">🔗</a></h2>
 <p>Xenko 2.1 introduces <strong>local reflections</strong>. We wrote about this feature <a href="https://stride3d.net/blog/real-time-local-reflections-preview/">back in March</a>; it's been through several revisions since then.</p>
-<img alt="Local reflections" src="/images/blog/release-2.1/local-reflections.jpg" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/local-reflections.jpg">
+<img alt="Local reflections" src="/images/blog/release-2.1/local-reflections.webp" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/local-reflections.webp">
 <p>You can enable and customize local reflections in the graphics compositor on the <strong>post effects</strong> properties.</p>
 <img alt="Enable local reflections" src="/images/blog/release-2.1/enable-local-reflections.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/enable-local-reflections.png">
 <p>For details, see the <a href="http://doc.stride3d.net/latest/en/manual/graphics/post-effects/local-reflections.html">local reflections documentation</a>.</p>
 <h2 id="clear-coat-shading" tabindex="-1">Clear coat shading <a class="direct-link" href="#clear-coat-shading">🔗</a></h2>
 <p>Xenko 2.1 includes a <strong>clear-coat material</strong> template that uses physically-based rendering to simulate vehicle paint.</p>
-<img alt="Clear coat" src="/images/blog/release-2.1/clear-coat-2.jpg" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/clear-coat-2.jpg">
+<img alt="Clear coat" src="/images/blog/release-2.1/clear-coat-2.webp" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/clear-coat-2.webp">
 <p>Clear-coat shading has several advantages over creating the effect manually with material layers:</p>
 <ul>
 <li>layers are blended based on distance</li>
@@ -159,13 +159,13 @@
 <li>improved visualization</li>
 </ul>
 <p>You can add a predefined <strong>clear coat</strong> material from the <strong>Asset view</strong> under <strong>Add asset &gt; Material</strong>.</p>
-<img alt="Add clear coat" src="/images/blog/release-2.1/add-clear-coat.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/add-clear-coat.png">
+<img alt="Add clear coat" src="/images/blog/release-2.1/add-clear-coat.webp" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/add-clear-coat.webp">
 <p>For details, see the <a href="http://doc.stride3d.net/latest/en/manual/graphics/materials/clear-coat-shading.html">clear coat shading documentation</a>.</p>
 <h2 id="thin-glass-materials" tabindex="-1">Thin glass materials <a class="direct-link" href="#thin-glass-materials">🔗</a></h2>
 <p>You can now render thin glass materials such as windshields. The diffuse color controls the tint of the glass and how much light is blocked (darker colors block more light).</p>
-<img alt="Thin Glass materials" src="/images/blog/release-2.1/glass-materials.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/glass-materials.png">
+<img alt="Thin Glass materials" src="/images/blog/release-2.1/glass-materials.webp" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/glass-materials.webp">
 <p>You can add a predefined <strong>Glass</strong> material from the <strong>Asset view</strong> under <strong>Add asset &gt; Material</strong>.</p>
-<img alt="Select thin glass material" src="/images/blog/release-2.1/select-thin-glass-material.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/select-thin-glass-material.png">
+<img alt="Select thin glass material" src="/images/blog/release-2.1/select-thin-glass-material.webp" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/select-thin-glass-material.webp">
 <h2 id="improved-light-shafts" tabindex="-1">Improved light shafts <a class="direct-link" href="#improved-light-shafts">🔗</a></h2>
 <p>You can now use <strong>light shafts</strong> with any kind of light that casts shadows (ie point lights, directional lights, or spot lights). You can also use them with multiple shadow cascades.</p>
 <p>Additionally, Game Studio now displays light shaft bounding volumes in the scene editor, so you can easily see the areas where light shafts are created. To show or hide navigation light shaft bounding volumes, in the <strong>scene editor toolbar</strong>, open the <strong>gizmo options</strong> menu and use the <strong>Light shaft bounding volumes</strong> checkbox.</p>
@@ -181,11 +181,11 @@
 <p>For details, see <a href="http://doc.stride3d.net/latest/en/manual/graphics/textures/streaming.html">streaming documentation</a>.</p>
 <h2 id="render-masks" tabindex="-1">Render masks <a class="direct-link" href="#render-masks">🔗</a></h2>
 <p>You can now set which render groups a camera renders under <strong>Graphics Compositor &gt; Entry points &gt; Render masks</strong>. For example, you can have a model be visible to Camera A but invisible to Camera B.</p>
-<img alt="Render mask" src="/images/blog/release-2.1/change-render-mask.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/change-render-mask.png">
+<img alt="Render mask" src="/images/blog/release-2.1/change-render-mask.webp" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/change-render-mask.webp">
 <p>For details, see the <a href="http://doc.stride3d.net/latest/en/manual/graphics/graphics-compositor/render-groups-and-masks.html">Render groups and masks documentation</a>.</p>
 <h2 id="improved-profiler" tabindex="-1">Improved profiler <a class="direct-link" href="#improved-profiler">🔗</a></h2>
 <p>The <strong>Game Profiler</strong> script now displays more information and is easier to use.</p>
-<img alt="Profiler at runtime" src="/images/blog/release-2.1/profiling-profiler-at-runtime.jpg" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/profiling-profiler-at-runtime.jpg">
+<img alt="Profiler at runtime" src="/images/blog/release-2.1/profiling-profiler-at-runtime.webp" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/profiling-profiler-at-runtime.webp">
 <p>You can now:</p>
 <ul>
 <li>profile GPU information</li>
@@ -199,7 +199,7 @@
 <p>For details, see the <a href="http://doc.stride3d.net/latest/en/manual/troubleshooting/profiling.html">Profiling documentation</a>.</p>
 <h2 id="debug-text" tabindex="-1">Debug text <a class="direct-link" href="#debug-text">🔗</a></h2>
 <p>You can now display debug text at runtime. For more information, see the <a href="http://doc.stride3d.net/latest/en/manual/troubleshooting/debug-text.html">debug text documentation</a>.</p>
-<img alt="Debug text" src="/images/blog/release-2.1/my-debug-text.jpg" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/my-debug-text.jpg">
+<img alt="Debug text" src="/images/blog/release-2.1/my-debug-text.webp" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-2.1/my-debug-text.webp">
 <h2 id="rewritten-input-system" tabindex="-1">Rewritten input system <a class="direct-link" href="#rewritten-input-system">🔗</a></h2>
 <p>The input system has been rewritten to track different input devices and allow for better extensibility.</p>
 <ul>
