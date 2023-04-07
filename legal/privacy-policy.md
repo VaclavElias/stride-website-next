@@ -6,7 +6,7 @@ description: Privacy Policy for Stride
 banner:
   title: Privacy Policy
   sub-title: 
-  image-url: /images/backgrounds/legal.jpg
+  image-url: /images/backgrounds/legal.webp
   h1: false
 ---
 
