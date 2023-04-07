@@ -20,7 +20,7 @@
 
 # Content Updates
 
-If you want to update the website, please follow the instructions below.
+If you want to contribute and update the website, please follow the instructions below.
 
 Small updates can be done directly in the GitHub web interface, for bigger updates the local development environment is required, which is described in the [Installation](Installation) section.
 
@@ -66,7 +66,9 @@ We can define bigger updates as changes to the design of the website, where you 
 - Update Bootstrap library or other libraries
 - Update layouts
 
-You would start with the local development environment, which is described in the [Installation](Installation) section, and then follow the steps below.
+You would start with the local development environment, which is described in the [Installation](Installation) section.
+
+Then you would make your changes and test them locally. Once you are happy with the result, you can create a pull request to merge your changes into the `master` branch.
 
 ## Wiki Updates
 
