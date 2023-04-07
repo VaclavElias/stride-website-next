@@ -23,7 +23,7 @@ Technologies we use to build our website:
   - [Prerequisites](Installation#prerequisites)
   - [Installation Steps](Installation#installation-steps)
   - [Running the Development Server](Installation#running-the-development-server)
-  - [ASP.NET Core](Installation#asp-net-core)
+  - [ASP.NET Core](Installation#aspnet-core)
 - [Content](Content)
   - [Content Updates](Content#content-updates)
     - [Small Updates](Content#small-updates)
