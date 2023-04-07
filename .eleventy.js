@@ -21,7 +21,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("scripts");
     eleventyConfig.addPassthroughCopy("files");
     eleventyConfig.addPassthroughCopy("favicon.ico");
-    eleventyConfig.addPassthroughCopy("websurge-allow.txt");
     eleventyConfig.addPassthroughCopy("favicon.png");
     eleventyConfig.addPassthroughCopy("CNAME"); // For GitHub Pages
     eleventyConfig.addPassthroughCopy("web.config");
