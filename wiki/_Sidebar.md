@@ -16,12 +16,12 @@
     - [Excerpt](Content#excerpt)
   - [Creating New Page](Content#creating-new-page)
     - [Page Front Matter](Content#page-front-matter)
-  - Shortcodes and Includes
-  - Web Assets
-    - Images
-    - Videos
-    - Alert
-    - Banner
+  - [Shortcodes and Includes](Content#shortcodes-and-includes)
+    - [Alert](Content#alert)
+    - [Alet Banner](Content#banner)
+    - [Image](Content#image)
+    - [Video](Content#video)
+- [Web Assets](Content#web-assets)
   - [Styling](Content#styling)
     - [Bootstrap Customization](Content#bootstrap-customization)
     - [CSS Guidelines](Content#css-guidlines)
