@@ -9,18 +9,22 @@
     - [Small Updates](Content#small-updates)
     - [Major Updates](Content#major-updates)
     - [Wiki Updates](Content#wiki-updates)
-  - Creating New Posts
-    - Post Naming Convention
-  - Creating New Pages
+  - [Creating New Post](Content#creating-new-post)
+    - [Post Naming Convention](Content#post-naming-convention)
+    - [Post Front Matter](Content#post-front-matter)
+    - [Post Content](Content#post-content)
+    - [Excerpt](Content#excerpt)
+  - [Creating New Page](Content#creating-new-page)
+    - [Page Front Matter](Content#page-front-matter)
   - Shortcodes and Includes
   - Web Assets
     - Images
     - Videos
     - Alert
     - Banner
-  - Styling
-    - Bootstrap Customization
-    - CSS Guidelines
+  - [Styling](Content#styling)
+    - [Bootstrap Customization](Content#bootstrap-customization)
+    - [CSS Guidelines](Content#css-guidlines)
   - [Submitting your Changes](Content#submitting-your-changes)
 - [Roadmap](Roadmap)
 - [Eleventy](Eleventy)
@@ -28,11 +32,10 @@
   - [Configuration](Eleventy#configuration)
   - [Global Data](Eleventy#global-data)
   - [Folder Structure](Eleventy#folder-structure)
-  - Layouts and Templates
-  - Includes and Partials
-  - Advanced Topics
-    - Creating Custom Shortcodes and Includes
-    - Performance Optimization
+  - [Layouts](Eleventy#layouts)
+  - [Includes](Eleventy#includes)
+  - [Advanced Topics](Eleventy#advanced-topics)
+    - [Creating Custom Shortcodes and Includes](Eleventy#creating-custom-shortcodes-and-includes)
 - [Deployment](Deployment)
   - [GitHub Pages](Deployment#github-pages)
   - [Azure Web Apps](Deployment#azure-web-apps)

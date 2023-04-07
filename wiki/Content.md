@@ -6,7 +6,11 @@
   - [Wiki Updates](#wiki-updates)
 - [Creating New Post](#creating-new-post)
   - [Post Naming Convention](#post-naming-convention)
+  - [Post Front Matter](#post-front-matter)
+  - [Post Content](#post-content)
+  - [Excerpt](#excerpt)
 - [Creating New Page](#creating-new-page)
+  - [Page Front Matter](#page-front-matter)
 - [Shortcodes and Includes](#shortcodes-and-includes)
 - [Web Assets](#web-assets)
   - [Image](#image)
@@ -82,26 +86,116 @@ You can update the wiki pages as any other content pages, by following the steps
 
 # Creating New Post
 
-To create a new blog post, create a new file in the `posts` folder. The file name should follow the following convention:
+To create a new blog post, create a new file in the `posts` folder. The file name should follow the following convention.
+
+## Post Naming Convention
 
 `YYYY-MM-DD-post-title.md`
 
 Replace `YYYY-MM-DD` with the date of the post and `post-title` with the title of the post.
 
+## Post Front Matter
+
 The file should start with the following front matter:
+
 ```yaml
+---
+title: 'Post title'
+# author's id, definied in the _data/site.json
+author: vaclav
+# optional, if not set, the default tags will be used, tags are merged with the default tags
+# you can find all tags in the live site in the /tags/ page
+tags: ['Announcement']
+# optional, if not set, the default image will be used
+# use webp format for best performance, images should be located in the /images/blog/YYYY-MM-DD-post-title folder
+image: /images/blog/2023-04/new-home-page.webp
+# optional, if true, the post will be featured in the popular section
+pupular: true
+# permlink is automatically generated based on the file name, but you can override it here
+permalink: /blog/2023-04/my-custom-link/ # this is a custom linke
+---
+```
+
+Default front matter, which is used for all posts, can be found in the `posts/posts.json` file.
+
+```json
+{
+  "layout": "post",
+  "eleventyComputed": {
+    "year": "{{ page.date | date: '%Y' }}",
+    "modified": "Last Modified"
+  },
+  "permalink": "/blog/{{ page.fileSlug }}/",
+  "tags": [ "blog", "search" ]
+}
+```
+
+## Post Content
+
+The fasted way to create a new post is to copy an existing post and update the front matter and the content.
 
 💡**Tip:** We have a folder called `_drafts` where you can store your drafts. These files are not publisked. Once you are ready to publish your post, you can move it to the `posts` folder.
 
-## Post Naming Convention
+## Excerpt
+
+The excerpt is the first paragraph of the post. Separated from the rest of the content by three dashes `---`. The excerpt is used in the blog post list, meta description and in the RSS feed.
+
+**Example**
+
+```yaml
+---
+title: 'Stride 4.1 is Now Live'
+author: aggror
+tags: ['Tutorials','Release', 'Graphics']
+---
+
+Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.
+
+---
+
+Additional content goes here...
+
+```
 
 # Creating New Page
 
+To create a new page, create a new file in the root folder or create a new folder and add an `index.md` file to it. You can use any templating language supported by Eleventy. We use Markup, html, nunjacks.
+
+## Page Front Matter
+
+The page front matter works the same way as the post front matter. The only difference is that the `layout` property is required.
+
+**Example:** file `features.html`
+
+```yaml
+---
+layout: default
+title: Features
+description: 'Stride supports an extensive list of features: Scene Editor, Physically Based Rendering, Particles, UI Editor, Prefabs, DX12 & Vulkan, C# Scripting, etc...'
+# permlink is automatically generated based on the file name, but you can override it here
+permalink: /my-features/ # otherwise it would be /features/
+---
+```
+
 # Shortcodes and Includes
 
-# Web Assets
+## Alert
 
-ToDo: List of web assets used in the website, like logo.
+To add an alert, use the following include
+
+```liquid
+{% include _alert.html type:'success' icon:'' title:'No icon: Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10.' %}
+```
+
+## Alert Banner
+
+A global alert banner can be used for promotional purposes. The banner can be activated in `site.json`.
+
+```json
+"alert-banner": true
+```
+
+The HTML can be updated in the `/_includes/alert-banner.html` file.
 
 ## Image
 
@@ -172,14 +266,20 @@ Replace `url` with the video URL (e.g., .mp4 file). Make sure you have a matchin
 <div class="ratio ratio-16x9 mb-2"><video autoplay loop class="responsive-video" poster="jpgUrl"><source src="url" type="video/mp4"></video></div>
 ```
 
-## Alert
+# Web Assets
 
-To add an alert, use the following shortcode:
-`{% alert 'type' 'title' 'content' %}`
+Our main web assets are:
 
-## Banner
+- `css/custom-bootstrap.scss` - Slightly modified Booststrap theme
+  - Some Bootstrap variables are overridden
+  - Some Bootsrap parts are disabled so they don't bloat the website (e.g. button-group, breadcrumm, ..)
+- `css/styles.scss` - Main stylesheet
+  - Styles also Dark Mode
+- `css/syntax-highlighting.scss` - Imported prismjs styling, Light and Dark Mode
+- `assets/search.liquid` - Script for search
+- `assets/site.liquid` - Not used
+- `assets/theme-selector.liquid` - Script for Ligth and Dark Mode selection
 
-A global banner is in `default.html` to be activated with promotions if needed.
 
 # Styling
 
