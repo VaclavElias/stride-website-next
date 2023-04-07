@@ -15,6 +15,7 @@ Technologies we use to build our website:
 - Font Awesome
 - GitHub Wiki
 - HTML, JavaScript, CSS, SCSS, and JSON
+- GitHub Actions (CI/CD) - Don't worry, this is already set up, you don't need to worry about it.
 
 ## Table of Contents
 

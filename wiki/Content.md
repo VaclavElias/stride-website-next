@@ -24,9 +24,13 @@ If you want to update the website, please follow the instructions below.
 
 Small updates can be done directly in the GitHub web interface, for bigger updates the local development environment is required, which is described in the [Installation](Installation) section.
 
-You can use any text editor to make changes. If you are using Visual Studio, you can open `Stride.Web.sln` solution file in the root of the repository and start making your updates directly from this IDE. 
+You can use any text editor to make changes. If you are using **Visual Studio**, you can open `Stride.Web.sln` solution file in the root of the repository and start making your updates directly from this IDE.
+
+You are always welcome to create an issue to discuss your changes before you start working on them. 
 
 ## Small Updates
+
+Creating an issue is not required for small updates, but it is recommended to let others know what you are working on. If you are not sure whether your update is small or not, please create an issue first.
 
 ### What is a small update?
 
@@ -53,6 +57,8 @@ We can define small updates as changes to the content of the website:
 1. Wait for the review and merge.
 
 ## Major Updates
+
+Creating an issue is **required** for major updates, so that others can comment on your changes and provide feedback.
 
 We can define bigger updates as changes to the design of the website, where you would like to see the impact of your changes beforehand to assess the desired result:
 
