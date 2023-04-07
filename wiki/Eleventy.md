@@ -100,7 +100,7 @@ The folder structure is crucial for Eleventy, as it determines the output of the
 - `appsettings.json` - ASP.NET Core configuration file
 - `Program.cs` - ASP.NET Core startup file
 - `web.config` - Configuration file for IIS deployement
-- `web.Release.config` - Configuration file for ASP.NET Core deployement
+- `web.Release.config` - Configuration file for Windows ASP.NET Core deployement
 
 
 **Note:** This project includes ASP.NET Core solution and files, as they can be used seamlessly with Eleventy. Read more about this in our [Installation](Installation#asp-net-core) section.
