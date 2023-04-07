@@ -4,9 +4,13 @@
 name: Build Eleventy app to Azure Web App - stride-web-rc
 
 on:
-#  push:
-#    branches:
-#      - eleventy
+  push:
+    branches:
+      - staging
+    paths-ignore:
+      - 'README.md'
+      - 'wiki/**'
+      - '.github/**'
   workflow_dispatch:
 
 jobs:
