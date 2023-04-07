@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Xenko Has Been Renamed to Stride'
 author: jorn
 popular: true

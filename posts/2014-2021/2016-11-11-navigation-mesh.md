@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Navigation Mesh Preview'
 author: silicon-studio
 image_thumb: /images/blog/navmeshes/thumb.jpg

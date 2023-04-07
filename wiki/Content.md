@@ -4,18 +4,22 @@
   - [Small Updates](#small-updates)
   - [Major Updates](#major-updates)
   - [Wiki Updates](#wiki-updates)
-- Creating New Posts
-  - Post Naming Convention
-- Creating New Pages
-- Shortcodes and Includes
-- Web Assets
-  - Image
-  - Video
-  - Alert
-  - Banner
-- Styling
-  - Bootstrap Customization
-  - CSS Guidelines
+- [Creating New Post](#creating-new-post)
+  - [Post Naming Convention](#post-naming-convention)
+  - [Post Front Matter](#post-front-matter)
+  - [Post Content](#post-content)
+  - [Excerpt](#excerpt)
+- [Creating New Page](#creating-new-page)
+  - [Page Front Matter](#page-front-matter)
+- [Shortcodes and Includes](#shortcodes-and-includes)
+  - [Alert](#alert)
+  - [Alet Banner](#banner)
+  - [Image](#image)
+  - [Video](#video)
+- [Web Assets](#web-assets)
+- [Styling](#styling)
+  - [Bootstrap Customization](#bootstrap-customization)
+  - [CSS Guidelines](#css-guidlines)
 - [Submitting your Changes](#submitting-your-changes)
 
 # Content Updates
@@ -58,7 +62,7 @@ We can define small updates as changes to the content of the website:
 
 ## Major Updates
 
-Creating an issue is **required** for major updates, so that others can comment on your changes and provide feedback.
+[Creating an issue](https://github.com/stride3d/stride-website/issues) is **required** for major updates, so that others can comment on your changes and provide feedback.
 
 We can define bigger updates as changes to the design of the website, where you would like to see the impact of your changes beforehand to assess the desired result:
 
@@ -78,11 +82,120 @@ Wiki pages are deployed through a separate GitHub action, `stride-web-wiki.yml`,
 
 You can update the wiki pages as any other content pages, by following the steps in the [Small Updates](#small-updates) section.
 
-**Important:** If you are updating any headers in the wiki pages, please make sure to update the *table of contents* at the top of the page, [Home](Home) page and `_Sidebar.md`. Also, you might need to search for all the links to the updated header and update them as well.
+⚠️**Important:** If you are updating any headers in the wiki pages, please make sure to update the *Table of Contents* at the top of the page, [Home](Home) page and `_Sidebar.md`. Also, you might need to search for all the links to the updated header and update them as well.
 
-# Web Assets
+# Creating New Post
 
-ToDo: List of web assets used in the website, like logo.
+To create a new blog post, create a new file in the `posts` folder. The file name should follow the following convention.
+
+## Post Naming Convention
+
+`YYYY-MM-DD-post-title.md`
+
+Replace `YYYY-MM-DD` with the date of the post and `post-title` with the title of the post.
+
+## Post Front Matter
+
+The file should start with the following front matter:
+
+```yaml
+---
+title: 'Post title'
+# author's id, definied in the _data/site.json
+author: vaclav
+# optional, if not set, the default tags will be used, tags are merged with the default tags
+# you can find all tags in the live site in the /tags/ page
+tags: ['Announcement']
+# optional, if not set, the default image will be used
+# use webp format for best performance, images should be located in the /images/blog/YYYY-MM-DD-post-title folder
+image: /images/blog/2023-04/new-home-page.webp
+# optional, if true, the post will be featured in the popular section
+pupular: true
+# permlink is automatically generated based on the file name, but you can override it here
+permalink: /blog/2023-04/my-custom-link/ # this is a custom linke
+---
+```
+
+Default front matter, which is used for all posts, can be found in the `posts/posts.json` file.
+
+```json
+{
+  "layout": "post",
+  "eleventyComputed": {
+    "year": "{{ page.date | date: '%Y' }}",
+    "modified": "Last Modified"
+  },
+  "permalink": "/blog/{{ page.fileSlug }}/",
+  "tags": [ "blog", "search" ]
+}
+```
+
+## Post Content
+
+The fasted way to create a new post is to copy an existing post and update the front matter and the content.
+
+💡**Tip:** We have a folder called `_drafts` where you can store your drafts. These files are not publisked. Once you are ready to publish your post, you can move it to the `posts` folder.
+
+## Excerpt
+
+The excerpt is the first paragraph of the post. Separated from the rest of the content by three dashes `---`. The excerpt is used in the blog post list, meta description and in the RSS feed.
+
+**Example**
+
+```yaml
+---
+title: 'Stride 4.1 is Now Live'
+author: aggror
+tags: ['Tutorials','Release', 'Graphics']
+---
+
+Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10. That means you can now head to the download page and start developing your games using the latest .NET technologies.
+
+---
+
+Additional content goes here...
+
+```
+
+# Creating New Page
+
+To create a new page, create a new file in the root folder or create a new folder and add an `index.md` file to it. You can use any templating language supported by Eleventy. We use Markup, html, nunjacks.
+
+## Page Front Matter
+
+The page front matter works the same way as the post front matter. The only difference is that the `layout` property is required.
+
+**Example:** file `features.html`
+
+```yaml
+---
+layout: default
+title: Features
+description: 'Stride supports an extensive list of features: Scene Editor, Physically Based Rendering, Particles, UI Editor, Prefabs, DX12 & Vulkan, C# Scripting, etc...'
+# permlink is automatically generated based on the file name, but you can override it here
+permalink: /my-features/ # otherwise it would be /features/
+---
+```
+
+# Shortcodes and Includes
+
+## Alert
+
+To add an alert, use the following include
+
+```liquid
+{% include _alert.html type:'success' icon:'' title:'No icon: Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10.' %}
+```
+
+## Alert Banner
+
+A global alert banner can be used for promotional purposes. The banner can be activated in `site.json`.
+
+```json
+"alert-banner": true
+```
+
+The HTML can be updated in the `/_includes/alert-banner.html` file.
 
 ## Image
 
@@ -153,14 +266,20 @@ Replace `url` with the video URL (e.g., .mp4 file). Make sure you have a matchin
 <div class="ratio ratio-16x9 mb-2"><video autoplay loop class="responsive-video" poster="jpgUrl"><source src="url" type="video/mp4"></video></div>
 ```
 
-## Alert
+# Web Assets
 
-To add an alert, use the following shortcode:
-`{% alert 'type' 'title' 'content' %}`
+Our main web assets are:
 
-## Banner
+- `css/custom-bootstrap.scss` - Slightly modified Booststrap theme
+  - Some Bootstrap variables are overridden
+  - Some Bootsrap parts are disabled so they don't bloat the website (e.g. button-group, breadcrumm, ..)
+- `css/styles.scss` - Main stylesheet
+  - Styles also Dark Mode
+- `css/syntax-highlighting.scss` - Imported prismjs styling, Light and Dark Mode
+- `assets/search.liquid` - Script for search
+- `assets/site.liquid` - Not used
+- `assets/theme-selector.liquid` - Script for Ligth and Dark Mode selection
 
-A global banner is in `default.html` to be activated with promotions if needed.
 
 # Styling
 
@@ -170,7 +289,9 @@ Our website is using the [Bootstrap](https://getbootstrap.com/) framework, versi
 
 ## CSS Guidelines
 
-We are using also [FontAwesome](https://fontawesome.com/) free icons, version **6.3**. The icons are loaded in the `src/_includes/css/main.css` file.
+We aim to write minimum CSS code to keep the website lightweight and use the Bootstrap framework as much as possible. 
+
+Further, we are using also [FontAwesome](https://fontawesome.com/) free icons. The icons are loaded in the `src/_includes/css/main.css` file.
 
 # Submitting your Changes
 

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Release and Pricing Information'
 author: silicon-studio
 ---

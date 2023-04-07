@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Real-Time Local Reflections Preview'
 author: silicon-studio
 image_thumb: /images/blog/2017-02-09-real-time-local-reflections/night-reflections.png

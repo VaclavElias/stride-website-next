@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Changes to the Xenko License'
 author: silicon-studio
 tags: ['Announcement']

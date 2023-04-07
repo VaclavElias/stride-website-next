@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Roadmap and Survey'
 author: silicon-studio
 image_thumb: /images/blog/survey.png

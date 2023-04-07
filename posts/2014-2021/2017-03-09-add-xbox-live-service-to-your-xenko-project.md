@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Add Xbox Live Service to Your Xenko Project'
 author: silicon-studio
 image_thumb: /images/blog/2017-03-09-xbox-live/xbox-live-resized.png

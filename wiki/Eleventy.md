@@ -8,12 +8,11 @@ We used to use **Jekyll** as our static site generator, but we decided to switch
 - [Configuration](#configuration)
 - [Global Data](#global-data)
 - [Folder Structure](#folder-structure)
-- Layouts and Templates
-- Includes and Partials
-- Advanced Topics
-  - Creating Custom Shortcodes and Includes
-  - Performance Optimization
-
+- [Layouts](#layouts)
+- [Includes](#includes)
+- [Advanced Topics](#advanced-topics)
+  - [Creating Custom Shortcodes and Includes](#creating-custom-shortcodes-and-includes)
+  
 # Packages and Dependencies
 
 Eleventy is a **Node.js** application. Please follow our [Installation](Installation) guide to install Node.js and all the required dependencies.
@@ -58,6 +57,7 @@ Global data is located in the `/_data` folder. It contains all the global data t
 Our `site.json` file contains these main properties, with only some listed below:
 
 - `dark-mode` - Dark mode toggle `true|false`
+- `alert-banner` - Global banner below navigation `true|false`
 - `docs-search` - Includes docs website content in the search `true|false`
 - `links` - Contains all the main links used across the website (social media, docs, GitHub, etc.)
 - `authors` - Contains all the authors used in the blog posts
@@ -81,10 +81,13 @@ The folder structure is crucial for Eleventy, as it determines the output of the
 - `/images` - Images and MP4 files used on the website
 - `/legal` - Content page
 - `/posts` - Blog posts
+- `/posts/2014-2021` - Old blog posts which are merged to the same output folder as `/posts`
+  - this folder is only for convenience to easily access new posts
 - `/wiki` - Excluded from build process, used only for wiki deployment
 
 **Files**
 
+- `/posts/posts.json` - Blog post defaults so they don't have to be repeated in the front matter
 - `*.html` - HTML content pages
 - `*.liquid` - Liquid content pages
 - `*.md` - Markdown content pages
@@ -106,12 +109,31 @@ The folder structure is crucial for Eleventy, as it determines the output of the
 **Note:** This project includes ASP.NET Core solution and files, as they can be used seamlessly with Eleventy. Read more about this in our [Installation](Installation#asp-net-core) section.
 
 
-# Layouts and Templates
+# Layouts
 
-# Includes and Partials
+All the layouts are located in the `/_layouts` folder. The `default` layout is the main layout page and is used by all the other layouts. 
+
+- `default` - Main layout page
+- `container` - Used by some pages
+- `page` - Used by most of the pages
+- `post` - Used by blog posts
+
+# Includes
+
+All the includes are located in the `/_includes` folder. The includes are reusable code snippets that can be included in multiple pages.
+
+Some includes are used solely by the layouts, while others are used by the content pages.
 
 # Advanced Topics
 
 ## Creating Custom Shortcodes and Includes
 
+If you need to create a custom shortcode or include, please follow the existing structure and include a comment to explain the new shortcode or include.
+
+The shortcodes are defined in the `.eleventy.js` file, while the includes are located in the `/_includes` folder.
+
+You can explore the existing shortcodes and includes to get a better understanding of how they work and how to create new ones.
+
 ## Performance Optimization
+
+ToDo: Remove this section if not needed

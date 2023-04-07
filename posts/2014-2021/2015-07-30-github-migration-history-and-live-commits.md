@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'History and Daily Commits on GitHub'
 author: silicon-studio
 image_thumb: /images/blog/github/Octocat.png

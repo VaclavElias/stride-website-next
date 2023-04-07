@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'VL.Stride Released by vvvv'
 author: 'vvvv'
 image_thumb: /images/blog/2020-10-02-vl.stride-announce/vl.stride.png

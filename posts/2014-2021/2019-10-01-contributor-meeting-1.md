@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Contributor Meeting October 2019'
 author: jorn
 tags: ['Meeting']

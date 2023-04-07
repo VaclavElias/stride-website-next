@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Feature Spotlight: Archetypes, Prefabs, and Nested Prefabs'
 author: silicon-studio
 tags: ['Archetypes', 'Prefabs', 'Education']

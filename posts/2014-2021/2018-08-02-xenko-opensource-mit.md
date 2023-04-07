@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Xenko 3.0 is Now Free and Open-Source!'
 author: virgile
 tags: ['Announcement']

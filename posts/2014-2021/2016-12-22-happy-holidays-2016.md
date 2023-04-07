@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Happy Holidays 2016
 author: silicon-studio
 image_thumb: /images/blog/2016-12-22-happy-holidays-2016/presents.png

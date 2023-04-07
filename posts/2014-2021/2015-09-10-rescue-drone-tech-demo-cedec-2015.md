@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Rescue Drone: Tech Demo'
 author: silicon-studio
 image_thumb: /images/blog/rescue-drone/thumb.jpg

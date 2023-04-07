@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Script Editor Preview'
 author: silicon-studio
 image_thumb: /images/blog/script_editor/thumb.jpg

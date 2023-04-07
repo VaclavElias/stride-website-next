@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Xenko meets vvvv'
 author: virgile
 image_thumb: /images/blog/2019-10-04-xenko-meets-vvvv/thumb.png

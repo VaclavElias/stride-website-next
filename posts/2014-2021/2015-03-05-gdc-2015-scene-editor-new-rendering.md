@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Scene Editor and Advanced Rendering presented at GDC'
 author: silicon-studio
 image: /images/blog/GDC2015/xenko_gdc.png

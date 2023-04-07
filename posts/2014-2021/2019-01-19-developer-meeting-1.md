@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Developer Meeting January 2019'
 author: virgile
 tags: ['Meeting']

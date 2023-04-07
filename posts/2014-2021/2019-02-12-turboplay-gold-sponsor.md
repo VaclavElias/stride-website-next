@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Welcome TurboPlay as Gold Sponsor'
 author: virgile
 image_thumb: /images/blog/2019-02-12-turboplay-gold-sponsor/logo_turboplay.png

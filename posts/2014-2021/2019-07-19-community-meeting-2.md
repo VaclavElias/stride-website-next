@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Community Meeting July 2019'
 author: virgile
 tags: ['Meeting']

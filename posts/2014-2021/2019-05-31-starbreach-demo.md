@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Starbreach Demo'
 author: virgile
 image_thumb: /images/blog/2019-05-31-starbreach-demo/starbreach_thumb.jpg

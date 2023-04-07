@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Stride 4.2 is Available Today'
 author: aggror
 popular: true

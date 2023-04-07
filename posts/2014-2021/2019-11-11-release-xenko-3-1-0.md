@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Xenko 3.1 Released'
 author: virgile
 tags: ['Release', 'Tutorials']

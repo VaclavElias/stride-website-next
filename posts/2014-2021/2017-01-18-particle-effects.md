@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Feature Spotlight: Particle Effects'
 author: silicon-studio
 image_thumb: /images/blog/2017-01-18-particles/thumb.png

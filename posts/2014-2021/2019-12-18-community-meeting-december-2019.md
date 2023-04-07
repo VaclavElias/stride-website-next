@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Community Meeting December 2019'
 author: jorn
 tags: ['Meeting']
