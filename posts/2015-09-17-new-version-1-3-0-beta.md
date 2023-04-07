@@ -12,7 +12,7 @@ We are proud to announce the release of a new version of Xenko, bringing lots of
 
 Also, if you haven't participate to our [survey](/blog/roadmap-and-survery/), please take the time to help us prioritize the features you need for your projects!
 
-{% img 'Rescue Robot Tech Demo' '/images/backgrounds/rescue-robot-tech-demo.jpg' %}
+{% img 'Rescue Robot Tech Demo' '/images/backgrounds/rescue-robot-tech-demo.webp' %}
 
 {% comment %} This link is not working https://youtu.be/-RbIALRmhs0 {% endcomment %}
 
