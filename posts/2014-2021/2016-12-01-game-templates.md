@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Newly Added Game Templates'
 author: silicon-studio
 image_thumb: /images/blog/2016-12-01-game-templates/template_thumb.png

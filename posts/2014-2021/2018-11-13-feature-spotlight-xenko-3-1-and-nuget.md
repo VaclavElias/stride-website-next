@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Feature Spotlight: Xenko 3.1 + NuGet'
 author: virgile
 tags: ['NuGet']

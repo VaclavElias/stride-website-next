@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Opensourcing Done! What's Next?
 author: virgile
 tags: ['Announcement']

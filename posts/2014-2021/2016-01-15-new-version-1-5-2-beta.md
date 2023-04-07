@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'First Fix Update of 2016!'
 author: silicon-studio
 ---

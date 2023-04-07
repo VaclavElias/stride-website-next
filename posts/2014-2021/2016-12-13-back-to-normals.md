@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Back to Normals'
 author: silicon-studio
 image_thumb: /images/blog/normals/Normal_map_example_thumb.png

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Run, Don''t Walk'
 author: silicon-studio
 image_thumb: /images/blog/run-dont-walk/thumb.jpg

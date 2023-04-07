@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Stride 4.1 is Now Live'
 author: aggror
 popular: true

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Xenko is Going Open Source'
 author: silicon-studio
 image_thumb: /images/blog/github/Octocat.png

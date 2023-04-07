@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Copy-Paste Improvements Coming Soon'
 author: silicon-studio
 image_thumb: /images/blog/copy_paste/thumb.jpg

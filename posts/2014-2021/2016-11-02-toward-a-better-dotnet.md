@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Toward a Better .NET!'
 author: silicon-studio
 image_thumb: /images/blog/microsoft_.net.png

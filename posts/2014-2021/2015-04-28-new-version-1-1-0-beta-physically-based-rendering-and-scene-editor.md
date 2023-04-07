@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Xenko 1.1 Beta Released'
 author: silicon-studio
 image_thumb: /images/blog/release-1.1/robot_editor_thumb.jpg

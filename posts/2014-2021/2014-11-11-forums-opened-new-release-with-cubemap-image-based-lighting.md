@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Forums Opened, New Release With Image-Based Lighting'
 author: silicon-studio
 image_thumb: /images/blog/release-1.0-beta3/CubemapIBLSample_thumb.jpg

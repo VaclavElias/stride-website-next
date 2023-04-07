@@ -22,7 +22,7 @@ Before updating the Stride website, ensure you are familiar with the following p
 
 # Installation Steps
 
-1. ❓ You might want to create an issue so we can track your contribution and avoid duplicate work. If you're unsure whether your contribution is needed, feel free to create an issue and ask
+1. ❓You might want to create an issue so we can track your contribution and avoid duplicate work. If you're unsure whether your contribution is needed, feel free to create an issue and ask
 1. 🍴 Fork the repository by navigating to the [Stride website repository](https://github.com/stride3d/stride-website) and clicking the **Fork** button in the top-right corner
 1. 📥 Clone your forked repository using the following command, replacing `your-username` with your GitHub username: `git clone https://github.com/your-username/stride-website.git`
    - 💡**Tip:** It's a good idea to create a new branch for each feature or bug fix you work on. This helps keep your forked repository organized and makes it easier to manage multiple pull requests

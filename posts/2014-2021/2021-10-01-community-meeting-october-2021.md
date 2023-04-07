@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Community Meeting October 2021'
 author: jorn
 tags: ['Meeting']

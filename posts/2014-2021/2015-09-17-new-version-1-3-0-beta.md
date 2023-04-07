@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Xenko 1.3 Beta Released'
 author: silicon-studio
 image_thumb: /images/blog/release-1.3/thumb.png

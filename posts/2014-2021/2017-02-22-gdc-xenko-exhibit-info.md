@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Xenko Exhibits and Official Release News'
 author: silicon-studio
 ---

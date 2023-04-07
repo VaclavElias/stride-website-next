@@ -81,10 +81,13 @@ The folder structure is crucial for Eleventy, as it determines the output of the
 - `/images` - Images and MP4 files used on the website
 - `/legal` - Content page
 - `/posts` - Blog posts
+- `/posts/2014-2021` - Old blog posts which are merged to the same output folder as `/posts`
+  - this folder is only for convenience to easily access new posts
 - `/wiki` - Excluded from build process, used only for wiki deployment
 
 **Files**
 
+- `/posts/posts.json` - Blog post defaults so they don't have to be repeated in the front matter
 - `*.html` - HTML content pages
 - `*.liquid` - Liquid content pages
 - `*.md` - Markdown content pages

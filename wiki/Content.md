@@ -4,18 +4,18 @@
   - [Small Updates](#small-updates)
   - [Major Updates](#major-updates)
   - [Wiki Updates](#wiki-updates)
-- Creating New Posts
-  - Post Naming Convention
-- Creating New Pages
-- Shortcodes and Includes
-- Web Assets
-  - Image
-  - Video
-  - Alert
-  - Banner
-- Styling
-  - Bootstrap Customization
-  - CSS Guidelines
+- [Creating New Post](#creating-new-post)
+  - [Post Naming Convention](#post-naming-convention)
+- [Creating New Page](#creating-new-page)
+- [Shortcodes and Includes](#shortcodes-and-includes)
+- [Web Assets](#web-assets)
+  - [Image](#image)
+  - [Video](#video)
+  - [Alert](#alert)
+  - [Banner](#banner)
+- [Styling](#styling)
+  - [Bootstrap Customization](#bootstrap-customization)
+  - [CSS Guidelines](#css-guidlines)
 - [Submitting your Changes](#submitting-your-changes)
 
 # Content Updates
@@ -58,7 +58,7 @@ We can define small updates as changes to the content of the website:
 
 ## Major Updates
 
-Creating an issue is **required** for major updates, so that others can comment on your changes and provide feedback.
+[Creating an issue](https://github.com/stride3d/stride-website/issues) is **required** for major updates, so that others can comment on your changes and provide feedback.
 
 We can define bigger updates as changes to the design of the website, where you would like to see the impact of your changes beforehand to assess the desired result:
 
@@ -78,7 +78,26 @@ Wiki pages are deployed through a separate GitHub action, `stride-web-wiki.yml`,
 
 You can update the wiki pages as any other content pages, by following the steps in the [Small Updates](#small-updates) section.
 
-**Important:** If you are updating any headers in the wiki pages, please make sure to update the *table of contents* at the top of the page, [Home](Home) page and `_Sidebar.md`. Also, you might need to search for all the links to the updated header and update them as well.
+⚠️**Important:** If you are updating any headers in the wiki pages, please make sure to update the *Table of Contents* at the top of the page, [Home](Home) page and `_Sidebar.md`. Also, you might need to search for all the links to the updated header and update them as well.
+
+# Creating New Post
+
+To create a new blog post, create a new file in the `posts` folder. The file name should follow the following convention:
+
+`YYYY-MM-DD-post-title.md`
+
+Replace `YYYY-MM-DD` with the date of the post and `post-title` with the title of the post.
+
+The file should start with the following front matter:
+```yaml
+
+💡**Tip:** We have a folder called `_drafts` where you can store your drafts. These files are not publisked. Once you are ready to publish your post, you can move it to the `posts` folder.
+
+## Post Naming Convention
+
+# Creating New Page
+
+# Shortcodes and Includes
 
 # Web Assets
 
@@ -170,7 +189,9 @@ Our website is using the [Bootstrap](https://getbootstrap.com/) framework, versi
 
 ## CSS Guidelines
 
-We are using also [FontAwesome](https://fontawesome.com/) free icons, version **6.3**. The icons are loaded in the `src/_includes/css/main.css` file.
+We aim to write minimum CSS code to keep the website lightweight and use the Bootstrap framework as much as possible. 
+
+Further, we are using also [FontAwesome](https://fontawesome.com/) free icons. The icons are loaded in the `src/_includes/css/main.css` file.
 
 # Submitting your Changes
 

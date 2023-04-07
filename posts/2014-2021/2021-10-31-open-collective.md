@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Open Collective'
 author: aggror
 popular: true

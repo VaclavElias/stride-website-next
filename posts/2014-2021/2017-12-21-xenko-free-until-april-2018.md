@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Xenko Pro Free until April 2018'
 author: silicon-studio
 image_thumb: /images/blog/2017-12-21-xenko-pro-free-until-april-2018/thumb.jpg

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Huge Update! Paradox Name Change!'
 author: silicon-studio
 image_thumb: /images/blog/release-1.4/XenkoLogoTM_thumb.png

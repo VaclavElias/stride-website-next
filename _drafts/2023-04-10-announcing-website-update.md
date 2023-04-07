@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Announcing Stride Website'
 author: vaclav
 tags: ['Announcement']
