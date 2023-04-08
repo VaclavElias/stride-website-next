@@ -1,10 +1,14 @@
 # Table of Contents
 
+We tested five different deployment methods and chose Azure Web Apps IIS ASP.NET 4.8.
+
 - [GitHub Pages](#github-pages)
 - [Azure Web Apps](#azure-web-apps)
   - [Deploying with .NET Framework](#deploying-with-net-framework)
   - [Deploying with .NET Core](#deploying-with-net-core)
+  - [Azure Static Web Apps](#azure-static-web-apps)
 - [Deployment To Wiki](#deployment-to-wiki)
+- [Deployment Tests](#deployment-tests)
 
 # GitHub Pages
 
@@ -42,6 +46,8 @@ The `web.config` file is used to configure IIS, including:
 - Redirects
 - Gzip compression
 - Static file caching
+- Custom Headers
+- Custom 404
 
 The GitHub action `eleventy_stride-web-rc.yml` builds the website and deploys it to Azure Web Apps.
 
@@ -53,11 +59,13 @@ We have got these 4 options to deploy our website:
 - Azure Web Apps (Windows) with Kestrel
 - Azure Web Apps (Linux) with Kestrel
 
-The GitHub action `eleventy_stride-web-rc.yml` builds the website and deploys it to Azure Web Apps.
+The GitHub action `main_stride-web-test.yml` builds the website and deploys it to Azure Web Apps.
 
 ## Azure Static Web Apps
 
-This wasn't tested yet.
+This deployment method was tested but not chosen. The main reason is the storage space limitation and that our media files are increasing in size.
+
+This method could be a good option for a future deployment, once video files are hosted on YouTube and images are hosted in Azure Blob Storage.
 
 # Deployment To Wiki
 
@@ -77,3 +85,35 @@ This GitHub action only monitors changes to the `wiki` folder. Any modifications
 We use the [Wiki Page Creator GitHub Action](https://github.com/marketplace/actions/wiki-page-creator-action) to deploy the `wiki` folder to the GitHub wiki.
 
 **Note**: ⚠️ A GitHub personal access token (GH_PAT) is required for authentication. This token is stored as a secret in the repository settings.⚠️
+
+# Deployment Tests
+
+Tests were disccused here https://github.com/stride3d/stride-website/issues/71
+
+The basic **load tests** we conducted by measuring the `/blog/` page for different deployment scenarios. We only performed 1-2 tests, as this process is time-consuming and likely unnecessary:
+
+- Hardware for Azure App Service: Basic B1, 1 CPU, 1.75 Memory, CPU type unknown, most likely different for Windows and Linux
+- Hardware for GitHub Pages: Unknown
+- Test was running 60 seconds, 2 threads
+
+**Results**
+
+1. GitHup Pages - **737 req/sec**
+   - We have no control over various aspects, including security headers, redirects, and caching.
+1. ASP.NET 4.8 with IIS - **186 req/sec**
+   - We have full control of everything through `web.config`, including security headers, redirects, caching, ..
+1. SWA (Static Web App - Paid) - **160 req/sec**
+   - No familiar with but should be fair enough control through `staticwebapp.config.json`
+1. .NET 7 (Windows) with IIS (in-process) - **127 req/sec**
+   - We have full control of everything through `web.config`, including security headers, redirects, caching, ..
+1. .NET 7 (Windows) with Kestrel (out-of-process) - **88 req/sec**
+   - We have full control of everything through ASP.NET Core middleware, including security headers, redirects, caching, .. 
+ 1. .NET 7 (Linux) with Kestrel - ***38 req/sec**
+    - We have full control of everything through ASP.NET Core middleware, including security headers, redirects, caching, .. 
+
+**\*** I believe that Linux was slow due to the Azure App Service configuration, where Linux performance is purposely lower but also cheaper.
+
+**Recommendation**
+
+1. **ASP.NET 4.8 with IIS** for Staging
+1. **ASP.NET 4.8 with IIS** for Release
