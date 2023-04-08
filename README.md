@@ -68,11 +68,13 @@ Please feel free to collaborate, create issues, and submit pull requests.
 ## Release Checklist
     
 ## RC6+ Checklist
+- [ ] Wiki - Add video steps from the origianl Readme.md
+- [ ] Wiki - Explain adding remote code
 - [ ] Web - Code refactoring and code clean up - Once the new design update is settled
-- [ ] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
-- [ ] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
-- [ ] Wiki - New post instructions (e.g. using webp images)
-- [ ] Wiki - Update post instructions
+- [x] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
+- [x] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
+- [x] Wiki - New post instructions (e.g. using webp images)
+- [x] Wiki - Update post instructions
 
 ## RC5 Checklist
 - [x] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
@@ -109,6 +111,9 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [ ] Separate post about .NET Live
 
 ## Post Release Update / Future Updates and Improvements
+
+ToDo: Move these to separate issues
+
 - [ ] Web - Encourage community to contribute with articles
 - [ ] Web - It would be nice to have a jump to the top button like on the Microsoft Dev Blog
 - [ ] Web - Search - Exclude API Search on the Web, or checkbox to include/exclude API
