@@ -1,3 +1,47 @@
+# Stride Website Development
+
+* [Getting Started](#getting-started)
+* [Contributing](#contributing)
+* [Roadmap](#roadmap)
+* [.NET Foundation](#net-foundation)
+* [License](#license)
+* [Stride Website Next](#stride-website-next)
+
+## Getting Started
+
+All the information you need to get started with Stride Website development are in the [Stride Website Wiki](https://github.com/VaclavElias/stride-website-next/wiki).
+
+## Contributing
+
+Use [Discussions](https://github.com/stride3d/stride-website/issues) for questions and general discussions. 
+Use [Issues](https://github.com/stride3d/stride-website/issues) to report bugs and proposing features.
+
+We welcome code contributions through pull requests, issues tagged as **[`help-wanted`](https://github.com/dotnet/docfx/labels/help-wanted)** are good candidate to start contributing code.
+
+### Branch and Release
+
+The `master` branch is the default branch for pull requests and most other development activities. We occationally use `feature/*` branches for epic feature development.
+
+Releases are based on a stable `master` branch. Use of [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) is encouraged.
+
+Stride Website is _not_ released under a regular cadence, new updates arrive when maintainers see enough changes that warrant a new releases. Sometimes we use prereleases to get feedbacks from the community.
+
+## Roadmap
+
+Our Wiki [Roadmap](https://github.com/VaclavElias/stride-website-next/wiki/Roadmap) communicates upcoming changes in Stride website.
+
+
+## .NET Foundation
+
+This project is supported by the [.NET Foundation](http://www.dotnetfoundation.org).
+
+This project has adopted the code of conduct defined by the [Contributor Covenant](http://contributor-covenant.org/) to clarify expected behavior in our community.
+For more information see the [.NET Foundation Code of Conduct](http://www.dotnetfoundation.org/code-of-conduct).
+
+## License
+
+This project is licensed under the [MIT](https://github.com/dotnet/docfx/blob/main/LICENSE) License.
+
 # Stride Website - Next
 
 ## Demo
@@ -126,6 +170,3 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - Maybe we can include this somewhere https://github.com/Doprez/Awesome-Stride
 - Web, Docs, GitHub Wiki
 - https://khalidabuhakmeh.com/combining-11ty-static-site-generator-with-aspnet-core
-
-
-

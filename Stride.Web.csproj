@@ -7,11 +7,6 @@
         <EnableDefaultContentItems>false</EnableDefaultContentItems>
     </PropertyGroup>
 
-    <!--<ItemGroup>
-        <Content Remove="_data\**" />
-        <Content Remove="posts\**" />
-    </ItemGroup>-->
-
     <ItemGroup>
         <Content Include="_site\**\*.*" CopyToPublishDirectory="PreserveNewest" Exclude="_site\web.config" />
     </ItemGroup>
