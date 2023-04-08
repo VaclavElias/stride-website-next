@@ -132,9 +132,9 @@ Default front matter, which is used for all posts, can be found in the `posts/po
 
 ## Post Content
 
-The fasted way to create a new post is to copy an existing post and update the front matter and the content.
+The fastest way to create a new post is to copy an existing post and update the front matter and the content.
 
-💡**Tip:** We have a folder called `_drafts` where you can store your drafts. These files are not publisked. Once you are ready to publish your post, you can move it to the `posts` folder.
+💡**Tip:** We have a folder called `_drafts` where you can store your drafts. These files are not published. Once you are ready to publish your post, you can move it to the `posts` folder.
 
 ## Excerpt
 
