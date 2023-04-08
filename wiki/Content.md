@@ -3,7 +3,7 @@
 - [Content Updates](#content-updates)
   - [Small Updates](#small-updates)
   - [Major Updates](#major-updates)
-  - [Wiki Updates](#wiki-updates)
+  - [Updating Wiki](#updating-wiki)
 - [Creating New Post](#creating-new-post)
   - [Post Naming Convention](#post-naming-convention)
   - [Post Front Matter](#post-front-matter)
@@ -13,7 +13,7 @@
   - [Page Front Matter](#page-front-matter)
 - [Shortcodes and Includes](#shortcodes-and-includes)
   - [Alert](#alert)
-  - [Alet Banner](#banner)
+  - [Alert Banner](#alert-banner)
   - [Image](#image)
   - [Video](#video)
 - [Web Assets](#web-assets)
@@ -74,7 +74,7 @@ You would start with the local development environment, which is described in th
 
 Then you would make your changes and test them locally. Once you are happy with the result, you can create a pull request to merge your changes into the `master` branch.
 
-## Wiki Updates
+## Updating Wiki
 
 While wiki pages can be updated directly in the GitHub web interface, this feature is restricted only to contributors who can edit the wiki directly. We have decided to move our wiki pages to a regular folder in this repository called `wiki`, allowing us to use the same process as we do for the website content. If any changes are made directly on the wiki pages, they will be overwritten by the next wiki deployment.
 
@@ -132,9 +132,9 @@ Default front matter, which is used for all posts, can be found in the `posts/po
 
 ## Post Content
 
-The fasted way to create a new post is to copy an existing post and update the front matter and the content.
+The fastest way to create a new post is to copy an existing post and update the front matter and the content.
 
-💡**Tip:** We have a folder called `_drafts` where you can store your drafts. These files are not publisked. Once you are ready to publish your post, you can move it to the `posts` folder.
+💡**Tip:** We have a folder called `_drafts` where you can store your drafts. These files are not published. Once you are ready to publish your post, you can move it to the `posts` folder.
 
 ## Excerpt
 
@@ -181,7 +181,11 @@ permalink: /my-features/ # otherwise it would be /features/
 
 ## Alert
 
-To add an alert, use the following include
+To add an alert, use the following include, where:
+
+- `type` is one of the following: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`, `dark`. Using these types will automatically include a relevant icon
+- `icon` is a Font Awesome icon, which is optional. You can use any free icon, e.g., fa-check.
+- `title` is the title of the alert
 
 ```liquid
 {% include _alert.html type:'success' icon:'' title:'No icon: Stride contributors are proud to announce a new release now running on .NET 6 supporting the latest C# 10.' %}
@@ -270,22 +274,25 @@ Replace `url` with the video URL (e.g., .mp4 file). Make sure you have a matchin
 
 Our main web assets are:
 
-- `css/custom-bootstrap.scss` - Slightly modified Booststrap theme
+- `css/custom-bootstrap.scss` - Slightly modified Bootstrap theme
   - Some Bootstrap variables are overridden
-  - Some Bootsrap parts are disabled so they don't bloat the website (e.g. button-group, breadcrumm, ..)
+  - Some Bootstrap parts are disabled so they don't bloat the website (e.g. button-group, breadcrumb, ..)
 - `css/styles.scss` - Main stylesheet
   - Styles also Dark Mode
 - `css/syntax-highlighting.scss` - Imported prismjs styling, Light and Dark Mode
 - `assets/search.liquid` - Script for search
 - `assets/site.liquid` - Not used
 - `assets/theme-selector.liquid` - Script for Ligth and Dark Mode selection
+- `search.liquid` - Renders as `search.json` contains search meta
 
 
 # Styling
 
 ## Bootstrap Customization
 
-Our website is using the [Bootstrap](https://getbootstrap.com/) framework, version **5.3**. The default Bootstrap theme is customized in the `src/_includes/css/bootstrap-custom.css` file. The customizations are applied to the `src/_includes/css/main.css` file.
+Our website uses the [Bootstrap](https://getbootstrap.com/) framework, version **5.3**.
+
+Prioritize using Bootstrap styling before introducing any custom styles. 
 
 ## CSS Guidelines
 
