@@ -1,4 +1,4 @@
-This is a proposal for our roadmap and ongoing development plan.
+This is a proposal for our website roadmap and ongoing website development plan.
 
 - Tackle existing issues listed in the [Issues](https://github.com/stride3d/stride-website/issues)
 - Convert images to WebP for better performance

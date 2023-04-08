@@ -41,7 +41,7 @@ Technologies we use to build our website:
     - [Alet Banner](Content#banner)
     - [Image](Content#image)
     - [Video](Content#video)
-- [Web Assets](Content#web-assets)
+  - [Web Assets](Content#web-assets)
   - [Styling](Content#styling)
     - [Bootstrap Customization](Content#bootstrap-customization)
     - [CSS Guidelines](Content#css-guidlines)
