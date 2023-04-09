@@ -142,7 +142,7 @@
     },
     {
       "id": "optimized",
-      "title": "Optimized perfomance",
+      "title": "Optimized performance",
       "description": "Get the best VR performance with clustered forward rendering, single-pass rendering, multi-threading, and next-gen graphics API support.",
       "type": "image",
       "enabled": true

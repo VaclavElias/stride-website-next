@@ -103,7 +103,7 @@ Each tutorial has a video tutorial accompanying it, which can be found on Stride
 ### Integrated C# Editor
 The transition to .NET6 unfortunately broke the help tooltips and the code completion of the integrated C# code editor. But we decided to accept it for now, as everyone is using a proper C# editor anyways, such as Visual Studio, Rider or Visual Studio Code.
 
-The reason for the error is that [RoslynPad](https://github.com/roslynpad/roslynpad), the underlaying library, also needs an update or fix. We'll adress this in one of the upcoming minor version releases.
+The reason for the error is that [RoslynPad](https://github.com/roslynpad/roslynpad), the underlaying library, also needs an update or fix. We'll address this in one of the upcoming minor version releases.
 
 {% img 'Integrated Editor Issue' 'https://i.imgur.com/Gn2i6Js.png' %}
 
@@ -112,7 +112,7 @@ We, contributors, believe that Stride can help .NET game developers make the gam
 
 Since the free and open-source release of Stride, the community has been growing slowly, so we have decided to open a fund to reward developers for any contribution they make to Stride. We set up an [Open Collective page](https://opencollective.com/stride3d) to manage our funds and allocate money for features that the community would like to see implemented.
 
-We have various bounties for [bug fixes and features](https://opencollective.com/stride3d/projects) (Vulkan support, decals, morph targets, and many others). If you have or know someone with the skills to tackle those bounties, please reach out to us through the [respective Github tickets](https://github.com/stride3d/stride/labels/bounty). You can also contact us through our discord server or on Github to propose new bounties.
+We have various bounties for [bug fixes and features](https://opencollective.com/stride3d/projects) (Vulkan support, decals, morph targets, and many others). If you have or know someone with the skills to tackle those bounties, please reach out to us through the [respective GitHub tickets](https://github.com/stride3d/stride/labels/bounty). You can also contact us through our discord server or on GitHub to propose new bounties.
 
 ### Contributors
 Many thanks to [all the contributors](https://github.com/stride3d/stride/graphs/contributors?from=2021-02-01&to=2022-06-10&type=c) who have donated their time and skill by adding features, fixing bugs, managing the build pipelines, adding documentation, and reviewing PRs.

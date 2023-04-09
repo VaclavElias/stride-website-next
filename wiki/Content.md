@@ -101,7 +101,7 @@ The file should start with the following front matter:
 ```yaml
 ---
 title: 'Post title'
-# author's id, definied in the _data/site.json
+# author's id, defined in the _data/site.json
 author: vaclav
 # optional, if not set, the default tags will be used, tags are merged with the default tags
 # you can find all tags in the live site in the /tags/ page
@@ -112,7 +112,7 @@ image: /images/blog/2023-04/new-home-page.webp
 # optional, if true, the post will be featured in the popular section
 pupular: true
 # permlink is automatically generated based on the file name, but you can override it here
-permalink: /blog/2023-04/my-custom-link/ # this is a custom linke
+permalink: /blog/2023-04/my-custom-link/ # this is a custom link
 ---
 ```
 
