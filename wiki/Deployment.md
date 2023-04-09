@@ -88,7 +88,7 @@ We use the [Wiki Page Creator GitHub Action](https://github.com/marketplace/acti
 
 # Deployment Tests
 
-Tests were disccused here https://github.com/stride3d/stride-website/issues/71
+Tests were discussed here https://github.com/stride3d/stride-website/issues/71
 
 The basic **load tests** we conducted by measuring the `/blog/` page for different deployment scenarios. We only performed 1-2 tests, as this process is time-consuming and likely unnecessary:
 

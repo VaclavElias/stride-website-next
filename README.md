@@ -80,7 +80,7 @@ Please feel free to collaborate, create issues, and submit pull requests.
 - [x] Web - Check with devs current googletagmanager which is importing lots of junk like facebook events
 - [x] - [x] Web - Shall we remove Diamond Striders and Platinum Striders, maybe to past 
 - [x] Wiki - Review and update
-- [x] Web - Do we want to preserve paging url as /blog/pageX/ or new /blog/X/. I added redericts to web.config to new pattern.
+- [x] Web - Do we want to preserve paging url as /blog/pageX/ or new /blog/X/. I added redirects to web.config to new pattern.
 
 ## RC4 Checklist
 - [x] Web - Ensure excerpt and page description is set for all pages
@@ -123,12 +123,12 @@ ToDo: Move these to separate issues
 - [ ] Web - Authors links to author pages
 - [ ] Web - Split Tags to 2 columns in the /tags page
 - [ ] Web - Blog Comments from GitHub Issues (replacement for old Discuss) - Analyse https://www.aleksandrhovhannisyan.com/blog/jekyll-comment-system-github-issues/, the problem is spam..
-- [ ] Include Avatar, with different asssets like dotnet bot, use also for 2D Games
+- [ ] Include Avatar, with different assets like dotnet bot, use also for 2D Games
 - [ ] Web - Community Page - Elaborate more on each item, maybe like this https://www.blender.org/support/ and this https://www.blender.org/get-involved/
-- [ ] Web - Keep only used FontAwesome references in all.css, to reduce the file sie
+- [ ] Web - Keep only used FontAwesome references in all.css, to reduce the file size
 - [ ] Metrics - Update to ASP.NET Core / Blazor https://github.com/stride3d/stride/tree/master/sources/metrics/Stride.Metrics
 - [ ] Web - Change all images to webp
-- [ ] Web - Creted devs dedicated page (https://developer.blender.org/)
+- [ ] Web - Create devs dedicated page (https://developer.blender.org/)
 - [ ] Web - Minify if possible js and html
 - [ ] Footer example https://www.blender.org/
   - [ ] New Section Download
