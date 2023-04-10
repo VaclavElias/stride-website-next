@@ -11,11 +11,12 @@
 
 # Common Issues and Solutions
 
-Any issue should be added to GitHub issues so it can be tracked and elaborated by the community.
+Any issue should be added to Stride Website [GitHub issues](https://github.com/stride3d/stride-website/issues) so it can be tracked and elaborated by the community.
 
 # Frequently Asked Questions
 
-**Q:** I just want to fix a typo in the post, do I need to follow your installation steps?<br>
-**A:** *No, you can fix the typo directly in the GitHub website, but you would need to still fork the repo, make your update on the main or your new branch and then create a pull request*
+**Q:** I just want to fix a typo in a post. Do I need to follow your installation steps?
+
+**A:** *No, you can fix the typo directly on the GitHub website. However, you will still need to fork the repo, make your update on the main branch or a new branch, and then create a pull request. You can follow this guide for [minor updates](Content#small-updates).*
 
 
