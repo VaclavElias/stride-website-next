@@ -2,7 +2,7 @@
 title: 'Stride 4.0 is Now Live'
 author: virgile
 popular: true
-tags: ['4.0', 'Release', 'Tutorials']
+tags: ['Release', 'Tutorials']
 ---
 
 Stride 4.0 is now out of beta, and the Xenko game engine has been renamed to Stride. This release brings Voxel Cone Tracing GI, .NET 5 support, flexible GPU instancing, Vulkan improvements, and new documentation and tutorials. The Stride team is also welcoming new developers to contribute to the engine's development.

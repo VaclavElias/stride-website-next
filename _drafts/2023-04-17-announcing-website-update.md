@@ -22,23 +22,30 @@ Our main goal was to make the website future-proof and easy to maintain. We also
 - Modern and simplified design
 - Updated static page generator: Eleventy 2.0 (previously Jekyll)
 - Bootstrap 5.3 (previously Bootstrap 3)
-- Font Awesome 6 (previuosly 4.4)
+- Font Awesome 6 (previously 4.4)
 - Removal of old, unnecessary code, such as AddThis, Disqus, JQuery, and JavaScript libraries
 - Improved website responsiveness (mobile, tablet, desktop)
 - Content review and minor corrections
 - [Tags](/tags/) page
 - [Archive](/archive/) page
-- Every singnle page was reviewed and updated 🤯
+- Every single page was reviewed and updated 🤯
 - Dark Theme (Experimental)
 - Search functionality now includes our [documentation]({{ site.links.docs-url }}) website
+- GitHub Wiki was enabled for content contributors, containing information about the website structure, how to add new content, and how to contribute.
 
 This new update will enable us to share more content with you faster and more easily. We will also be able to add more features and enhance the overall experience.
 
+{%- capture title -%}
+The Disqus comment widget has been removed from the blog posts, as we would like to encourage our readers to use <a class="link-info" href="{{ site.links.github-discussions-url }}" target="_blank" rel="noopener">GitHub Discussion</a> or Discord. We are considering linking the GitHub Discussions with the blog posts.
+{%- endcapture -%}
+
+{% include _alert.html type:'info' title:title %}
+
 ## What's next
 
-We will continue to improve the website and add more content. We will also be adding more features and further refining the overall experience.
+We will continue to improve the website and add more content. Additionally, we will be adding more features and further refining the overall experience.
 
-Our GitHub issue tracker is open for any suggestions or feedback. Please feel free to collaborate, create issues, and submit pull requests.
+Our Stride website [GitHub issue tracker](https://github.com/stride3d/stride-website/issues) is open for any suggestions or feedback. Please feel free to collaborate, create issues, and submit pull requests.
 
 ## Closing
 
