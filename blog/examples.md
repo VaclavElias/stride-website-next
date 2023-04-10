@@ -4,6 +4,8 @@ title: Examples
 description: Example Stride Website styling
 ---
 
+This page contains examples of how to use the Stride Website styling, shortcodes and includes.
+
 [[TOC]]
 
 ## Includes

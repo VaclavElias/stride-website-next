@@ -13,18 +13,18 @@ All the information you need to get started with Stride Website development are 
 
 ## Contributing
 
-Use [Discussions](https://github.com/stride3d/stride-website/issues) for questions and general discussions. 
+Use [Discord](https://discord.gg/f6aerfE) for questions and general discussions. 
 Use [Issues](https://github.com/stride3d/stride-website/issues) to report bugs and proposing features.
 
 We welcome code contributions through pull requests, issues tagged as **[`help-wanted`](https://github.com/dotnet/docfx/labels/help-wanted)** are good candidate to start contributing code.
 
 ### Branch and Release
 
-The `master` branch is the default branch for pull requests and most other development activities. We occationally use `feature/*` branches for epic feature development.
+The `master` branch is the default branch for pull requests and most other development activities. 
 
 Releases are based on a stable `master` branch. Use of [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) is encouraged.
 
-Stride Website is _not_ released under a regular cadence, new updates arrive when maintainers see enough changes that warrant a new releases. Sometimes we use prereleases to get feedbacks from the community.
+Stride Website is _not_ released under a regular cadence, new updates arrive when maintainers fix issues or see enough changes that warrant a new releases. Sometimes we use prereleases to get feedbacks from the community.
 
 ## Roadmap
 
