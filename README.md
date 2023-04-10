@@ -40,7 +40,7 @@ For more information see the [.NET Foundation Code of Conduct](http://www.dotnet
 
 ## License
 
-This project is licensed under the [MIT](/blob/main/LICENSE.md) License.
+This project is licensed under the [MIT](https://github.com/VaclavElias/stride-website-next/blob/main/LICENSE.md) License.
 
 # Stride Website - Next
 
