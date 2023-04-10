@@ -9,14 +9,14 @@
 
 ## Getting Started
 
-All the information you need to get started with Stride Website development are in the [Stride Website Wiki](https://github.com/VaclavElias/stride-website-next/wiki).
+All the information you need to get started with Stride Website development can be found in the [Stride Website Wiki](https://github.com/VaclavElias/stride-website-next/wiki).
 
 ## Contributing
 
 Use [Discord](https://discord.gg/f6aerfE) for questions and general discussions. 
 Use [Issues](https://github.com/stride3d/stride-website/issues) to report bugs and proposing features.
 
-We welcome code contributions through pull requests, issues tagged as **[`help-wanted`](https://github.com/dotnet/docfx/labels/help-wanted)** are good candidate to start contributing code.
+We welcome code contributions through pull requests. Issues tagged as **[`help-wanted`](https://github.com/stride3d/stride-website/labels/help-wanted)** are good candidates for starting to contribute code.
 
 ### Branch and Release
 
@@ -24,11 +24,11 @@ The `master` branch is the default branch for pull requests and most other devel
 
 Releases are based on a stable `master` branch. Use of [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) is encouraged.
 
-Stride Website is _not_ released under a regular cadence, new updates arrive when maintainers fix issues or see enough changes that warrant a new releases. Sometimes we use prereleases to get feedbacks from the community.
+Stride Website is _not_ released under a regular cadence; new updates arrive when maintainers fix issues or see enough changes that warrant a new releases. Sometimes we use prereleases to get feedbacks from the community.
 
 ## Roadmap
 
-Our Wiki [Roadmap](https://github.com/VaclavElias/stride-website-next/wiki/Roadmap) communicates upcoming changes in Stride website.
+Our Wiki [Roadmap](https://github.com/VaclavElias/stride-website-next/wiki/Roadmap) communicates upcoming changes to the Stride website.
 
 
 ## .NET Foundation
@@ -40,7 +40,7 @@ For more information see the [.NET Foundation Code of Conduct](http://www.dotnet
 
 ## License
 
-This project is licensed under the [MIT](https://github.com/dotnet/docfx/blob/main/LICENSE) License.
+This project is licensed under the [MIT](/blob/main/LICENSE.md) License.
 
 # Stride Website - Next
 
@@ -66,11 +66,15 @@ Please feel free to collaborate, create issues, and submit pull requests.
   - [x] Minor corrections and removal of unnecessary content
 
 ## Release Checklist
+
+## Release Checklist
+- [ ] Wiki - Check links
+- [ ] Web - Check links
     
 ## RC6+ Checklist
-- [ ] Wiki - Add video steps from the origianl Readme.md
+- [x] Wiki - Add video steps from the original Readme.md
 - [ ] Wiki - Explain adding remote code
-- [ ] Web - Code refactoring and code clean up - Once the new design update is settled
+- [x] Web - Code refactoring and code clean up - Once the new design update is settled
 - [x] Wiki - Add Deployment Docs (staging, production, process for simple changes vs bigger updates)
 - [x] Wiki - Instructions how to add posts, update website, folder structure, site.json (describe settings), _data, _drafts, remote c# code, explain packages in package.json
 - [x] Wiki - New post instructions (e.g. using webp images)
