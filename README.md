@@ -7,11 +7,11 @@
 * [License](#license)
 * [Stride Website Next](#stride-website-next)
 
-## Getting Started
+## 🚀 Getting Started
 
-All the information you need to get started with Stride Website development can be found in the [Stride Website Wiki](https://github.com/VaclavElias/stride-website-next/wiki).
+All the information you need to get started with Stride Website development can be found in the 📚 [Stride Website Wiki](https://github.com/VaclavElias/stride-website-next/wiki).
 
-## Contributing
+## 🤝 Contributing
 
 Use [Discord](https://discord.gg/f6aerfE) for questions and general discussions. 
 Use [Issues](https://github.com/stride3d/stride-website/issues) to report bugs and proposing features.
@@ -26,12 +26,12 @@ Releases are based on a stable `master` branch. Use of [Conventional Commit](htt
 
 Stride Website is _not_ released under a regular cadence; new updates arrive when maintainers fix issues or see enough changes that warrant a new releases. Sometimes we use prereleases to get feedbacks from the community.
 
-## Roadmap
+## 🗺️ Roadmap
 
 Our Wiki [Roadmap](https://github.com/VaclavElias/stride-website-next/wiki/Roadmap) communicates upcoming changes to the Stride website.
 
 
-## .NET Foundation
+## 🌐 .NET Foundation
 
 This project is supported by the [.NET Foundation](http://www.dotnetfoundation.org).
 
