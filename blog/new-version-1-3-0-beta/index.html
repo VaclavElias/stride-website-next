@@ -14,10 +14,9 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="canonical" href="https://www.stride3d.net/blog/new-version-1-3-0-beta/">
     <link rel="alternate" type="application/rss+xml" title="Stride Game Engine" href="/feed.xml">
-    <link rel="stylesheet" href="/css/styles.css?site-version=2.0.0.7"><meta property="og:image" content="/images/og/ogp.jpg"><script src="/scripts/theme-selector.js?site-version=2.0.0.7"></script>
+    <link rel="stylesheet" href="/css/styles.css?site-version=2.0.0.8"><meta property="og:image" content="/images/og/ogp.jpg"><script src="/scripts/theme-selector.js?site-version=2.0.0.8"></script>
 </head>
-<body class="bg-stride-website d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg bg-light-stride-website">
+<body class="bg-stride-website d-flex flex-column min-vh-100"><nav class="navbar navbar-expand-lg bg-light-stride-website">
     <div class="container-xxl">
         <a class="navbar-brand" href="/">
             <img id="logo" height="37" width="124" src="/images/svg/stride-logo-light.svg" alt="Stride logo">
@@ -35,11 +34,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/manual/" target="_blank" rel="noopener"><i class="fa-solid fa-book fa-fw text-decoration-none"></i> Manual (EN)</a></li>
-                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/jp/manual/" target="_blank" rel="noopener"><i class="fa-solid fa-book fa-fw text-decoration-none"></i> Manual (JP)</a></li>
-                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/api/" target="_blank" rel="noopener"><i class="fa-solid fa-gears fa-fw text-decoration-none"></i> API</a></li>
-                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/releasenotes/" target="_blank" rel="noopener"><i class="fa-brands fa-readme fa-fw text-decoration-none"></i> Release Notes</a></li>
-                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/tutorials/" target="_blank" rel="noopener"><i class="fa-solid fa-glasses fa-fw text-decoration-none"></i> Tutorials</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/manual/" target="_blank" rel="noopener">📚 Manual (EN)</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/jp/manual/" target="_blank" rel="noopener">📚 Manual (JP)</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/tutorials/" target="_blank" rel="noopener">🎓 Tutorials</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/releasenotes/" target="_blank" rel="noopener">📝 Release Notes</a></li>
+                        <li><a class="dropdown-item" href="https://doc.stride3d.net/latest/en/api/" target="_blank" rel="noopener">🔧 API</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -223,7 +222,19 @@ Also, complex entity hierarchies are now well handled.</p>
 <img alt="Physics Nodes" src="/images/blog/release-1.3/physics_nodes.png" class="img-fluid mb-3" loading="lazy" data-src="/images/blog/release-1.3/physics_nodes.png">
 <h3 id="async-scripting-for-collision-handling" tabindex="-1">Async scripting for collision handling <a class="direct-link" href="#async-scripting-for-collision-handling">🔗</a></h3>
 <p>Collision handling has been redesigned and now uses an async/await pattern. Events have been removed. Instead awaitable APIs are available, improving both internal performance and the readability of your code.</p>
-<pre class="language-csharp"><code class="language-csharp"><span class="token comment">//start our state machine</span><br><span class="token keyword">while</span> <span class="token punctuation">(</span>Game<span class="token punctuation">.</span>IsRunning<span class="token punctuation">)</span><br><span class="token punctuation">{</span><br>    <span class="token comment">//wait for entities coming in</span><br>    <span class="token keyword">await</span> trigger<span class="token punctuation">.</span><span class="token function">FirstCollision</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    SimpleMessage<span class="token punctuation">.</span><span class="token function">OnStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    <span class="token comment">//now wait for entities exiting</span><br>    <span class="token keyword">await</span> trigger<span class="token punctuation">.</span><span class="token function">AllCollisionsEnded</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    SimpleMessage<span class="token punctuation">.</span><span class="token function">OnStop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<pre class="language-csharp"><code class="language-csharp"><span class="token comment">//start our state machine</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>Game<span class="token punctuation">.</span>IsRunning<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">//wait for entities coming in</span>
+    <span class="token keyword">await</span> trigger<span class="token punctuation">.</span><span class="token function">FirstCollision</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    SimpleMessage<span class="token punctuation">.</span><span class="token function">OnStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//now wait for entities exiting</span>
+    <span class="token keyword">await</span> trigger<span class="token punctuation">.</span><span class="token function">AllCollisionsEnded</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    SimpleMessage<span class="token punctuation">.</span><span class="token function">OnStop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <h3 id="collider-shapes" tabindex="-1">Collider shapes <a class="direct-link" href="#collider-shapes">🔗</a></h3>
 <p>You can now declare collider shapes right <strong>inside of a physics component</strong>, for increased productivity. These shapes will also be affected by the scaling of the entity. Using Collider Shape assets to share shapes among elements is still possible, of course.</p>
 <p>A <strong>Convex Hull collider shape</strong> has been added, providing a shape that is shrink wrapped to a model. For more complex model, a shape is wrapped to each mesh. In the future we also hope to provide complex convex decomposition.</p>
@@ -510,11 +521,11 @@ Also, complex entity hierarchies are now well handled.</p>
             </div>
             <div class="d-flex flex-column flex-sm-row justify-content-between pt-3 pb-4 text-center small">
                 <p class="text-light" style="--bs-text-opacity: 0.85;">Supported by the <a class="link-danger" href="https://dotnetfoundation.org/" target="_blank" rel="noopener">.NET Foundation</a></p>
-                <p class="text-light" style="--bs-text-opacity: 0.85;">Website v.2.0.0.7</p>
+                <p class="text-light" style="--bs-text-opacity: 0.85;">Website v.2.0.0.8</p>
                 <p class="text-light" style="--bs-text-opacity: 0.85;">© .NET Foundation and Contributors</p>
             </div>
         </footer>
     </div>
-</div><script src="/scripts/bootstrap.bundle.min.js?site-version=2.0.0.7"></script>
+</div><script src="/scripts/bootstrap.bundle.min.js?site-version=2.0.0.8"></script>
 </body>
 </html>
