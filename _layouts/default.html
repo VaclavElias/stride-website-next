@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 {% include _head.html %}
 <body class="bg-stride-website d-flex flex-column min-vh-100">
-    {% include _top-navigation.html %}
+    {%- include _top-navigation.html -%}
     {%- if site.alert-banner -%}{% include alert-banner.html %}{%- endif -%}
     {%- if banner -%}{% include banner.html title:banner.title sub-title:banner.sub-title image-url:banner.image-url h1:banner.h1 %}{%- endif -%}
     {{ content }}
