@@ -1,4 +1,4 @@
-Welcome to the Stride Website Wiki Test.
+Welcome to the Stride Website Wiki Test 2024.
 
 This wiki serves as a comprehensive guide to help you navigate and contribute to the **Stride website**.
 
